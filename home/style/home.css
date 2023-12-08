@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Calibri, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #081c4c;
+    width: 20%;
+    padding: 2rem 0;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+
+/* PERFIL */
+
+.perfil {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.perfil img {
+    height: 25px;
+}
+
+.perfil span {
+    color: #fff;
+    font-size: 1.375rem;
+}
+
+/* NAVEGACAO ENTRE PAGINAS */
+.navegacao {
+    flex-grow: 1;
+    width: 100%;
+}
+
+#corpo-navegacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1rem; */
+    gap: 0.5rem
+}
+
+#corpo-navegacao li{
+    width: 80%;
+    position: relative;
+    background-color: #fff; 
+    border-radius: 0.375rem;
+    padding: 0.375rem 0;
+}
+
+#corpo-navegacao li a{
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: none;
+    color: #081c4c;
+}
+
+#corpo-navegacao li p{
+    text-align: center;
+}
+
+#corpo-navegacao .item-estrategico {
+    padding: 0.75rem 2rem;
+    border-radius: 0.625rem;
+}
+/* BOTÃO VOLTAR */
+
+#btn-sair {
+    border: none;
+    border: 1px solid #fff;
+    background-color: #081c4c;
+    padding: 0.375rem 2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* NAVEGAÇÃO */
+.titulo-categorias {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2rem 0;
+}
+
+.centraliza-categoria {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorias {
+    display: flex;
+    gap: 4rem;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.categoria-icone {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.ctg-nome {
+    border-radius: 1.2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 600;
+    padding: 1.5rem 0;
+}
+
+.categoria-estrategico {
+    background-color: #081c4c;
+}
+
+.categoria-gerencial {
+    background-color: #667ca5;
+}
+
+.categoria-operacional {
+    background-color: #a6a6a6;
+}
+
+#esconde-gerencial {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#esconde-estrategico {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#esconde-operacional {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.inativo {
+    background-color: rgba(217,217,217, .95);
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risco LDFT da Instituição</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <img src="./images/logo_ms.png" alt="">
+    
+        <div class="perfil">
+            <img class="foto" src="images/perfil.png" alt="">
+            <span>Olá, Usuário!</span>
+            <button id="btn-sair">Sair</button>
+        </div>
+    
+        <div class="filler"></div>
+    
+        <nav>
+            <ul>
+                <li id="volta-estrategico"><img src="images/icone_estrategico.svg" alt=""></li>
+                <li id="volta-gerencial" class="desativado"><img src="images/icone_gerenciamento.png" alt=""></li>
+                <li id="volta-operacional" class="desativado"><img src="images/icone_operacional.png" alt=""></li>
+            </ul>
+        </nav>
+        <button id="btn-voltar">Voltar</button>
+    </header>
+
+    <h1>Risco LDFT da Instituição</h1>
+    <div class="dashboards">
+        
+        <!--Primeiro Gráfico-->
+        <div id="inerente-inst" class="item1">
+
+            <div class="item-header">
+                
+                <h2>Risco Inerente LDFT da Instituição</h2>
+                <h3>Últimos 3 anos</h3>
+                
+            </div>
+
+            <div class="item-body">
+
+                
+                <div class="graf_body">
+                    <img src="images\Picture1.png" class="risco_style_inerente">
+                    <canvas id="inerente-chart" ></canvas>
+                </div>
+
+            </div>
+                        
+        </div>
+
+        <!--Segundo Gráfico-->
+        <div id="unidade-negocio" class="item2">
+            
+            <div class="item-header">
+
+                <h2>Risco Inerente por Unidade de Negócio</h2>
+                <h3>Últimos 3 anos (em porcentagem)</h3>
+
+            </div>
+
+            <div class="item-body">
+
+                <div class="graf_body">
+                    <img src="images\Picture1.png" class="risco_style_negocio">
+                    <canvas id="negocio-chart"></canvas>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--Gráficos inferiores-->
+        <div id="Impactos" class="item3">
+            
+            <h2 style="margin-top: 0.563rem; margin-bottom: 0px; margin-left: 0.563rem;">Impactos (Último Ano)</h2>
+            <img src="images/graf_infer.png" id="graf_infer" alt="graficos inferiores">
+
+            <!-- <div class="grafs">
+                <h3 style="margin-top: 0.824rem; margin-bottom: 0.875rem;">Financeiro</h3>
+                <hr>
+                <canvas id="Financeiro" style="margin: 0px 3.938rem 0px 3.938rem;"></canvas>
+
+            </div>
+
+            <div class="grafs">
+                <h3 style="margin-top: 3rem; margin-bottom: 0.875rem;">Jurídico</h3>
+                <hr>
+                <canvas id="Juridico" style="margin: 0px 3.938rem 0px 3.938rem;"></canvas>
+            </div>
+
+            <div class="grafs">
+                <h3 style="margin-top: 3rem; margin-bottom: 0.875rem;">Reputacional</h3>
+                <hr>
+                <canvas id="Reputacional" style="margin: 0px 3.938rem 0px 3.938rem;"></canvas>
+            </div>
+
+            <div class="grafs">
+                <h3 style="margin-top: 3rem; margin-bottom: 0.875rem;">Socioambiental</h3>
+                <hr>
+                <canvas id="Socioambiental" style="margin: 0px 3.938rem 0px 3.938rem;"></canvas>
+            </div> -->
+
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

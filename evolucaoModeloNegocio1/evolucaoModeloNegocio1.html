@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Linhas com Chart.js</title>
+    <!-- Inclua o Chart.js através de um CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/evolucaoModeloNegocio.css">
+</head>
+<body>
+
+<header>
+    <img src="./images/logo_ms.png" alt="">
+
+    <div class="perfil">
+        <img class="foto" src="images/perfil.png" alt="">
+        <span>Olá, Usuário!</span>
+        <button id="btn-sair">Sair</button>
+    </div>
+
+    <div class="filler"></div>
+
+    <nav>
+        <ul>
+            <li id="volta-estrategico"><img src="images/icone_estrategico.svg" alt=""></li>
+            <li id="volta-gerencial" class="desativado"><img src="images/icone_gerenciamento.png" alt=""></li>
+            <li id="volta-operacional" class="desativado"><img src="images/icone_operacional.png" alt=""></li>
+        </ul>
+    </nav>
+    <button id="btn-voltar">Voltar</button>
+</header>
+<div>
+    <h1>EVOLUÇÃO DO MODELO DE NEGÓCIO</h1>
+
+</div>
+
+<div id="dashboard">
+    <div class="chartCard">
+        <div class="headerCard">
+            <h2>Base de clientes</h2>
+            <h3>Evolução da base clientes(PF e PJ)</h3>
+        </div>
+        <div class="bodyCard">        
+            <canvas id="baseClientes"></canvas>
+            <div id="legenda-base-clientes">
+                <div class="legenda-pf">
+                    <span>PF</span>
+                    <img class="triangulo-legenda" src="images/triangulo-pf.png" alt="">
+                    <span>+X %</span>
+                </div>
+                <div class="legenda-pj">
+                    <span>PJ</span>
+                    <img class="triangulo-legenda" src="images/triangulo-pj.png" alt="">
+                    <span>+X %</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="chartCard">
+        <div class="headerCard">
+            <h2>Volume de transações</h2>
+            <h3>Quantidade de operações e montantes envolvidos (bi reais)</h3>
+        </div>
+        <div class="bodyCard volumeTransacoes-chart-selections">
+            <div class="chart-legenda-volume-transacoes">
+                <canvas id="volumeTransacoes"></canvas>
+                <div id="legenda-volume-transacoes"></div>
+            </div>
+            <div class="selections">
+                <select name="transacoes" id="transacoes">
+                    <option value="Trans. Digital">Trans. Digital</option>
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2">Opção 2</option>
+                </select>
+                <select name="contrato" id="contrato">
+                    <option value="PF">PF</option>
+                    <option value="PJ">PJ</option>
+                </select>
+                <select name="entidade" id="entidades">
+                    <option value="Bacen">Bacen</option>
+                    <option value="CVM">CVM</option>
+                    <option value="Susep">Susep</option>
+                </select>
+                <select name="meios" id="meios">
+                    <option value="Segmento">Segmento</option>
+                    <option value="Canais">Canais</option>
+                    <option value="Produtos">Produtos</option>
+                    <option value="Segmentos">Segmentos</option>
+                    <option value="Serviços">Serviços</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="chartCard">
+        <div class="headerCard">
+            <h2>Perfis de Risco</h2>
+            <h3>Volume por classificação de risco dos perfis</h3>
+        </div>
+        <div class="bodyCard chart-legenda-perfis-risco">
+            
+            <canvas id="perfisRisco"></canvas>
+            
+            <div class="perfis-risco-legenda-select">
+
+                <div id="customLegend"></div>
+
+                <select name="perfis" id="selectPerfis">
+                    <option value="Clientes">Clientes</option>
+                    <option value="Funcionarios">Funcionários</option>
+                    <option value="Parceiros">Parceiros</option>
+                    <option value="Prestadores">Prestadores</option>
+                    <option value="Produtos">Produtos</option>
+                  </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="chartCard">
+        <div class="headerCard">
+            <h2>Alertas do monitoramento</h2>
+            <h3>Classificação do risco dos perfis</h3>
+        </div>
+        <div class="bodyCard alertas-monitoramento-chart-selections chart-alertas-monitoramentos">
+            <canvas id="alertasMonitoramento"></canvas>
+            <div class="selections">
+                <select name="clientes" id="clientes">
+                    <option value="cliente-PF">Clientes PF</option>
+                    <option value="cliente-PJ">Clientes PJ</option>
+                  </select>
+                  <select name="entidades-alertas" id="entidades-alertas">
+                    <option value="Bacen">Bacen</option>
+                    <option value="CVM">CVM</option>
+                    <option value="Susep">Susep</option>
+                  </select>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Elemento HTML onde o gráfico será renderizado -->
+
+<script src="javascript/script.js"></script>
+
+</body>
+</html>

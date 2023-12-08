@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./loginDash/style.css">
+    <title>Compliance Analytics</title>
+</head>
+<body class="fundoLogin">
+    <div class="containerMaxWidth">
+        <div class="logoTitulo">
+            <img src="./loginDash/logoMS.png" alt="Logo Management Solutions">
+        </div>
+        <div class="formLogin">
+            <form action="./home" id="formLogin">
+                <div class="infoLogin">
+                    <img src="./loginDash/assets/icons/perfilDefaultIcon.png" alt="perfilDefault"><div>Faça o login</div>
+                </div>
+                <div class="containerCampos">
+                    <div class="inputUsuario">
+                        <label for="usuario">Usuário:</label>
+                        <input type="text" name="usuario" id="loginUsuario">
+                    </div>
+                    <div class="inputSenha">
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" id="loginSenha">
+                    </div>
+                    <input type="submit" value="Entrar" class="botaoEnviar" id="botaoEnviar">
+                </div>
+            </form>
+        </div>
+        <header class="botoesAuxiliares">
+            <div class="botaoDescricao">
+                <a href="#"><img src="./loginDash/assets/icons/infoIcon.svg" alt="imagem Info"><div>DESCRIÇÃO</div></a>
+            </div>
+            <div class="botaoAjuda">
+                <a href="#"><img src="./loginDash/assets/icons/helpIcon.png" alt="imagem Ajuda"><div>AJUDA</div></a>
+            </div>
+            <div class="botaoSair">
+                <a href="#"><img src="./loginDash/assets/icons/exitIcon.png" alt="imagem Saída"><div>SAIR</div></a>
+            </div>
+        </header>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="./loginDash/script.js"></script>
+</body>
+</html>

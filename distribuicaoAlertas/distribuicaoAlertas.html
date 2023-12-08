@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="./images/logo_ms.png" alt="">
+    
+        <div class="perfil">
+            <img class="foto" src="images/perfil.png" alt="">
+            <span>Olá, Usuário!</span>
+            <button id="btn-sair">Sair</button>
+        </div>
+    
+        <div class="filler"></div>
+    
+        <nav>
+            <ul>
+                <li id="volta-estrategico"><img src="images/icone_estrategico.svg" alt=""></li>
+                <li id="volta-gerencial" class="desativado"><img src="images/icone_gerenciamento.png" alt=""></li>
+                <li id="volta-operacional" class="desativado"><img src="images/icone_operacional.png" alt=""></li>
+            </ul>
+        </nav>
+        <img class="icone_back" src="images/icone_back.png" alt="">
+        <button id="btn-voltar">Voltar</button>
+    </header>
+
+    <h1>DISTRIBUIÇÃO DE ALERTAS</h1>
+
+    <div id="dashboard">
+        <div class="chartCard">
+            <div class="headerCard">
+                <h2>Atribuição automática</h2>
+                <h3>Configuração</h3>
+            </div>
+            <div class="bodyCard">        
+                <ul class="table">
+                    <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Responsável</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Coordenador 123</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 3</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 5</span></li><li><span>Coordenador 123</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>Coordenador 123</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 7</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 8</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="chartCard">
+            <div class="headerCard">
+                <h2>Atribuição automática</h2>
+                <h3>Manutenção</h3>
+            </div>
+            <div class="bodyCard">
+                
+            </div>
+        </div>
+        <div class="chartCard">
+            <div class="headerCard">
+                <h2>Atribuição manual</h2>
+                <h3>Alertas pendentes</h3>
+            </div>
+            <div class="bodyCard chart-legenda-perfis-risco">
+                <ul class="table">
+                    <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Quantidade de alertas com distribuição pendente</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>25</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>15</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 5</span></li><li><span>30</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>55</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>78</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>10</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>22</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 8</span></li><li><span>30</span></li></ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="chartCard">
+            <div class="headerCard">
+                <h2>Análises pendentes por analista</h2>
+                <h3>Quantidade e tempo médio</h3>
+            </div>
+            <div class="bodyCard alertas-monitoramento-chart-selections chart-alertas-monitoramentos">
+                <canvas id="volumeTransacoes"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/javascript.js"></script>
+</body>
+</html>
