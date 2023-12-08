@@ -11,29 +11,53 @@
     <link rel="stylesheet" href="./style/kyAir.css">
 </head>
 <body>
-
-<header>
-    <img src="./images/logo_ms.png" alt="">
-
-    <div class="perfil">
-        <img class="foto" src="images/perfil.png" alt="">
-        <span>Olá, Usuário!</span>
-        <button id="btn-sair">Sair</button>
+<header class="header1">
+    <img src="./logoMS.png" alt="MSSolutions" class="MSlogoHome" onclick="redirecionarParaHome()">
+    <!-- <div class="dropdown">
+      <button class="botaoHeader botaoBiblioteca">
+        <img src="./assets/icons/capturaIconOff.svg" alt="Icone Biblioteca">
+        <p>Biblioteca</p>
+      </button>
+      <div class="dropdown-content">
+        <a href="captura.html">Captura</a>
+        <a href="triagem.html">Triagem</a>
+      </div>
+    </div> -->
+    <a href="captura.html" class="linksBotoes linkCaptura">
+      <button class="botaoHeader botaoCaptura botaoOff">
+        <img src="./assets/icons/capturaIconOff.svg" alt="Icone Atendimento">
+        <p>Captura</p>
+      </button>
+    </a>
+    <a href="triagem.html" class="linksBotoes">
+      <button class="botaoHeader botaoTriagem botaoTriagemOn">
+        <img src="./assets/icons/TriagemIconOn.png" alt="Icone Atendimento">
+        <p>Triagem</p>
+      </button>
+    </a>
+    <a href="atendimento.html" class="linksBotoes">
+      <button class="botaoHeader botaoAtendimento botaoOff">
+        <img src="./assets/icons/atendimentoIconOff.png" alt="Icone Atendimento">
+        <p>Atendimento</p>
+      </button>
+    </a>
+    <h1 class="a comprimentos">Olá, Usuário! </h1>
+    <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito" onclick="redirecionarParaLogin()">
+      <img src="./assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+      SAIR
+    </button>
+</header>
+    <div class="cardClassificacao">
+        Olá
+    </div>
+    <div class="cardDistribuicao">
+        Olá
+    </div>
+    <div class="cardHistorico">
+        Olá
     </div>
 
-    <div class="filler"></div>
-
-    <nav>
-        <ul>
-            <li id="volta-estrategico"><img src="images/icone_estrategico.svg" alt=""></li>
-            <li id="volta-gerencial" class="desativado"><img src="images/icone_gerenciamento.png" alt=""></li>
-            <li id="volta-operacional" class="desativado"><img src="images/icone_operacional.png" alt=""></li>
-        </ul>
-    </nav>
-    <button id="btn-voltar">Voltar</button>
-</header>
 
 <script src="./javascript/script.js"></script>
-
 </body>
 </html>
