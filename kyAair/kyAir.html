@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Linhas com Chart.js</title>
+    <!-- Inclua o Chart.js através de um CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/kyAir.css">
+</head>
+<body>
+
+<header>
+    <img src="./images/logo_ms.png" alt="">
+
+    <div class="perfil">
+        <img class="foto" src="images/perfil.png" alt="">
+        <span>Olá, Usuário!</span>
+        <button id="btn-sair">Sair</button>
+    </div>
+
+    <div class="filler"></div>
+
+    <nav>
+        <ul>
+            <li id="volta-estrategico"><img src="images/icone_estrategico.svg" alt=""></li>
+            <li id="volta-gerencial" class="desativado"><img src="images/icone_gerenciamento.png" alt=""></li>
+            <li id="volta-operacional" class="desativado"><img src="images/icone_operacional.png" alt=""></li>
+        </ul>
+    </nav>
+    <button id="btn-voltar">Voltar</button>
+</header>
+
+<script src="./javascript/script.js"></script>
+
+</body>
+</html>

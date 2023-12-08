@@ -1,0 +1,245 @@
+ /* GLOBAL */
+
+ * {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: #f5f5f5;
+    font-family: Calibri, sans-serif;
+    padding-bottom: 2rem;
+ }
+
+ /* HEADER */
+
+header {
+    background-color: #081c4c;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.5rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav li{
+    background-color: #fff;
+    padding: 0.313rem;
+    margin-right: 0.938rem;
+    border-radius: 5px;
+}
+
+nav li img {
+    height: 1.25rem;
+}
+
+nav {
+    margin-right: 2rem;
+}
+
+.desativado {
+    background-color: #808080;
+}
+
+.filler {
+    flex-grow: 1;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.foto {
+    height: 1.2rem;
+}
+
+.perfil span {
+    color: #fff;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.perfil button {
+    background-color: #fff;
+    border: none;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+}
+
+.icone_back {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+#btn-voltar {
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    background-color: #fff;
+    border: none;
+}
+
+/* DASHBOARD */
+
+h1 {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #081c4c;
+}
+
+h2 {
+    font-size: 0.875rem;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0.325rem
+}
+
+h3 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: 	#808080;
+}
+
+#dashboard {
+    padding: 0 1rem;
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* CARDS */
+.chartCard {
+    background-color: #fff;
+    display:flex;
+    flex-direction: column;
+}
+
+.headerCard {
+    border-bottom: 1px solid #000;
+    padding: 0.75rem;
+}
+
+.bodyCard {
+    padding: 0.75rem;
+    flex-grow: 1;
+}
+
+/* SELECTIONS */
+
+.selections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 25%;
+    height: 100%;
+    justify-content: center;
+}
+
+
+select {
+    padding: 0.25rem 0;
+    width: 100%;
+    margin-bottom: 0.625rem;
+}
+
+/* BASE DE CLIENTES */
+
+#baseClientes {
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 2rem;
+}
+
+.triangulo-legenda {
+    height: 1.25rem;
+}
+
+.legenda-pf {
+    color: #9dc3e6;
+    display: flex;
+    align-items: center;
+}
+
+.legenda-pj {
+    color: #8497b0;
+    display: flex;
+    align-items: center;
+}
+
+
+#legenda-base-clientes {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* VOLUME DE TRANSAÇÕES */
+
+#volumeTransacoes {
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+#legenda-volume-transacoes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.alinhamento-icone-palavra {
+    display: flex;
+    align-items: center;
+}
+
+.chart-legenda-volume-transacoes {
+    width: 100%;
+}
+
+.volumeTransacoes-chart-selections {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* PERFIS DE RISCO */
+
+#perfisRisco {
+    max-width: 75%;
+    max-height: 220px;
+}
+
+.perfis-risco-legenda-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+
+.chart-legenda-perfis-risco {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+/* ALERTAS DO MONITORAMENTO*/
+
+#alertasMonitoramento {
+    max-width: 75%;
+    max-height: 220px;
+}
+
+.alertas-monitoramento-chart-selections {
+    display: flex;
+    align-items: end;
+}
