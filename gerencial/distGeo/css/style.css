@@ -11,6 +11,7 @@
     height: 900px;
     width: 48%;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .distGeoFull .bloco1{
@@ -85,4 +86,37 @@
     font-size: 12px;
     font-weight: bold;
   
+  }
+
+  #graficoMapaCalor{
+    margin-top: 100px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .conteudosBloco2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+  }
+
+  .conteinerInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .conteinerInputs .linhaInputs{
+    display: flex;
+    align-items: center;
+  }
+
+  .conteinerInputs input{
+    height: 18px;
+    width: 18px;
+  }
+
+  .conteinerInputs select{
+    font-size: 18px;
   }

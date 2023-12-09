@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="//cdn.amcharts.com/lib/4/maps.js"></script>
+  <script src="//cdn.amcharts.com/lib/4/geodata/brazilLow.js"></script>
   <title>Compliance Analytics</title>
 </head>
 <header class="header1" >
@@ -107,6 +110,31 @@
         <h5>Distribuição de clientes e transações por estado</h5>
       </div>
       <hr>
+      <div class="conteudosBloco2">
+        <div class="conteinerMapa">
+          <div id="graficoMapaCalor"></div>
+        </div>
+        <div class="conteinerInputs">
+          <div class="linhaInputs">
+            <input type="checkbox" name="" id="">
+            <select name="" id="" class="selection-boxes">
+              <option value="">Risco Alto</option>
+            </select>
+          </div>
+          <div class="linhaInputs">
+            <input type="checkbox" name="" id="">
+            <select name="" id="" class="selection-boxes">
+              <option value="">PF</option>
+            </select>
+          </div>
+          <div class="linhaInputs">
+            <input type="checkbox" name="" id="">
+            <select name="" id="" class="selection-boxes">
+              <option value="">Transacionado</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="./js/script.js"></script>
