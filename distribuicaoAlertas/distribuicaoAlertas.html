@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
@@ -30,63 +32,136 @@
         <button id="btn-voltar">Voltar</button>
     </header>
 
-    <h1>DISTRIBUIÇÃO DE ALERTAS</h1>
+    <nav class="cabecario">
+        <ul>
+            <li class="vazio"></li>
+            <li><span>Monitoramento</span></li>
+            <li class="vazio"></li>
+            <li class="active"><span>Distribuição de alertas</span></li>
+            <li class="vazio"></li>
+            <li><span>Comunicação</span></li>
+            <li class="vazio"></li>
+            <li><span>Produtividade</span></li>
+            <li class="vazio"></li>
+            <li><span>KY e AIR</span></li>
+            <li class="vazio"></li>
+            <li><span>Distribuição Geográfica</span></li>
+            <li class="vazio"></li>
+            <li><span>Avaliação de Efetividade</span></li>
+            <li class="vazio"></li>
+        </ul>
+    </nav>
 
-    <div id="dashboard">
-        <div class="chartCard">
-            <div class="headerCard">
-                <h2>Atribuição automática</h2>
-                <h3>Configuração</h3>
+    <div class="espacamento"></div>
+
+    <div class="dashboard-tela-abrir">
+        <div id="dashboard">
+            <div class="chartCard atribuicao-automatica-configuracao">
+                <div class="headerCard">
+                    <h2>Atribuição automática</h2>
+                    <h3>Configuração</h3>
+                </div>
+                <div class="bodyCard">    
+                    <ul class="table">
+                        <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Responsável</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Coordenador 123</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 3</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 5</span></li><li><span>Coordenador 123</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>Coordenador 123</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 7</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 8</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
+                    </ul>
+                </div>
             </div>
-            <div class="bodyCard">        
-                <ul class="table">
-                    <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Responsável</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Coordenador 123</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 3</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 5</span></li><li><span>Coordenador 123</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>Coordenador 123</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 7</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 8</span></li><li><span>Coordenador XXXXXX</span></li></ul></li>
-                </ul>
+            <div class="chartCard atribuicao-automatica-manutencao">
+                <div class="headerCard">
+                    <h2>Atribuição automática</h2>
+                    <h3>Manutenção</h3>
+                </div>
+                <div class="bodyCard">
+                    <select name="" id="">
+                        <option value="Esteira 1">Esteira 1</option>
+                        <option value="Esteira 1">Esteira 2</option>
+                        <option value="Esteira 1">Esteira 3</option>
+                        <option value="Esteira 1">Esteira 4</option>
+                    </select>
+                    <ul class="table">
+                        <li><ul class="table_header"><li><span>Cenários</span></li><li><span>Responsável</span></li><li><span>Modificar</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 1</span></li><li><span>Analista 1</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 2</span></li><li><span>Analista 2</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 3</span></li><li><span>Analista 3</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 4</span></li><li><span>Analista 4</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 4</span></li><li><span>Analista 4</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 4</span></li><li><span>Analista 4</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 4</span></li><li><span>Analista 4</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Cenário 4</span></li><li><span>Analista 4</span></li><li><img src="./images/Engrenagem.png" alt=""><span>Alterar</span></li></ul></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chartCard atribuicao-manual">
+                <div class="headerCard">
+                    <h2>Atribuição manual</h2>
+                    <h3>Alertas pendentes</h3>
+                </div>
+                <div class="bodyCard">
+                    <ul class="table">
+                        <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Quantidade de alertas com distribuição pendente</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>25</span><sup style="color: red; font-size: 0.5rem;">1</sup><img src="./images/lupa.png" alt="" id="distribuicao-pendente-lupa"></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>15</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 5</span></li><li><span>30</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>55</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>78</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>10</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>22</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 8</span></li><li><span>30</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chartCard analise-pendentes-analise">
+                <div class="headerCard">
+                    <h2>Análises pendentes por analista</h2>
+                    <h3>Quantidade e tempo médio</h3>
+                </div>
+                <div class="bodyCard">
+                    <!-- <span class="legenda">quantidades</span> -->
+                    <div class="tamanho-grafico">
+                        <canvas id="grafico-analises-pendentes"></canvas>
+                    </div>
+                    <!-- <span class="legenda">minutos</span> -->
+                </div>
             </div>
         </div>
-        <div class="chartCard">
+        <div class="tela-abrir chartCard">
             <div class="headerCard">
-                <h2>Atribuição automática</h2>
-                <h3>Manutenção</h3>
+                <div class="titulo-subtitulo">
+                    <h2>Alertas com distribuição pendente</h2>
+                    <h3>Esteira 1</h3>
+                </div>
+                <button id="fechar-alertas-distribuicao-pendentes">Fechar</button>
             </div>
             <div class="bodyCard">
-                
-            </div>
-        </div>
-        <div class="chartCard">
-            <div class="headerCard">
-                <h2>Atribuição manual</h2>
-                <h3>Alertas pendentes</h3>
-            </div>
-            <div class="bodyCard chart-legenda-perfis-risco">
+                <div style="height: 1rem;"></div> 
                 <ul class="table">
-                    <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Quantidade de alertas com distribuição pendente</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>25</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>15</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 5</span></li><li><span>30</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>55</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>78</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>10</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>22</span></li></ul></li>
-                    <li><ul class="table_row"><li><span>Esteira 8</span></li><li><span>30</span></li></ul></li>
+                    <li><ul class="table_header"><li><span>Cenário</span></li><li><span>Alerta</span></li><li><span>Motivo</span></li><li><span>Responsável</span></li><li><span>Configurar</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Alerta 1</span></li><li><span>Pendente há 30 dias</span></li><li><select name="" id=""><option value="">Analista 1</option><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Alerta 25</span></li><li><span>Pendente há 30 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Alerta 4</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>Alerta 5</span></li><li><span>Pendente há 30 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>Alerta 7</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 3</span></li><li><span>Alerta 1</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 3</span></li><li><span>Alerta 2</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Alerta 1</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Alerta 2</span></li><li><span>Pendente há 25 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Alerta 1</span></li><li><span>Sinalizado pelo analista</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>Alerta 1</span></li><li><span>Pendente há 25 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>Alerta 1</span></li><li><span>Pendente há 25 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 1</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 25</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 4</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 3</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
                 </ul>
-            </div>
-        </div>
-        <div class="chartCard">
-            <div class="headerCard">
-                <h2>Análises pendentes por analista</h2>
-                <h3>Quantidade e tempo médio</h3>
-            </div>
-            <div class="bodyCard alertas-monitoramento-chart-selections chart-alertas-monitoramentos">
-                <canvas id="volumeTransacoes"></canvas>
             </div>
         </div>
     </div>
