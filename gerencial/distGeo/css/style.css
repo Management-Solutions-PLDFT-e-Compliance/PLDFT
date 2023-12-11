@@ -1,0 +1,122 @@
+.distGeoFull{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    width: 1900px;
+    gap: 30px;
+}
+
+.distGeoFull .bloco{
+    background-color: white;
+    height: 900px;
+    width: 48%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.distGeoFull .bloco1{
+    margin-left: 30px;
+}
+
+
+/* ----------Tabelas 5 Colunas ------------------- */
+
+.tableFixHead5Col {
+    overflow-y: auto; 
+    height: 89%;
+    margin-top: 20px;
+  }
+  
+  .tableFixHead5Col thead th {
+    font-size: 18px;
+    position: sticky; 
+    top: 0px;
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .table5Col {
+    width:100%;
+    border-spacing: 5px;
+    font-size: 16px;
+  }
+  
+  
+  
+  .table5Col td{
+    padding: 0.6rem 0.5rem;
+  }
+  
+  .table5Col th:nth-child(1), .table5Col td:nth-child(1) {
+    width: 2%;
+  }
+  
+  .table5Col th:nth-child(2), .table5Col td:nth-child(2) {
+    width: 20%;
+  }
+  
+  .table5Col th:nth-child(3), .table5Col td:nth-child(3) {
+    width: 12%;
+  }
+  .table5Col th:nth-child(4), .table5Col td:nth-child(4) {
+    width: 8%;
+  }
+  .table5Col th:nth-child(5), .table5Col td:nth-child(5) {
+    width: 5%;
+  }
+
+  .table5Col td:nth-child(5) {
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: red;
+    font-weight: bold;
+  }
+
+  .table5Col th, .table5Col td {
+    border: 1px solid lightgray;
+    border-spacing: 30px;
+    text-align: center;
+  }
+  
+  
+  .table5Col th {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+  
+  }
+
+  #graficoMapaCalor{
+    margin-top: 100px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .conteudosBloco2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+  }
+
+  .conteinerInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .conteinerInputs .linhaInputs{
+    display: flex;
+    align-items: center;
+  }
+
+  .conteinerInputs input{
+    height: 18px;
+    width: 18px;
+  }
+
+  .conteinerInputs select{
+    font-size: 18px;
+  }
