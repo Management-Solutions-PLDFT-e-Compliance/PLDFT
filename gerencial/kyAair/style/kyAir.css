@@ -94,6 +94,7 @@
 }
 
 select{
+    
     margin: 5px;
     width: 190px;
     height: 30px;
@@ -101,11 +102,12 @@ select{
 }
 
 table{
-    width: 100%;
+    width: 98%;
     height: 280px;
-    font-size: 30px;
-    font-family: sans-serif;
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
     border: 5px solid white;
+    margin: 5px;
 }
 
 td{
@@ -117,31 +119,76 @@ td{
     color: lightgray;
     border: 1px solid lightgray;
     text-align: right;
+    font-weight: normal;
 }
 
 .riscoMuitoAlto{
     background-color: #fc9494;
     border: white 3px solid;
     text-align: center;
+    font-weight: bold;
 }
 .riscoAlto{
     background-color: #fcc474;
     border: white 3px solid;
     text-align: center;
+    font-weight: bold;
+
 }
 
 .riscoModerado{
     background-color: #fcfc94;
     border: white 3px solid;
     text-align: center;
+    font-weight: bold;
+
 }
 .riscoBaixo{
     background-color: #94d454;
     border: white 3px solid;
     text-align: center;
+    font-weight: bold;
+
 }
 .riscoMuitoBaixo{
     background-color: #84fc84;
     border: white 3px solid;
     text-align: center;
+    font-weight: bold;
+
+}
+
+label{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 17.6px;
+    position: fixed;
+    right: 500px;
+}
+
+input{
+    height: 30px;
+    width: 350px;
+}
+
+.camposInput1{
+    position: fixed;
+    right: 400px;
+}
+.camposInput2{
+    position: fixed;
+    right: 400px;
+    bottom: 500px;
+}
+.camposInput3{
+    position: fixed;
+    right: 400px;
+}
+.camposInput4{
+    position: fixed;
+    right: 400px;
+}
+.camposInput5{
+    position: fixed;
+    right: 400px;
 }
