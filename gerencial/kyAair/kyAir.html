@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gráfico de Linhas com Chart.js</title>
-    <!-- Inclua o Chart.js através de um CDN -->
+    <title>Risco LDFT da Instituição</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/kyAir.css">
     <link rel="stylesheet" href="../../style.css">
@@ -47,13 +47,116 @@
     </a>
   </header>
     <div class="cardClassificacao">
-        Olá
+        <div class="titulos">
+          <h2>Classificação de risco</h2>
+          <h5>Por perfil de risco</h5>
+          <hr>
+        </div>
+        <canvas id="doughnutChart"></canvas>
+        <canvas id="doughnutChart2"></canvas>
+        <canvas id="doughnutChart3"></canvas>
+        <canvas id="doughnutChart4"></canvas>
+        <canvas id="doughnutChart5"></canvas>
+    
+    </div>
     </div>
     <div class="cardDistribuicao">
-        Olá
+      <div class="titulos">
+        <h2>Distribuição de risco LDFT</h2>
+        <h5>Por perfil</h5>
+        <hr>
+      </div>
+      <div>
+        <Select>
+          <option value="Clientes">Clientes</option>
+          <option value="Funcionários">Funcionários</option>
+          <option value="Parceiros">Parceiros</option>
+          <option value="Prestadores">Prestadores</option>
+          <option value="Produtos">Produtos</option>
+        </Select>
+      </div>
+      <div>
+        <table>
+          <thead>
+            <tr class="headerTable">
+              <th></th>
+              <th>Segmento 1</th>
+              <th>Segmento 2</th>
+              <th>Segmento 3</th>
+              <th>Segmento 4</th>
+              <th>Segmento 5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="riscoMuitoAlto">
+              <td class="headerTable">Muito Alto</td>
+              <td>12</td>
+              <td>1</td>
+              <td>123</td>
+              <td>98</td>
+              <td>5</td>
+            </tr>
+            <tr class="riscoAlto">
+              <td class="headerTable">Risco Alto</td>
+              <td>2333</td>
+              <td>1232</td>
+              <td>3257</td>
+              <td>743</td>
+              <td>789</td>
+            </tr>
+            <tr class="riscoModerado">
+              <td class="headerTable">Risco Moderado</td>
+              <td>6444</td>
+              <td>90334</td>
+              <td>72578</td>
+              <td>3486</td>
+              <td>142</td>
+            </tr>
+            <tr class="riscoBaixo">
+              <td class="headerTable">Risco Baixo</td>
+              <td>19324</td>
+              <td>40553</td>
+              <td>32532</td>
+              <td>280</td>
+              <td>236</td>
+            </tr>
+            <tr class="riscoMuitoBaixo">
+              <td class="headerTable">Risco Muito Baixo</td>
+              <td>205</td>
+              <td>2944</td>
+              <td>46643</td>
+              <td>967</td>
+              <td>24</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="cardHistorico">
-        Olá
+      <div class="titulos">
+        <h2>Histórico  por perfil</h2>
+        <h5>Filtro</h5>
+        <hr>
+      </div>
+      <div>
+        <label for="">CPF/CNPJ:</label>
+        <input type="text">
+      </div>
+      <div> 
+        <label for="">Sanções:</label>
+        <input type="text">
+      </div>
+      <div>
+        <label for="">Tempo de relacionamento:</label>
+        <input type="date" name="" id="">
+      </div>
+      <div>
+        <input type="date" name="" id="">
+      </div>
+      <div>
+        <label for="">Risco:</label>
+        <input type="text">
+      </div>
     </div>
 
 
