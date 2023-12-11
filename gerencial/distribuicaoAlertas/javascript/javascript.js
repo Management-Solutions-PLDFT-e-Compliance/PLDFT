@@ -33,8 +33,8 @@ var dataAnalisePendente = {
     },{
         label: 'Volume financeiro',
         type: 'line',
-        backgroundColor: 'rgb(9,41,104)',
-        borderColor: 'rgb(9,41,104)',
+        backgroundColor: 'rgba(151,169,215,255)',
+        borderColor: 'rgba(151,169,215,255)',
         data: [240, 140, 110, 160, 40, 55],
         fill: false,
         borderWidth: 1,
@@ -100,7 +100,7 @@ var analisePendente = new Chart(analisePendenteCtx, {
 });
 
 function createLinearGradientBar(ctx, colorInicio, colorFim) {
-    var gradient = ctx.createLinearGradient(0, 150, 0, 180);
+    var gradient = ctx.createLinearGradient(0, 100, 0, 500);
     gradient.addColorStop(0, colorInicio); // Cor no início do gradiente
     gradient.addColorStop(1, colorFim); // Cor no final do gradiente
     return gradient;
