@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./css/redeTransac.css">
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="//www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+  <title>Compliance Analytics</title>
+</head>
+<header class="header1" >
+  <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+  <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+    <button class="botaoHeader botaoEstrategico botaoOff">
+      <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+      <p>Estratégico</p>
+    </button>
+  </a>
+  <a href="../../gerencial/home.html" class="linksBotoes">
+    <button class="botaoHeader botaoGerencial botaOff">
+      <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+      <p>Gerencial</p>
+    </button>
+  </a>
+  <a href="../../operacional/home.html" class="linksBotoes">
+    <button class="botaoHeader botaoOperacional botaoOn">
+      <img src="../../assets/icons/operacionalOn.png" alt="Icone Atendimento">
+      <p>Operacional</p>
+    </button>
+  </a>
+  <a href="../../parametrizacao/home.html" class="linksBotoes">
+    <button class="botaoHeader botaoParams botaoOff">
+      <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+      <p>Parametrização</p>
+    </button>
+  </a>
+  <h1 class="a comprimentos">Olá, Usuário! </h1>
+  <a href="../../index.html" style="position: absolute; top: 31px;">
+    <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+      <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+      SAIR
+    </button>
+  </a>
+</header>
+<body>
+    <div class="redeTransacFull">
+        <div class="titulos">
+            <h2>Rede transacional</h2>
+            <h5>Grafos</h5>
+            </div>
+            <hr>
+            <div id="grafRedeTransac"></div>
+            <div id="legendaRedeTransac">
+                <div class="legendaLinha">
+                    <div class="itemLegendaLinha">
+                        <div class="linhaTransAlert"></div>
+                        <p>Transação alertada</p>
+                    </div>
+                    <div class="itemLegendaLinha">
+                        <div class="linhaOutrasTrans"></div>
+                        <p>Outras transações</p>
+                    </div>
+                    <div class="itemLegendaLinha">
+                        <div class="linhaOpcEsco"></div>
+                        <p>Opção selecionada</p>
+                    </div>
+                    <div class="itemLegendaLinha">
+                        <div class="linhaOutrasInfos"></div>
+                        <p>Outras informações</p>
+                    </div>
+                </div>
+                <hr class="separador">
+                <div class="legendaCliente">
+                    <p class="tituloLegendaCliente">Risco LDFT de cliente:</p>
+                    <div class="todosTiposClientes">
+                        <div class="cliente">
+                            <div class="riscoMuitoAlto"></div>
+                            <p>Muito Alto</p>
+                        </div>
+                        <div class="cliente">
+                            <div class="riscoAlto"></div>
+                            <p>Alto</p>
+                        </div>
+                        <div class="cliente">
+                            <div class="riscoModerado"></div>
+                            <p>Moderado</p>
+                        </div>
+                        <div class="cliente">
+                            <div class="riscoBaixo"></div>
+                            <p>Baixo</p>
+                        </div>
+                        <div class="cliente">
+                            <div class="riscoMuitoBaixo"></div>
+                            <p>Muito Baixo</p>
+                        </div>
+                        <div class="cliente">
+                            <div class="riscoNaoCliente"></div>
+                            <p>Não Cliente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="./js/redeTransac.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

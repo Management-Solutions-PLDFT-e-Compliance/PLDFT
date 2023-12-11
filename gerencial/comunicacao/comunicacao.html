@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <title>Compliance Analytics</title>
+</head>
+<header class="header1" >
+  <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+  <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+    <button class="botaoHeader botaoEstrategico botaoOff">
+      <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+      <p>Estratégico</p>
+    </button>
+  </a>
+  <a href="../../gerencial/home.html" class="linksBotoes">
+    <button class="botaoHeader botaoGerencial botaoOn">
+      <img src="../../assets/icons/gerencialOn.png" alt="Icone Atendimento">
+      <p>Gerencial</p>
+    </button>
+  </a>
+  <a href="../../operacional/home.html" class="linksBotoes">
+    <button class="botaoHeader botaoOperacional botaoOff">
+      <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+      <p>Operacional</p>
+    </button>
+  </a>
+  <a href="../../parametrizacao/home.html" class="linksBotoes">
+    <button class="botaoHeader botaoParams botaoOff">
+      <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+      <p>Parametrização</p>
+    </button>
+  </a>
+  <h1 class="a comprimentos">Olá, Usuário! </h1>
+  <a href="../../index.html" style="position: absolute; top: 31px;">
+    <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+      <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+      SAIR
+    </button>
+  </a>
+</header>
+<body>
+  <div class="comunicacaoFull">
+    <div class="blocoSuperior">
+        <div class="card1">
+            <div class="titulos">
+                <h2>Casos comunicados ao COAF/Sancionados
+                </h2>
+                <h5>Período</h5>
+              </div>
+              <hr>
+              <div class="conteudo">
+                  <select name="" id="selectCasosCoaf" onchange="atualizarValoresCasosCoaf()">
+                    <option value="1">Último Mês</option>
+                    <option value="2">Último Bimestre</option>
+                    <option value="3">Último Trimestre</option>
+                    <option value="4">Último Semestre</option>
+                  </select>
+                  <div class="conteinerContadores">
+                    <div class="contador">
+                        <p class="elem1">29</p>
+                        <p class="elem2">(2)</p>
+                        <p class="elem3">Bacen</p>
+                    </div>
+                    <div class="contador">
+                        <p class="elem1">15</p>
+                        <p class="elem2">(1)</p>
+                        <p class="elem3">CVM</p>
+                    </div>
+                    <div class="contador">
+                        <p class="elem1">5</p>
+                        <p class="elem2">(1)</p>
+                        <p class="elem3">Susep</p>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        <div class="card2">
+            <div class="titulos">
+                <h2>Comunicações pendentes
+                </h2>
+                <h5>Volume mensal</h5>
+            </div>
+              <hr>
+            <div class="conteudo">
+                <div class="conteinerContadores">
+                  <div class="contador">
+                      <p class="elem1">1</p>
+                      <p class="elem3">Bacen</p>
+                  </div>
+                  <div class="contador">
+                      <p class="elem1">0</p>
+                      <p class="elem3">CVM</p>
+                  </div>
+                  <div class="contador">
+                      <p class="elem1">1</p>
+                      <p class="elem3">Susep</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="card3">
+            <div class="titulos">
+                <h2>Hits lista de sanções (CSNU)
+                </h2>
+                <h5>Volume de hits</h5>
+              </div>
+              <hr>
+              <div class="conteudo">
+                <img src="./assets/cadeado.png" alt="" class="imagemCadeado">
+                <div class="conteinerContadores">
+                  <div class="contador">
+                      <p class="elem1">1</p>
+                      <p class="elem3">Diário</p>
+                  </div>
+                  <div class="contador">
+                      <p class="elem1">18</p>
+                      <p class="elem3">Mensal</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="card4">
+            <div class="titulos">
+                <h2>Número de Ofícios e requisições
+                </h2>
+                <h5>Por período de tempo</h5>
+              </div>
+              <hr>
+              <div class="conteudo">
+                <div class="conteinerSelects">
+                    <select name="" id="" onchange="atualizarValoresNumOficios()">
+                      <option value="">Bacen</option>
+                      <option value="">Susep</option>
+                      <option value="">CVM</option>
+                    </select>
+                    <select name="" id="" onchange="atualizarValoresNumOficios()">
+                        <option value="">Mensal</option>
+                        <option value="">Trimestral</option>
+                        <option value="">Semestral</option>
+                      </select>
+                </div>
+                <div class="conteinerContadores">
+                  <div class="contador">
+                      <p class="elem1">27</p>
+                      <p class="elem3">Recebido</p>
+                  </div>
+                  <div class="contador">
+                      <p class="elem1">7</p>
+                      <p class="elem3">Concluído</p>
+                  </div>
+                  <div class="contador">
+                      <p class="elem1">20</p>
+                      <p class="elem3">Pendente</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blocoInferior">
+        <div class="card1">
+            <div class="titulos">
+                <h2>Comunicações ao COAF
+                </h2>
+                <h5>Período</h5>
+              </div>
+              <hr>
+        </div>
+        <div class="card2">
+            <div class="titulos">
+                <h2>Novos relacionamentos recusados
+                </h2>
+                <h5>Últimos 6 meses</h5>
+              </div>
+              <hr>
+              <div class="conteudo">
+                  <select name="" id="">
+                    <option value="">Pessoa Jurídica</option>
+                    <option value="">Pessoa Física</option>
+                  </select>
+                  <div class="conteinerGraf">
+                    <canvas id="novosRelRec"></canvas>
+                  </div>
+              </div>
+        </div>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+  <script src="../../script.js"></script>
+</body>
+</html>
