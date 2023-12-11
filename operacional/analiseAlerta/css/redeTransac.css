@@ -1,0 +1,120 @@
+.redeTransacFull{
+    position: absolute;
+    top: 150px;
+    width: 1850px;
+    background-color: white;
+    height: 900px;
+    left: 35px;
+    border-radius: 10px;
+}
+
+#grafRedeTransac {
+    width: 100%;
+    height: 92%;
+  }
+
+#legendaRedeTransac{
+    position: absolute;
+    left: 1497px;
+    top: 500px;
+    width: 352px;
+    height: 400px;
+    /* border: 1px solid black; */
+    background-color: rgba(255, 255, 255, 0.753);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#legendaRedeTransac .legendaLinha .itemLegendaLinha{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#legendaRedeTransac .legendaLinha{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaTransAlert{
+    width: 100px;
+    height: 10px;
+    background-color: #FF0000;
+}
+
+#legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaOutrasTrans{
+    width: 100px;
+    height: 10px;
+    background-color: #2E75B6;
+}
+
+#legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaOpcEsco{
+    width: 100px;
+    height: 10px;
+    background-color: #000;
+}
+
+#legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaOutrasInfos{
+    width: 100px;
+    height: 10px;
+    background-color: #AFABAB;
+}
+
+#legendaRedeTransac .separador{
+    margin-top: 10px;
+}   
+
+#legendaRedeTransac .legendaCliente .tituloLegendaCliente{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes .cliente{
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoMuitoAlto{
+    width: 40px;
+    height: 20px;
+    background-color: #FF9797;
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoAlto{
+    width: 40px;
+    height: 20px;
+    background-color: #FFC271;
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoModerado{
+    width: 40px;
+    height: 20px;
+    background-color: #FFFF93;
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoBaixo{
+    width: 40px;
+    height: 20px;
+    background-color: #92D050;
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoMuitoBaixo{
+    width: 40px;
+    height: 20px;
+    background-color: #81FF84;
+}
+
+#legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoNaoCliente{
+    width: 40px;
+    height: 20px;
+    background-color: #A6A6A6;
+}
