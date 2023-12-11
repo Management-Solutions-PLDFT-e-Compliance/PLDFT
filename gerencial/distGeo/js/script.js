@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
     polygonSeriesMapaCalor.heatRules.push({
     property: "fill",
     target: polygonSeriesMapaCalor.mapPolygons.template,
-    min: am4core.color("#FFFF00"),
+    min: am4core.color("#99ff00"),
     max: am4core.color("#FF0000")
     });
 
