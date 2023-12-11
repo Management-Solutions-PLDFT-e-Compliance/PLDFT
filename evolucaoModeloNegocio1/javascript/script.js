@@ -114,7 +114,7 @@ var dataPerfisRiscos = {
         pointRadius: 0
     },
     {
-        label: 'Mínimo',
+        label: 'Muito Alto',
         backgroundColor: 'rgb(217,61,61)',
         borderColor: 'rgb(217,61,61)',
         data: [123, 212, 32, 242, 125, 112],

@@ -339,7 +339,7 @@ width: 24px;
   font-size: 20px;
   font-family: sans-serif;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 
 }
 
@@ -362,7 +362,8 @@ width: 24px;
   display:flex;
   margin-left: 30px;
   width: fit-content;
-  margin-top: 17.1%
+  margin-left: 9%;
+  justify-content: center;
 }
 
 .contorno_cinza {
@@ -372,7 +373,6 @@ width: 24px;
   border-radius: 10px;
   background-color: white;
   text-align: center;
-  margin: 0px 10px 50px 10px;
 }
 
 .conteudo_contorno_cinza {

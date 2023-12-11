@@ -7,9 +7,13 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/chart.js">
     </script>
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../../reset.css">
     <link rel="stylesheet" href="monitoramento.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
 
 <body>
@@ -49,7 +53,7 @@
 
             <div id="content">
                 
-                <select name="time-range" class="selection-boxes">
+                <select name="time-range" class="selection-boxes" style="margin-top: 10px;">
                     <option value="Hoje">Hoje</option>
                     <option value="Últimos 30 dias">Últimos 30 dias</option>
                     <option value="Último mês">Último mês</option>
@@ -58,7 +62,7 @@
                 </select>
                 
                 <!-- style="margin-top: 29.5%;" -->
-                <div class="icones_contorno">
+                <div class="icones_contorno" >
                     <div class="contorno_cinza">
                       <div class="conteudo_contorno_cinza">
   
@@ -93,7 +97,7 @@
                 <hr>
             </div>
 
-            <div class="icones_contorno" style=" margin-top: 128px;">
+            <div class="icones_contorno" style=" margin-top: 60px;">
                 <div class="contorno_cinza">
                   <div class="conteudo_contorno_cinza">
 
@@ -128,12 +132,32 @@
                 <h5>Últimos 6 meses</h5>
                 <hr>
             </div>
+
+            <div class="icones_contorno" style="margin-top: 20%; margin-left: 35px;">
+                <img src="./icons/cronômetro-94.png" alt="Tempo">
+                <div class="contorno_cinza">  
+                    <div class="conteudo_contorno_cinza">
+                      <div class="numero_contorno">120</div>
+                      <div class="palavra_contorno">Minutos</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="item4">
             <div class="titulos">
                 <h2>Alertas - Falsos positivos</h2>
                 <h5>Últimos 30 dias</h5>
                 <hr>
+            </div>
+
+            <div class="icones_contorno" style="margin-top: 20%; margin-left: 35px;">
+                <img src="./icons/positivo-94.png" alt="Tempo">
+                <div class="contorno_cinza">  
+                    <div class="conteudo_contorno_cinza">
+                      <div class="numero_contorno">85%</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="item5">
@@ -142,25 +166,47 @@
                 <h5>Últimos 30 dias</h5>
                 <hr>
             </div>
+
+            <div class="icones_contorno" style="margin-top: 20%; margin-left: 35px;">
+                <img src="./icons/negativo-94 .png" alt="Tempo">
+                <div class="contorno_cinza">  
+                    <div class="conteudo_contorno_cinza">
+                      <div class="numero_contorno">1</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="item6">
             <div class="titulos">
-                <h2>efwefwef</h2>
-                <h5>efwefwfwefwe</h5>
+                <h2>Top 5 regras com maior geração de alertas</h2>
+                <h5>Período</h5>
                 <hr>
             </div>
+            <div id="select-boxes-charts">
+                <select name="time-range-chart" class="selection-boxes" style="position: fixed;">
+                    <option value="6_meses">Últimos 6 meses</option>
+                </select>
+
+                <select id="select-chart" name="Charts" class="selection-boxes" style="position: fixed; left: 773px;">
+                    <option value="Bacen">Bacen</option>
+                    <option value="CVM">CVM</option>
+                    <option value="Susep">Susep</option>
+                </select>
+            </div>
+            <canvas id="Regras_geracao_alertas" style="width: 900px; height:610px; margin: 40px 5px 5px 5px "></canvas>
         </div>
 
         <div class="item7">
             <div class="titulos">
-                <h2>efwefwef</h2>
-                <h5>efwefwfwefwe</h5>
+                <h2>Histórico de geração de alertas por regra</h2>
+                <h5>Últimos 6 meses</h5>
                 <hr>
             </div>
+            <canvas id="historico_alertas_regra" style="width: 900px;height:640px"></canvas>
         </div>
 
     </div>
-
+    <script src="monitoramento.js"></script>
 </body>
 </html>
