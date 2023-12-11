@@ -30,12 +30,12 @@ function atualizarValoresCasosCoaf() {
   var ctxNovosRelRec = document.getElementById('novosRelRec').getContext('2d');
 
   var dataNovosRelRec = {
-    labels: ['Auditoria', 'Credito', 'Open Finance'],
+    labels: ['jan', 'fev', 'mar', 'abr', 'mai', 'jun'],
     datasets: [{
         label: 'Valores das Barras',
         backgroundColor: 'rgb(9,41,104)',
         borderWidth: 1,
-        data: [1, 1, 100],
+        data: [3, 5, 4, 2, 6, 5],
         barPercentage: 0.5
     }]
 };
@@ -44,17 +44,15 @@ var optionsNovosRelRec = {
     scales: {
         y: {
             display: false,
-            suggestedMin: 0, // Valor mínimo sugerido
-            suggestedMax: 2,
             beginAtZero: true,
             grid: {
-                display: false // Remove a grade do eixo Y
+                display: true // Remove a grade do eixo Y
             }
         },
         x: {
             beginAtZero: true,
             grid: {
-                display: false // Remove a grade do eixo Y
+                display: false
             }
         }
         
