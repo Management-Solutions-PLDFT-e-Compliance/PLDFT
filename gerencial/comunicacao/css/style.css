@@ -1,0 +1,180 @@
+.comunicacaoFull{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 150px;
+    left: 30px;
+    width: 1850px;
+    gap: 20px;
+    height: 900px;
+}
+
+.comunicacaoFull *{
+    font-size: 18px;
+}
+
+.comunicacaoFull > div{
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.comunicacaoFull .blocoSuperior > div{
+    background-color: white;
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.comunicacaoFull .blocoInferior > div{
+    margin-top: -80px;
+    background-color: white;
+    height: 120%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.comunicacaoFull .blocoSuperior .card1 .conteudo{
+    padding: 20px;
+}
+
+.comunicacaoFull select{
+    padding: 2px;
+    border: 2px solid lightgray;
+}
+
+.comunicacaoFull .blocoSuperior .card1 select{
+    padding: 2px;
+    border: 2px solid lightgray;
+    margin-bottom: 30px;
+}
+
+.comunicacaoFull .blocoSuperior .card1 .conteinerContadores{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comunicacaoFull .blocoSuperior .card1 .conteinerContadores .contador{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid lightgray;
+    width: 30%;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.comunicacaoFull .blocoSuperior .card1 .conteinerContadores .contador .elem1{
+    font-size: 35px;
+}
+
+
+
+.comunicacaoFull .conteudo{
+    padding: 20px;
+}
+
+.comunicacaoFull .blocoSuperior .card2 .conteinerContadores{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.comunicacaoFull .blocoSuperior .card2 .conteinerContadores .contador{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid lightgray;
+    width: 30%;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.comunicacaoFull .blocoSuperior .card2 .conteinerContadores .contador .elem1{
+    font-size: 35px;
+}
+
+
+.comunicacaoFull .blocoSuperior .card4 .conteudo{
+    padding: 20px;
+}
+
+.comunicacaoFull .blocoSuperior .card4 .conteinerSelects{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comunicacaoFull .blocoSuperior .card4 select{
+    width: 40%;
+    padding: 2px;
+    border: 2px solid lightgray;
+    margin-bottom: 30px;
+}
+
+.comunicacaoFull .blocoSuperior .card4 .conteinerContadores{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comunicacaoFull .blocoSuperior .card4 .conteinerContadores .contador{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid lightgray;
+    width: 30%;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.comunicacaoFull .blocoSuperior .card4 .conteinerContadores .contador .elem1{
+    font-size: 35px;
+}
+
+
+
+.comunicacaoFull .blocoSuperior .card3 .conteudo{
+    padding: 20px
+}
+
+.comunicacaoFull .blocoSuperior .card3 .conteinerContadores{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 150px;
+}
+
+.comunicacaoFull .blocoSuperior .card3 .conteinerContadores .contador{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid lightgray;
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.comunicacaoFull .blocoSuperior .card3 .conteinerContadores .contador .elem1{
+    font-size: 35px;
+}
+
+.comunicacaoFull .blocoSuperior .card3 .conteudo .imagemCadeado{
+    position: absolute;
+    width: 100px;
+    margin-top: 100px;
+}
+
+.comunicacaoFull .blocoInferior .card2 .conteudo select{
+    margin-left: 700px;
+}

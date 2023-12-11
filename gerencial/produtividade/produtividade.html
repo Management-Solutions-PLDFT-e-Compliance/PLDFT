@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1" >
+        <a href="../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+          <button class="botaoHeader botaoEstrategico botaoOff">
+            <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+            <p>Estratégico</p>
+          </button>
+        </a>
+        <a href="../gerencial/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoGerencial botaoOn">
+            <img src="../../assets/icons/gerencialOn.png" alt="Icone Atendimento">
+            <p>Gerencial</p>
+          </button>
+        </a>
+        <a href="../operacional/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoOperacional botaoOff">
+            <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+            <p>Operacional</p>
+          </button>
+        </a>
+        <a href="../parametrizacao/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoParams botaoOff">
+            <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+            <p>Parametrização</p>
+          </button>
+        </a>
+        <h1 class="a comprimentos">Olá, Usuário! </h1>
+        <a href="../index.html" style="position: absolute; top: 31px;">
+          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+            <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+            SAIR
+          </button>
+        </a>
+      </header>
+
+    <nav class="cabecario">
+        <ul>
+            <li class="vazio"></li>
+            <li><span>Monitoramento</span></li>
+            <li class="vazio"></li>
+            <li class="active"><span>Distribuição de alertas</span></li>
+            <li class="vazio"></li>
+            <li><span>Comunicação</span></li>
+            <li class="vazio"></li>
+            <li><span>Produtividade</span></li>
+            <li class="vazio"></li>
+            <li><span>KY e AIR</span></li>
+            <li class="vazio"></li>
+            <li><span>Distribuição Geográfica</span></li>
+            <li class="vazio"></li>
+            <li><span>Avaliação de Efetividade</span></li>
+            <li class="vazio"></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard-tela-abrir">
+        <div id="dashboard">
+            <div class="up">
+
+                <div class="chartCard producao-esteira-analise-por-esteira">
+                    <div class="headerCard">
+                        <h2>Produção por esteira de análise</h2>
+                        <h3>Tempo médio de análise por esteira</h3>
+                    </div>
+                    <div class="bodyCard">
+                        <div class="grafico-analise-esteira-tamanho">
+                            <canvas id="grafico-analise-esteira"></canvas>
+                        </div> 
+                    </div>
+                </div>
+                <div class="chartCard producao-esteira-analise-ociosidade">
+                    <div class="headerCard">
+                        <h2></h2>
+                        <h3>Tempo médio de ociosidade da análise</h3>
+                    </div>
+                    <div class="bodyCard">
+                        <div class="grafico-ociosidade-tamanho">
+                            <canvas id="grafico-ociosidade"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chartCard atribuicao-manual">
+                <div class="headerCard">
+                    <h2>Produtividade dos analistas por esteira</h2>
+                    <h3>Tempo de análise considerando últimos 6 meses (recebimento de alerta até encerrament)</h3>
+                </div>
+                <div class="bodyCard">
+                    <button>Abrir produtividade por analista</button>
+                    <ul class="table">
+                        <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Quantidade de alertas com distribuição pendente</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>25</span><sup style="color: red; font-size: 0.5rem;">1</sup><img src="./images/lupa.png" alt="" id="distribuicao-pendente-lupa"></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>15</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 5</span></li><li><span>30</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>55</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>78</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>10</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Não identificada</span></li><li><span>22</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                        <li><ul class="table_row"><li><span>Esteira 8</span></li><li><span>30</span><img src="./images/lupa.png" alt=""></li></ul></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tela-abrir chartCard">
+            <div class="headerCard">
+                <div class="titulo-subtitulo">
+                    <h2>Alertas com distribuição pendente</h2>
+                    <h3>Esteira 1</h3>
+                </div>
+                <button id="fechar-alertas-distribuicao-pendentes">Fechar</button>
+            </div>
+            <div class="bodyCard">
+                <div style="height: 1rem;"></div> 
+                <ul class="table">
+                    <li><ul class="table_header"><li><span>Cenário</span></li><li><span>Alerta</span></li><li><span>Motivo</span></li><li><span>Responsável</span></li><li><span>Configurar</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Alerta 1</span></li><li><span>Pendente há 30 dias</span></li><li><select name="" id=""><option value="">Analista 1</option><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Alerta 25</span></li><li><span>Pendente há 30 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 1</span></li><li><span>Alerta 4</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>Alerta 5</span></li><li><span>Pendente há 30 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 2</span></li><li><span>Alerta 7</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 3</span></li><li><span>Alerta 1</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 3</span></li><li><span>Alerta 2</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Alerta 1</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Alerta 2</span></li><li><span>Pendente há 25 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 4</span></li><li><span>Alerta 1</span></li><li><span>Sinalizado pelo analista</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>Alerta 1</span></li><li><span>Pendente há 25 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Esteira 6</span></li><li><span>Alerta 1</span></li><li><span>Pendente há 25 dias</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 1</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 25</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 4</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                    <li><ul class="table_row"><li><span>Cenário não identificado</span></li><li><span>Alerta 3</span></li><li><span>Responsável não identificado</span></li><li><select name="" id=""><option value="">Selecionar</option></select></li><li>Atribuir</li></ul></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/javascript.js"></script>
+</body>
+</html>
