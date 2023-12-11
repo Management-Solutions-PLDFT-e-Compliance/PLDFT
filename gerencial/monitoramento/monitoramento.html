@@ -8,8 +8,9 @@
         src="https://cdn.jsdelivr.net/npm/chart.js">
     </script>
     <link rel="stylesheet" href="../../reset.css">
-    <link rel="stylesheet" href="monitoramento.css">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="monitoramento.css">
+    <link rel="stylesheet" href="../home_style.css">
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/chart.js">
     </script>
@@ -17,31 +18,62 @@
 </head>
 
 <body>
-    <header>
-        <img src="images/logo_ms.png" alt="">
     
-        <div class="perfil">
-            <img class="foto" src="images/perfil.png" alt="">
-            <span>Olá, Usuário!</span>
-            <button id="btn-sair">Sair</button>
-        </div>
+  <header class="header1" >
+    <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+    <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+      <button class="botaoHeader botaoEstrategico botaoOff">
+        <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+        <p>Estratégico</p>
+      </button>
+    </a>
+    <a href="../../gerencial/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoGerencial botaoOn">
+        <img src="../../assets/icons/gerencialOn.png" alt="Icone Atendimento">
+        <p>Gerencial</p>
+      </button>
+    </a>
+    <a href="../../operacional/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoOperacional botaoOff">
+        <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+        <p>Operacional</p>
+      </button>
+    </a>
+    <a href="../../parametrizacao/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoParams botaoOff">
+        <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+        <p>Parametrização</p>
+      </button>
+    </a>
+    <h1 class="a comprimentos">Olá, Usuário! </h1>
+    <a href="../../index.html" style="position: absolute; top: 31px;">
+      <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+        <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+        SAIR
+      </button>
+    </a>
     
-        <div class="filler"></div>
-    
-        <nav>
-            <ul>
-                <li class="desativado"><img src="images/icone_estrategico.svg" alt="icone"></li>
-                <li ><img src="images/icone_gerenciamento.png" alt=""></li>
-                <li class="desativado"><img src="images/icone_operacional.png" alt=""></li>
-            </ul>
-        </nav>
-        <img class="icone_back" src="images/icone_back.png" alt="">
-        <button id="btn-voltar">Voltar</button>
-    </header>
-   
-
-    <h1>Monitoramento</h1>
-
+  </header>
+  
+  <nav class="cabecario">
+    <ul>
+        <li class="vazio"></li>
+        <li class="active"><span>Monitoramento</span></li>
+        <li class="vazio"></li>
+        <li><span>Distribuição de alertas</span></li>
+        <li class="vazio"></li>
+        <li><span>Comunicação</span></li>
+        <li class="vazio"></li>
+        <li><span>Produtividade</span></li>
+        <li class="vazio"></li>
+        <li><span>KY e AIR</span></li>
+        <li class="vazio"></li>
+        <li><span>Distribuição Geográfica</span></li>
+        <li class="vazio"></li>
+        <li><span>Avaliação de Efetividade</span></li>
+        <li class="vazio"></li>
+    </ul>
+</nav>
     <div class="pagina">
 
         <div class="item1">
@@ -194,7 +226,7 @@
                     <option value="Susep">Susep</option>
                 </select>
             </div>
-            <canvas id="Regras_geracao_alertas" style="width: 900px; height:610px; margin: 40px 5px 5px 5px "></canvas>
+            <canvas id="Regras_geracao_alertas" style="width: 900px; height:520px; margin: 40px 10px 10px 10px;"></canvas>
         </div>
 
         <div class="item7">
@@ -203,7 +235,7 @@
                 <h5>Últimos 6 meses</h5>
                 <hr>
             </div>
-            <canvas id="historico_alertas_regra" style="width: 900px;height:640px"></canvas>
+            <canvas id="historico_alertas_regra" style="width: 921px; height: 560px; margin: 10px;"></canvas>
         </div>
 
     </div>

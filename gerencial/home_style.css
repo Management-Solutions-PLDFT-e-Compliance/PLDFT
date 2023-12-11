@@ -1,0 +1,50 @@
+.cabecario {
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    color: gray;
+}
+ 
+.cabecario  ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* gap: .5rem; */
+}
+ 
+.cabecario .vazio {
+    width: .5rem;
+    padding: 0;
+    background-color: #f5f5f5;
+    align-self: flex-end;
+}
+ 
+.cabecario  li{
+    width: 15%;
+    padding: 0;
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
+    padding: .5rem 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 2px solid #000;
+    background-color: #fff;
+}
+.cabecario li a{
+    color: #808080;
+    display: flex;
+    justify-content: center;
+}
+
+
+.cabecario .active {
+    color: #000;
+    background-color: #d3d3d3;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: none;
+}
