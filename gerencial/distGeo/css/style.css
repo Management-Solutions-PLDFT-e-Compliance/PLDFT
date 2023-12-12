@@ -1,7 +1,7 @@
 .distGeoFull{
     display: flex;
     position: absolute;
-    top: 150px;
+    top: 170px;
     width: 1900px;
     gap: 30px;
 }

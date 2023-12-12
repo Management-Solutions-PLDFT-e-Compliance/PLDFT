@@ -2,7 +2,7 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    top: 150px;
+    top: 170px;
     left: 30px;
     width: 1850px;
     gap: 20px;
@@ -29,7 +29,7 @@
 .comunicacaoFull .blocoInferior > div{
     margin-top: -80px;
     background-color: white;
-    height: 120%;
+    height: 114%;
     width: 100%;
     border-radius: 10px;
 }
@@ -177,4 +177,33 @@
 
 .comunicacaoFull .blocoInferior .card2 .conteudo select{
     margin-left: 700px;
+    width: 170px;
+}
+
+.comunicacaoFull .blocoInferior .card1 .controlesGraf{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.comunicacaoFull .blocoInferior .card1 .controlesGraf select{
+    width: 150px;
+}
+
+.comunicacaoFull .blocoInferior .card1 .controlesGraf .blocoCheckBox{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.comunicacaoFull .blocoInferior .card1 .controlesGraf .blocoCheckBox input{
+    width: 22px;
+    height: 22px;
+}
+
+.comunicacaoFull .blocoInferior .card1 .conteinerGraf{
+    width: 98%;
+    margin-left: 10px;
 }
