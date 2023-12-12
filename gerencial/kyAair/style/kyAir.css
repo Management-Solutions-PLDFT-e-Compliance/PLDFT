@@ -99,7 +99,7 @@ h3{
 
 .cardDistribuicao{
     width: 60.5%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -110,7 +110,7 @@ h3{
 
 .cardHistorico{
     width: 37.5%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -190,7 +190,7 @@ select{
 
 table{
     width: 98%;
-    height: 280px;
+    height: 270px;
     font-size: 28px;
     font-family: "Poppins", sans-serif;
     border: 5px solid white;
@@ -316,7 +316,8 @@ input{
     right: 30px;
     bottom: 20px;
     position: fixed;
-    text-align: end;
+    text-align: center;
+    align-items: center;
     color: white;
     font-weight: bold;
 }
