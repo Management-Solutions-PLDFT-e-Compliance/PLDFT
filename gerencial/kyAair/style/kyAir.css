@@ -313,11 +313,17 @@ input{
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
-    right: 30px;
+    right: 20px;
     bottom: 20px;
     position: fixed;
     text-align: center;
     align-items: center;
     color: white;
     font-weight: bold;
+}
+
+.legenda{
+    position: fixed;
+    top: 620px;
+    left: 350px;
 }
