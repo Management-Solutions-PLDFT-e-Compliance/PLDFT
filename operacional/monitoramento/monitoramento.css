@@ -1,0 +1,109 @@
+body{
+    font-family: sans-serif;
+}
+
+.pagina {
+    display: grid;
+    grid-template-columns: 622px 622px 622px;
+    /* grid-template-rows: 2; */
+    gap: 10px;
+    margin-top: 1%;
+    padding-right: 3.5rem;
+    padding-left: 0.8rem;
+}
+        
+
+.item1, .item2, .item3, .item4, .item5{
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+    
+}
+
+.item1, .item2, .item3{
+    height: 210px;
+}
+
+.item4{
+    grid-column: span 2;
+}
+
+
+.conteudo_contorno_cinza > div > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+}
+
+.icones_contorno{
+    margin-top: 31px;
+    height: 110px;
+    margin-left: 10px;
+}
+
+.contorno_cinza{
+    margin: 0px 60px 0px 60px;
+    width: 175px;
+    height: 100px;
+    padding-left: 2.5px;
+}
+
+.item6{
+    grid-column: span 2;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+}
+
+.item7{
+    grid-column: span 3;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+}
+
+.numero_contorno, .palavra_contorno, .conteudo_contorno_cinza{
+    width: 90px;
+    
+    justify-content: center;
+    text-align: center;
+}
+
+.numero_contorno {
+    height: 50px;
+}
+
+.item4{
+    height: 678px;
+}
+
+.item4 > button {
+    background-color: #304c7c;
+    color: white;
+    border: 1px solid #304c7c;
+    border-radius: 10px;
+    width: 90px;
+    height: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 655px;
+}
+
+#scroll-content{
+    margin-top: 30px;
+    margin-right: 10px;
+    max-height: 560px;
+    overflow-y: auto;
+}
+
+.item-list{
+    margin:10px 0px 10px 20px;
+    font-size: 17.6px;
+    display: flex;
+    border: 2px solid #dcdcdc;
+    width: fit-content;
+}
+
+.item-list img{
+    margin-left: 330px;
+}
