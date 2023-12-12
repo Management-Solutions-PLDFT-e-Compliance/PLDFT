@@ -2,14 +2,14 @@ var data = {
   labels: ['Fóruns e comitês', 'Política de PLDFT', 'Papéis e responsabilidades', 'Alçadas'],
   datasets: [
     {
-      label: 'Exemplo de Radar Chart',
-      backgroundColor: 'rgba(75, 192, 192, 0.2)',
-      borderColor: 'rgba(75, 192, 192, 1)',
+      label: 'Observado',
+      backgroundColor: 'rgba(70, 117, 197, 0.2)',
+      borderColor: 'rgba(70, 117, 197, 1)',
       borderWidth: 2,
       data: [4, 4, 4, 3], // Ajustado para que "Alçadas" seja 3
     },
     {
-      label: 'Exemplo 2',
+      label: 'Esperado',
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgba(255, 99, 132, 1)',
       borderWidth: 2,
@@ -48,14 +48,14 @@ var data2 = {
   labels: ['Escopo da Matriz de controles', 'Planos de ação sobre os controles realizados', 'Periodicidade de execução dos controles', 'Escopo de Indicadores', 'Atualização e acessibilidade'],
   datasets: [
     {
-      label: 'Exemplo de Radar Chart',
-      backgroundColor: 'rgba(75, 192, 192, 0.2)',
-      borderColor: 'rgba(75, 192, 192, 1)',
+      label: 'Observado',
+      backgroundColor: 'rgba(70, 117, 197, 0.2)',
+      borderColor: 'rgba(70, 117, 197, 1)',
       borderWidth: 2,
       data: [3, 4, 3, 3, 2], // Ajustado para que "Alçadas" seja 3
     },
     {
-      label: 'Exemplo 2',
+      label: 'Esperado',
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgba(255, 99, 132, 1)',
       borderWidth: 2,
@@ -94,14 +94,14 @@ var data3 = {
   labels: ['Monitoramento e Seleção', 'Análise e comunicação ao COAF', 'Sanções e Indisponibilidades de ativos'],
   datasets: [
     {
-      label: 'Exemplo de Radar Chart',
-      backgroundColor: 'rgba(75, 192, 192, 0.2)',
-      borderColor: 'rgba(75, 192, 192, 1)',
+      label: 'Observado',
+      backgroundColor: 'rgba(70, 117, 197, 0.2)',
+      borderColor: 'rgba(70, 117, 197, 1)',
       borderWidth: 2,
       data: [3, 3, 4], // Ajustado para que "Alçadas" seja 3
     },
     {
-      label: 'Exemplo 2',
+      label: 'Esperado',
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgba(255, 99, 132, 1)',
       borderWidth: 2,
@@ -140,14 +140,14 @@ var data4 = {
   labels: ['Data de atualização do relatório AIR', 'Governança de aprovação', 'Escopo de perfis', 'Corpo de variáveis e metodologia', 'População', 'Atualização'],
   datasets: [
     {
-      label: 'Exemplo de Radar Chart',
-      backgroundColor: 'rgba(75, 192, 192, 0.2)',
-      borderColor: 'rgba(75, 192, 192, 1)',
+      label: 'Observado',
+      backgroundColor: 'rgba(70, 117, 197, 0.2)',
+      borderColor: 'rgba(70, 117, 197, 1)',
       borderWidth: 2,
       data: [4, 4, 2, 2, 4, 2], // Ajustado para que "Alçadas" seja 3
     },
     {
-      label: 'Exemplo 2',
+      label: 'Esperado',
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgba(255, 99, 132, 1)',
       borderWidth: 2,
