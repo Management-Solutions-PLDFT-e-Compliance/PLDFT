@@ -278,3 +278,19 @@ input{
     right: 130px;
     bottom: 130px;
 }
+
+.botaoPesquisa{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    right: 30px;
+    bottom: 20px;
+    position: fixed;
+    text-align: end;
+    color: white;
+    font-weight: bold;
+}
