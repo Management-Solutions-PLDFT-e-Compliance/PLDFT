@@ -1,0 +1,257 @@
+/* ------------crição de cards--------------*/
+
+.analiseAlertaFull{
+    position: absolute;
+    top: 180px;
+    width: 1880px;
+    height: 870px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.analiseAlertaFull *{
+    font-size: 18px;
+}
+
+
+.analiseAlertaFull > div{
+    width: 100%;
+}
+
+.analiseAlertaFull .parteCima{
+    height: 60%;
+    display: flex;
+    gap: 20px;
+}
+
+.analiseAlertaFull .parteCima > div{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.analiseAlertaFull .parteCima .card1{
+    width: 54%;
+}
+
+.analiseAlertaFull .parteCima .card2{
+    width: 45%;
+}
+
+.analiseAlertaFull .parteBaixo{
+    height: 40%;
+    display: flex;
+    gap: 20px;
+}
+
+.analiseAlertaFull .parteBaixo > div{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.analiseAlertaFull .parteBaixo .card1{
+    width: 34%;
+}
+
+.analiseAlertaFull .parteBaixo .card2{
+    width: 19%;
+}
+
+.analiseAlertaFull .parteBaixo .card3{
+    width: 45%;
+}
+
+/*------------------estilização conteúdos---------------------- */
+
+.analiseAlertaFull .parteCima .card1 .conteudo{
+    display: flex;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 60px;
+}
+
+.analiseAlertaFull .parteCima .card1 .conteudo > div > *{
+    margin-bottom: 19px;
+}
+
+.analiseAlertaFull .parteCima .card1 .conteudo > div > .linhaChk{
+    display: flex;
+    gap: 10px;
+}
+
+.analiseAlertaFull .parteCima .card1 .conteudo > div > .linhaChk > input{
+    width: 20px;
+    height: 20px;
+}
+
+.analiseAlertaFull .parteCima .card1 .conteudo .col3{
+    margin-top: -3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.analiseAlertaFull .parteCima .card1 .conteudo .col3 input{
+    padding: 2px 10px 2px 10px;
+    border: 1px solid lightgray;
+    width: 250px;
+    margin-bottom: 13px;
+}
+
+.analiseAlertaFull input {
+    color: black;
+    padding: 2px 10px 2px 10px;
+    border: 1px solid lightgray;
+}
+
+.analiseAlertaFull .parteCima .card1 .conteudo .col3 .inputBold{
+    font-weight: bold;
+    color: black;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo{
+    display: flex;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo > div > *{
+    margin-bottom: 30px;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col1{
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col1 .pDetalhe{
+    margin-top: 40px;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col1 .pData{
+    margin-top: 45px;
+}
+
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col2 > input{
+    padding: 2px 10px 2px 10px;
+    border: 1px solid lightgray;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col2 .inputDuplo{
+    display: flex;
+    gap: 15px;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col2 .inputDuplo > input{
+    padding: 2px 10px 2px 10px;
+    border: 1px solid lightgray;
+    width: 330px;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col2 .linhaChk{
+    display: flex;
+    gap: 20px;
+}
+
+.analiseAlertaFull .parteCima .card2 .conteudo .col2 .linhaChk input{
+    width: 20px;
+    height: 20px;
+}
+
+.analiseAlertaFull .parteBaixo .card1 .conteudo {
+    padding: 20px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.analiseAlertaFull .parteBaixo .card1 .conteudo .linha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.analiseAlertaFull .parteBaixo .card1 .conteudo .linha input{
+    width: 250px;
+}
+
+.analiseAlertaFull .parteBaixo .card2 .conteudo {
+    display: flex;
+    justify-content: center;
+}
+
+.analiseAlertaFull .parteBaixo .card2 .conteudo .imgRedeTransac{
+    width: 250px;
+    cursor: pointer;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo{
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo .linha{
+    display: flex;
+    gap: 200px;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo p{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo p span{
+    font-size: 22px;
+    color: #2E4A7E;
+    font-weight: bold;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo p .porcentagem{
+    font-size: 30px;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo .assertividade{
+    color: #2E4A7E;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo .linha2{
+    display: flex;
+    gap: 100px;
+    margin-top: 70px;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo .linha2 .botao{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 180px;
+    gap: 5px;
+}
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo .linha2 .botaoFalsoPos img{
+    margin-right: 5px;
+}
+
+.analiseAlertaFull .parteBaixo .card1 .lupaPreta{
+    position: fixed;
+    margin-top: -61px;
+    margin-left: 577px;
+}
