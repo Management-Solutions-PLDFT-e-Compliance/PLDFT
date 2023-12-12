@@ -230,26 +230,51 @@ label{
 input{
     height: 30px;
     width: 350px;
+    margin: 10px;
 }
 
+.camposLabel1{
+    position: fixed;
+    right: 500px;
+    bottom: 315px;
+}
+.camposLabel2{
+    position: fixed;
+    right: 500px;
+    bottom: 275px;
+}
+.camposLabel3{
+    position: fixed;
+    right: 500px;
+    bottom: 235px;
+}
+.camposLabel4{
+    position: fixed;
+    right: 500px;
+    bottom: 145px;
+}
 .camposInput1{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 300px;
 }
 .camposInput2{
     position: fixed;
-    right: 400px;
-    bottom: 500px;
+    right: 130px;
+    bottom: 260px;
 }
 .camposInput3{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 220px;
 }
 .camposInput4{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 180px;
 }
 .camposInput5{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 130px;
 }
