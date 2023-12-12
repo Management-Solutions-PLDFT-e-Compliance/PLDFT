@@ -15,13 +15,13 @@
 
 #legendaRedeTransac{
     position: absolute;
-    left: 1497px;
-    top: 500px;
-    width: 352px;
-    height: 400px;
+    left: 1640px;
+    top: 600px;
+    width: 210px;
+    height: 300px;
     /* border: 1px solid black; */
     background-color: rgba(255, 255, 255, 0.753);
-    font-size: 18px;
+    font-size: 12px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -39,25 +39,25 @@
 }
 
 #legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaTransAlert{
-    width: 100px;
+    width: 50px;
     height: 10px;
     background-color: #FF0000;
 }
 
 #legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaOutrasTrans{
-    width: 100px;
+    width: 50px;
     height: 10px;
     background-color: #2E75B6;
 }
 
 #legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaOpcEsco{
-    width: 100px;
+    width: 50px;
     height: 10px;
     background-color: #000;
 }
 
 #legendaRedeTransac .legendaLinha .itemLegendaLinha .linhaOutrasInfos{
-    width: 100px;
+    width: 50px;
     height: 10px;
     background-color: #AFABAB;
 }
@@ -80,41 +80,41 @@
 #legendaRedeTransac .legendaCliente .todosTiposClientes .cliente{
     display: flex;
     align-items: center;
-    gap: 20px
+    gap: 10px
 }
 
 #legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoMuitoAlto{
-    width: 40px;
-    height: 20px;
+    width: 20px;
+    height: 10px;
     background-color: #FF9797;
 }
 
 #legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoAlto{
-    width: 40px;
-    height: 20px;
+    width: 20px;
+    height: 10px;
     background-color: #FFC271;
 }
 
 #legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoModerado{
-    width: 40px;
-    height: 20px;
+    width: 20px;
+    height: 10px;
     background-color: #FFFF93;
 }
 
 #legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoBaixo{
-    width: 40px;
-    height: 20px;
+    width: 20px;
+    height: 10px;
     background-color: #92D050;
 }
 
 #legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoMuitoBaixo{
-    width: 40px;
-    height: 20px;
+    width: 20px;
+    height: 10px;
     background-color: #81FF84;
 }
 
 #legendaRedeTransac .legendaCliente .todosTiposClientes .cliente .riscoNaoCliente{
-    width: 40px;
-    height: 20px;
+    width: 20px;
+    height: 10px;
     background-color: #A6A6A6;
 }
