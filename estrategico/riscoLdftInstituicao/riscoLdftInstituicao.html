@@ -55,6 +55,7 @@
 
       <nav class="cabecario">
         <ul>
+            <li class="vazio"></li>
             <li class="active"><span>Risco LDFT da Instituição</span></li>
             <li class="vazio"></li>
             <li><a href="../evolucaoModeloNegocio1/evolucaoModeloNegocio1.html" style="text-decoration: none; height: 100%; width:100%"><span>Evol. do modelo de negócios</a></span></li>
@@ -114,31 +115,40 @@
                 <div class="graficos_inferiores">
                     <div class="grafs">
                     
-                        <div class="titulos">
+                        <div class="titulos" style="padding-top: 0px; padding-left: 0px;">
                             <h5>Financeiro</h5>
                         </div>
                         <hr>
-    
-                        <div id="doughnut1" style="width: 100%; height: 500px;"></div>
+                        <p style="margin-top: 3px;">Perda de R$ X a R$ Y</p>
+                        <div id="chartdiv1" style="width: 100%; height: 200px;"></div>
     
                     </div>
     
                     <div class="grafs">
-                        <h3 style="margin-top: 3rem; margin-bottom: 0.875rem;">Jurídico</h3>
+                        <div class="titulos" style="padding-top: 0px; padding-left: 0px;">
+                            <h5>Jurídico</h5>
+                        </div>
                         <hr>
-                        <canvas id="Juridico" style="margin: 0px 3.938rem 0px 3.938rem;"></canvas>
+                        <p style="margin-top: 3px;">Perda de R$ X a R$ Y</p>
+                        <div id="chartdiv2" style="width: 100%; height: 200px;"></div>
                     </div>
     
                     <div class="grafs">
-                        <h3 style="margin-top: 3rem; margin-bottom: 0.875rem;">Reputacional</h3>
+                        <div class="titulos" style="padding-top: 0px; padding-left: 0px;">
+                            <h5>Reputacional</h5>
+                        </div>
                         <hr>
-                        <canvas id="Reputacional" style="margin: 0px 3.938rem 0px 3.938rem;"></canvas>
+                        <p style="margin-top: 3px;">Perda de valor da Marca Nacional</p>
+                        <div id="chartdiv3" style="width: 100%; height: 200px;"></div>
                     </div>
     
                     <div class="grafs">
-                        <h3 style="margin-top: 3rem; margin-bottom: 0.875rem;">Socioambiental</h3>
+                        <div class="titulos" style="padding-top: 0px; padding-left: 0px;">
+                            <h5>Socioambiental</h5>
+                        </div>
                         <hr>
-                        <canvas id="Socioambiental" style="margin: 0px 3.938rem 0px 3.938rem;"></canvas>
+                        <p style="margin-top: 3px;">X % de CNAES socio-ambientais R$ Y</p>
+                        <div id="chartdiv4" style="width: 100%; height: 200px;"></div>
                     </div>
                 </div>
 
