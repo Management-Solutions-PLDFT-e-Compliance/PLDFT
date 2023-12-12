@@ -107,6 +107,94 @@ var config_negocio = {
 
 var graf_negocio = new Chart(graf_negocioctx, config_negocio);
 
+// Gráficos Inferiores
+
+function createPieChart(containerId, chartData, rightText) {
+    var chart = am4core.create(containerId, am4charts.PieChart);
+    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+    chart.data = chartData;
+
+    chart.radius = am4core.percent(70);
+    chart.innerRadius = am4core.percent(40);
+    chart.startAngle = 180;
+    chart.endAngle = 360;
+
+    var series = chart.series.push(new am4charts.PieSeries());
+    series.dataFields.value = "value";
+
+    // Configurar as fatias (slices)
+    var sliceTemplate = series.slices.template;
+    sliceTemplate.cornerRadius = 5; //Ajuste das bordar externas
+    sliceTemplate.innerCornerRadius = 5; //Ajuste das bordar externas
+    sliceTemplate.draggable = false;
+    sliceTemplate.inert = true;
+
+    series.hiddenState.properties.startAngle = 90;
+    series.hiddenState.properties.endAngle = 90;
+
+    // Adicionar borda às fatias
+    series.slices.template.stroke = am4core.color("#082464");
+    series.slices.template.strokeWidth = 3;
+
+    // Desativar rótulos para as fatias
+    series.labels.template.disabled = true;
+
+    // Desativar rótulos dos pontos de dados individualmente
+    series.ticks.template.disabled = true;
+
+    // Desativar tooltips se desejar
+    series.slices.template.tooltipText = "";
+
+    // Adicionar texto à ponta direita do gráfico
+    var labelRight = series.createChild(am4core.Label);
+    labelRight.text = rightText;
+    labelRight.fontSize = 40;
+    labelRight.align = "middle";
+    labelRight.valign = "middle";
+    labelRight.horizontalCenter = "middle";
+    labelRight.verticalCenter = "middle";
+    labelRight.marginRight = 10;
+
+    chart.legend = new am4charts.Legend();
+    chart.legend.disabled = true;
+
+    series.colors.list = [
+      am4core.color("#082464"),
+      am4core.color("#ffffff")
+    ];
+  }
+
+// Dados específicos para cada gráfico
+var chartData1 = [
+{ value: 20 },
+{ value: 80 }
+];
+
+var chartData2 = [
+{ value: 35 },
+{ value: 65 }
+];
+
+var chartData3 = [
+{ value: 90 },
+{ value: 10 }
+];
+
+var chartData4 = [
+{ value: 75 },
+{ value: 15 }
+];
+
+// Chamar a função para criar quatro gráficos em contêineres diferentes com dados e textos diferentes
+createPieChart("chartdiv1", chartData1, "20%");
+createPieChart("chartdiv2", chartData2, "35%");
+createPieChart("chartdiv3", chartData3, "90%");
+createPieChart("chartdiv4", chartData4, "75%");
+ 
+
+
+
 //Gráficos Inferiores
 
 
