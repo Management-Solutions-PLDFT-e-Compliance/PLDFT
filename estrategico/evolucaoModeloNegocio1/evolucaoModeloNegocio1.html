@@ -9,32 +9,46 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/evolucaoModeloNegocio.css">
+    <link rel="stylesheet" href="style/evolucaoModeloNegocioMapaCalor.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 
-<header>
-    <img src="./images/logo_ms.png" alt="">
-
-    <div class="perfil">
-        <img class="foto" src="images/perfil.png" alt="">
-        <span>Olá, Usuário!</span>
-        <button id="btn-sair">Sair</button>
-    </div>
-
-    <div class="filler"></div>
-
-    <nav>
-        <ul>
-            <li id="volta-estrategico"><img src="images/icone_estrategico.svg" alt=""></li>
-            <li id="volta-gerencial" class="desativado"><img src="images/icone_gerenciamento.png" alt=""></li>
-            <li id="volta-operacional" class="desativado"><img src="images/icone_operacional.png" alt=""></li>
-        </ul>
-    </nav>
-    <button id="btn-voltar">Voltar</button>
-</header>
+    <header class="header1" >
+        <a href="../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+          <button class="botaoHeader botaoEstrategico botaoOn">
+            <img src="../../assets/icons/estrategicoIconOn.svg" alt="Icone Atendimento">
+            <p>Estratégico</p>
+          </button>
+        </a>
+        <a href="../gerencial/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoGerencial botaoOff">
+            <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+            <p>Gerencial</p>
+          </button>
+        </a>
+        <a href="../operacional/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoOperacional botaoOff">
+            <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+            <p>Operacional</p>
+          </button>
+        </a>
+        <a href="../parametrizacao/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoParams botaoOff">
+            <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+            <p>Parametrização</p>
+          </button>
+        </a>
+        <h1 class="a comprimentos">Olá, Usuário! </h1>
+        <a href="../index.html" style="position: absolute; top: 31px;">
+          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+            <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+            SAIR
+          </button>
+        </a>
+      </header>
 <div>
-    <h1>EVOLUÇÃO DO MODELO DE NEGÓCIO</h1>
-
 </div>
 
 <div id="dashboard">
@@ -140,9 +154,101 @@
         </div>
     </div>
 </div>
+<div id="dashboard-mapa-calor">
+    <div class="up">
+        <div class="chartCard mapa-calor">
+            <div class="headerCard">
+                <h2>Mapa de calor</h2>
+                <h3>Procedimentos de PLDFT</h3>
+            </div>
+            <div class="bodyCard body_mapa_calor">       
+                <select name="mapa_calor_select" id="mapa_calor_select">
+                    <option value="Segmento">Segmento</option>
+                    <option value="Canais">Canais</option>
+                    <option value="Produtos">Produtos</option>
+                    <option value="Segmentos">Segmentos</option>
+                    <option value="Serviços">Serviços</option>
+                </select>
+                <ul class="mapa_calor_matriz">
+                    <li><ul class="mapa_calor_header"><li><span>Segmento 1</span></li><li><span>Segmento 2</span></li><li><span>Segmento 3</span></li><li><span>Segmento 4</span></li></ul></li>
+                    <li><span class="header_linha">Alertas</span><ul class="mapa_calor_linha"><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li><span class="header_linha">Comunicações</span><ul class="mapa_calor_linha"><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li><span class="header_linha">KYC</span><ul class="mapa_calor_linha"><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li><span class="header_linha">Sanções</span><ul class="mapa_calor_linha"><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li class="legenda"><div class="centraliza"><span>0</span><div class="bar-legenda"></div><span>100</span></div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="chartCard decricao-indicador">
+            <div class="headerCard">
+                <h2>Descrição indicador</h2>
+                <h3>Detalhe do mapa de calor</h3>
+            </div>
+            <div class="bodyCard">
+                <ul class="table_indicacao" id="tabela_indicacao">
+                    <li><ul class="table_header_indicacao"><li><span>Métrica</span></li><li><span>Descrição</span></li><li><span>Risco</span></li></ul></li>
+                    <li><ul class="table_row_indicacao"><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li><ul class="table_row_indicacao"><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li><ul class="table_row_indicacao"><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li><ul class="table_row_indicacao"><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                    <li><ul class="table_row_indicacao"><li><span></span></li><li><span></span></li><li><span></span></li></ul></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="chartCard">
+        <div class="headerCard">
+            <h2>Top 5 clientes</h2>
+            <h3>Mais alertados</h3>
+        </div>
+        <div class="bodyCard">
+            <div class="table-select">
+                <ul id= "table-cliente">
+                    <li><ul class="table_header"><li><span>Cliente</span></li><li><span>Número de alertas em 2022</span></li><li><span>Risco cliente LDFT</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Amazon</span></li><li><span>95 alertas</span></li><li><span>Risco alto</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Matheus</span></li><li><span>90 alertas</span></li><li><span>Risco alto</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Victor</span></li><li><span></span>84 alertas</li><li><span>Risco alto</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>IBM</span></li><li><span></span>76 alertas</li><li><span>Risco alto</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Rodolfo</span></li><li><span></span>52 alertas</li><li><span>Risco médio</span></li></ul></li>
+                </ul>
+                <select name="clientes" id="clientes-selects">
+                    <option value="Clientes">Clientes</option>
+                    <option value="PF">PF</option>
+                    <option value="PJ">PJ</option>
+                </select>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="chartCard">
+        <div class="headerCard">
+            <h2>Top 5 produtos</h2>
+            <h3>Mais alertados</h3>
+        </div>
+        <div class="bodyCard">
+            <div class="table-select">
+                <ul id="table-produto">
+                    <li><ul class="table_header"><li><span>Produto</span></li><li><span>Número de alertas em 2022</span></li><li><span>Risco produto LDFT</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Produto 1</span></li><li><span>X alertas</span></li><li><span>Risco alto</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Produto 2</span></li><li><span>Y alertas</span></li><li><span>Risco baixo</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Produtp 3</span></li><li><span>Z alertas</span></li><li><span>Risco médio</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Produto 4</span></li><li><span>W alertas</span></li><li><span>Risco alto</span></li></ul></li>
+                    <li><ul class="table_row"><li><span>Produto 5</span></li><li><span>J alertas</span></li><li><span>Risco alto</span></li></ul></li>
+                </ul>
+                <select name="canais" id="canais">
+                    <option value="canais">Canal 1</option>
+                    <option value="canais">Canal 2</option>
+                    <option value="canais">Canal 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Elemento HTML onde o gráfico será renderizado -->
 
 <script src="javascript/script.js"></script>
+<script src="javascript/script-mapa-calor.js"></script>
 
 </body>
 </html>
