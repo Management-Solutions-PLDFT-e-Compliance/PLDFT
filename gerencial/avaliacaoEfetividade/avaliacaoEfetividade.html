@@ -72,35 +72,91 @@
         <h2>EIXO 1 EFETIVIDADE</h2>
         <h5>Avaliação dos critérios</h5>
         <hr>
-      </div>
+    </div>
+    <div class="radarChart">
+        <canvas id="radarChart" width="400" height="400"></canvas>
+    </div>
 </div>
 <div class="cardEixo2Efetividade">
     <div class="titulos">
         <h2>EIXO 2 EFETIVIDADE</h2>
         <h5>Avaliação dos critérios</h5>
         <hr>
-      </div>
+    </div>
+    <div class="radarChart2">
+        <canvas id="radarChart2"></canvas>
+    </div>
 </div>
 <div class="cardEixo3Efetividade">
     <div class="titulos">
         <h2>EIXO 3 EFETIVIDADE</h2>
         <h5>Avaliação dos critérios</h5>
         <hr>
-      </div>
+    </div>
+    <div class="radarChart3">
+        <canvas id="radarChart3"></canvas>
+    </div>
 </div>
 <div class="cardEixo4Efetividade">
     <div class="titulos">
         <h2>EIXO 4 EFETIVIDADE</h2>
         <h5>Avaliação dos critérios</h5>
         <hr>
-      </div>
+    </div>
+    <div class="radarChart4">
+        <canvas id="radarChart4"></canvas>
+    </div>
 </div>
 <div class="cardDeficiencias">
     <div class="titulos">
         <h2>DEFICIÊNCIAS</h2>
         <h5>Última avaliação</h5>
         <hr>
-      </div>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Eixo</th>
+                    <th>Métrica</th>
+                    <th>Oportunidade de melhoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Governança</td>
+                    <td>Matriz de alçadas</td>
+                    <td>Ausência de matriz de alçadas</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Avaliação Interna do Risco</td>
+                    <td>Risco de produtos</td>
+                    <td>Ausência de avaliação de risco LDFT para todos os produtos</td>
+                </tr>
+                <tr>
+                    <td>Impactos do risco da instituição</td>
+                    <td>AIR da instituição não contempla impactos regulatórios</td>
+                    
+                </tr>
+                <tr>
+                    <td>Quantidade de atividades de funcionários na AIR</td>
+                    <td>Evolução da AIR funcionários</td>
+                    
+                </tr>
+                <tr>
+                    <td>Procedimentos de KY</td>
+                    <td>Identificação de fornecedores</td>
+                    <td>Fornecedores não possuem cadastro completo</td>
+                </tr>
+                <tr>
+                    <td>Controles e Indicadores</td>
+                    <td>Escopo de Indicadores</td>
+                    <td>Evolução dos indicadores para todos os eixos de PLDFT</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
 </div>
 <div class="cardPlanosDeAcao">
     <div class="titulos">
@@ -123,7 +179,7 @@
                 <td>Elaborar matriz de alçadas e redigir documentação relacionada</td>
                 <td>Área PLDFT</td>
                 <td>10/01/2022</td>
-                <td>Em atraso</td>
+                <td class="tdStatus">Em atraso</td>
               </tr>
               <tr>
                 <td>Calcular risco para todos os produtos da instituição</td>

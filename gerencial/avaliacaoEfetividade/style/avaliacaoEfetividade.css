@@ -139,7 +139,9 @@ table{
 
 td{
     border: lightgray 2px solid;
-    padding: 15px;
+    padding: 10px;
+    text-align: center;
+    padding-top: 8px;
 }
 
 th{
@@ -152,3 +154,28 @@ th{
     padding-top: 5px;
 }
 
+tr{
+    padding: 8px;
+    text-align: center;
+}
+
+.tdStatus{
+    width: 120px;
+}
+
+.radarChart{
+    height: 350px;
+    width: 350px;
+}
+.radarChart2{
+    height: 350px;
+    width: 350px;
+}
+.radarChart3{
+    height: 350px;
+    width: 350px;
+}
+.radarChart4{
+    height: 350px;
+    width: 350px;
+}
