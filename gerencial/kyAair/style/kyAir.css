@@ -10,12 +10,96 @@ body{
     margin: 19.2px;
     position: fixed;
     top: 13vh;
-    
+}
+
+h4{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+h3{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 52px;
+}
+
+.clientes{
+    position: fixed;
+    left: 145px;
+}
+.fornecedores{
+    position: fixed;
+    left: 475px;
+}
+.parceiros{
+    position: fixed;
+    left: 900px;
+}
+.funcionarios{
+    position: fixed;
+    left: 1275px;
+}
+.produtos{
+    position: fixed;
+    left: 1650px;
+}
+
+.clientes2{
+    position: fixed;
+    left: 145px;
+    top: 375px;
+}
+.fornecedores2{
+    position: fixed;
+    left: 515px;
+    top: 375px;
+}
+.parceiros2{
+    position: fixed;
+    left: 920px;
+    top: 375px;
+}
+.funcionarios2{
+    position: fixed;
+    left: 1315px;
+    top: 375px;
+}
+.produtos2{
+    position: fixed;
+    left: 1670px;
+    top: 375px;
+}
+
+.clientes3{
+    position: fixed;
+    left: 105px;
+    top: 550px;
+}
+.fornecedores3{
+    position: fixed;
+    left: 465px;
+    top: 550px;
+}
+.parceiros3{
+    position: fixed;
+    left: 865px;
+    top: 550px;
+}
+.funcionarios3{
+    position: fixed;
+    left: 1270px;
+    top: 550px;
+}
+.produtos3{
+    position: fixed;
+    left: 1625px;
+    top: 550px;
 }
 
 .cardDistribuicao{
     width: 60.5%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -26,7 +110,7 @@ body{
 
 .cardHistorico{
     width: 37.5%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -59,37 +143,37 @@ body{
 }
 
 #doughnutChart{
-    max-height: 300px;
-    max-width: 350px;
+    max-height: 270px;
+    max-width: 320px;
     position: fixed;
     top: 265px;
-    
+    left: 35px;
 
 }
 #doughnutChart2{
-    max-height: 300px;
-    max-width: 350px;
+    max-height: 270px;
+    max-width: 320px;
     position: fixed;
     left: 400px;
     top: 265px;
 }
 #doughnutChart3{
-    max-height: 300px;
-    max-width: 350px;
+    max-height: 270px;
+    max-width: 320px;
     position: fixed;
     left: 800px;
     top: 265px;
 }
 #doughnutChart4{
-    max-height: 300px;
-    max-width: 350px;
+    max-height: 270px;
+    max-width: 320px;
     position: fixed;
     left: 1200px;
     top: 265px;
 }
 #doughnutChart5{
-    max-height: 300px;
-    max-width: 350px;
+    max-height: 270px;
+    max-width: 320px;
     position: fixed;
     left: 1550px;
     top: 265px;
@@ -106,7 +190,7 @@ select{
 
 table{
     width: 98%;
-    height: 280px;
+    height: 270px;
     font-size: 28px;
     font-family: "Poppins", sans-serif;
     border: 5px solid white;
@@ -172,26 +256,74 @@ label{
 input{
     height: 30px;
     width: 350px;
+    margin: 10px;
 }
 
+.camposLabel1{
+    position: fixed;
+    right: 500px;
+    bottom: 315px;
+}
+.camposLabel2{
+    position: fixed;
+    right: 500px;
+    bottom: 275px;
+}
+.camposLabel3{
+    position: fixed;
+    right: 500px;
+    bottom: 235px;
+}
+.camposLabel4{
+    position: fixed;
+    right: 500px;
+    bottom: 145px;
+}
 .camposInput1{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 300px;
 }
 .camposInput2{
     position: fixed;
-    right: 400px;
-    bottom: 500px;
+    right: 130px;
+    bottom: 260px;
 }
 .camposInput3{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 220px;
 }
 .camposInput4{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 180px;
 }
 .camposInput5{
     position: fixed;
-    right: 400px;
+    right: 130px;
+    bottom: 130px;
+}
+
+.botaoPesquisa{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.legenda{
+    position: fixed;
+    top: 620px;
+    left: 350px;
 }

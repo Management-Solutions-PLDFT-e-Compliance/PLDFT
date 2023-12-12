@@ -225,3 +225,5 @@ document.addEventListener("DOMContentLoaded", function () {
       heatLegend.valueAxis.hideTooltip();
     });
   }
+
+  // Função para atualizar os valores do gráfico com base nos checkboxes e inputs

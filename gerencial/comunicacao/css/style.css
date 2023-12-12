@@ -2,7 +2,7 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    top: 150px;
+    top: 170px;
     left: 30px;
     width: 1850px;
     gap: 20px;
@@ -29,7 +29,7 @@
 .comunicacaoFull .blocoInferior > div{
     margin-top: -80px;
     background-color: white;
-    height: 120%;
+    height: 114%;
     width: 100%;
     border-radius: 10px;
 }

@@ -9,6 +9,7 @@
   <script src="//cdn.amcharts.com/lib/4/core.js"></script>
   <script src="//cdn.amcharts.com/lib/4/maps.js"></script>
   <script src="//cdn.amcharts.com/lib/4/geodata/brazilLow.js"></script>
+  <link rel="stylesheet" href="../../home_style.css">
   <title>Compliance Analytics</title>
 </head>
 <header class="header1" >
@@ -45,6 +46,25 @@
     </button>
   </a>
 </header>
+<nav class="cabecario">
+  <ul>
+      <li class="vazio"></li>
+      <li><a href="../monitoramento/monitoramento.html"><span>Monitoramento</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../distribuicaoAlertas/distribuicaoAlertas.html"><span>Distribuição de alertas</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../comunicacao/comunicacao.html"><span>Comunicação</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../produtividade/produtividade.html"><span>Produtividade</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../kyAair/kyAir.html"><span>KY e AIR</span></a></li>
+      <li class="vazio"></li>
+      <li class="active"><span>Distribuição Geográfica</span></li>
+      <li class="vazio"></li>
+      <li><a href="../home.html"><span>Avaliação de Efetividade</span></a></li>
+      <li class="vazio"></li>
+  </ul>
+</nav>
 <body>
   <div class="distGeoFull">
     <div class="bloco bloco1">
@@ -116,20 +136,25 @@
         </div>
         <div class="conteinerInputs">
           <div class="linhaInputs">
-            <input type="checkbox" name="" id="">
-            <select name="" id="" class="selection-boxes">
+            <input type="checkbox" name="" id="" onclick="CriaMapaCalor()">
+            <select name="" id="" class="selection-boxes" onchange="CriaMapaCalor()">
+              <option value="">Risco Muito Alto</option>
               <option value="">Risco Alto</option>
+              <option value="">Risco Moderado</option>
+              <option value="">Risco Baixo</option>
+              <option value="">Risco Muito Baixo</option>
             </select>
           </div>
           <div class="linhaInputs">
-            <input type="checkbox" name="" id="">
-            <select name="" id="" class="selection-boxes">
+            <input type="checkbox" name="" id="" onclick="CriaMapaCalor()">
+            <select name="" id="" class="selection-boxes" onchange="CriaMapaCalor()">
               <option value="">PF</option>
+              <option value="">PJ</option>
             </select>
           </div>
           <div class="linhaInputs">
-            <input type="checkbox" name="" id="">
-            <select name="" id="" class="selection-boxes">
+            <input type="checkbox" name="" id="" onclick="CriaMapaCalor()">
+            <select name="" id="" class="selection-boxes" onchange="CriaMapaCalor()">
               <option value="">Transacionado</option>
             </select>
           </div>
