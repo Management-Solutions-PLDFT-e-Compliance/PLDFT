@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risco LDFT da Instituição</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/avaliacaoEfetividade.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../home_style.css">
+
+</head>
+<body>
+  <header class="header1" >
+    <a href="../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+    <a href="../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+      <button class="botaoHeader botaoEstrategico botaoOff">
+        <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+        <p>Estratégico</p>
+      </button>
+    </a>
+    <a href="../gerencial/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoGerencial botaoOn">
+        <img src="../../assets/icons/gerencialOn.png" alt="Icone Atendimento">
+        <p>Gerencial</p>
+      </button>
+    </a>
+    <a href="../operacional/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoOperacional botaoOff">
+        <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+        <p>Operacional</p>
+      </button>
+    </a>
+    <a href="../parametrizacao/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoParams botaoOff">
+        <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+        <p>Parametrização</p>
+      </button>
+    </a>
+    <h1 class="a comprimentos">Olá, Usuário! </h1>
+    <a href="../index.html" style="position: absolute; top: 31px;">
+      <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+        <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+        SAIR
+      </button>
+    </a>
+  </header>
+  <nav class="cabecario">
+    <ul>
+        <li class="vazio"></li>
+        <li><span>Monitoramento</span></li>
+        <li class="vazio"></li>
+        <li><span>Distribuição de alertas</span></li>
+        <li class="vazio"></li>
+        <li><span>Comunicação</span></li>
+        <li class="vazio"></li>
+        <li><span>Produtividade</span></li>
+        <li class="vazio"></li>
+        <li><span>KY e AIR</span></li>
+        <li class="vazio"></li>
+        <li><span>Distribuição Geográfica</span></li>
+        <li class="vazio"></li>
+        <li class="active"><span>Avaliação de Efetividade</span></li>
+        <li class="vazio"></li>
+    </ul>
+</nav>
+<div class="cardEixo1Efetividade">
+    <div class="titulos">
+        <h2>EIXO 1 EFETIVIDADE</h2>
+        <h5>Avaliação dos critérios</h5>
+        <hr>
+      </div>
+</div>
+<div class="cardEixo2Efetividade">
+    <div class="titulos">
+        <h2>EIXO 2 EFETIVIDADE</h2>
+        <h5>Avaliação dos critérios</h5>
+        <hr>
+      </div>
+</div>
+<div class="cardEixo3Efetividade">
+    <div class="titulos">
+        <h2>EIXO 3 EFETIVIDADE</h2>
+        <h5>Avaliação dos critérios</h5>
+        <hr>
+      </div>
+</div>
+<div class="cardEixo4Efetividade">
+    <div class="titulos">
+        <h2>EIXO 4 EFETIVIDADE</h2>
+        <h5>Avaliação dos critérios</h5>
+        <hr>
+      </div>
+</div>
+<div class="cardDeficiencias">
+    <div class="titulos">
+        <h2>DEFICIÊNCIAS</h2>
+        <h5>Última avaliação</h5>
+        <hr>
+      </div>
+</div>
+<div class="cardPlanosDeAcao">
+    <div class="titulos">
+        <h2>PLANOS DE AÇÃO</h2>
+        <h5>Última avaliação</h5>
+        <hr>
+    </div>
+    <div>
+        <table>
+            <thead>
+              <tr>
+                <th>Plano de ação</th>
+                <th>Área responsável</th>
+                <th>Prazo</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Elaborar matriz de alçadas e redigir documentação relacionada</td>
+                <td>Área PLDFT</td>
+                <td>10/01/2022</td>
+                <td>Em atraso</td>
+              </tr>
+              <tr>
+                <td>Calcular risco para todos os produtos da instituição</td>
+                <td>Área PLDFT</td>
+                <td>23/11/2022</td>
+                <td>Em aberto</td>
+              </tr>
+              <tr>
+                <td>Alterar metodologia incluindo impactos regulatórios</td>
+                <td>Área PLDFT</td>
+                <td>12/03/2023</td>
+                <td>Em aberto</td>
+              </tr>
+              <tr>
+                <td>Reclassificação das atividades de risco dos funcionários</td>
+                <td>Área Recursos Humanos</td>
+                <td>19/07/2022</td>
+                <td>Em aberto</td>
+              </tr>
+              <tr>
+                <td>Recadastramento de fornecedores</td>
+                <td>Área gestão de fornecedores</td>
+                <td>14/03/2022</td>
+                <td>Em aberto</td>
+              </tr>
+              <tr>
+                <td>Realizar inclusão de indicadores para gestão de PLDFT</td>
+                <td>Área PLDFT</td>
+                <td>25/10/2022</td>
+                <td>Em aberto</td>
+              </tr>
+            </tbody>
+          </table>
+          
+    </div>
+</div>
+
+
+
+<script src="../../script.js"></script>
+<script src="./javascript/script.js"></script>
+</body>
+</html>

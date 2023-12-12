@@ -1,0 +1,154 @@
+body{
+    font-family: sans-serif;
+}
+.cardEixo1Efetividade{
+    width: 23.75%;
+    height: 37%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 19.2px;
+    position: fixed;
+    top: 13vh;
+}
+.cardEixo2Efetividade{
+    width: 23.75%;
+    height: 37%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 19.2px;
+    position: fixed;
+    top: 13vh;
+    left: 24.75%;
+}
+.cardEixo3Efetividade{
+    width: 23.75%;
+    height: 37%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 19.2px;
+    position: fixed;
+    top: 13vh;
+    left: 49.5%;
+}
+.cardEixo4Efetividade{
+    width: 23.75%;
+    height: 37%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 19.2px;
+    position: fixed;
+    top: 13vh;
+    left: 74.25%;
+}
+
+.cardDeficiencias{
+    width: 48.5%;
+    height: 46%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 20px;
+    position: fixed;
+    top: 51vh;
+}
+
+.cardPlanosDeAcao{
+    width: 48.5%;
+    height: 46%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 20px;
+    position: fixed;
+    top: 51vh;
+    left: 49.5%;
+}
+
+h4{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+h3{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 52px;
+}
+
+
+
+.cardDistribuicao{
+    width: 60.5%;
+    height: 36%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 20px;
+    position: fixed;
+    top: 61vh;
+}
+
+.cardHistorico{
+    width: 37.5%;
+    height: 36%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 20px;
+    position: fixed;
+    top: 61vh;
+    left: 61%;
+}
+.titulos {
+    padding: 10px;
+}
+.titulos > h2 {
+    color: #000;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.titulos > h5 {
+    color: #c2c2c2;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+table{
+    width: 98%;
+    height: 420px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid lightgray;
+    margin: 5px;
+}
+
+td{
+    border: lightgray 2px solid;
+    padding: 15px;
+}
+
+th{
+    border: lightgray 2px solid;
+    background-color: #dcdcdc;
+    font-weight: bold;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    padding-top: 5px;
+}
+
