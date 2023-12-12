@@ -340,7 +340,7 @@ function createLinearGradient(ctx, colorInicio, colorFim) {
 
 // FUNÇÃO QUE CRIA GRADIENTE NO GRÁFICO DE BARRAS
     function createLinearGradientBar(ctx, colorInicio, colorFim) {
-        var gradient = baseClientesCtx.createLinearGradient(0, 150, 0, 180);
+        var gradient = baseClientesCtx.createLinearGradient(0, 200, 0, 300);
         gradient.addColorStop(0, colorInicio); // Cor no início do gradiente
         gradient.addColorStop(1, colorFim); // Cor no final do gradiente
         return gradient;
