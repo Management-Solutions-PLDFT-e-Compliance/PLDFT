@@ -71,6 +71,32 @@ h3{
     top: 375px;
 }
 
+.clientes3{
+    position: fixed;
+    left: 105px;
+    top: 550px;
+}
+.fornecedores3{
+    position: fixed;
+    left: 465px;
+    top: 550px;
+}
+.parceiros3{
+    position: fixed;
+    left: 865px;
+    top: 550px;
+}
+.funcionarios3{
+    position: fixed;
+    left: 1270px;
+    top: 550px;
+}
+.produtos3{
+    position: fixed;
+    left: 1625px;
+    top: 550px;
+}
+
 .cardDistribuicao{
     width: 60.5%;
     height: 37%;
