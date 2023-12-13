@@ -1,1 +1,129 @@
-Infos Transacionais
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../home_style.css">
+  <link rel="stylesheet" href="./css/infoTransac.css">
+  <title>Compliance Analytics</title>
+</head>
+<body>
+  <header class="header1" >
+    <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+    <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+      <button class="botaoHeader botaoEstrategico botaoOff">
+        <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+        <p>Estratégico</p>
+      </button>
+    </a>
+    <a href="../../gerencial/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoGerencial botaoOff">
+        <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+        <p>Gerencial</p>
+      </button>
+    </a>
+    <a href="../../operacional/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoOperacional botaoOn">
+        <img src="../../assets/icons/operacionalOn.png" alt="Icone Atendimento">
+        <p>Operacional</p>
+      </button>
+    </a>
+    <a href="../../parametrizacao/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoParams botaoOff">
+        <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+        <p>Parametrização</p>
+      </button>
+    </a>
+    <h1 class="a comprimentos">Olá, Usuário! </h1>
+    <a href="../../index.html" style="position: absolute; top: 31px;">
+      <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+        <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+        SAIR
+      </button>
+    </a>
+  </header>
+
+  <nav class="cabecario">
+    <ul>
+        <li class="vazio"></li>
+        <li><a href="../monitoramento/monitoramento.html"><span>Monitoramento</span></a></li>
+        <li class="vazio"></li>
+        <li class="active"><span>Análise de alerta</span></li>
+    </ul>
+  </nav>
+  <div class="infoTransacFull">
+    <div class="parteCima">
+        <div class="card1">
+            <div class="titulos">
+                <h2>Busca
+                </h2>
+                <h5>Movimentação</h5>
+            </div>
+            <hr>
+            <div class="conteudo">
+                <div class="col1">
+                    <p>Filtro:</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>Período:</p>
+                </div>
+                <div class="col2">
+                    <div class="linhaChk">
+                        <label for="">Período</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                    <div class="linhaChk">
+                        <label for="">Débito</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                    <div class="linhaChk">
+                        <label for="">Crédito</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                    <div class="linhaChk">
+                        <label for="">Todos os filtros</label>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                    <div class="linhaInputsData">
+                        <input type="date" name="" id="">
+                        <p>a</p>
+                        <input type="date" name="" id="">
+                    </div>
+                </div>
+            </div>
+            <button class="botao">Pesquisar</button>
+        </div>
+        <div class="card2">
+            <div class="titulos">
+                <h2>Conta cliente
+                </h2>
+                <h5>Quantidade de operações e montantes envolvidos (bi reais)</h5>
+            </div>
+            <hr>
+        </div>
+        <div class="card3">
+            <div class="titulos">
+                <h2>Rede Transacional
+                </h2>
+                <h5>Grafos</h5>
+            </div>
+            <hr>
+            <div class="conteudo"><a href="./redeTransac.html"><img src="./assets/imgRedeTransac.svg" alt="" class="imgRedeTransac"></a></div>
+        </div>
+    </div>
+    <div class="parteBaixo">
+        <div class="card1">
+            <div class="titulos">
+                <h2>Movimentação</h2>
+                <h5>Detalhe</h5>
+            </div>
+            <hr>
+        </div>
+    </div>
+  </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
