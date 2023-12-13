@@ -119,3 +119,82 @@
     background-color: white;
 }
 
+/* ----------Tabelas 5 Colunas ------------------- */
+
+.tableFixHead10Col {
+    overflow-y: auto; 
+    height: 89%;
+    margin-top: 20px;
+  }
+  
+  .tableFixHead10Col thead th {
+    font-size: 18px;
+    position: sticky; 
+    top: 0px;
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .table10Col {
+    width:100%;
+    border-spacing: 5px;
+    font-size: 16px;
+  }
+  
+  
+  
+  .table10Col td{
+    padding: 0.6rem 0.5rem;
+  }
+  
+  .table10Col th:nth-child(1), .table10Col td:nth-child(1) {
+    width: 2%;
+  }
+  
+  .table10Col th:nth-child(2), .table10Col td:nth-child(2) {
+    width: 20%;
+  }
+  
+  .table10Col th:nth-child(3), .table10Col td:nth-child(3) {
+    width: 12%;
+  }
+  .table10Col th:nth-child(4), .table10Col td:nth-child(4) {
+    width: 8%;
+  }
+  .table10Col th:nth-child(5), .table10Col td:nth-child(5) {
+    width: 5%;
+  }
+
+  .table10Col th:nth-child(6), .table10Col td:nth-child(6) {
+    width: 5%;
+  }
+
+  .table10Col th:nth-child(7), .table10Col td:nth-child(7) {
+    width: 5%;
+  }
+
+  .table10Col th:nth-child(8), .table10Col td:nth-child(8) {
+    width: 5%;
+  }
+
+  .table10Col th:nth-child(9), .table10Col td:nth-child(9) {
+    width: 5%;
+  }
+
+  .table10Col th:nth-child(10), .table10Col td:nth-child(10) {
+    width: 5%;
+  }
+
+  .table10Col th, .table10Col td {
+    border: 1px solid lightgray;
+    border-spacing: 30px;
+    text-align: center;
+  }
+  
+  
+  .table10Col th {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+  
+  }

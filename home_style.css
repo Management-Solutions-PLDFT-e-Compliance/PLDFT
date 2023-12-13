@@ -30,7 +30,7 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid gray;
     background-color: #fff;
 }
 .cabecario li a{
@@ -44,8 +44,8 @@
 .cabecario .active {
     color: #000;
     background-color: #d3d3d3;
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
     border-bottom: none;
 }
