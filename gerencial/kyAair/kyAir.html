@@ -50,21 +50,21 @@
   </header>
   <nav class="cabecario">
     <ul>
-        <li class="vazio"></li>
-        <li><span>Monitoramento</span></li>
-        <li class="vazio"></li>
-        <li><span>Distribuição de alertas</span></li>
-        <li class="vazio"></li>
-        <li><span>Comunicação</span></li>
-        <li class="vazio"></li>
-        <li><span>Produtividade</span></li>
-        <li class="vazio"></li>
-        <li class="active"><span>KY e AIR</span></li>
-        <li class="vazio"></li>
-        <li><span>Distribuição Geográfica</span></li>
-        <li class="vazio"></li>
-        <li><span>Avaliação de Efetividade</span></li>
-        <li class="vazio"></li>
+      <li class="vazio"></li>
+      <li><a href="../../gerencial/monitoramento/monitoramento.html" style="text-decoration: none; height: 100%; width: 100%;"><span>Monitoramento</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../../gerencial/distribuicaoAlertas/distribuicaoAlertas.html" style="text-decoration: none; height: 100%; width: 100%;"><span>Distribuição de alertas</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../../gerencial/comunicacao/comunicacao.html" style="text-decoration: none; height: 100%; width: 100%;"><span>Comunicação</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../../gerencial/produtividade/produtividade.html" style="text-decoration: none; height: 100%; width: 100%;"><span>Produtividade</span></a></li>
+      <li class="vazio"></li>
+      <li class="active"><span>KY e AIR</span></li>
+      <li class="vazio"></li>
+      <li><a href="../../gerencial/distGeo/distGeo.html" style="text-decoration: none; height: 100%; width: 100%;"><span>Distribuição Geográfica</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../../gerencial/avaliacaoEfetividade/avaliacaoEfetividade.html" style="text-decoration: none; height: 100%; width: 100%;"><span>Avaliação de Efetividade</span></a></li>
+      <li class="vazio"></li>
     </ul>
 </nav>
 
@@ -76,19 +76,25 @@
         </div>
         <h4 class="clientes">Clientes</h4>
         <h3 class="clientes2">84K</h3>
+        <h4 class="clientes3">96% atualizado</h4>
         <canvas id="doughnutChart"></canvas>
         <h4 class="fornecedores">Fornecedores</h4>
         <h3 class="fornecedores2">195</h3>
+        <h4 class="fornecedores3">75% atualizado</h4>
         <canvas id="doughnutChart2"></canvas>
         <h4 class="parceiros">Parceiros</h4>
         <h3 class="parceiros2">209</h3>
+        <h4 class="parceiros3">88% atualizado</h4>
         <canvas id="doughnutChart3"></canvas>
         <h4 class="funcionarios">Funcionários</h4>
         <h3 class="funcionarios2">22K</h3>
+        <h4 class="funcionarios3">97% atualizado</h4>
         <canvas id="doughnutChart4"></canvas>
         <h4 class="produtos">Produtos</h4>
         <h3 class="produtos2">653</h3>
+        <h4 class="produtos3">99% atualizado</h4>
         <canvas id="doughnutChart5"></canvas>
+        <img src="./images/legenda.png" alt="" class="legenda">
     
     </div>
     </div>
@@ -171,24 +177,26 @@
         <hr>
       </div>
       <div>
-        <label for="">CPF/CNPJ:</label>
-        <input type="text">
+        <label for="cpf" class="camposLabel1">CPF/CNPJ:</label>
+        <input type="text" id="cpf" class="camposInput1">
       </div>
       <div> 
-        <label for="">Sanções:</label>
-        <input type="text">
+        <label for="" class="camposLabel2">Sanções:</label>
+        <input type="text" class="camposInput2">
       </div>
       <div>
-        <label for="">Tempo de relacionamento:</label>
-        <input type="date" name="" id="">
+        <label for="" class="camposLabel3">Tempo de relacionamento:</label>
+        <input type="date" name="" id="" class="camposInput3">
       </div>
       <div>
-        <input type="date" name="" id="">
+        <input type="date" name="" id="" class="camposInput4">
       </div>
       <div>
-        <label for="">Risco:</label>
-        <input type="text">
+        <label for="" class="camposLabel4">Risco:</label>
+        <input type="text" class="camposInput5">
       </div>
+
+      <button class="botaoPesquisa"><img src="./images/lupaBranca.png" alt="" width="30px" height="30px"> Pesquisar</button>
     </div>
 
 
