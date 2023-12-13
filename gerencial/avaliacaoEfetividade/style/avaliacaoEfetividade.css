@@ -164,18 +164,26 @@ tr{
 }
 
 .radarChart{
+    position: fixed;
+    left: 80px;
     height: 350px;
     width: 350px;
 }
 .radarChart2{
+    position: fixed;
+    left: 550px;
     height: 350px;
     width: 350px;
 }
 .radarChart3{
+    position: fixed;
+    right: 550px;
     height: 350px;
     width: 350px;
 }
 .radarChart4{
+    position: fixed;
+    right: 60px;
     height: 350px;
     width: 350px;
 }
