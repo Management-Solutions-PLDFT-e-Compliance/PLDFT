@@ -8,6 +8,8 @@ body {
     padding-bottom: 2rem;
 }
 
+
+
  /* DASHBOARD */
 
 header {
@@ -34,7 +36,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    /* gap: .5rem; */
+    
 }
 
 .cabecario .vazio {

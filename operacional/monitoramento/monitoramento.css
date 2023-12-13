@@ -107,3 +107,76 @@ body{
 .item-list img{
     margin-left: 330px;
 }
+
+.item5{
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+
+
+#filtro-container{
+    background-color: #dcdcdc; 
+    border: 1px solid rgb(192, 192, 192); 
+    width: 330px; 
+    margin-left: 120px
+    
+}
+
+.filtros{
+    display: flex;
+    margin: 40px 0px;
+}
+
+.filtros label{
+    font-weight: bold;
+}
+
+.filtros > input{
+    position: absolute;
+    right: 200px;
+    width: 20px;
+    height: 20px;
+}
+
+.filtros-input {
+    display: flex;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 20px 0px 10px 10px;
+}
+
+.filtros-input input{
+    border: 1px solid #dcdcdc;
+    position: absolute;
+    right: 300px;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.filtros-input select{
+    border: 1px solid #dcdcdc;
+    position: absolute;
+    right: 300px;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.botaoPesquisa{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}

@@ -257,14 +257,93 @@
                 <hr>
             </div>
 
-            <div class="icones_contorno" style="margin-top: 20%; margin-left: 35px;">
-                <img src="./icons/negativo-94 .png" alt="Tempo">
-                <div class="contorno_cinza">  
-                    <div class="conteudo_contorno_cinza">
-                      <div class="numero_contorno">1</div>
-                    </div>
-                </div>
+            <p style="font-size: 17.6px; font-family: sans-serif; font-weight: bold; padding: 10px;">Filtro:</p>
+            <div id="filtro-container">
+              <div class="filtros">
+
+                <label for="check-box-id" style="position: absolute;
+      right: 402px;">ID do alerta</label>
+                <input type="checkbox" name="check-box-id">
+
+              </div>
+              <div class="filtros">
+
+                <label for="check-box-id" style="position: absolute;
+      right: 384px;">Tipo de alerta</label>
+                <input type="checkbox" name="check-box-id">
+
+              </div>
+              <div class="filtros">
+
+                <label for="check-box-id" style="position: absolute;
+      right: 367px;">Data de criação</label>
+                <input type="checkbox" name="check-box-id">
+
+              </div>
+              <div class="filtros">
+
+                <label for="check-box-id" style="position: absolute;
+      right: 353px;">Cenário do alerta</label>
+                <input type="checkbox" name="check-box-id">
+
+              </div>
+              <div class="filtros">
+
+                <label for="check-box-id" style="position: absolute;
+      right: 364px;">Status do alerta</label>
+                <input type="checkbox" name="check-box-id">
+
+              </div>
+              <div class="filtros">
+
+                <label for="check-box-id" style="position: absolute;
+      right: 366px;">Todos os filtros</label>
+                <input type="checkbox" name="check-box-id">
+
+              </div>
             </div>
+
+            <div class="filtros-input">
+
+              <label for="input-boxes">ID do alerta:</label>
+              <input type="text">
+
+            </div>
+
+            <div class="filtros-input">
+
+              <label for="input-boxes">Tipo de alerta:</label>
+              <select name="tipo-alert" id="tipo-alerta"></select>
+              <option value=""></option>
+
+            </div>
+
+            <div class="filtros-input">
+
+              <label for="input-boxes">Data de criação:</label>
+              <input type="date" style="width: 100px; right:400px">
+              <p style="position: absolute;right: 370px; bottom:185px;">a</p>
+              <input type="date" style="width: 100px; right:250px">
+
+            </div>
+
+            <div class="filtros-input">
+
+              <label for="input-boxes">Cenários:</label>
+              <select name="cenarios" id="cenarios"></select>
+              <option value=""></option>
+
+            </div>
+
+            <div class="filtros-input">
+
+              <label for="input-boxes">Status:</label>
+              <select name="cenarios" id="cenarios"></select>
+              <option value=""></option>
+
+            </div>
+            
+            <button class="botaoPesquisa"><img src="./icons/lupaBranca.png" alt="" width="30px" height="30px"> Pesquisar</button>
         </div>
 
     </div>
