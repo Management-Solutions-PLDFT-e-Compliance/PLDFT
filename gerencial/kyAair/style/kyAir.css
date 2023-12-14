@@ -199,14 +199,16 @@ table{
 
 td{
     border: white 3px solid;
+    vertical-align: middle;
 }
 
 .headerTable{
     background-color: white;
     color: lightgray;
     border: 1px solid lightgray;
-    text-align: right;
     font-weight: normal;
+    width: 230px;
+    height: 40px;
 }
 
 .riscoMuitoAlto{
@@ -214,6 +216,7 @@ td{
     border: white 3px solid;
     text-align: center;
     font-weight: bold;
+    
 }
 .riscoAlto{
     background-color: #fcc474;
@@ -239,6 +242,13 @@ td{
 }
 .riscoMuitoBaixo{
     background-color: #84fc84;
+    border: white 3px solid;
+    text-align: center;
+    font-weight: bold;
+
+}
+.naoAplica{
+    background-color: lightgray;
     border: white 3px solid;
     text-align: center;
     font-weight: bold;

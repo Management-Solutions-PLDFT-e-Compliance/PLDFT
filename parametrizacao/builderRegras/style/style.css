@@ -19,47 +19,6 @@ header {
     margin-bottom: .375rem;
 }
 
-/* DASHBOARD */
-/* #dashboard {
-    padding: 0 2rem; 
-} */
-
-/* CARDS */
-.chartCard {
-    background-color: #fff;
-    display:flex;
-    flex-direction: column;
-    border-radius: 10px;
-    height: 85vh;
-}
-
-.headerCard {
-    border-bottom: 1px solid #000;
-    padding: 1rem;
-}
-
-.bodyCard {
-    padding: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-h2 {
-    font-size: 1.3em;
-    color: #000;
-    font-weight: 700;
-    margin-bottom: 0.325rem
-}
-
-h3 {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 1.3em;
-    font-weight: 600;
-    color: 	#808080;
-}
-
 /* CABEÇARIO */
 .cabecario {
     font-size: 1.1em;
@@ -113,47 +72,61 @@ h3 {
     border-bottom: none;
 }
 
-/* LISTA CATEGORIAS */
- 
-.lista-categorias {
-    display: flex;
-    gap: .5rem
-}
-
-.lista-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 14.28%;
-    border-radius: 10px;
-    border: 1px solid lightgray;
-    padding: 1rem;
-    gap: 1rem;
-}
-
-.lista-item img {
-    height: 100px;
-}
-
-.lista-item p {
+/* Sub menu */
+.subCabecario {
     font-size: 1.1em;
     font-weight: bold;
-    text-align: center;
-    width: 23ch;
+    width: 100%;
+    color: gray;
+}
+.subCabecario  ul{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    /* gap: .5rem; */
 }
 
-/* CONTEÚDO */
-
-.container-content {
+.subCabecario  ul{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    /* gap: .5rem; */
+}
+ 
+.subCabecario .vazio {
+    width: .5rem;
+    padding: 0;
+    background-color: #f5f5f5;
+    align-self: flex-end;
+}
+ 
+.subCabecario  li{
+    width: 15%;
+    padding: 0;
+    margin-top: 0.5%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+    padding: .5rem 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: 2px solid gray;
+    background-color: #fff;
+}
+.subCabecario li a{
+    color: #808080;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.container-content p {
-    font-size: 2em;
-    font-weight: bold;
-    color: gray;
+
+.subCabecario .active {
+    color: #000;
+    background-color: #d3d3d3;
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    border-bottom: none;
 }
