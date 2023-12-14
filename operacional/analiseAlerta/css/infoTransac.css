@@ -84,8 +84,8 @@
     width: 150px;
     gap: 5px;
     height: 35px;
-    margin-left: 402px;
-    margin-top: -15px;
+    margin-left: 399px;
+    margin-top: -9px;
 }
 
 .infoTransacFull .parteCima .card2{
@@ -236,6 +236,7 @@
 
   .conteinerGrafico{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 260px;
@@ -243,7 +244,17 @@
 
   #volumeTransacoes{
     max-width: 900px;
-    max-height: 250px;
+    max-height: 230px;
   }
 
+  #legenda-volume-transacoes{
+    display: flex;
+    gap: 20px;
+  }
+
+
+  .alinhamento-icone-palavra{
+    display: flex;
+    align-items: center;
+  }
   
