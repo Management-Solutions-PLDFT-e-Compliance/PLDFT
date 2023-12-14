@@ -181,3 +181,246 @@ var data = {
     data: data,
     options: options
   });
+
+
+
+  function atualizarTabela() {
+    var selectElement = document.getElementById("seletorTabela");
+    var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+    var tabelaTesteDiv = document.getElementById("tabelaTeste");
+
+    // Lógica para decidir qual tabela deve ser exibida com base na opção selecionada
+    var tabelaHTML = "";
+    switch (selectedOption) {
+        case "Clientes":
+            tabelaHTML = `<table>
+          <thead>
+            <tr class="headerTable">
+              <th></th>
+              <th>Segmento 1</th>
+              <th>Segmento 2</th>
+              <th>Segmento 3</th>
+              <th>Segmento 4</th>
+              <th>Segmento 5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="riscoMuitoAlto">
+              <td class="headerTable">Muito Alto</td>
+              <td>12</td>
+              <td>1</td>
+              <td>123</td>
+              <td>98</td>
+              <td>5</td>
+            </tr>
+            <tr class="riscoAlto">
+              <td class="headerTable">Risco Alto</td>
+              <td>2333</td>
+              <td>1232</td>
+              <td>3257</td>
+              <td>743</td>
+              <td>789</td>
+            </tr>
+            <tr class="riscoModerado">
+              <td class="headerTable">Risco Moderado</td>
+              <td>6444</td>
+              <td>90334</td>
+              <td>72578</td>
+              <td>3486</td>
+              <td>142</td>
+            </tr>
+            <tr class="riscoBaixo">
+              <td class="headerTable">Risco Baixo</td>
+              <td>19324</td>
+              <td>40553</td>
+              <td>32532</td>
+              <td>280</td>
+              <td>236</td>
+            </tr>
+            <tr class="riscoMuitoBaixo">
+              <td class="headerTable">Risco Muito Baixo</td>
+              <td>205</td>
+              <td>2944</td>
+              <td>46643</td>
+              <td>967</td>
+              <td>24</td>
+            </tr>
+          </tbody>
+        </table>`;
+            break;
+        case "Funcionários":
+            tabelaHTML = `<table>
+            <thead>
+              <tr class="headerTable">
+                <th></th>
+                <th>Segmento 1</th>
+                <th>Segmento 2</th>
+                <th>Segmento 3</th>
+                <th>Segmento 4</th>
+                <th>Segmento 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="riscoMuitoAlto">
+                <td class="headerTable">Muito Alto</td>
+                <td>300</td>
+                <td>1900</td>
+                <td>2000</td>
+                <td>500</td>
+                <td>300</td>
+              </tr>
+              <tr class="riscoAlto">
+                <td class="headerTable">Risco Alto</td>
+                <td>600</td>
+                <td>550</td>
+                <td>650</td>
+                <td>700</td>
+                <td>500</td>
+              </tr>
+              <tr class="riscoModerado">
+                <td class="headerTable">Risco Moderado</td>
+                <td>400</td>
+                <td>300</td>
+                <td>500</td>
+                <td>450</td>
+                <td>350</td>
+              </tr>
+              <tr class="riscoBaixo">
+                <td class="headerTable">Risco Baixo</td>
+                <td>100</td>
+                <td>500</td>
+                <td>50</td>
+                <td>50</td>
+                <td>300</td>
+              </tr>
+              <tr class="riscoMuitoBaixo">
+                <td class="headerTable">Risco Muito Baixo</td>
+                <td>1200</td>
+                <td>3800</td>
+                <td>5100</td>
+                <td>1900</td>
+                <td>1000</td>
+              </tr>
+            </tbody>
+          </table>`;
+            break;
+        case "Produtos":
+            tabelaHTML = `<table>
+            <thead>
+              <tr class="headerTable">
+                <th></th>
+                <th>Agência</th>
+                <th>Internet <br> Banking</th>
+                <th>Mobile</th>
+                <th>ATM</th>
+                <th>-</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="riscoMuitoAlto">
+                <td class="headerTable">Muito Alto</td>
+                <td>300</td>
+                <td>1900</td>
+                <td>2000</td>
+                <td>500</td>
+                <td class="naoAplica">n/a</td>
+              </tr>
+              <tr class="riscoAlto">
+                <td class="headerTable">Risco Alto</td>
+                <td>600</td>
+                <td>550</td>
+                <td>650</td>
+                <td>700</td>
+                <td class="naoAplica">n/a</td>
+              </tr>
+              <tr class="riscoModerado">
+                <td class="headerTable">Risco Moderado</td>
+                <td>400</td>
+                <td>300</td>
+                <td>500</td>
+                <td>450</td>
+                <td class="naoAplica">n/a</td>
+              </tr>
+              <tr class="riscoBaixo">
+                <td class="headerTable">Risco Baixo</td>
+                <td>100</td>
+                <td>500</td>
+                <td>50</td>
+                <td>50</td>
+                <td class="naoAplica">n/a</td>
+              </tr>
+              <tr class="riscoMuitoBaixo">
+                <td class="headerTable">Risco Muito Baixo</td>
+                <td>1200</td>
+                <td>3800</td>
+                <td>5100</td>
+                <td>1900</td>
+                <td class="naoAplica">n/a</td>
+              </tr>
+            </tbody>
+          </table>`;
+            break;
+        // Adicione casos para outras opções conforme necessário
+        default:
+            tabelaHTML = `<table>
+            <thead>
+              <tr class="headerTable">
+                <th></th>
+                <th>Segmento 1</th>
+                <th>Segmento 2</th>
+                <th>Segmento 3</th>
+                <th>Segmento 4</th>
+                <th>Segmento 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="riscoMuitoAlto">
+                <td class="headerTable">Muito Alto</td>
+                <td>12</td>
+                <td>1</td>
+                <td>123</td>
+                <td>98</td>
+                <td>5</td>
+              </tr>
+              <tr class="riscoAlto">
+                <td class="headerTable">Risco Alto</td>
+                <td>2333</td>
+                <td>1232</td>
+                <td>3257</td>
+                <td>743</td>
+                <td>789</td>
+              </tr>
+              <tr class="riscoModerado">
+                <td class="headerTable">Risco Moderado</td>
+                <td>6444</td>
+                <td>90334</td>
+                <td>72578</td>
+                <td>3486</td>
+                <td>142</td>
+              </tr>
+              <tr class="riscoBaixo">
+                <td class="headerTable">Risco Baixo</td>
+                <td>19324</td>
+                <td>40553</td>
+                <td>32532</td>
+                <td>280</td>
+                <td>236</td>
+              </tr>
+              <tr class="riscoMuitoBaixo">
+                <td class="headerTable">Risco Muito Baixo</td>
+                <td>205</td>
+                <td>2944</td>
+                <td>46643</td>
+                <td>967</td>
+                <td>24</td>
+              </tr>
+            </tbody>
+          </table>`;
+    }
+
+    // Atualiza a div com a nova tabela
+    tabelaTesteDiv.innerHTML = tabelaHTML;
+}
+
+// Chama a função uma vez para exibir a tabela inicial
+atualizarTabela();
