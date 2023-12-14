@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1" >
+        <a href="../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+          <button class="botaoHeader botaoEstrategico botaoOff">
+            <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+            <p>Estratégico</p>
+          </button>
+        </a>
+        <a href="../gerencial/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoGerencial botaoOff">
+            <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+            <p>Gerencial</p>
+          </button>
+        </a>
+        <a href="../operacional/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoOperacional botaoOff">
+            <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+            <p>Operacional</p>
+          </button>
+        </a>
+        <a href="../parametrizacao/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoParams botaoOn botaoOnParams">
+            <img src="../../assets/icons/parametrizacaoOn.png" alt="Icone Atendimento">
+            <p>Parametrização</p>
+          </button>
+        </a>
+        <h1 class="a comprimentos">Olá, Usuário! </h1>
+        <a href="../index.html" style="position: absolute; top: 31px;">
+          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+            <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+            SAIR
+          </button>
+        </a>
+    </header>
+
+    <nav class="cabecario">
+        <ul>
+            <li class="vazio"></li>
+            <li class="active"><span>Calculo do risco LDFT</span></li>
+            <li class="vazio"></li>
+            <li><span>builder de regras</span></li>
+            <li class="vazio" style="width: 70%;"></li>
+        </ul>
+    </nav>
+
+    <div id="dashboard">
+        <div class="chartCard">
+            <div class="headerCard">
+                <h2>Perfil de risco LDFT</h2>
+                <h3>Perfis regulatórios</h3>
+            </div>
+            <div class="bodyCard">        
+                <ul class="lista-categorias">
+                    <li class="lista-item">
+                        <img src="./images/instituicao.svg" alt="">
+                        <p class="legenda">Instituição</p>
+                    </li>
+                    <li class="lista-item">
+                        <img src="./images/cliente.png" alt="">
+                        <p class="legenda">Cliente</p>
+                    </li>
+                    <li class="lista-item">
+                        <img src="./images/produto.png" alt="">
+                        <p class="legenda">Produto</p>
+                    </li>
+                    <li class="lista-item">
+                        <img src="./images/funcionarios.png" alt="">
+                        <p class="legenda">Funcionários</p>
+                    </li>
+                    <li class="lista-item">
+                        <img src="./images/parceiros.png" alt="">
+                        <p class="legenda">Parceiros</p>
+                    </li>
+                    <li class="lista-item">
+                        <img src="./images/fornecedores.png" alt="">
+                        <p class="legenda">Fornecedores</p>
+                    </li>
+                    <li class="lista-item">
+                        <img src="./images/beneficiarios.png" alt="">
+                        <p class="legenda">Beneficiários de produtos de acumulação</p>
+                    </li>
+                </ul>
+
+                <div class="container-content">
+                    <p>Selecione perfil para visualização</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./javascript/javascript.js"></script>
+</body>
+</html>
