@@ -86,7 +86,7 @@ body{
     height: 25px;
     font-weight: bold;
     position: absolute;
-    right: 655px;
+    right: 670px;
 }
 
 #scroll-content{
@@ -117,7 +117,7 @@ body{
 #filtro-container{
     background-color: #dcdcdc; 
     border: 1px solid rgb(192, 192, 192); 
-    width: 330px; 
+    width: 345px; 
     margin-left: 120px
     
 }
@@ -172,7 +172,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
-    right: 20px;
+    right: 30px;
     bottom: 20px;
     position: fixed;
     text-align: center;

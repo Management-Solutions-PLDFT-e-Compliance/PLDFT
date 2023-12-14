@@ -54,19 +54,19 @@ var dados_negocio = {
     labels: ['Unidade 1', 'Unidade 2', 'Unidade 3', 'Unidade 4', 'Unidade 5', 'Unidade 6', 'Unidade 7', 'Unidade 8', 'Unidade 9', 'Unidade 10'],
     datasets: [
         {
-            label: '2020',
+            label: '2021',
             backgroundColor: 'rgb(160,172,196)',
             barThickness:'flex',
             data: [63, 71, 53, 50, 58, 74, 74, 74, 63, 84]
         },
         {
-            label: '2021',
+            label: '2022',
             backgroundColor: 'rgb(104,124,164)',
             barThickness: 'flex',
             data: [87, 84, 76, 74, 83, 50, 78, 51, 59, 77]
         },
         {
-            label: '2022',
+            label: '2023',
             backgroundColor: 'rgb(48,76,124)',
             barThickness:'flex',
             data: [56, 86, 65, 69, 61, 50, 57, 79, 75, 83]
