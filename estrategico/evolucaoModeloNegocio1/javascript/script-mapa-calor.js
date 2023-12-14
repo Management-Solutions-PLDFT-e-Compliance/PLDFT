@@ -46,28 +46,33 @@ var newData = [
 
 function getInformation(e) {
     const tabela_indicacao = document.getElementById('tabela_indicacao')
+    const btnDownloadTabela = document.getElementsByClassName("btn-download-tabela")[0]
 
     if(e.target.tagName == 'LI' && e.target.firstChild.innerHTML != "n/a" &&  e.target.innerHTML != "n/a") {
         if(itemSelecionadoAnterior == null){
             itemSelecionadoAnterior = e.target
             e.target.classList.add('selected')
             tabela_indicacao.style.display = 'block'
+            btnDownloadTabela.style.display = 'flex'
         } else {
             itemSelecionadoAnterior.classList.remove('selected')
             itemSelecionadoAnterior = e.target
             e.target.classList.add('selected')
             tabela_indicacao.style.display = 'block'
+            btnDownloadTabela.style.display = 'flex'
         }
     } else if(e.target.firstChild.innerHTML != "n/a"  &&  e.target.innerHTML != "n/a") {
         if(itemSelecionadoAnterior == null){
             itemSelecionadoAnterior = e.target.parentNode
             e.target.parentNode.classList.add('selected')
             tabela_indicacao.style.display = 'block'
+            btnDownloadTabela.style.display = 'flex'
         } else {
             itemSelecionadoAnterior.classList.remove('selected')
             itemSelecionadoAnterior = e.target.parentNode
             e.target.parentNode.classList.add('selected')
             tabela_indicacao.style.display = 'block'
+            btnDownloadTabela.style.display = 'flex'
         }
     }
 
@@ -161,6 +166,7 @@ function updateColor(value, colorBox) {
 document.getElementById('mapa_calor_select').addEventListener('change', function () {
     var selectedOption = this.value;
     const tabela_indicacao = document.getElementById('tabela_indicacao')
+    const btnDownloadTabela = document.getElementsByClassName("btn-download-tabela")[0]
 
     // Atualiza os dados com base na opção selecionada
 
@@ -373,6 +379,7 @@ document.getElementById('mapa_calor_select').addEventListener('change', function
     }
     tabela_indicacao.innerHTML = datas
     tabela_indicacao.style.display = "none"
+    btnDownloadTabela.style.display = "none"
 
     updateMatriz()
 })
