@@ -83,9 +83,9 @@
     font-weight: bold;
     width: 150px;
     gap: 5px;
-    height: 40px;
-    margin-left: 400px;
-    margin-top: -10px;
+    height: 35px;
+    margin-left: 402px;
+    margin-top: -15px;
 }
 
 .infoTransacFull .parteCima .card2{
@@ -119,3 +119,105 @@
     background-color: white;
 }
 
+.infoTransacFull .parteBaixo .card1 .botao{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+    gap: 5px;
+    height: 35px;
+    margin-left: 402px;
+    margin-top: -15px;
+}
+
+/* ----------Tabelas 5 Colunas ------------------- */
+
+.tableFixHead10Col {
+    overflow-y: auto; 
+    height: 80%;
+    margin-top: 20px;
+  }
+  
+  .tableFixHead10Col thead th {
+    font-size: 18px;
+    position: sticky; 
+    top: 0px;
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .table10Col {
+    width:100%;
+    border-spacing: 5px;
+    font-size: 18px;
+  }
+  
+  
+  
+  .table10Col td{
+    padding: 0.6rem 0.5rem;
+  }
+  
+  .table10Col th:nth-child(1), .table10Col td:nth-child(1) {
+    width: 5%;
+  }
+  
+  .table10Col th:nth-child(2), .table10Col td:nth-child(2) {
+    width: 2%;
+  }
+  
+  .table10Col th:nth-child(3), .table10Col td:nth-child(3) {
+    width: 2%;
+  }
+  .table10Col th:nth-child(4), .table10Col td:nth-child(4) {
+    width: 2%;
+  }
+  .table10Col th:nth-child(5), .table10Col td:nth-child(5) {
+    width: 3%;
+  }
+
+  .table10Col th:nth-child(6), .table10Col td:nth-child(6) {
+    width: 2%;
+  }
+
+  .table10Col th:nth-child(7), .table10Col td:nth-child(7) {
+    width: 5%;
+  }
+
+  .table10Col th:nth-child(8), .table10Col td:nth-child(8) {
+    width: 4%;
+  }
+
+  .table10Col th:nth-child(9), .table10Col td:nth-child(9) {
+    width: 5%;
+  }
+
+  .table10Col th:nth-child(10), .table10Col td:nth-child(10) {
+    width: 1.5%;
+  }
+
+  .table10Col th, .table10Col td {
+    border: 1px solid lightgray;
+    border-spacing: 30px;
+  }
+  
+  
+  .table10Col th {
+    background-color: #D9D9D9;
+    color: black;
+    font-weight: bold;
+    text-align: start;
+  }
+
+  .table10Col th:nth-child(10){
+    background-color: white;
+    border: none;
+  }
