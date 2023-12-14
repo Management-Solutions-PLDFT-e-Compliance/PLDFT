@@ -135,16 +135,18 @@
     width: 150px;
     gap: 5px;
     height: 35px;
-    margin-left: 402px;
-    margin-top: -15px;
+    margin-left: 1620px;
+    margin-top: 10px;
+    margin-bottom: -10px;
 }
 
 /* ----------Tabelas 5 Colunas ------------------- */
 
 .tableFixHead10Col {
     overflow-y: auto; 
-    height: 80%;
+    height: 74%;
     margin-top: 20px;
+    padding-left: 20px;
   }
   
   .tableFixHead10Col thead th {
@@ -221,3 +223,27 @@
     background-color: white;
     border: none;
   }
+
+  .table10Col td:nth-child(10){
+    border: none;
+  }
+
+  .table10Col td:nth-child(10) input{
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .conteinerGrafico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
+  }
+
+  #volumeTransacoes{
+    max-width: 900px;
+    max-height: 250px;
+  }
+
+  

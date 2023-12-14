@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="../../home_style.css">
   <link rel="stylesheet" href="./css/infoTransac.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
   <title>Compliance Analytics</title>
 </head>
 <body>
@@ -103,6 +105,9 @@
                 <h5>Quantidade de operações e montantes envolvidos (bi reais)</h5>
             </div>
             <hr>
+            <div class="conteinerGrafico">
+              <canvas id="volumeTransacoes"></canvas>
+            </div>
         </div>
         <div class="card3">
             <div class="titulos">
@@ -149,7 +154,7 @@
                       <td>Débito</td>
                       <td>João</td>
                       <td>Débito</td>
-                      <td></td>
+                      <td><input type="checkbox" name="" id=""></td>
                     </tr>
                     <tr>
                         <td>Cartão</td>
@@ -161,7 +166,7 @@
                         <td>Débito</td>
                         <td>Não se aplica</td>
                         <td>Compra</td>
-                        <td></td>
+                        <td><input type="checkbox" name="" id=""></td>
                       </tr>
                       <tr>
                         <td>DOC</td>
@@ -173,7 +178,7 @@
                         <td>Débito</td>
                         <td>Maria</td>
                         <td>Débito</td>
-                        <td></td>
+                        <td><input type="checkbox" name="" id=""></td>
                       </tr>
                       <tr>
                         <td>Empréstimo</td>
@@ -185,7 +190,7 @@
                         <td>Crédito</td>
                         <td>Não se aplica</td>
                         <td>Resgate</td>
-                        <td></td>
+                        <td><input type="checkbox" name="" id=""></td>
                       </tr>
                       <tr>
                         <td>Pix</td>
@@ -197,7 +202,7 @@
                         <td>Crédito</td>
                         <td>José</td>
                         <td>Crédito</td>
-                        <td></td>
+                        <td><input type="checkbox" name="" id=""></td>
                       </tr>
                   </tbody>
                 </table>
@@ -205,7 +210,7 @@
         </div>
     </div>
   </div>
-
+    <script src="./js/infosTransac.js"></script>
     <script src="../../script.js"></script>
 </body>
 </html>
