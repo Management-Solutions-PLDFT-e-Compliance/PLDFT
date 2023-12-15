@@ -626,9 +626,35 @@ document.getElementById('transacoes').addEventListener('change', function () {
     var selectedOption = this.value;
 
     // Atualiza os dados com base na opção selecionada
-    var newData;
+    var newData = {
+        labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+        datasets: [{
+            label: 'Operações',
+            type: 'bar',
+            backgroundColor: createLinearGradientBar(baseClientesCtx, 'rgb(9,41,104)', 'rgba(157,195,230,255)'),
+            borderColor: 'rgba(75, 192, 192, 1)',
+            data: [2500, 3000, 4200, 4000, 5700, 6000],
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'leftYAxis',
+            barPercentage: 0.4,
+            datalabels: {
+                display: false // Remove os rótulos de dados para este conjunto de dados
+            }
+        },{
+            label: 'Volume financeiro',
+            type: 'line',
+            backgroundColor: 'rgb(9,41,104)',
+            borderColor: 'rgb(9,41,104)',
+            data: [20, 22, 17, 25, 19, 28],
+            fill: false,
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'rightYAxis',
+        }]
+    }
 
-    if (selectedOption === 'Trans. Digital') {
+    if (selectedOption === 'Unidade de Negócio') {
         newData = {
         labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
         datasets: [{
@@ -655,7 +681,7 @@ document.getElementById('transacoes').addEventListener('change', function () {
             pointRadius: 0,
             yAxisID: 'rightYAxis',
         }]
-    }} else if (selectedOption === 'opcao1') {
+    }} else if (selectedOption === 'Conta') {
         newData = {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
@@ -683,7 +709,7 @@ document.getElementById('transacoes').addEventListener('change', function () {
                 yAxisID: 'rightYAxis',
             }]
         }
-    }  else if (selectedOption === 'opcao2') {
+    }  else if (selectedOption === 'Empréstimos') {
         newData = {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
@@ -711,6 +737,18 @@ document.getElementById('transacoes').addEventListener('change', function () {
                 yAxisID: 'rightYAxis',
             }]
         }
+    }  else if (selectedOption === 'Cartões') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  else if (selectedOption === 'Corretora') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  else if (selectedOption === 'Câmbio') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  else if (selectedOption === 'Externas') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
     }  
     // Atualiza o gráfico com os novos dados
     volumeTransacoes.data = newData;
@@ -724,7 +762,33 @@ document.getElementById('contrato').addEventListener('change', function () {
     var selectedOption = this.value;
 
     // Atualiza os dados com base na opção selecionada
-    var newData;
+    var newData = {
+        labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+        datasets: [{
+            label: 'Operações',
+            type: 'bar',
+            backgroundColor: createLinearGradientBar(baseClientesCtx, 'rgb(9,41,104)', 'rgba(157,195,230,255)'),
+            borderColor: 'rgba(75, 192, 192, 1)',
+            data: [2500, 3000, 4200, 4000, 5700, 6000],
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'leftYAxis',
+            barPercentage: 0.4,
+            datalabels: {
+                display: false // Remove os rótulos de dados para este conjunto de dados
+            }
+        },{
+            label: 'Volume financeiro',
+            type: 'line',
+            backgroundColor: 'rgb(9,41,104)',
+            borderColor: 'rgb(9,41,104)',
+            data: [20, 22, 17, 25, 19, 28],
+            fill: false,
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'rightYAxis',
+        }]
+    }
 
     if (selectedOption === 'PF') {
         newData = {
@@ -781,7 +845,10 @@ document.getElementById('contrato').addEventListener('change', function () {
                 yAxisID: 'rightYAxis',
             }]
         }
-    } 
+    } else if (selectedOption === 'Tipo de Cliente') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  
     // Atualiza o gráfico com os novos dados
     volumeTransacoes.data = newData;
     volumeTransacoes.update();
@@ -832,6 +899,11 @@ document.getElementById('entidades').addEventListener('change', function () {
         newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
         newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
     } else if (selectedOption === 'Susep') {
+
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+
+    } else if (selectedOption === 'Órgão Regulador') {
 
         newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
         newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)

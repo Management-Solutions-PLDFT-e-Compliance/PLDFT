@@ -31,15 +31,16 @@ header {
     flex-direction: column;
     border-radius: 10px;
     height: 85vh;
+    padding: 1rem;
 }
 
 .headerCard {
     border-bottom: 1px solid #000;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .bodyCard {
-    padding: 1rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -66,6 +67,7 @@ h3 {
     font-weight: bold;
     width: 100%;
     color: gray;
+    margin-bottom: 1rem;
 }
  
 .cabecario  ul{
@@ -156,4 +158,551 @@ h3 {
     font-size: 2em;
     font-weight: bold;
     color: gray;
+}
+
+/* CLIENTE VARIÁVEIS ATUAIS */
+
+#visualização-das-variaveis-atuais {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#visualização-das-variaveis-atuais h2 {
+    margin-bottom: 2rem;
+}
+
+#visualização-das-variaveis-atuais table{
+    width: 100%;
+    font-size: 1.3em;
+    margin-bottom: 2rem;
+}
+
+#visualização-das-variaveis-atuais th{
+    padding: .75rem 1rem;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+#visualização-das-variaveis-atuais td{
+    padding: 1rem 1rem;
+    text-align: left;
+    border: none;
+}
+
+#visualização-das-variaveis-atuais input{
+    transform: scale(2)
+}
+
+#visualização-das-variaveis-atuais th:nth-child(1){
+    color: #fff;
+}
+#visualização-das-variaveis-atuais th:nth-child(2){
+    border-bottom: 1px solid #000;
+}
+#visualização-das-variaveis-atuais th:nth-child(3){
+    border-bottom: 1px solid #000;
+}
+#visualização-das-variaveis-atuais th:nth-child(4){
+    border-bottom: 1px solid #000;
+}
+#visualização-das-variaveis-atuais th:nth-child(5){
+    border-bottom: 1px solid #000;
+}
+#visualização-das-variaveis-atuais th:nth-child(6){
+    border-bottom: 1px solid #000;
+}
+#visualização-das-variaveis-atuais th:nth-child(7){
+    border-bottom: 1px solid #000;
+}
+#visualização-das-variaveis-atuais th:nth-child(8){
+    border-bottom: 1px solid #000;
+}
+
+.visualizacao-variaveis-atuais-btn{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.visualizacao-variaveis-atuais-btn button {
+    border: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: .75rem 1.5rem;
+    border-radius: 5px;
+    background-color: #a6a6a6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.visualizacao-variaveis-atuais-btn button:nth-child(1) {
+    background-color: #2e4a7e;
+}
+
+
+.visualizacao-variaveis-atuais-btn img {
+    height: 25px;
+}
+
+/* ADICIONAR VARIÁVEL */
+
+#adicionar-variavel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+#adicionar-variavel .chartCard{
+    width: 60%;
+    height: fit-content;
+    padding: 1rem 2rem;
+}
+
+#adicionar-variavel form{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+#adicionar-variavel .texto-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#adicionar-variavel .texto-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.3em;
+}
+
+#adicionar-variavel input{
+    transform: scale(2);
+}
+
+#adicionar-variavel p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #003399;
+}
+
+#adicionar-variavel select {
+    font-size: 1.3em;
+    padding: .75rem 1.5rem;
+    border: 1px solid gray;
+    width: 30%;
+    text-align: right;
+    color: gray;
+}
+
+#adicionar-variavel-btn-avancar {
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: fit-content;
+    padding: .75rem 1.5rem;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a6a6a6;
+    align-self: flex-end;
+}
+
+#adicionar-variavel-btn-avancar img{
+    height: 25px;
+}
+
+/* cenarios-lista-ponderacoes */
+
+#cenarios-lista-ponderacoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+#cenarios-lista-ponderacoes .chartCard{
+    width: 60%;
+    height: fit-content;
+    padding: 1rem 2rem;
+}
+
+#cenarios-lista-ponderacoes h2{
+    margin-bottom: 2rem;
+}
+
+#cenarios-lista-ponderacoes  .header-tabela{
+    display: flex;
+    font-size: 1.5em;
+    font-weight: bold;
+    gap: 32.5rem;
+}
+
+#cenarios-lista-ponderacoes p {
+    font-size: 1.5em;
+    color: #000;
+    width: 22%;
+}
+
+#cenarios-lista-ponderacoes select {
+    font-size: 1.3em;
+    padding: .75rem 1.5rem;
+    border: 1px solid gray;
+    text-align: center;
+    color: gray;
+}
+
+#cenarios-lista-ponderacoes .texto-input {
+    display: flex;
+    align-items: center;
+}
+
+#cenarios-lista-ponderacoes form{
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+#cenarios-lista-ponderacoes .direita{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#cenarios-lista-ponderacoes .direita select{
+    width: 40%;
+}
+
+#cenarios-lista-ponderacoes .esquerda{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#cenarios-lista-ponderacoes .esquerda select{
+    width: 35%;
+}
+
+
+#cenarios-lista-ponderacoes .de-ate{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#cenarios-lista-ponderacoes .de-ate select{
+    width: 16rem;
+}
+
+#cenarios-lista-ponderacoes .de-ate p:nth-child(1){
+    margin-right: 4.5rem;
+}
+
+#cenarios-lista-ponderacoes .de-ate .texto-input:nth-child(2) p{
+    width: 1rem;
+}
+
+#cenarios-lista-ponderacoes .adicionar-variavel-btns {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+#cenarios-lista-ponderacoes .adicionar-variavel-btns button{
+    padding: .75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #a6a6a6;
+    border: none;
+    gap: .5rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+#cenarios-lista-ponderacoes .adicionar-variavel-btns button img {
+    height: 25px;
+}
+
+/* POP UP */
+
+#pop-up {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+
+#pop-up .chartCard {
+    width: 85%;
+    height: fit-content;
+    border: 20px solid lightgray;
+}
+
+#pop-up .headerCard {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#pop-up .headerCard img{
+    height: 40px;
+}
+
+#pop-up .esquerda-direita {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+#pop-up h2 {
+    font-size: 2em;
+    color: #000;
+}
+
+#pop-up h3 {
+    font-size: 2em;
+    color: #000;
+}
+
+#pop-up .container-h3 {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    width: 60%;
+}
+
+#pop-up .container-h4 {
+    color: #fff;
+    background-color: #8faadc;
+    padding: 1rem 2rem;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#pop-up .direita, #pop-up .esquerda {
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+}
+
+#pop-up table{
+    font-size: 1.3em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#pop-up thead{
+    background-color: #d9e2f3;
+    font-weight: bold;
+}
+
+#pop-up th, #pop-up td{
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+#pop-up td {
+    padding: 2rem 1rem;
+}
+
+#pop-up-btn-incluir {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2e4a7e;
+    padding: .75rem 1.5rem;
+}
+
+#pop-up-btn-incluir img{
+    height: 25px;
+}
+
+/* PARAMETRIZAR */
+
+#parametrizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+#parametrizar .chartCard{
+    width: 60%;
+    height: fit-content;
+    padding: 1rem 2rem;
+}
+
+#parametrizar form{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+#parametrizar .texto-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#parametrizar .texto-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.3em;
+}
+
+#parametrizar input{
+    transform: scale(2);
+}
+
+#parametrizar p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #003399;
+}
+
+#parametrizar select {
+    font-size: 1.3em;
+    padding: .75rem 1.5rem;
+    border: 1px solid gray;
+    width: 30%;
+    text-align: right;
+    color: gray;
+}
+
+#parametrizar-btn-avancar {
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: fit-content;
+    padding: .75rem 1.5rem;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a6a6a6;
+    align-self: flex-end;
+}
+
+#parametrizar-btn-avancar img{
+    height: 25px;
+}
+
+/* parametrizar cenarios-lista-ponderacoes */
+
+#cenarios-lista-ponderacoes-parametrizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+}
+
+#cenarios-lista-ponderacoes-parametrizar .chartCard {
+    width: 60%;
+    height: fit-content;
+}
+
+#cenarios-lista-ponderacoes-parametrizar .headerCard {
+    border-bottom: none;
+}
+
+#cenarios-lista-ponderacoes-parametrizar thead {
+    border-bottom: 1px solid #000;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#cenarios-lista-ponderacoes-parametrizar th, #cenarios-lista-ponderacoes-parametrizar td {
+    padding: .75rem 1.5rem;
+    text-align: left;
+}
+
+#cenarios-lista-ponderacoes-parametrizar td {
+    font-size: 1.4em;
+    padding: 1rem 1.5rem;
+}
+
+#cenarios-lista-ponderacoes-parametrizar select {
+    width: 50%;
+    padding: .75rem 1.5rem;
+    border: 1px solid lightgray;
+}
+
+.adicionar-variavel-parametrizar-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.adicionar-variavel-parametrizar-btns button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .75rem 1.5rem;
+    background-color: #2e4a7e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.adicionar-variavel-parametrizar-btns button:nth-child(1){
+    width: 35%;
+}
+.adicionar-variavel-parametrizar-btns button:nth-child(2){
+    width: 35%;
+}
+.adicionar-variavel-parametrizar-btns button:nth-child(3){
+    width: 20%;
+}
+
+.adicionar-variavel-parametrizar-btns button img{
+    height: 25px;
+}
+
+.adicionar-variavel-parametrizar-btns button span{
+    align-self: center;
 }
