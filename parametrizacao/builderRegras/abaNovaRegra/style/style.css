@@ -248,7 +248,7 @@ form {
     
 .racionalRegra {
   margin-left: 20px; /* Ajuste a margem conforme necessário */
-  height: 750px;
+  height: 650px;
   overflow-y: scroll;
 }
 
@@ -305,5 +305,14 @@ form {
 .botoesNovaRegra .salvar{
     position: fixed;
     top: 1010px;
+    right: 30px;
+}
+.botoesNovaRegra .adicionar{
+    position: fixed;
+    background-color: white;
+    border: none;
+    color: lightgray;
+    box-shadow: none;
+    top: 930px;
     right: 30px;
 }
