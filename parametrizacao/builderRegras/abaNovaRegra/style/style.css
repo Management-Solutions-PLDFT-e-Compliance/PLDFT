@@ -156,7 +156,7 @@ h3{
 }
 
 .titulos hr{
-    width: 48%;
+    width: 100%;
 }
 
 .titulos > h2 {
@@ -166,6 +166,17 @@ h3{
     font-weight: bold;
     margin-bottom: 4px;
     padding-left: 20px;
+}
+
+.titulos2 > h2 {
+    color: #000;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    margin-right: 215px;
+    display: inline-block;
 }
 
 .titulos > h5 {
@@ -192,11 +203,11 @@ select{
     width: 350px;
 }
 
-input{
+form input{
     height: 35px;
     width: 350px;
 }
-p{
+form p{
     padding-top: 35px;
     padding-left: 20px;
 }
@@ -204,4 +215,64 @@ p{
 form p {
     text-align: left;
     margin-right: 50px; /* Ajuste conforme necessário */
+}
+
+form {
+    text-align: right;
+    font-family: "Poppins", sans-serif;
   }
+
+  form p {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    margin-right: 50px; /* Ajuste conforme necessário */
+  }
+
+  form label {
+    display: inline-block;
+    width: 500px; /* Ajuste conforme necessário */
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    margin-right: 10px; /* Espaçamento entre a etiqueta e o campo de entrada */
+  }
+
+  form input,
+  select {
+    font-family: "Poppins", sans-serif;
+    width: 350px; /* Ajuste conforme necessário */
+  }
+
+.cardNovaRegra {
+  display: flex;
+}
+    
+.racionalRegra {
+  margin-left: 20px; /* Ajuste a margem conforme necessário */
+}
+
+.restaurarFlex {
+    flex: 0 0 auto;
+}
+
+.racionalRegra select{
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    width: 200px; /* Ajuste conforme necessário */
+    margin-right: 100px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.racionalRegra label {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-weight: normal;
+    padding-right: 30px;
+    padding-left: 10px;
+    vertical-align:top;
+}
+
+.racionalRegra input{
+    height: 20px;
+    width: 20px;
+}
