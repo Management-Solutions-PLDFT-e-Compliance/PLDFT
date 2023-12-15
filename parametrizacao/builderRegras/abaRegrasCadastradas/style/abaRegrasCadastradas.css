@@ -1,0 +1,99 @@
+#selects{
+    display: flex;
+    justify-content: center;
+}
+
+.selection-boxes{
+    font-size: large;
+    margin: 20px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+}
+
+#regras_atuais{
+    font-size: x-large;
+    background-color: white;
+    width: auto;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid #dcdcdc;
+    height: 730px;
+}
+
+.tabelaRegras{
+    max-height: 650px;
+    overflow-y: auto;
+}
+
+.tabelaRegras > table{
+    margin-left: 0px;
+    width: 100%;
+}
+
+.tabelaRegras > table > thead > tr > th:nth-child(2), th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6), th:nth-child(7), th:nth-child(8), th:nth-child(9) {
+
+    color: #000;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 7px;
+    border-collapse: collapse;
+    font-weight: bold;
+
+}
+
+.tabelaRegras > table > tbody > tr  > td {
+    margin: 12px;
+    text-align: center;
+}
+
+.tabelaRegras > table {
+    border-collapse: separate;
+    border-spacing: 25px; /*Altere o valor conforme necessário*/
+}
+
+.tabelaRegras > table > tbody > tr > td > input{
+    width: 20px;
+    height: 20px;
+}
+
+/* Botoes */
+
+#botoes_inferiores{
+    display: flex;
+    position: absolute;
+    right: 80px;
+    bottom: 35px;
+}
+
+.botao_ativo{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.botao_inativo{
+    display: flex;
+    background-color: lightgray;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}

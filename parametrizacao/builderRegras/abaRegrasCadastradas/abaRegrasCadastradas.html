@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="./style/abaRegrasCadastradas.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1" >
+        <a href="../../../home.html"><img src="../../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+          <button class="botaoHeader botaoEstrategico botaoOff">
+            <img src="../../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+            <p>Estratégico</p>
+          </button>
+        </a>
+        <a href="../../../gerencial/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoGerencial botaoOff">
+            <img src="../../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+            <p>Gerencial</p>
+          </button>
+        </a>
+        <a href="../../../operacional/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoOperacional botaoOff">
+            <img src="../../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+            <p>Operacional</p>
+          </button>
+        </a>
+        <a href="../../home.html" class="linksBotoes">
+          <button class="botaoHeader botaoParams botaoOn botaoOnParams">
+            <img src="../../../assets/icons/parametrizacaoOn.png" alt="Icone Atendimento">
+            <p>Parametrização</p>
+          </button>
+        </a>
+        <h1 class="a comprimentos">Olá, Usuário! </h1>
+        <a href="../../../index.html" style="position: absolute; top: 31px;">
+          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+            <img src="../../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+            SAIR
+          </button>
+        </a>
+    </header>
+    <nav class="cabecario">
+        <ul>
+            <li class="vazio"></li>
+            <li><a href="../../calculoRiscoLDFT/calculoRiscoLDFT.html"><span>Calculo do risco LDFT</span></a></li>
+            <li class="vazio"></li>
+            <li class="active"><span>Builder de regras</span></li>
+            <li class="vazio" style="width: 70%;"></li>
+        </ul>
+    </nav>
+    <nav class="subCabecario">
+        <ul>
+            <li class="vazio"></li>
+            <li class="active"><span>Regras cadastradas</span></li>
+            <li class="vazio"></li>
+            <li><a href="../abaNovaRegra/abaNovaRegra.html"><span>Nova Regra Monitoramento</span></a></li>
+            <li class="vazio" style="width: 70%;"></li>
+        </ul>
+    </nav>
+
+    <div id="pagina">
+      <div id="selects">
+        <select name="Codigo" class="selection-boxes"><option value="Código">Código</option></select>
+        <select name="Nome" class="selection-boxes"><option value="Nome">Nome</option></select>
+        <select name="Tipo" class="selection-boxes"><option value="Tipo (PF/PJ)">Tipo (PF/PJ)</option></select>
+        <select name="Moeda" class="selection-boxes"><option value="Moeda">Moeda</option></select>
+        <select name="Empresa/CNPJ" class="selection-boxes"><option value="Empresa/CNPJ">Empresa/CNPJ</option></select>
+        <select name="Periodo" class="selection-boxes"><option value="Período Trans.">Período Trans.</option></select>
+      </div>
+
+      <p style="font-size: 1.1em; font-family: sans-serif; font-weight: bold; margin: 10px 0px 0px 20px ;">Regras atuais</p>
+
+      <div id="regras_atuais">
+
+        <div class="tabelaRegras">
+          <table id="Tabela_Regras">
+            <thead>
+              <tr>
+                <th><input type="checkbox" style="width: 20px; height: 20px;"></th>
+                <th>Código</th>
+                <th>Nome da regra</th>
+                <th>Tipo</th>
+                <th>Produto</th>
+                <th>Moeda</th>
+                <th>Parâmetro</th>
+                <th>Período transacional</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00001</td>
+                <td>PEP 1</td>
+                <td>PF</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Mensal</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00002</td>
+                <td>Câmbio/renda 1</td>
+                <td>PF/PJ</td>
+                <td>Câmbio</td>
+                <td>BRL</td>
+                <td>>10.000</td>
+                <td>Mensal</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00003</td>
+                <td>Transação Espécie 1</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>10.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00004</td>
+                <td>Fracionado 1</td>
+                <td>PF</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>#>10</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00005</td>
+                <td>Fracionado espécie 1</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td><10.000 e #>10</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00006</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00007</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00008</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00009</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00010</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00011</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00012</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00013</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00014</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00015</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00016</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>00017</td>
+                <td>Transação Espécie 2</td>
+                <td>PF/PJ</td>
+                <td>Conta Corrente</td>
+                <td>BRL</td>
+                <td>>50.000</td>
+                <td>Diário</td>
+                <td>Ativo</td>
+              </tr>
+  
+            </tbody>
+          </table>
+        </div>
+
+        <div id="botoes_inferiores">
+
+          <button class="botao_ativo" onclick="downloadExcel()"><img src="./images/download-30.png" alt="Download">Download</button>
+          <button class="botao_inativo"><img src="./images/engrenagem-30.png" alt="Parametrizar">Parametrizar</button>
+          <button class="botao_inativo"><img src="./images/x-30.png" alt="">Inativar</button>
+          
+        </div>
+      </div>
+
+    </div>
+
+    
+    <script src="./javascript/abaRegrasCadastradas.js"></script>
+    <script src="../../../script.js"></script>
+</body>
+</html>
