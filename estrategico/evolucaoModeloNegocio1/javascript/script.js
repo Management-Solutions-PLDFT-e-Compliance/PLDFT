@@ -372,8 +372,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
                 label: 'Muito Baixo',
-                backgroundColor: 'rgba(72,117,197,0.2)',
-                borderColor: 'rgba(72,117,197,255)',
+                backgroundColor: 'rgb(67,190,67)',
+                borderColor: 'rgb(67,190,67)',
                 data: [452, 527, 600, 425, 395, 555],
                 fill: false,
                 borderWidth: 1,
@@ -381,8 +381,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Baixo',
-                backgroundColor: 'rgba(238,132,60,0.2)',
-                borderColor: 'rgba(238,132,60,255)',
+                backgroundColor: 'rgb(157,210,52)',
+                borderColor: 'rgb(157,210,52)',
                 data: [1502, 1650, 1480, 1700, 1645, 1800],
                 fill: false,
                 borderWidth: 1,
@@ -390,8 +390,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Moderado',
-                backgroundColor: 'rgba(167,167,167,0.2)',
-                borderColor: 'rgba(167,167,167,255)',
+                backgroundColor: 'rgb(247,230,36)',
+                borderColor: 'rgb(247,230,36)',
                 data: [3000, 3250, 2890, 3560, 3540, 3241],
                 fill: false,
                 borderWidth: 1,
@@ -400,7 +400,7 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             {
                 label: 'Alto',
                 backgroundColor: 'rgba(255,192,0,0.2)',
-                borderColor: 'rgba(255,192,0,255)',
+                borderColor: 'rgba(255,192,0,0.2)',
                 data: [2613, 2951, 3491, 2601, 2483, 2194],
                 fill: false,
                 borderWidth: 3,
@@ -408,8 +408,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Muito Alto',
-                backgroundColor: 'rgba(91, 155, 213, 0.2)',
-                borderColor: 'rgba(91,155,213,255)',
+                backgroundColor: 'rgb(217,61,61)',
+                borderColor: 'rgb(217,61,61)',
                 data: [123, 212, 32, 242, 125, 112],
                 fill: false,
                 borderWidth: 3,
@@ -421,8 +421,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
                 label: 'Muito Baixo',
-                backgroundColor: 'rgba(72,117,197,0.2)',
-                borderColor: 'rgba(72,117,197,255)',
+                backgroundColor: 'rgb(67,190,67)',
+                borderColor: 'rgb(67,190,67)',
                 data: [73, 76, 78, 79, 75, 79],
                 fill: false,
                 borderWidth: 1,
@@ -430,8 +430,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Baixo',
-                backgroundColor: 'rgba(238,132,60,0.2)',
-                borderColor: 'rgba(238,132,60,255)',
+                backgroundColor: 'rgb(157,210,52)',
+                borderColor: 'rgb(157,210,52)',
                 data: [74, 79, 73, 79, 77, 72],
                 fill: false,
                 borderWidth: 1,
@@ -439,8 +439,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Moderado',
-                backgroundColor: 'rgba(167,167,167,0.2)',
-                borderColor: 'rgba(167,167,167,255)',
+                backgroundColor: 'rgb(247,230,36)',
+                borderColor: 'rgb(247,230,36)',
                 data: [58, 60, 70, 65, 68, 70],
                 fill: false,
                 borderWidth: 1,
@@ -449,7 +449,7 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             {
                 label: 'Alto',
                 backgroundColor: 'rgba(255,192,0,0.2)',
-                borderColor: 'rgba(255,192,0,255)',
+                borderColor: 'rgba(255,192,0,0.2)',
                 data: [52, 54, 60, 58, 55, 51],
                 fill: false,
                 borderWidth: 3,
@@ -457,8 +457,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Muito Alto',
-                backgroundColor: 'rgba(91, 155, 213, 0.2)',
-                borderColor: 'rgba(91,155,213,255)',
+                backgroundColor: 'rgb(217,61,61)',
+                borderColor: 'rgb(217,61,61)',
                 data: [34, 23, 18, 38, 11, 41],
                 fill: false,
                 borderWidth: 3,
@@ -470,8 +470,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
                 label: 'Muito Baixo',
-                backgroundColor: 'rgba(72,117,197,0.2)',
-                borderColor: 'rgba(72,117,197,255)',
+                backgroundColor: 'rgb(67,190,67)',
+                borderColor: 'rgb(67,190,67)',
                 data: [85, 89, 55, 88, 75, 79],
                 fill: false,
                 borderWidth: 1,
@@ -479,8 +479,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Baixo',
-                backgroundColor: 'rgba(238,132,60,0.2)',
-                borderColor: 'rgba(238,132,60,255)',
+                backgroundColor: 'rgb(157,210,52)',
+                borderColor: 'rgb(157,210,52)',
                 data: [74, 81, 73, 90, 77, 74],
                 fill: false,
                 borderWidth: 1,
@@ -488,8 +488,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Moderado',
-                backgroundColor: 'rgba(167,167,167,0.2)',
-                borderColor: 'rgba(167,167,167,255)',
+                backgroundColor: 'rgb(247,230,36)',
+                borderColor: 'rgb(247,230,36)',
                 data: [50, 76,60, 68, 65, 70],
                 fill: false,
                 borderWidth: 1,
@@ -498,7 +498,7 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             {
                 label: 'Alto',
                 backgroundColor: 'rgba(255,192,0,0.2)',
-                borderColor: 'rgba(255,192,0,255)',
+                borderColor: 'rgba(255,192,0,0.2)',
                 data: [64, 75, 60, 55, 58, 51],
                 fill: false,
                 borderWidth: 3,
@@ -506,8 +506,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Muito Alto',
-                backgroundColor: 'rgba(91, 155, 213, 0.2)',
-                borderColor: 'rgba(91,155,213,255)',
+                backgroundColor: 'rgb(217,61,61)',
+                borderColor: 'rgb(217,61,61)',
                 data: [40, 18, 23, 11, 38, 41],
                 fill: false,
                 borderWidth: 3,
@@ -519,8 +519,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
                 label: 'Muito Baixo',
-                backgroundColor: 'rgba(72,117,197,0.2)',
-                borderColor: 'rgba(72,117,197,255)',
+                backgroundColor: 'rgb(67,190,67)',
+                borderColor: 'rgb(67,190,67)',
                 data: [150, 147, 135, 149, 180, 139],
                 fill: false,
                 borderWidth: 1,
@@ -528,8 +528,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Baixo',
-                backgroundColor: 'rgba(238,132,60,0.2)',
-                borderColor: 'rgba(238,132,60,255)',
+                backgroundColor: 'rgb(157,210,52)',
+                borderColor: 'rgb(157,210,52)',
                 data: [120, 135, 140, 130, 128, 125],
                 fill: false,
                 borderWidth: 1,
@@ -537,8 +537,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Moderado',
-                backgroundColor: 'rgba(167,167,167,0.2)',
-                borderColor: 'rgba(167,167,167,255)',
+                backgroundColor: 'rgb(247,230,36)',
+                borderColor: 'rgb(247,230,36)',
                 data: [100, 89, 90, 95, 110, 109],
                 fill: false,
                 borderWidth: 1,
@@ -547,7 +547,7 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             {
                 label: 'Alto',
                 backgroundColor: 'rgba(255,192,0,0.2)',
-                borderColor: 'rgba(255,192,0,255)',
+                borderColor: 'rgba(255,192,0,0.2)',
                 data: [87, 82, 85, 75, 85, 90],
                 fill: false,
                 borderWidth: 3,
@@ -555,8 +555,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Muito Alto',
-                backgroundColor: 'rgba(91, 155, 213, 0.2)',
-                borderColor: 'rgba(91,155,213,255)',
+                backgroundColor: 'rgb(217,61,61)',
+                borderColor: 'rgb(217,61,61)',
                 data: [54, 60, 65, 68, 76, 74],
                 fill: false,
                 borderWidth: 3,
@@ -568,8 +568,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
                 label: 'Muito Baixo',
-                backgroundColor: 'rgba(72,117,197,0.2)',
-                borderColor: 'rgba(72,117,197,255)',
+                backgroundColor: 'rgb(67,190,67)',
+                borderColor: 'rgb(67,190,67)',
                 data: [354, 326, 375, 400, 386, 350],
                 fill: false,
                 borderWidth: 1,
@@ -577,8 +577,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Baixo',
-                backgroundColor: 'rgba(238,132,60,0.2)',
-                borderColor: 'rgba(238,132,60,255)',
+                backgroundColor: 'rgb(157,210,52)',
+                borderColor: 'rgb(157,210,52)',
                 data: [325, 375, 354, 328, 295, 300],
                 fill: false,
                 borderWidth: 1,
@@ -586,8 +586,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Moderado',
-                backgroundColor: 'rgba(167,167,167,0.2)',
-                borderColor: 'rgba(167,167,167,255)',
+                backgroundColor: 'rgb(247,230,36)',
+                borderColor: 'rgb(247,230,36)',
                 data: [256, 300, 254, 230, 250, 276],
                 fill: false,
                 borderWidth: 1,
@@ -596,7 +596,7 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             {
                 label: 'Alto',
                 backgroundColor: 'rgba(255,192,0,0.2)',
-                borderColor: 'rgba(255,192,0,255)',
+                borderColor: 'rgba(255,192,0,0.2)',
                 data: [221, 200, 254, 230, 194, 200],
                 fill: false,
                 borderWidth: 3,
@@ -604,8 +604,8 @@ document.getElementById('selectPerfis').addEventListener('change', function () {
             },
             {
                 label: 'Muito Alto',
-                backgroundColor: 'rgba(91, 155, 213, 0.2)',
-                borderColor: 'rgba(91,155,213,255)',
+                backgroundColor: 'rgb(217,61,61)',
+                borderColor: 'rgb(217,61,61)',
                 data: [100, 125, 100, 118, 90, 150],
                 fill: false,
                 borderWidth: 3,
@@ -626,9 +626,35 @@ document.getElementById('transacoes').addEventListener('change', function () {
     var selectedOption = this.value;
 
     // Atualiza os dados com base na opção selecionada
-    var newData;
+    var newData = {
+        labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+        datasets: [{
+            label: 'Operações',
+            type: 'bar',
+            backgroundColor: createLinearGradientBar(baseClientesCtx, 'rgb(9,41,104)', 'rgba(157,195,230,255)'),
+            borderColor: 'rgba(75, 192, 192, 1)',
+            data: [2500, 3000, 4200, 4000, 5700, 6000],
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'leftYAxis',
+            barPercentage: 0.4,
+            datalabels: {
+                display: false // Remove os rótulos de dados para este conjunto de dados
+            }
+        },{
+            label: 'Volume financeiro',
+            type: 'line',
+            backgroundColor: 'rgb(9,41,104)',
+            borderColor: 'rgb(9,41,104)',
+            data: [20, 22, 17, 25, 19, 28],
+            fill: false,
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'rightYAxis',
+        }]
+    }
 
-    if (selectedOption === 'Trans. Digital') {
+    if (selectedOption === 'Unidade de Negócio') {
         newData = {
         labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
         datasets: [{
@@ -655,7 +681,7 @@ document.getElementById('transacoes').addEventListener('change', function () {
             pointRadius: 0,
             yAxisID: 'rightYAxis',
         }]
-    }} else if (selectedOption === 'opcao1') {
+    }} else if (selectedOption === 'Conta') {
         newData = {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
@@ -683,7 +709,7 @@ document.getElementById('transacoes').addEventListener('change', function () {
                 yAxisID: 'rightYAxis',
             }]
         }
-    }  else if (selectedOption === 'opcao2') {
+    }  else if (selectedOption === 'Empréstimos') {
         newData = {
             labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
             datasets: [{
@@ -711,6 +737,18 @@ document.getElementById('transacoes').addEventListener('change', function () {
                 yAxisID: 'rightYAxis',
             }]
         }
+    }  else if (selectedOption === 'Cartões') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  else if (selectedOption === 'Corretora') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  else if (selectedOption === 'Câmbio') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  else if (selectedOption === 'Externas') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
     }  
     // Atualiza o gráfico com os novos dados
     volumeTransacoes.data = newData;
@@ -724,7 +762,33 @@ document.getElementById('contrato').addEventListener('change', function () {
     var selectedOption = this.value;
 
     // Atualiza os dados com base na opção selecionada
-    var newData;
+    var newData = {
+        labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+        datasets: [{
+            label: 'Operações',
+            type: 'bar',
+            backgroundColor: createLinearGradientBar(baseClientesCtx, 'rgb(9,41,104)', 'rgba(157,195,230,255)'),
+            borderColor: 'rgba(75, 192, 192, 1)',
+            data: [2500, 3000, 4200, 4000, 5700, 6000],
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'leftYAxis',
+            barPercentage: 0.4,
+            datalabels: {
+                display: false // Remove os rótulos de dados para este conjunto de dados
+            }
+        },{
+            label: 'Volume financeiro',
+            type: 'line',
+            backgroundColor: 'rgb(9,41,104)',
+            borderColor: 'rgb(9,41,104)',
+            data: [20, 22, 17, 25, 19, 28],
+            fill: false,
+            borderWidth: 1,
+            pointRadius: 0,
+            yAxisID: 'rightYAxis',
+        }]
+    }
 
     if (selectedOption === 'PF') {
         newData = {
@@ -781,7 +845,10 @@ document.getElementById('contrato').addEventListener('change', function () {
                 yAxisID: 'rightYAxis',
             }]
         }
-    } 
+    } else if (selectedOption === 'Tipo de Cliente') {
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+    }  
     // Atualiza o gráfico com os novos dados
     volumeTransacoes.data = newData;
     volumeTransacoes.update();
@@ -832,6 +899,11 @@ document.getElementById('entidades').addEventListener('change', function () {
         newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
         newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
     } else if (selectedOption === 'Susep') {
+
+        newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
+        newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
+
+    } else if (selectedOption === 'Órgão Regulador') {
 
         newData.datasets[0].data = criarVetorAleatorio(6, 5000, 1000)
         newData.datasets[1].data = criarVetorAleatorio(6, 20, 10)
