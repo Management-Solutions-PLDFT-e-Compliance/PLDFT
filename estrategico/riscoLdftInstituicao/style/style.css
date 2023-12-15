@@ -87,3 +87,18 @@ body{
     margin-top: 0.5rem;
     width: 100%;
 }
+
+.controleGrafImpactos{
+    position: fixed;
+    margin-top: -40px;
+    margin-left: 187px;
+}
+
+.controleGrafImpactos select{
+    font-size: 20px;
+    width: 100px;
+    padding: 3px 0px;
+    border: 1px solid lightgray;
+}
+
+
