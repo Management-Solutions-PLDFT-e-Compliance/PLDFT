@@ -122,11 +122,13 @@ function createPieChart(containerId, chartData, rightText) {
 
     var series = chart.series.push(new am4charts.PieSeries());
     series.dataFields.value = "value";
+    series.slices.template.propertyFields.fill = "color";
+    series.slices.template.propertyFields.stroke = "stroke";
 
     // Configurar as fatias (slices)
     var sliceTemplate = series.slices.template;
-    sliceTemplate.cornerRadius = 5; //Ajuste das bordar externas
-    sliceTemplate.innerCornerRadius = 5; //Ajuste das bordar externas
+    // sliceTemplate.cornerRadius = 5; //Ajuste das bordar externas
+    // sliceTemplate.innerCornerRadius = 5; //Ajuste das bordar externas
     sliceTemplate.draggable = false;
     sliceTemplate.inert = true;
 
@@ -163,28 +165,45 @@ function createPieChart(containerId, chartData, rightText) {
       am4core.color("#082464"),
       am4core.color("#ffffff")
     ];
+
   }
 
 // Dados específicos para cada gráfico
 var chartData1 = [
-{ value: 20 },
-{ value: 80 }
+{ value: 20, "color": am4core.color("#11B450"), "stroke": am4core.color("#11B450")},
+{ value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#9BD449")},
+{ value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#F8FC05")},
+{ value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#F19B26")},
+{ value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#FD0F06")}
 ];
 
 var chartData2 = [
-{ value: 35 },
-{ value: 65 }
-];
+    { value: 20, "color": am4core.color("#11B450"), "stroke": am4core.color("#11B450")},
+    { value: 15, "color": am4core.color("#9BD449"), "stroke": am4core.color("#9BD449")},
+    { value: 5, "color": am4core.color("#ffffff"), "stroke": am4core.color("#9BD449")},
+    { value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#F8FC05")},
+    { value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#F19B26")},
+    { value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#FD0F06")}
+    ];
 
 var chartData3 = [
-{ value: 90 },
-{ value: 10 }
-];
+    { value: 20, "color": am4core.color("#11B450"), "stroke": am4core.color("#11B450")},
+    { value: 20, "color": am4core.color("#9BD449"), "stroke": am4core.color("#9BD449")},
+    { value: 20, "color": am4core.color("#F8FC05"), "stroke": am4core.color("#F8FC05")},
+    { value: 20, "color": am4core.color("#F19B26"), "stroke": am4core.color("#F19B26")},
+    { value: 10, "color": am4core.color("#FD0F06"), "stroke": am4core.color("#FD0F06")},
+    { value: 10, "color": am4core.color("#ffffff"), "stroke": am4core.color("#FD0F06")}
+    ];
 
 var chartData4 = [
-{ value: 75 },
-{ value: 15 }
-];
+    { value: 20, "color": am4core.color("#11B450"), "stroke": am4core.color("#11B450")},
+    { value: 20, "color": am4core.color("#9BD449"), "stroke": am4core.color("#9BD449")},
+    { value: 20, "color": am4core.color("#F8FC05"), "stroke": am4core.color("#F8FC05")},
+    { value: 15, "color": am4core.color("#F19B26"), "stroke": am4core.color("#F19B26")},
+    { value: 5, "color": am4core.color("#ffffff"), "stroke": am4core.color("#F19B26")},
+    { value: 20, "color": am4core.color("#ffffff"), "stroke": am4core.color("#FD0F06")}
+    ];
+;
 
 // Chamar a função para criar quatro gráficos em contêineres diferentes com dados e textos diferentes
 createPieChart("chartdiv1", chartData1, "20%");
