@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../home_style.css">
   <title>Compliance Analytics</title>
 </head>
 <body>
@@ -22,17 +23,17 @@
       </button>
     </a>
     <a href="../operacional/home.html" class="linksBotoes">
-      <button class="botaoHeader botaoOperacional botaoOff">
-        <img src="../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+      <button class="botaoHeader botaoOperacional botaoOn">
+        <img src="../assets/icons/operacionalOn.png" alt="Icone Atendimento">
         <p>Operacional</p>
       </button>
     </a>
-    <a href="../parametrizacao/home.html" class="linksBotoes">
-      <button class="botaoHeader botaoParams botaoOn botaoOnParams">
-        <img src="../assets/icons/parametrizacaoOn.png" alt="Icone Atendimento">
+    <div class="linksBotoes">
+      <button class="botaoHeader botaoParams botaoOff">
+        <img src="../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
         <p>Parametrização</p>
       </button>
-    </a>
+    </div>
     <h1 class="a comprimentos">Olá, Usuário! </h1>
     <a href="../index.html" style="position: absolute; top: 31px;">
       <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
@@ -41,6 +42,18 @@
       </button>
     </a>
   </header>
+
+  <nav class="cabecario">
+    <ul>
+        <li class="vazio"></li>
+        <li><a href="./monitoramento/monitoramento.html"><span>Monitoramento</span></a></li>
+        <li class="vazio"></li>
+        <li><a href="./analiseAlerta/analiseAlerta.html"><span>Análise de alerta</span></a></li>
+        <li class="vazio" style="width: 70%;"></li>
+    </ul>
+  </nav>
+
+
     <div class="texto-central">
         <h4>Selecione a funcionalidade para visualização</h4>
     </div>
