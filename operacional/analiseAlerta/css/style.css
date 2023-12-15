@@ -255,3 +255,8 @@
     margin-top: -61px;
     margin-left: 577px;
 }
+
+.analiseAlertaFull .parteBaixo .card3 .conteudo .linha2 a{
+    text-decoration: none;
+    display: flex;
+}

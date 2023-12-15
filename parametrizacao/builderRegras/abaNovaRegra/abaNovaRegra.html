@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/reset.css">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="../../../style.css">
     <title>Document</title>
 </head>
@@ -57,10 +57,79 @@
             <li class="vazio"></li>
             <li><a href=""><span>Regras cadastradas</span></a></li>
             <li class="vazio"></li>
-            <li class="active"><a href=""><span>Nova Regra Monitoramento</span></a></li>
+            <li class="active"><a href="" style="text-decoration: none; height: 100%; width:100%"><span>Nova Regra Monitoramento</span></a></li>
             <li class="vazio" style="width: 70%;"></li>
         </ul>
     </nav>
+    <div class="cardNovaRegra">
+        <div>
+            <h3>Nova regra de monitoramento transacional</h3>
+        </div>
+        <div class="titulos">
+            <h2>Histórico  por perfil</h2>
+            <hr>
+        </div>
+        <form action="/action_page.php" method="post">
+            <p>
+              <label for="codigo_regra">Código da Regra:</label>
+              <input type="text" id="codigo_regra" name="codigo_regra" value="00007" readonly>
+            </p>
+            <p>
+              <label for="nome_regra">Nome da Regra:</label>
+              <input type="text" id="nome_regra" name="nome_regra" required>
+            </p>
+            <p>
+              <label for="periodo_transacional">Período transacional:</label>
+              <select id="periodo_transacional" name="periodo_transacional">
+                <option value="Diário">Diário</option>
+                <option value="Semanal">Semanal</option>
+                <option value="Mensal">Mensal</option>
+                <option value="Anual">Anual</option>
+              </select>
+            </p>
+            <p>
+              <label for="produto_servico">Produto/ Serviço:</label>
+              <select id="produto_servico" name="produto_servico">
+                <option value="Conta corrente">Conta corrente</option>
+                <option value="Cartão de crédito">Cartão de crédito</option>
+                <option value="Cartão de débito">Cartão de débito</option>
+                <option value="Empréstimo">Empréstimo</option>
+              </select>
+            </p>
+            <p>
+              <label for="rating_risco_cliente">Rating risco Cliente:</label>
+              <select id="rating_risco_cliente" name="rating_risco_cliente">
+                <option value="Baixo">Baixo</option>
+                <option value="Médio">Médio</option>
+                <option value="Alto">Alto</option>
+              </select>
+            </p>
+            <p>
+              <label for="tipo_cliente_pf_pj">Tipo de cliente (PF/PJ):</label>
+              <select id="tipo_cliente_pf_pj" name="tipo_cliente_pf_pj">
+                <option value="PF">Pessoa física</option>
+                <option value="PJ">Pessoa jurídica</option>
+              </select>
+            </p>
+            <p>
+              <label for="pep">PEP:</label>
+              <select id="pep" name="pep">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+              </select>
+            </p>
+            <p>
+              <label for="moeda">Moeda:</label>
+              <select id="moeda" name="moeda">
+                <option value="BRL">Real</option>
+                <option value="USD">Dólar</option>
+                <option value="EUR">Euro</option>
+              </select>
+            </p>
+          </form>
+        
+        </div>
+
 
     
     <script src="./javascript/javascript.js"></script>

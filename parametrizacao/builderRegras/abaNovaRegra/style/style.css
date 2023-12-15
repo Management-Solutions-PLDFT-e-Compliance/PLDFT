@@ -96,7 +96,7 @@ header {
 .subCabecario .vazio {
     width: .5rem;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: gray;
     align-self: flex-end;
 }
  
@@ -112,10 +112,10 @@ header {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     border-bottom: 2px solid gray;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .subCabecario li a{
-    color: #808080;
+    color: #2c4c7c;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -123,10 +123,85 @@ header {
 
 
 .subCabecario .active {
-    color: #000;
+    color: red;
     background-color: #d3d3d3;
-    border-top: 2px solid gray;
-    border-left: 2px solid gray;
-    border-right: 2px solid gray;
-    border-bottom: none;
+    /* border-top: 2px solid gray; */
+    /* border-left: 2px solid gray; */
+    /* border-right: 2px solid gray; */
+    border-bottom: 4px solid #2c4c7c;
 }
+
+.cardNovaRegra{
+    width: 98%;
+    height: 76%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin: 19.2px;
+    position: fixed;
+    top: 21vh;
+}
+
+h3{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.titulos {
+    padding: 10px;
+}
+
+.titulos hr{
+    width: 48%;
+}
+
+.titulos > h2 {
+    color: #000;
+    font-size: 90px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 4px;
+    padding-left: 20px;
+}
+
+.titulos > h5 {
+    color: #c2c2c2;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+label{
+    color: #2c4c7c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+select{
+    height: 35px;
+    width: 350px;
+}
+
+input{
+    height: 35px;
+    width: 350px;
+}
+p{
+    padding-top: 35px;
+    padding-left: 20px;
+}
+
+form p {
+    text-align: left;
+    margin-right: 50px; /* Ajuste conforme necessário */
+  }

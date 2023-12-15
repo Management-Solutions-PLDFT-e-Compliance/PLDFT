@@ -18,8 +18,8 @@
 </head>
 <body>
     <header class="header1" >
-        <a href="../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
-        <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+        <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../home.html" class="linksBotoes primeiroLinkBotao">
           <button class="botaoHeader botaoEstrategico botaoOn">
             <img src="../../assets/icons/estrategicoIconOn.svg" alt="Icone Atendimento">
             <p>Estratégico</p>
@@ -43,7 +43,7 @@
             <p>Parametrização</p>
           </button>
         </a>
-        <h1 class="a comprimentos">Olá, Usuário! </h1>
+        <h1 class="a comprimentos" style="font-weight: bold;">Olá, Usuário! </h1>
         <a href="../../index.html" style="position: absolute; top: 31px;">
           <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
             <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
@@ -53,7 +53,7 @@
       </header>
 
 
-      <nav class="cabecario">
+      <nav class="cabecario" style="font-size: 1.3em;">
         <ul>
             <li class="vazio"></li>
             <li class="active"><span>Risco LDFT da Instituição</span></li>
@@ -109,7 +109,14 @@
             <div id="Impactos" class="item3">
                 
                 <div class="titulos">
-                    <h2>Impactos (Último Ano)</h2>
+                    <h2>Impactos no ano:</h2>
+                </div>
+                <div class="controleGrafImpactos">
+                  <select name="" id="seletorAnosGrafImpactos" onchange="atualizarGraficosImpactos()">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                  </select>
                 </div>
                 
                 <div class="graficos_inferiores">

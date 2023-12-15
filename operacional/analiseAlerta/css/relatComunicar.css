@@ -1,0 +1,74 @@
+.relatComunicarFull{
+    position: absolute;
+    top: 180px;
+    width: 1870px;
+    height: 870px;
+    left: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.relatComunicarFull *{
+    font-size: 20px;
+}
+
+.relatComunicarFull .conteudo{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.espacoid{
+    display: flex;
+    gap: 100px;
+    align-items: center;    
+}
+
+.blocoBordaNumID{
+    border: 1px solid lightgray;
+    width: 150px;
+    text-align: center;
+    padding: 2px 0px;
+}
+
+.tituloRelatorio{
+    padding: 0px;
+    margin-top: 40px;
+}
+
+.paragrafosRelatorio{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-right: 20px;
+}
+
+.paragrafosRelatorio p{
+    text-align: justify;
+    line-height: 2;
+}
+
+.relatComunicarFull .botao{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 110px;
+    gap: 5px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.relatComunicarFull > a{
+    text-decoration: none;
+    position: fixed;
+    margin-top: -56px;
+    margin-left: 1747px;
+}
