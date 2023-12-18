@@ -261,6 +261,10 @@ h3 {
     width: 70%
 }
 
+/* .atribuicao-manual{
+    height: ;
+} */
+
 .atribuicao-manual img {
     height: 20px;
 }
@@ -330,6 +334,10 @@ h3 {
 }
 
 /* CARD ANÁLISES PENDENTES POR ANALISTA */
+
+/* .analise-pendentes-analise{
+    height: 95%;
+} */
 .analise-pendentes-analise .bodyCard {
     display: flex;
     justify-content: center;
@@ -338,8 +346,13 @@ h3 {
 }
 
 .analise-pendentes-analise .tamanho-grafico {
-    width: 80%;
+    width: 68%;
 }
+
+/* #grafico-analises-pendentes{
+    max-width: 700px;
+    max-height: 300px;
+} */
 
 .analise-pendentes-analise .quantidade {
     height: 100px;
