@@ -246,17 +246,17 @@ document.addEventListener("DOMContentLoaded", function () {
     //   heatLegend.valueAxis.hideTooltip();
     // });
 
-    // Calcula o valor máximo e mínimo
-    let valores = dadosMapaCalor.map(objeto => objeto.value);
+    // Parte para deixar o mínimo e máximo da legenda dinâmico
+    // let valores = dadosMapaCalor.map(objeto => objeto.value);
 
-    let valorMaximo = Math.max(...valores);
-    let valorMinimo = Math.min(...valores);
+    // let valorMaximo = Math.max(...valores);
+    // let valorMinimo = Math.min(...valores);
 
-    let porcentagemInicio = document.getElementById("porcentagemInicial");
-    let porcentagemFim = document.getElementById("porcentagemFinal");
+    // let porcentagemInicio = document.getElementById("porcentagemInicial");
+    // let porcentagemFim = document.getElementById("porcentagemFinal");
 
-    porcentagemInicio.textContent = `${valorMinimo}%`;
-    porcentagemFim.textContent = `${valorMaximo}%`;
+    // porcentagemInicio.textContent = `${valorMinimo}%`;
+    // porcentagemFim.textContent = `${valorMaximo}%`;
 
   }
 
