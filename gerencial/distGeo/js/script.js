@@ -179,26 +179,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Preenche os dados para fazer o mapa de calor
     // Faremos com que os menores valores sejam verdes e maiores sejam vermelhos
-    polygonSeriesMapaCalor.heatRules.push({
-    property: "fill",
-    target: polygonSeriesMapaCalor.mapPolygons.template,
-    min: am4core.color("#99ff00"),
-    max: am4core.color("#FF0000")
+    // polygonSeriesMapaCalor.heatRules.push({
+    // property: "fill",
+    // target: polygonSeriesMapaCalor.mapPolygons.template,
+    // min: am4core.color("#99ff00"),
+    // max: am4core.color("#FF0000")
+    // });
+
+    polygonSeriesMapaCalor.mapPolygons.template.adapter.add("fill", function(fill, target) {
+      if (target.dataItem) {
+        if (target.dataItem.value >= 0 && target.dataItem.value < 20) {
+          return am4core.color("#11B450")
+        }
+        else if (target.dataItem.value >= 20 && target.dataItem.value < 40) {
+          return am4core.color("#9BD449")
+        }
+        else if (target.dataItem.value >= 40 && target.dataItem.value < 60) {
+          return am4core.color("#F8FC05")
+        }
+        else if (target.dataItem.value >= 60 && target.dataItem.value < 80) {
+          return am4core.color("#F19B26")
+        }
+        else {
+          return am4core.color("#FD0F06");
+        }
+      }
+      return fill;
     });
 
 
     // Define as legendas, posição e cores.
-    let heatLegend = chartMapaCalor.createChild(am4maps.HeatLegend);
-    heatLegend.series = polygonSeriesMapaCalor;
-    heatLegend.align = "right";
-    heatLegend.width = am4core.percent(25);
-    heatLegend.marginRight = am4core.percent(4);
-    heatLegend.marginBottom = am4core.percent(2);
-    heatLegend.minValue = 0;
-    heatLegend.maxValue = 100;
-    heatLegend.valign = "bottom";
-    heatLegend.numberFormatter = new am4core.NumberFormatter();
-    heatLegend.numberFormatter.numberFormat = "#.#'%'";
+    // let heatLegend = chartMapaCalor.createChild(am4maps.HeatLegend);
+    // heatLegend.series = polygonSeriesMapaCalor;
+    // heatLegend.align = "right";
+    // heatLegend.width = am4core.percent(25);
+    // heatLegend.marginRight = am4core.percent(4);
+    // heatLegend.marginBottom = am4core.percent(2);
+    // heatLegend.minValue = 0;
+    // heatLegend.maxValue = 100;
+    // heatLegend.valign = "bottom";
+    // heatLegend.numberFormatter = new am4core.NumberFormatter();
+    // heatLegend.numberFormatter.numberFormat = "#.#'%'";
 
 
     // Configuras os tooltips (texto ao passar o mouse)
@@ -212,18 +233,31 @@ document.addEventListener("DOMContentLoaded", function () {
     let hs = polygonTemplate.states.create("hover");
     hs.properties.fill = am4core.color("grey").brighten(-0.5);
 
-    polygonTemplate.events.on("over", function(ev) {
-      if (!isNaN(ev.target.dataItem.value)) {
-        heatLegend.valueAxis.showTooltipAt(ev.target.dataItem.value)
-      }
-      else {
-        heatLegend.valueAxis.hideTooltip();
-      }
-    });
+    // polygonTemplate.events.on("over", function(ev) {
+    //   if (!isNaN(ev.target.dataItem.value)) {
+    //     heatLegend.valueAxis.showTooltipAt(ev.target.dataItem.value)
+    //   }
+    //   else {
+    //     heatLegend.valueAxis.hideTooltip();
+    //   }
+    // });
     
-    polygonTemplate.events.on("out", function(ev) {
-      heatLegend.valueAxis.hideTooltip();
-    });
+    // polygonTemplate.events.on("out", function(ev) {
+    //   heatLegend.valueAxis.hideTooltip();
+    // });
+
+    // Calcula o valor máximo e mínimo
+    let valores = dadosMapaCalor.map(objeto => objeto.value);
+
+    let valorMaximo = Math.max(...valores);
+    let valorMinimo = Math.min(...valores);
+
+    let porcentagemInicio = document.getElementById("porcentagemInicial");
+    let porcentagemFim = document.getElementById("porcentagemFinal");
+
+    porcentagemInicio.textContent = `${valorMinimo}%`;
+    porcentagemFim.textContent = `${valorMaximo}%`;
+
   }
 
   // Função para atualizar os valores do gráfico com base nos checkboxes e inputs

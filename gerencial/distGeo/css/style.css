@@ -94,6 +94,42 @@
     height: 600px;
   }
 
+  .legendaMapaCalor{
+    position: absolute;
+    top: 726px;
+    left: 1463px;
+    width: 10%;
+  }
+
+  .legendaMapaCalor p{
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .legendaMapaCalor #porcentagemInicial{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: -13px;
+  }
+
+  .legendaMapaCalor #porcentagemFinal{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 173px;
+  }
+
+  #color-bar{
+    
+    height: 24px;
+    background: linear-gradient(to right, #11B450, #9BD449, #F8FC05, #F19B26, #FD0F06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 6px;
+    
+  }
+
   .conteudosBloco2{
     display: flex;
     align-items: center;
