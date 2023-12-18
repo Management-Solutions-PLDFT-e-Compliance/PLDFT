@@ -77,18 +77,6 @@ body{
     height: 678px;
 }
 
-.item4 > button {
-    background-color: #304c7c;
-    color: white;
-    border: 1px solid #304c7c;
-    border-radius: 10px;
-    width: 90px;
-    height: 25px;
-    font-weight: bold;
-    position: absolute;
-    right: 670px;
-}
-
 #scroll-content{
     margin-top: 30px;
     margin-right: 10px;
@@ -179,4 +167,76 @@ body{
     align-items: center;
     color: white;
     font-weight: bold;
+}
+
+.conteinerCardsAlerta{
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    height: 80%;
+    overflow-y: auto;
+}
+
+.conteinerCardsAlerta .cardAlerta{
+    display: flex;
+    flex-direction: column;
+    border: lightgray 3px solid;
+    width: 250px;
+    height: 217px;
+    font-size: 18px;
+    padding: 20px 20px 0px 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.conteinerCardsAlerta .cardAlerta a{
+    margin-top: 20px;
+    margin-bottom: -2px;
+    text-decoration: none;
+    margin-left: -22px;
+}
+
+.conteinerCardsAlerta .cardAlerta a button{
+    background-color: rgb(43, 43, 43);
+    border: none;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 0px 0px 10px 10px;
+    width: 248px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteinerCardsAlerta .cardAlerta a button p{
+    font-size: 16px;
+    color: white;
+}
+
+.conteinerCardsAlerta .cardAlerta a button img{
+    width: 20px;
+}
+
+.ElemBold{
+    font-weight: bold;
+}
+
+.botaoAbrirTodos{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    height: 43px;
+    margin-left: 1126px;
+    margin-top: 0px;
 }
