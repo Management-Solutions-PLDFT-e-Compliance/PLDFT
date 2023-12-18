@@ -225,6 +225,9 @@ function atualizaGrafNovosRelRec(){
           { data: generateRandomArray(180, 365, 12) }
         ]
       };
+
+      ComunicCoaf.options.scales.y.max = 800;
+      
     } else if (document.getElementById('chkUltSem').checked) {
       labels = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun'];
       data = {
@@ -233,14 +236,20 @@ function atualizaGrafNovosRelRec(){
           { data: generateRandomArray(180, 365, 6) }
         ]
       };
+
+      ComunicCoaf.options.scales.y.max = 800;
+
     } else if (document.getElementById('chkUltMes').checked) {
       labels = Array.from({ length: 30 }, (_, i) => i + 1);
       data = {
         datasets: [
-          { data: generateRandomArray(180, 365, 30) },
-          { data: generateRandomArray(180, 365, 30) }
+          { data: generateRandomArray(0, 20, 30) },
+          { data: generateRandomArray(0, 20, 30) }
         ]
       };
+
+      ComunicCoaf.options.scales.y.max = 50;
+
     }
 
     ComunicCoaf.data.labels = labels;
