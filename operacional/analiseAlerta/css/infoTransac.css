@@ -140,6 +140,28 @@
     margin-bottom: -10px;
 }
 
+.infoTransacFull .parteBaixo .card1 .botaoVoltar{
+  display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 118px;
+    gap: 5px;
+    height: 37px;
+    margin-left: 1747px;
+    margin-top: -54px;
+    margin-bottom: -10px;
+    position: absolute;
+}
+
 /* ----------Tabelas 5 Colunas ------------------- */
 
 .tableFixHead10Col {
@@ -258,3 +280,6 @@
     align-items: center;
   }
   
+  a{
+    text-decoration: none;
+  }
