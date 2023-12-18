@@ -296,6 +296,42 @@
 
     </div>
 
+    <script>
+      // Função para adicionar nova linha à tabela
+      function adicionarNovaRegra() {
+        var tabela = document.querySelector('.tabelaRegras tbody');
+    
+        tabela.innerHTML = tabela.innerHTML +
+          `<tr>
+            <td><input type="checkbox"></td>
+            <td>00018</td>
+            <td>Câmbio / renda 2</td>
+            <td>PF/PJ</td>
+            <td>Câmbio</td>
+            <td>BRL</td>
+            <td>>50.000 ou >#10...</td>
+            <td>Diário</td>
+            <td>Ativo</td>
+          </tr>`;
+      }
+    
+      // Verificação do parâmetro na URL para decidir se a função deve ser executada
+      function verificarExecucaoFuncao() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var executarFuncao = urlParams.get('executarFuncao');
+    
+        if (executarFuncao === 'true') {
+          adicionarNovaRegra();
+        }
+      }
+    
+      // Chame a função ao carregar a página
+      window.onload = function () {
+        verificarExecucaoFuncao();
+      };
+    </script>
+    
+    
     
     <script src="./javascript/abaRegrasCadastradas.js"></script>
     <script src="../../../script.js"></script>
