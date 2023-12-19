@@ -118,11 +118,10 @@ header {
     color: #2c4c7c;
     display: flex;
     justify-content: center;
-    text-decoration: none;
+    text-decoration: none;  
 }
 
 .subCabecario .active {
-    color: red;
     background-color: #d3d3d3;
     /* border-top: 2px solid gray; */
     /* border-left: 2px solid gray; */
