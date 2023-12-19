@@ -59,7 +59,7 @@
             <div class="chartCard">
                 <div class="headerCard">
                     <h2>Simulação</h2>
-                    <img src="./images/fechar-preto.png" alt="">
+                    <img src="./images/fechar-preto.png" id="fechar-pop-up" alt="">
                 </div>
                 <div class="bodyCard">
                     <div class="esquerda-direita">
@@ -199,74 +199,14 @@
                                         <th>Cenários</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="checkbox" name="" id=""></td>
-                                        <td><span>00001</span></td>
-                                        <td><span>Profissão</span></td>
-                                        <td><span>Cadastral</span></td>
-                                        <td><span>PF</span></td>
-                                        <td><span>200</span></td>
-                                        <td><span>Lista</span></td>
-                                        <td><span>4</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="" id=""></td>
-                                        <td><span>00003</span></td>
-                                        <td><span>CEP</span></td>
-                                        <td><span>Cadastral</span></td>
-                                        <td><span>PF</span></td>
-                                        <td><span>100</span></td>
-                                        <td><span>Lista</span></td>
-                                        <td><span>3</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="" id=""></td>
-                                        <td><span>00009</span></td>
-                                        <td><span>PEP</span></td>
-                                        <td><span>Cadastral</span></td>
-                                        <td><span>PF</span></td>
-                                        <td><span>300</span></td>
-                                        <td><span>Lista</span></td>
-                                        <td><span>2</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="" id=""></td>
-                                        <td><span>00010</span></td>
-                                        <td><span>Tempo de relacionamento</span></td>
-                                        <td><span>Cadastral</span></td>
-                                        <td><span>PF</span></td>
-                                        <td><span>50</span></td>
-                                        <td><span>Cenários</span></td>
-                                        <td><span>3</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="" id=""></td>
-                                        <td><span>00014</span></td>
-                                        <td><span>Volume transação espécie</span></td>
-                                        <td><span>Transacional</span></td>
-                                        <td><span>PF</span></td>
-                                        <td><span>200</span></td>
-                                        <td><span>Cenários</span></td>
-                                        <td><span>3</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" name="" id=""></td>
-                                        <td><span>00036</span></td>
-                                        <td><span>Profissão</span></td>
-                                        <td><span>Cadastral</span></td>
-                                        <td><span>PF</span></td>
-                                        <td><span>200</span></td>
-                                        <td><span>Lista</span></td>
-                                        <td><span>4</span></td>
-                                    </tr>
+                                <tbody id="table-data-area">
                                 </tbody>
                             </table>
                             <div class="visualizacao-variaveis-atuais-btn">
                                 <button id="adicionar-variavel-btn"><img src="./images/add.png" alt=""><span>Adicionar variável</span></button>
-                                <button><img src="./images/engrenagem.png" alt=""><span>Parametrizar</span></button>
-                                <button><img src="./images/lista.svg" alt=""><span>Download lista</span></button>
-                                <button><img src="./images/fehcar.png" alt=""><span>Excluir</span></button>
+                                <button id="visualizacao-variaveis-parametrizar"><img src="./images/engrenagem.png" alt=""><span>Parametrizar</span></button>
+                                <button id="visualizacao-variaveis-download"><a href="./lista_variaveis_atuais.xlsx" download="lista_variaveis_atuais.xlsx"><img src="./images/lista.svg" alt=""><span>Download lista</span></a></button>
+                                <button id="visualizacao-variaveis-excluir"><img src="./images/fehcar.png" alt=""><span>Excluir</span></button>
                             </div>
                         </div>
     
@@ -398,28 +338,31 @@
                                     <form action="">
                                         <div class="texto-input">
                                             <p for="">Variável Cadastral / Transacional</p>
-                                            <select name="" id="">
+                                            <select name="" id="parametrizar-var-cadastral">
                                                 <option value="Selecionar">Selecionar</option>
+                                                <option value="Profissao">Profissão</option>
                                             </select>
                                         </div>
                                         <div class="texto-input">
                                             <p for="">Peso máximo</p>
-                                            <select name="" id="">
+                                            <select name="" id="parametrizar-peso">
                                                 <option value="Selecionar">Selecionar</option>
+                                                <option value="200">200</option>
                                             </select>
                                         </div>
                                         <div class="texto-input">
                                             <p for="">Quantidade de faixas de risco/cenários</p>
-                                            <select name="" id="">
+                                            <select name="" id="parametrizar-qnt-faixas">
                                                 <option value="Selecionar">Selecionar</option>
+                                                <option value="4">4</option>
                                             </select>
                                         </div>
                                         <div class="texto-input">
                                             <p>Tipologia de ponderação</p>
                                             <div class="texto-checkbox">
-                                                <input type="checkbox" name="" id="">
+                                                <input id="parametrizar-cenarios-faixas" type="checkbox" name="" id="">
                                                 <label for="">Cenários/faixas</label>
-                                                <input type="checkbox" name="" id="">
+                                                <input id="parametrizar-lista" type="checkbox" name="" id="">
                                                 <label for="">Lista</label>
                                             </div>
                                         </div>
@@ -506,15 +449,16 @@
                                     </table>
                                     
                                     <div class="adicionar-variavel-parametrizar-btns">
-                                        <button id="adicionar-variavel-parametrizar-btn-incluir">
+                                        <button id="adicionar-variavel-parametrizar-btn-upload-lista">
                                             <img src="./images/lista.svg" alt="">
+                                            <input class= "upload-file" type="file" name="upload" id="">
                                             <span>Upload de lista</span>
                                         </button>
                                         <button id="adicionar-variavel-parametrizar-btn-simular">
                                             <img src="./images/grafico.png" alt="">
                                             <span>Simular variáveis</span>
                                         </button>
-                                        <button id="adicionar-variavel-parametrizar-btn-incluir">
+                                        <button id="adicionar-variavel-parametrizar-btn-Atualizar">
                                             <img src="./images/add.png" alt="">
                                             <span>Atualizar</span>
                                         </button>
@@ -530,5 +474,7 @@
     </div>
     <script src="../../script.js"></script>
     <script src="./javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
 </body>
 </html>
