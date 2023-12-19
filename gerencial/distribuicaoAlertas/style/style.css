@@ -172,6 +172,7 @@ h3 {
     grid-template-columns: 50% 50%;
     grid-template-rows: auto 1fr;
     gap: 1rem;
+    margin-top: 20px;
 }
 
 /* CARD */
@@ -261,6 +262,10 @@ h3 {
     width: 70%
 }
 
+.atribuicao-manual{
+    height: 100.45%;
+}
+
 .atribuicao-manual img {
     height: 20px;
 }
@@ -277,7 +282,8 @@ h3 {
 
 .atribuicao-manual .table{
     width: 100%;
-    height: 15.5rem;
+    height: 18.5rem;
+    margin-top: -46px;
 }
 
 .atribuicao-manual .bodyCard{
@@ -330,6 +336,10 @@ h3 {
 }
 
 /* CARD ANÁLISES PENDENTES POR ANALISTA */
+
+/* .analise-pendentes-analise{
+    height: 95%;
+} */
 .analise-pendentes-analise .bodyCard {
     display: flex;
     justify-content: center;
@@ -338,8 +348,13 @@ h3 {
 }
 
 .analise-pendentes-analise .tamanho-grafico {
-    width: 80%;
+    width: 68%;
 }
+
+/* #grafico-analises-pendentes{
+    max-width: 700px;
+    max-height: 300px;
+} */
 
 .analise-pendentes-analise .quantidade {
     height: 100px;

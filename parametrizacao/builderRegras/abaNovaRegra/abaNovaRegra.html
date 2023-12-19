@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -73,11 +75,11 @@
         <form action="/action_page.php" method="post">
             <p>
               <label for="codigo_regra">Código da Regra:</label>
-              <input type="text" id="codigo_regra" name="codigo_regra" value="00007" readonly>
+              <input type="text" id="codigo_regra" name="codigo_regra" value="00018" readonly>
             </p>
             <p>
               <label for="nome_regra">Nome da Regra:</label>
-              <input type="text" id="nome_regra" name="nome_regra" required>
+              <input type="text" id="nome_regra" name="nome_regra" value="Câmbio / renda 2" required>
             </p>
             <p>
               <label for="periodo_transacional">Período transacional:</label>
@@ -154,9 +156,8 @@
       <div class="botoesNovaRegra">
         <button class="adicionar"><img src="./images/adicionar.png" alt="">Adicionar condição</button>
         <button class="retornar"><img src="./images/voltar.png" alt="" height="35px">Retornar</button>
-        <button class="salvar"><img src="./images/salvar.png" alt="" height="35px">Salvar nova regra</button>
+        <button class="salvar" id="salvar"><img src="./images/salvar.png" alt="" height="35px">Salvar nova regra</button>
       </div>
-
 
     <script src="../../../script.js"></script>
     <script src="./javascript/javascript.js"></script>

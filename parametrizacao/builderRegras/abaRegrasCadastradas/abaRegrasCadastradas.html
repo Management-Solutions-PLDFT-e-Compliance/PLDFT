@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="../../../style.css">
     <link rel="stylesheet" href="./style/abaRegrasCadastradas.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -54,248 +56,422 @@
         </ul>
     </nav>
     <nav class="subCabecario">
-        <ul>
-            <li class="vazio"></li>
-            <li class="active"><span>Regras cadastradas</span></li>
-            <li class="vazio"></li>
-            <li><a href="../abaNovaRegra/abaNovaRegra.html"><span>Nova Regra Monitoramento</span></a></li>
-            <li class="vazio" style="width: 70%;"></li>
-        </ul>
+      <ul>
+          <li class="vazio"></li>
+          <li class="active"><a href="" style="text-decoration: none; height: 100%; width:100%"><span>Regras cadastradas</span></a></li>
+          <li class="vazio"></li>
+          <li><a href="../abaNovaRegra/abaNovaRegra.html"><span>Nova Regra Monitoramento</span></a></li>
+          <li class="vazio" style="width: 70%;"></li>
+      </ul>
     </nav>
 
     <div id="pagina">
-      <div id="selects">
-        <select name="Codigo" class="selection-boxes"><option value="Código">Código</option></select>
-        <select name="Nome" class="selection-boxes"><option value="Nome">Nome</option></select>
-        <select name="Tipo" class="selection-boxes"><option value="Tipo (PF/PJ)">Tipo (PF/PJ)</option></select>
-        <select name="Moeda" class="selection-boxes"><option value="Moeda">Moeda</option></select>
-        <select name="Empresa/CNPJ" class="selection-boxes"><option value="Empresa/CNPJ">Empresa/CNPJ</option></select>
-        <select name="Periodo" class="selection-boxes"><option value="Período Trans.">Período Trans.</option></select>
+      <div id="pag_filtros_tabelas">
+
+        <div id="selects">
+          <select name="Codigo" class="selection-boxes"><option value="Código">Código</option></select>
+          <select name="Nome" class="selection-boxes"><option value="Nome">Nome</option></select>
+          <select name="Tipo" class="selection-boxes"><option value="Tipo (PF/PJ)">Tipo (PF/PJ)</option></select>
+          <select name="Moeda" class="selection-boxes"><option value="Moeda">Moeda</option></select>
+          <select name="Empresa/CNPJ" class="selection-boxes"><option value="Empresa/CNPJ">Empresa/CNPJ</option></select>
+          <select name="Periodo" class="selection-boxes"><option value="Período Trans.">Período Trans.</option></select>
+        </div>
+
+        <p style="font-size: 1.1em; font-family: sans-serif; font-weight: bold; margin: 10px 0px 0px 20px ;">Regras atuais</p>
+
+        <div id="regras_atuais">
+
+          <div class="tabelaRegras">
+            <table id="Tabela_Regras">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Código</th>
+                  <th>Nome da regra</th>
+                  <th>Tipo</th>
+                  <th>Produto</th>
+                  <th>Moeda</th>
+                  <th>Parâmetro</th>
+                  <th>Período transacional</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00001</td>
+                  <td>PEP 1</td>
+                  <td>PF</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Mensal</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00002</td>
+                  <td>Câmbio/renda 1</td>
+                  <td>PF/PJ</td>
+                  <td>Câmbio</td>
+                  <td>BRL</td>
+                  <td>>10.000</td>
+                  <td>Mensal</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00003</td>
+                  <td>Transação Espécie 1</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>10.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00004</td>
+                  <td>Fracionado 1</td>
+                  <td>PF</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>#>10</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00005</td>
+                  <td>Fracionado espécie 1</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td><10.000 e #>10</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00006</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00007</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00008</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00009</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00010</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00011</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00012</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00013</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00014</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00015</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00016</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="checkbox"></td>
+                  <td>00017</td>
+                  <td>Transação Espécie 2</td>
+                  <td>PF/PJ</td>
+                  <td>Conta Corrente</td>
+                  <td>BRL</td>
+                  <td>>50.000</td>
+                  <td>Diário</td>
+                  <td>Ativo</td>
+                </tr>
+    
+              </tbody>
+            </table>
+          </div>
+
+          <div id="botoes_inferiores">
+
+            <button class="botao_ativo" onclick="downloadExcel()"><img src="./images/download-30.png" alt="Download">Download</button>
+            <button class="botao_inativo" onclick="trocaPaginaParametrizar()"><img src="./images/engrenagem-30.png" alt="Parametrizar">Parametrizar</button>
+            <button class="botao_inativo" onclick="Inativar()"><img src="./images/x-30.png" alt="Inativar">Inativar</button>
+            
+          </div>
+
+        </div>
       </div>
 
-      <p style="font-size: 1.1em; font-family: sans-serif; font-weight: bold; margin: 10px 0px 0px 20px ;">Regras atuais</p>
+      <div id="pag_parametrizar">
+        <div id="conteudo_parametrizar">
+          <div id="Parametrizacao_de_regra">
+            
+            <p style="font-size: 1.1em; font-family: sans-serif; font-weight: bold; margin: 20px 10px 10px 10px;">Parametros de regra de monitoramento transacional</p>
 
-      <div id="regras_atuais">
+            <div class="titulos">
+              <h2>Dados e Parâmetros</h2>
+              <hr>
+            </div>
 
-        <div class="tabelaRegras">
-          <table id="Tabela_Regras">
-            <thead>
-              <tr>
-                <th><input type="checkbox" style="width: 20px; height: 20px;"></th>
-                <th>Código</th>
-                <th>Nome da regra</th>
-                <th>Tipo</th>
-                <th>Produto</th>
-                <th>Moeda</th>
-                <th>Parâmetro</th>
-                <th>Período transacional</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00001</td>
-                <td>PEP 1</td>
-                <td>PF</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Mensal</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00002</td>
-                <td>Câmbio/renda 1</td>
-                <td>PF/PJ</td>
-                <td>Câmbio</td>
-                <td>BRL</td>
-                <td>>10.000</td>
-                <td>Mensal</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00003</td>
-                <td>Transação Espécie 1</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>10.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00004</td>
-                <td>Fracionado 1</td>
-                <td>PF</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>#>10</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00005</td>
-                <td>Fracionado espécie 1</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td><10.000 e #>10</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00006</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00007</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00008</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00009</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00010</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00011</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00012</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00013</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00014</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00015</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00016</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>00017</td>
-                <td>Transação Espécie 2</td>
-                <td>PF/PJ</td>
-                <td>Conta Corrente</td>
-                <td>BRL</td>
-                <td>>50.000</td>
-                <td>Diário</td>
-                <td>Ativo</td>
-              </tr>
+            <div class="dadosParam_filtros">
+              <label>Código da Regra</label>
+              <select name="codigo-regra" class="selection-boxes">
+                <option value="0001">0001</option>
+              </select>
+            </div>
+            
+            <div class="dadosParam_filtros">
+              <label>Nome da Regra</label>
+              <select name="nome-regra" class="selection-boxes">
+                <option value="PEP 1">PEP 1</option>
+              </select>
+            </div>
+
+            <div class="dadosParam_filtros">
+              <label>Perído transacional</label>
+              <select name="periodoTran" class="selection-boxes">
+                <option value="Mensal">Mensal</option>
+              </select>
+            </div>
+
+            <div class="dadosParam_filtros">
+              <label>Produto/ Serviço</label>
+              <select name="Produto" class="selection-boxes">
+                <option value="Conta_corrente">Conta corrente</option>
+              </select>
+            </div>
+
+            <div class="dadosParam_filtros">
+              <label>Rating risco Cliente</label>
+              <select name="risco-cliente" class="selection-boxes">
+                <option value="Todos">Todos</option>
+              </select>
+            </div>
+
+            <div class="dadosParam_filtros">
+              <label>Tipo de cliente(PF/PJ)</label>
+              <select name="tipo-cliente" class="selection-boxes">
+                <option value="PF">PF</option>
+              </select>
+            </div>
+
+            <div class="dadosParam_filtros">
+              <label>PEP</label>
+              <select name="PEP" class="selection-boxes">
+                <option value="Sim">Sim</option>
+              </select>
+            </div>
+
+            <div class="dadosParam_filtros">
+              <label>Moeda</label>
+              <select name="Moeda" class="selection-boxes">
+                <option value="BRL">BRL</option>
+              </select>
+            </div>
+
+            <button class="botao_ativo" style="position: absolute; left: 10px; bottom: 20px ;" onclick="VoltarTela()"><img src="./images/voltar.png" alt="Voltar" style="width: 30px; height: 30px;">Voltar</button>
+          </div>
+
+          <div id="Racional_da_regra">
+
+            <p style="font-size: 1.1em; font-family: sans-serif; font-weight: bold; margin: 20px 10px 10px 10px;">Racional da regra</p>
+
+            <div class="titulos" style="display: flex; padding-bottom: 0px;">
+              <h2>Campo</h2>
+              <h2 style="margin-left: 250px;">Operação</h2>
+              <h2 style="margin-left: 165px;">Valor</h2>
+            </div>
+            <hr>
+
+            <div id="racional_filtros">
+              <div class="cada_fitro">
+
+                <select name="campo_regra" class="selection-boxes">
+                  <option value="Valor">Valor trans.</option>
+                </select>
   
-            </tbody>
-          </table>
+                <select name="operacao"  class="selection-boxes">
+                  <option value=">">></option>
+                </select>
+  
+                <select name="valor" class="selection-boxes">
+                  <option value="50000">50.000</option>
+                </select>
+
+              </div>
+
+              <div class="cada_fitro" >
+                <input type="checkbox" style="width: 15px; height: 15px; margin-left: 10px;" id="filtro_E">
+                <label for="input">e</label>
+
+                <input type="checkbox" style="margin-left: 30px; width: 15px; height: 15px;"
+                id="filtro_OU">
+                <label for="input">ou</label>
+              </div>
+
+              <div class="cada_fitro">
+                <select name="campo_regra" class="selection-boxes">
+                  <option value="Selecionar">Selecionar</option>
+                  <option value="Quantd_trans">Quantidade trans.</option>
+                </select>
+  
+                <select name="operacao"  class="selection-boxes">
+                  <option value="Selecionar">Selecionar</option>
+                  <option value=">=">>=</option>
+                </select>
+  
+                <select name="valor" class="selection-boxes">
+                  <option value="Selecionar">Selecionar</option>
+                  <option value="#10">#10</option>
+                </select>
+              </div>
+
+            </div>
+            
+            <button onclick="adicionarCondicao()" class="botao_ativo AddCondicao" style="margin-top: 10px;"> <img src="./images/adicionar.png" alt="Adicionar" style="width: 30px; height: 30px;">Adicionar condição</button>
+
+            <button class="botao_ativo Salvar" onclick="SalvarAtivar()"> <img src="./images/salvar.png" alt="Salvar" style="width: 30px; height: 30px;">Salvar e ativar</button>
+          </div>
+
         </div>
 
-        <div id="botoes_inferiores">
-
-          <button class="botao_ativo" onclick="downloadExcel()"><img src="./images/download-30.png" alt="Download">Download</button>
-          <button class="botao_inativo"><img src="./images/engrenagem-30.png" alt="Parametrizar">Parametrizar</button>
-          <button class="botao_inativo"><img src="./images/x-30.png" alt="">Inativar</button>
-          
-        </div>
       </div>
-
     </div>
 
+    <script>
+      // Função para adicionar nova linha à tabela
+      function adicionarNovaRegra() {
+        var tabela = document.querySelector('.tabelaRegras tbody');
+    
+        tabela.innerHTML = tabela.innerHTML +
+          `<tr>
+            <td><input type="checkbox"></td>
+            <td>00018</td>
+            <td>Câmbio / renda 2</td>
+            <td>PF/PJ</td>
+            <td>Câmbio</td>
+            <td>BRL</td>
+            <td>>50.000 ou >#10...</td>
+            <td>Diário</td>
+            <td>Ativo</td>
+          </tr>`;
+      }
+    
+      // Verificação do parâmetro na URL para decidir se a função deve ser executada
+      function verificarExecucaoFuncao() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var executarFuncao = urlParams.get('executarFuncao');
+    
+        if (executarFuncao === 'true') {
+          adicionarNovaRegra();
+        }
+      }
+    
+      // Chame a função ao carregar a página
+      window.onload = function () {
+        verificarExecucaoFuncao();
+      };
+    </script>
+    
+    
     
     <script src="./javascript/abaRegrasCadastradas.js"></script>
     <script src="../../../script.js"></script>
