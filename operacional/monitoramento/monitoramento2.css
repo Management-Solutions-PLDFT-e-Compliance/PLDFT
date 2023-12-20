@@ -162,3 +162,121 @@
     border-radius: 10px;
     width: 65%;
 }
+
+.conteinerCardsAlerta2{
+    padding: 20px;
+    padding-left: 40px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    height: 70%;
+    overflow-y: auto;
+}
+
+.conteinerCardsAlerta2 .cardAlerta{
+    display: flex;
+    flex-direction: column;
+    border: lightgray 3px solid;
+    width: 250px;
+    height: 217px;
+    font-size: 18px;
+    padding: 20px 20px 0px 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.conteinerCardsAlerta2 .cardAlerta a{
+    margin-top: 20px;
+    margin-bottom: -2px;
+    text-decoration: none;
+    margin-left: -22px;
+}
+
+.conteinerCardsAlerta2 .cardAlerta a button{
+    background-color: rgb(43, 43, 43);
+    border: none;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 0px 0px 10px 10px;
+    width: 248px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteinerCardsAlerta2 .cardAlerta a button p{
+    font-size: 16px;
+    color: white;
+}
+
+.conteinerCardsAlerta2 .cardAlerta a button img{
+    width: 20px;
+}
+
+.ElemBold{
+    font-weight: bold;
+}
+
+.conteinerInputs{
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.conteinerInputs p, .conteinerInputs label{
+    font-weight: bold;
+}
+
+.conteinerInputs *{
+    font-size: 18px;
+}
+
+.conteinerInputs input, .conteinerInputs select{
+    padding: 2px 5px;
+    border: 1px solid lightgray;
+}
+
+.conteinerInputs select{
+    width: 150px;
+}
+
+.conteinerInputs > div {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+.conteinerInputs > div > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.conteinerInputs .blocoInputId input{
+    width: 100px;
+}
+
+.conteinerInputs .blocoInputData > div{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.botaoPesquisa2{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    gap: 5px;
+    margin-left: 974px;
+    margin-top: -45px;
+}
