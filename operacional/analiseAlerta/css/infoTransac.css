@@ -1,9 +1,8 @@
 .infoTransacFull{
     position: absolute;
-    top: 180px;
+    top: 890px;
     width: 1880px;
-    height: 870px;
-    left: 20px;
+    height: 960px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -12,7 +11,7 @@
 
 .infoTransacFull .parteCima{
     width: 100%;
-    height: 40%;
+    height: 35%;
     display: flex;
     gap: 20px;
 }
@@ -23,14 +22,14 @@
 }
 
 .infoTransacFull .parteCima .card1{
-    width: 30%;
+    width: 34%;
 }
 
 .infoTransacFull .parteCima .card1 .conteudo{
     display: flex;
     padding-top: 20px;
-    padding-left: 20px;
-    gap: 50px;
+    padding-left: 40px;
+    gap: 70px;
 }
 
 .infoTransacFull .parteCima .card1 .conteudo p, .infoTransacFull .parteCima .card1 .conteudo label{
@@ -84,19 +83,19 @@
     width: 150px;
     gap: 5px;
     height: 35px;
-    margin-left: 399px;
-    margin-top: -9px;
+    margin-left: 475px;
+    margin-top: -20px;
 }
 
 .infoTransacFull .parteCima .card2{
-    width: 50%;
+    width: 65%;
 }
 
-.infoTransacFull .parteCima .card3{
+/* .infoTransacFull .parteCima .card3{
     width: 19%;
-}
+} */
 
-.infoTransacFull .parteCima .card3 .conteudo {
+/* .infoTransacFull .parteCima .card3 .conteudo {
     display: flex;
     justify-content: center;
 }
@@ -104,12 +103,12 @@
 .infoTransacFull .parteCima .card3 .imgRedeTransac{
     width: 250px;
     cursor: pointer;
-}
+} */
 
 
 .infoTransacFull .parteBaixo{
     width: 100%;
-    height: 60%;
+    height: 61%;
 }
 
 .infoTransacFull .parteBaixo .card1{
@@ -135,7 +134,7 @@
     width: 150px;
     gap: 5px;
     height: 35px;
-    margin-left: 1620px;
+    margin-left: 1600px;
     margin-top: 10px;
     margin-bottom: -10px;
 }
@@ -265,7 +264,7 @@
   }
 
   #volumeTransacoes{
-    max-width: 900px;
+    max-width: 1150px;
     max-height: 230px;
   }
 

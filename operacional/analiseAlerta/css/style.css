@@ -3,7 +3,7 @@
 .analiseAlertaFull{
     position: absolute;
     top: 180px;
-    width: 1880px;
+    width: 1860px;
     height: 870px;
     left: 20px;
     display: flex;
@@ -68,7 +68,7 @@
     display: flex;
     padding: 10px;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 30px;
     gap: 60px;
 }
 
@@ -251,7 +251,7 @@
 }
 
 .analiseAlertaFull .parteBaixo .card1 .lupaPreta{
-    position: fixed;
+    position: absolute;
     margin-top: -61px;
     margin-left: 577px;
 }
