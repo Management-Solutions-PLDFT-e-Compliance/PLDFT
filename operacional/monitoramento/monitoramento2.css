@@ -1,0 +1,164 @@
+.monitoramentoFull{
+    margin: 25px 20px 0px 20px;
+    height: 880px;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.ladoEsquerdo{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ladoEsquerdo > div{
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.ladoEsquerdo .card1 .conteudo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0px 30px;
+}
+
+.ladoEsquerdo .card1 .conteudo .bloco{
+    display: flex;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px;
+}
+
+.ladoEsquerdo .card1 .conteudo .bloco > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.ladoEsquerdo .card1 .conteudo .bloco > div .indNum{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.ladoEsquerdo .card1 .conteudo .bloco > div .legenda{
+    font-weight: bold;
+}
+
+.ladoEsquerdo .card2 .conteudo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0px 30px;
+}
+
+.ladoEsquerdo .card2 .conteudo .bloco{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid lightgray;
+    width: 250px;
+    padding: 15px;
+    padding-top: 10px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 5px;
+}
+
+.ladoEsquerdo .card2 .conteudo .bloco > div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ladoEsquerdo .card2 .conteudo .bloco > div .indNum{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.ladoEsquerdo .card2 .conteudo .bloco  .legenda{
+    font-weight: bold;
+}
+
+.ladoEsquerdo .card2 .conteudo .bloco2 div{
+    margin-top: 7px;
+}
+
+.ladoEsquerdo .card2 .conteudo .bloco2{
+    gap: 14px;
+}
+
+.ladoEsquerdo .card3 .conteudo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0px 30px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco1{
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    width: 175px;
+    font-weight: bold;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco1 > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 23px;
+    gap: 13px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco1 > div .indNum{
+    font-size: 50px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco2{
+    border: 3px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    align-items: center;
+    width: 350px;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco2 > div{
+    display: flex;
+    gap: 40px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco2 > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco2 > div > div > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ladoEsquerdo .card3 .conteudo .bloco2 > div > div > div p{
+    font-size: 50px;
+}
+
+.ladoDireito{
+    background-color: white;
+    border-radius: 10px;
+    width: 65%;
+}
