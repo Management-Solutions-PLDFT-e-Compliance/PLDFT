@@ -2,7 +2,6 @@
     position: absolute;
     top: 180px;
     width: 1870px;
-    height: 870px;
     left: 20px;
     background-color: white;
     border-radius: 10px;
@@ -43,6 +42,12 @@
     padding-right: 20px;
 }
 
+.paragrafosRelatorio > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .paragrafosRelatorio p{
     text-align: justify;
     line-height: 1.6;
@@ -68,7 +73,50 @@
 
 .relatFalsPosFull > a{
     text-decoration: none;
-    position: fixed;
+    position: absolute;
     margin-top: -56px;
     margin-left: 1747px;
+}
+
+.botoesEditarSalvar{
+    display: flex;
+    position: absolute;
+    margin-top: -123px;
+    margin-left: 1709px;
+    gap: 20px;
+}
+
+.botoesEditarSalvar button{
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.conteinerBotao{
+    display: flex;
+    justify-content: end;
+    margin-top: -20px;
+}
+
+.botaoComunicar{
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    gap: 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.divEditavel{
+    padding: 20px;
 }

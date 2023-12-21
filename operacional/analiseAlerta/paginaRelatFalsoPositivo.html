@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="../../home_style.css">
   <link rel="stylesheet" href="./css/relatFalsPos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.14.1/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.14.1/dist/sweetalert2.all.min.js"></script>
   <title>Compliance Analytics</title>
 </head>
 <body>
@@ -70,17 +72,24 @@
             <h2>RELATÓRIO DE ALERTA DE PLD - Parecer da Comunicação IA
             </h2>
         </div>
+        <div class="botoesEditarSalvar">
+          <button onclick="habilitaEdicao('divEditavel')"><img src="./icons/editar.png" alt="" width="57px"></button>
+          <button onclick="desabilitaEdicao('divEditavel')"><img src="./icons/salvar.png" alt="" width="50px"></button>
+          
+        </div>
         <div class="paragrafosRelatorio">
-            <p>No dia 12/11/2022, foi realizada uma transferência bancária no valor de R$ 51.323,00 da conta do Cliente João Silva na agência 0002 do Banco BBBB S.A. para uma conta em outro banco, cujo titular não pôde ser identificado. A operação chamou a atenção dos analistas do Banco BBBB S.A. devido à falta de informações sobre o destinatário da transferência, bem como pela estrutura incomum da transação, que envolveu múltiplas transferências e contas intermediárias.
-            </p>
-            <p>Considerando as informações disponíveis, há indícios de que a operação possa estar relacionada a atividades suspeitas, como lavagem de dinheiro, financiamento ao terrorismo, corrupção ou outras atividades ilícitas. Entretanto, após a realização de investigações e análises adicionais, verificou-se que a transferência foi realizada para pagamento a beneficiários com grau de relacionamento comprovado do cliente João Silva.
-            </p>
-            <p>Assim, conclui-se que a operação não apresenta mais riscos de lavagem de dinheiro ou financiamento ao terrorismo e que não é necessário comunicá-la ao COAF. O Banco BBBB S.A. irá arquivar o presente relatório de alerta de PLD para fins de registro e monitoramento interno.
-            </p>
-            <p>Observações Adicionais:
-            </p>
-            <p>O Banco BBBB S.A. realizou as diligências necessárias para identificar e verificar a identidade do cliente e das contas envolvidas na operação.
-            </p>
+            <div id="divEditavel">
+              <p>No dia 12/11/2022, foi realizada uma transferência bancária no valor de R$ 51.323,00 da conta do Cliente João Silva na agência 0002 do Banco BBBB S.A. para uma conta em outro banco, cujo titular não pôde ser identificado. A operação chamou a atenção dos analistas do Banco BBBB S.A. devido à falta de informações sobre o destinatário da transferência, bem como pela estrutura incomum da transação, que envolveu múltiplas transferências e contas intermediárias.
+              </p>
+              <p>Considerando as informações disponíveis, há indícios de que a operação possa estar relacionada a atividades suspeitas, como lavagem de dinheiro, financiamento ao terrorismo, corrupção ou outras atividades ilícitas. Entretanto, após a realização de investigações e análises adicionais, verificou-se que a transferência foi realizada para pagamento a beneficiários com grau de relacionamento comprovado do cliente João Silva.
+              </p>
+              <p>Assim, conclui-se que a operação não apresenta mais riscos de lavagem de dinheiro ou financiamento ao terrorismo e que não é necessário comunicá-la ao COAF. O Banco BBBB S.A. irá arquivar o presente relatório de alerta de PLD para fins de registro e monitoramento interno.
+              </p>
+              <p contenteditable="false"><strong>Observações Adicionais:</strong>
+              </p>
+              <p>O Banco BBBB S.A. realizou as diligências necessárias para identificar e verificar a identidade do cliente e das contas envolvidas na operação.
+              </p>
+            </div>
             <p>Assinatura do Responsável pela Análise:
             </p>
             <p>Nome: José Silva
@@ -90,9 +99,10 @@
             <p>Data: 18/11/2022
             </p>
         </div>
+        <div class="conteinerBotao"><button class="botaoComunicar" onclick="arquivarRelatorio()"><img src="./icons/arquivar.png" alt="" width="30px" height="30px">Arquivar</button></div>
     </div>
   </div>
-
+    <script src="./js/relatorios.js"></script>
     <script src="../../script.js"></script>
 </body>
 </html>

@@ -24,3 +24,14 @@ function comunicarCoaf(){
         }
       })
 }
+
+function arquivarRelatorio(){
+    Swal.fire({
+        icon: "success",
+        title: "Relatório arquivado!",
+      }).then((result) => {
+        if(result.isConfirmed){
+            window.location.href = '../analiseAlerta/analiseAlerta.html';
+        }
+      })
+}
