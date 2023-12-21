@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="../../home_style.css">
   <link rel="stylesheet" href="./css/relatComunicar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.14.1/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.14.1/dist/sweetalert2.all.min.js"></script>
   <title>Compliance Analytics</title>
 </head>
 <body>
@@ -55,7 +57,7 @@
   </nav>
   <div class="relatComunicarFull">
     <div class="titulos">
-        <h2>Relatório de Comunicação
+        <h2 contenteditable="true">Relatório de Comunicação
         </h2>
         <h5>Resumo</h5>
     </div>
@@ -70,15 +72,22 @@
             <h2>RELATÓRIO DE COMUNICAÇÃO DE OPERAÇÃO SUSPEITA  - Parecer da Comunicação IA
             </h2>
         </div>
+        <div class="botoesEditarSalvar">
+          <button onclick="habilitaEdicao('divEditavel')"><img src="./icons/editar.png" alt="" width="57px"></button>
+          <button onclick="desabilitaEdicao('divEditavel')"><img src="./icons/salvar.png" alt="" width="50px"></button>
+          
+        </div>
         <div class="paragrafosRelatorio">
-            <p>No dia 08/10/2022, foi realizado um débito no valor de R$ 49.239,40 da conta de Antônio da Silva na agência 0001 do Banco AAAA S.A. para uma conta em outro banco,  cuja transferência não se enquadra no perfil do cliente. A operação chamou a atenção dos analistas do Banco AAAA S.A. devido ao valor muito alto, fora da média de transações registradas.
-            </p>
-            <p>Considerando as informações disponíveis, há indícios de que a operação possa estar relacionada a atividades suspeitas, como lavagem de dinheiro, financiamento ao terrorismo, corrupção ou outras atividades ilícitas. O Banco AAAA S.A. decidiu comunicar a operação suspeita ao COAF, conforme estabelecido na legislação aplicável.
-            </p>
-            <p>Observações Adicionais:
-            </p>
-            <p>O Banco AAAA S.A. não possui outras informações relevantes sobre o cliente Antônio da Silva ou a operação em questão. O banco também realizou as diligências necessárias para identificar e verificar a identidade do cliente e das contas envolvidas na operação.
-            </p>
+            <div id="divEditavel">
+              <p>No dia 08/10/2022, foi realizado um débito no valor de R$ 49.239,40 da conta de Antônio da Silva na agência 0001 do Banco AAAA S.A. para uma conta em outro banco,  cuja transferência não se enquadra no perfil do cliente. A operação chamou a atenção dos analistas do Banco AAAA S.A. devido ao valor muito alto, fora da média de transações registradas.
+              </p>
+              <p>Considerando as informações disponíveis, há indícios de que a operação possa estar relacionada a atividades suspeitas, como lavagem de dinheiro, financiamento ao terrorismo, corrupção ou outras atividades ilícitas. O Banco AAAA S.A. decidiu comunicar a operação suspeita ao COAF, conforme estabelecido na legislação aplicável.
+              </p>
+              <p contenteditable="false"><strong>Observações Adicionais:</strong>
+              </p>
+              <p>O Banco AAAA S.A. não possui outras informações relevantes sobre o cliente Antônio da Silva ou a operação em questão. O banco também realizou as diligências necessárias para identificar e verificar a identidade do cliente e das contas envolvidas na operação.
+              </p>
+            </div>
             <p>Assinatura do Responsável pela Comunicação:
             </p>
             <p>Nome: Maria da Silva
@@ -88,9 +97,11 @@
             <p>Data: 13/10/2022
             </p>
         </div>
+        <div class="conteinerBotao"><button class="botaoComunicar" onclick="comunicarCoaf()">Comunicar COAF<img src="./icons/comunicar.png" alt="" width="30px" height="30px"></button></div>
     </div>
+    <a href="../analiseAlerta/analiseAlerta.html"></a>
   </div>
-
+    <script src="./js/relatorios.js"></script>
     <script src="../../script.js"></script>
 </body>
 </html>
