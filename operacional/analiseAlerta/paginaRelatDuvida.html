@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../home_style.css">
+  <link rel="stylesheet" href="./css/relatDuvida.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.14.1/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.14.1/dist/sweetalert2.all.min.js"></script>
+  <title>Compliance Analytics</title>
+</head>
+<body>
+  <header class="header1" >
+    <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+    <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+      <button class="botaoHeader botaoEstrategico botaoOff">
+        <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+        <p>Estratégico</p>
+      </button>
+    </a>
+    <a href="../../gerencial/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoGerencial botaoOff">
+        <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+        <p>Gerencial</p>
+      </button>
+    </a>
+    <a href="../../operacional/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoOperacional botaoOn">
+        <img src="../../assets/icons/operacionalOn.png" alt="Icone Atendimento">
+        <p>Operacional</p>
+      </button>
+    </a>
+    <a href="../../parametrizacao/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoParams botaoOff">
+        <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+        <p>Parametrização</p>
+      </button>
+    </a>
+    <h1 class="a comprimentos">Olá, Usuário! </h1>
+    <a href="../../index.html" style="position: absolute; top: 31px;">
+      <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+        <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+        SAIR
+      </button>
+    </a>
+  </header>
+
+  <nav class="cabecario">
+    <ul>
+        <li class="vazio"></li>
+        <li><a href="../monitoramento/monitoramento2.html"><span>Monitoramento</span></a></li>
+        <li class="vazio"></li>
+        <li class="active"><span>Análise de alerta</span></li>
+        <li class="vazio" style="width: 70%;"></li>
+    </ul>
+  </nav>
+  <div class="relatComunicarFull">
+    <div class="titulos">
+        <h2 contenteditable="true">Relatório de Comunicação (Dúvida)
+        </h2>
+        <h5>Resumo</h5>
+    </div>
+    <a href="./analiseAlerta.html"><button class="botao"><img src="./icons/voltar.png" alt="" width="30px" height="30px">Voltar</button></a>
+    <hr>
+    <div class="conteudo">
+        <div class="espacoid">
+            <p>Id Alerta:</p>
+            <p class="blocoBordaNumID">01</p>
+        </div>
+        <div class="titulos tituloRelatorio">
+            <h2>RELATÓRIO DE COMUNICAÇÃO DE OPERAÇÃO SUSPEITA - Parecer da Comunicação IA
+            </h2>
+        </div>
+        <div class="botoesEditarSalvar">
+          <button onclick="habilitaEdicao('divEditavel')"><img src="./icons/editar.png" alt="" width="57px"></button>
+          <button onclick="desabilitaEdicao('divEditavel')"><img src="./icons/salvar.png" alt="" width="50px"></button>
+          
+        </div>
+        <div class="paragrafosRelatorio">
+            <div id="divEditavel">
+              <p>No dia 08/10/2022, foi realizado um débito no valor de R$ 49.239,40 da conta de Antônio da Silva na agência 0001 do Banco AAAA S.A. para uma conta em outro banco,  cuja transferência não se enquadra no perfil do cliente. A operação chamou a atenção dos analistas do Banco AAAA S.A. devido ao valor muito alto, fora da média de transações registradas.
+              </p>
+              <p>Considerando as informações disponíveis, há indícios de que a operação possa estar relacionada a atividades suspeitas, como lavagem de dinheiro, financiamento ao terrorismo, corrupção ou outras atividades ilícitas. O Banco AAAA S.A. decidiu comunicar a operação suspeita ao COAF, conforme estabelecido na legislação aplicável.
+              </p>
+              <p contenteditable="false"><strong>Observações para a gestão:</strong>
+              </p>
+              <p>Solicito à gestão, a validação do seguinte relatório para que o mesmo possa ser comunicado ao COAF.
+              </p>
+            </div>
+            <p>Analista Solicitante:
+            </p>
+            <p>Nome: José Silva
+            </p>
+            <p>Cargo: Analista de Prevenção à Lavagem de Dinheiro.
+            </p>
+            <p>Data: 18/11/2022
+            </p>
+        </div>
+        <div class="conteinerBotao" onclick="comunicarGestor()"><button class="botaoComunicar">Enviar</button></div>
+    </div>
+    <a href="../analiseAlerta/analiseAlerta.html"></a>
+  </div>
+    <script src="./js/relatorios.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

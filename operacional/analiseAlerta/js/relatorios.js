@@ -21,6 +21,8 @@ function comunicarCoaf(){
       }).then((result) => {
         if(result.isConfirmed){
             window.location.href = '../analiseAlerta/analiseAlerta.html';
+        }else{
+            window.location.href = '../analiseAlerta/analiseAlerta.html';
         }
       })
 }
@@ -31,6 +33,21 @@ function arquivarRelatorio(){
         title: "Relatório arquivado!",
       }).then((result) => {
         if(result.isConfirmed){
+            window.location.href = '../analiseAlerta/analiseAlerta.html';
+        }else{
+            window.location.href = '../analiseAlerta/analiseAlerta.html';
+        }
+      })
+}
+
+function comunicarGestor(){
+    Swal.fire({
+        icon: "success",
+        title: "Relatório encaminhado para o(a) gestor(a) responsável!",
+      }).then((result) => {
+        if(result.isConfirmed){
+            window.location.href = '../analiseAlerta/analiseAlerta.html';
+        }else{
             window.location.href = '../analiseAlerta/analiseAlerta.html';
         }
       })
