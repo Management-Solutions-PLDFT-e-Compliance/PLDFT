@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1" >
+        <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+          <button class="botaoHeader botaoEstrategico botaoOff">
+            <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+            <p>Estratégico</p>
+          </button>
+        </a>
+        <a href="../../gerencial/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoGerencial botaoOff">
+            <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+            <p>Gerencial</p>
+          </button>
+        </a>
+        <a href="../../operacional/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoOperacional botaoOff">
+            <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+            <p>Operacional</p>
+          </button>
+        </a>
+        <a href="../home.html" class="linksBotoes">
+          <button class="botaoHeader botaoParams botaoOn botaoOnParams">
+            <img src="../../assets/icons/parametrizacaoOn.png" alt="Icone Atendimento">
+            <p>Parametrização</p>
+          </button>
+        </a>
+        <h1 class="a comprimentos" style="font-weight: bold;">Olá, Usuário! </h1>
+        <a href="../../index.html" style="position: absolute; top: 31px;">
+          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+            <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+            SAIR
+          </button>
+        </a>
+    </header>
+
+    <nav class="cabecario">
+        <ul>
+            <li class="vazio"></li>
+            <li class="active"><span>Calculo do risco LDFT</span></li>
+            <li class="vazio"></li>
+            <li><a href="../builderRegras/builderRegras.html"><span>Builder de regras</span></a></li>
+            <li class="vazio" style="width: 70%;"></li>
+        </ul>
+    </nav>
+
+    <div>
+        <div id="pop-up" style="display: none;">
+            <div class="chartCard">
+                <div class="headerCard">
+                    <h2>Simulação</h2>
+                    <img src="./images/fechar-preto.png" id="fechar-pop-up" alt="">
+                </div>
+                <div class="bodyCard">
+                    <div class="esquerda-direita">
+                        <div class="esquerda">
+                            <div class="container-h3">
+                                <h3>Cenário anterior</h3>
+                            </div>
+                            <div class="subtitulo-tabela">
+                                <div class="container-h4">
+                                    <h4>Classificação dos clientes em categorias de risco</h4>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Total de clientes</th>
+                                            <th>Total de clientes</th>
+                                            <th>Risco</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5.005.738</td>
+                                            <td>49,45%</td>
+                                            <td>Baixo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.113.099</td>
+                                            <td>50,52%</td>
+                                            <td>Médio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.017</td>
+                                            <td>0,03</td>
+                                            <td>Alto</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="direita">
+                            <div class="container-h3">
+                                <h3>Simulação</h3>
+                            </div>
+                            <div class="subtitulo-tabela">
+                                <div class="container-h4">
+                                    <h4>Classificação dos clientes em categorias de risco</h4>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Total de clientes</th>
+                                            <th>Total de clientes</th>
+                                            <th>Risco</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>7.198.350</td>
+                                            <td>66,42%</td>
+                                            <td>Baixo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.410.224</td>
+                                            <td>31,42%</td>
+                                            <td>Médio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>229.793</td>
+                                            <td>2,12</td>
+                                            <td>Alto</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="pop-up-btn-incluir">
+                        <img src="./images/add.png" alt="">
+                        <span>Incluir</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="dashboard">
+            <div class="chartCard">
+                <div class="headerCard">
+                    <h2>Perfil de risco LDFT</h2>
+                    <h3>Perfis regulatórios</h3>
+                </div>
+                <div class="bodyCard">        
+                    <ul class="lista-categorias">
+                        <li class="lista-item" style="background-color: lightgray;">
+                            <a href="./calculoRiscoLDFTInstituicao.html">
+                                <img src="./images/instituicao.svg" alt="">
+                                <p class="legenda">Instituição</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTCliente.html">
+                                <img src="./images/client.png" alt="">
+                                <p class="legenda">Cliente</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTProduto.html">
+                                <img src="./images/product.png" alt="">
+                                <p class="legenda">Produto</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTFuncionario.html">
+                                <img src="./images/employee.png" alt="">
+                                <p class="legenda">Funcionários</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTParceiro.html">
+                                <img src="./images/handshake.png" alt="">
+                                <p class="legenda">Parceiros</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTFornecedor.html">
+                                <img src="./images/supplier.png" alt="">
+                                <p class="legenda">Fornecedores</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTBeneficiario.html">
+                                <img src="./images/debt.png" alt="">
+                                <p class="legenda">Beneficiários de produtos de acumulação</p>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <div class="container-content">
+                        <div id="visualização-das-variaveis-atuais">
+                            <h2>visualização de Variáveis atuais</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>#</th>
+                                        <th>Variável</th>
+                                        <th>Tipo</th>
+                                        <th>PF/PJ</th>
+                                        <th>Peso máximo</th>
+                                        <th>Tipo de ponderação</th>
+                                        <th>Cenários</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-data-area">
+                                </tbody>
+                            </table>
+                            <div class="visualizacao-variaveis-atuais-btn">
+                                <button id="adicionar-variavel-btn"><img src="./images/add.png" alt=""><span>Adicionar variável</span></button>
+                                <button id="visualizacao-variaveis-parametrizar"><img src="./images/engrenagem.png" alt=""><span>Parametrizar</span></button>
+                                <button id="visualizacao-variaveis-download"><a href="./lista_variaveis_atuais.xlsx" download="lista_variaveis_atuais.xlsx"><img src="./images/lista.svg" alt=""><span>Download lista</span></a></button>
+                                <button id="visualizacao-variaveis-excluir"><img src="./images/fehcar.png" alt=""><span>Excluir</span></button>
+                            </div>
+                        </div>
+    
+                        <div id="adicionar-variavel" style="display: none;">
+                            <div class="chartCard">
+                                <div class="headerCard">
+                                    <h2>Adicionar variável</h2>
+                                </div>
+                                <div class="bodyCard">       
+                                    <form action="">
+                                        <div class="texto-input">
+                                            <p for="">Variável Cadastral/Transacional</p>
+                                            <select name="" id="adicionar-variavel-var-central">
+                                                <option value="Selecionar">Selecionar</option>
+                                                <option value="Renda">Renda</option>
+                                            </select>
+                                        </div>
+                                        <div class="texto-input">
+                                            <p for="">Peso máximo</p>
+                                            <select name="" id="adicionar-variavel-peso">
+                                                <option value="Selecionar">Selecionar</option>
+                                                <option value="60">60</option>
+                                            </select>
+                                        </div>
+                                        <div class="texto-input">
+                                            <p for="">Quantidade de faixas de risco/cenários</p>
+                                            <select name="" id="adicionar-variavel-qnt-faixas">
+                                                <option value="Selecionar">Selecionar</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="texto-input">
+                                            <p>Tipologia de ponderação</p>
+                                            <div class="texto-checkbox">
+                                                <input type="checkbox" name="" id="adicionar-variavel-cenario-faixas">
+                                                <label for="">Cenários/faixas</label>
+                                                <input type="checkbox" name="" id="adicionar-variavel-lista">
+                                                <label for="">Lista</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <button id="adicionar-variavel-btn-avancar">
+                                        <img src="./images/avancar.png" alt="">
+                                        <span>Avançar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="cenarios-lista-ponderacoes" style="display: none;">
+                            <div class="chartCard">
+                                <div class="headerCard">
+                                    <h2>cenários, listas e ponderações</h2>
+    
+                                    <div class="header-tabela">
+                                        <span>Faixas de risco/ cenários</span>
+                                        <span>Peso</span>
+                                    </div>
+                                </div>
+                                <div class="bodyCard">       
+                                    <form action="">
+                                        <div class="esquerda">
+                                            <div class="texto-input">
+                                                <p for="">Até</p>
+                                                <select name="" id="cenarios-lista-ponderacoes-ate1">
+                                                    <option value="Selecionar">Selecionar</option>
+                                                    <option value="R$2000,00">R$2000,00</option>
+                                                </select>
+                                            </div>
+                                            <div class="de-ate">
+                                                <div class="texto-input">
+                                                    <p for="">De</p>
+                                                    <select name="" id="cenarios-lista-ponderacoes-de">
+                                                        <option value="Selecionar">Selecionar</option>
+                                                        <option value="R$2000,00">R$2000,00</option>
+                                                    </select>
+                                                </div>
+                                                <div class="texto-input">
+                                                    <p for="">Até</p>
+                                                    <select name="" id="cenarios-lista-ponderacoes-ate2">
+                                                        <option value="Selecionar">Selecionar</option>
+                                                        <option value="R$5000,00">R$5000,00</option>
+                                                    </select>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="texto-input">
+                                                <p for="">Acima de</p>
+                                                <select name="" id="cenarios-lista-ponderacoes-acima-de">
+                                                    <option value="Selecionar">Selecionar</option>
+                                                    <option value="R$5000,00">R$5000,00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="direita">
+                                            <select name="" id="cenarios-lista-ponderacoes-peso1">
+                                                <option value="0">0</option>
+                                            </select>
+                                            <select name="" id="cenarios-lista-ponderacoes-peso2">
+                                                <option value="0">0</option>
+                                            </select>
+                                            <select name="" id="cenarios-lista-ponderacoes-peso3">
+                                                <option value="0">0</option>
+                                            </select>
+                                        </div>
+                                        </div>
+                                    </form>
+                                    <div class="adicionar-variavel-btns">
+                                        <button id="adicionar-variavel-btn-simular">
+                                            <img src="./images/grafico.png" alt="">
+                                            <span>Simula variáveis</span>
+                                        </button>
+                                        <button id="adicionar-variavel-btn-incluir">
+                                            <img src="./images/add.png" alt="">
+                                            <span>Incluir</span>
+                                        </button>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="parametrizar" style="display: none;">
+                            <div class="chartCard">
+                                <div class="headerCard">
+                                    <h2>Parametrizar</h2>
+                                </div>
+                                <div class="bodyCard">       
+                                    <form action="">
+                                        <div class="texto-input">
+                                            <p for="">Variável Cadastral / Transacional</p>
+                                            <select name="" id="parametrizar-var-cadastral">
+                                                <option value="Selecionar">Selecionar</option>
+                                                <option value="Profissão">Profissão</option>
+                                            </select>
+                                        </div>
+                                        <div class="texto-input">
+                                            <p for="">Peso máximo</p>
+                                            <select name="" id="parametrizar-peso">
+                                                <option value="Selecionar">Selecionar</option>
+                                                <option value="200">200</option>
+                                            </select>
+                                        </div>
+                                        <div class="texto-input">
+                                            <p for="">Quantidade de faixas de risco/cenários</p>
+                                            <select name="" id="parametrizar-qnt-faixas">
+                                                <option value="Selecionar">Selecionar</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                        <div class="texto-input">
+                                            <p>Tipologia de ponderação</p>
+                                            <div class="texto-checkbox">
+                                                <input id="parametrizar-cenarios-faixas" type="checkbox" name="" id="">
+                                                <label for="">Cenários/faixas</label>
+                                                <input id="parametrizar-lista" type="checkbox" name="" id="">
+                                                <label for="">Lista</label>
+                                            </div>
+                                        </div>
+    
+                                    </form>
+                                    <button id="parametrizar-btn-avancar">
+                                        <img src="./images/avancar.png" alt="">
+                                        <span>Avançar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cenarios-lista-ponderacoes-parametrizar" style="display: none;">
+                            <div class="chartCard">
+                                <div class="headerCard">
+                                    <h2>cenários, listas e ponderações</h2>
+                                </div>
+                                <div class="bodyCard">
+                                    
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Campo</th>
+                                                <th>Risco LDFT</th>
+                                                <th>Peso</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Empresário</td>
+                                                <td>Muito Alto</td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">0</option>
+                                                        <option value="">100</option>
+                                                        <option value="">200</option>
+                                                        <option value="">300</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Diarista</td>
+                                                <td>Baixo</td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">0</option>
+                                                        <option value="">100</option>
+                                                        <option value="">200</option>
+                                                        <option value="">300</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Engenheiro</td>
+                                                <td>Médio</td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">0</option>
+                                                        <option value="">100</option>
+                                                        <option value="">200</option>
+                                                        <option value="">300</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04</td>
+                                                <td>Advogado</td>
+                                                <td>Alto</td>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">0</option>
+                                                        <option value="">100</option>
+                                                        <option value="">200</option>
+                                                        <option value="">300</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <div class="adicionar-variavel-parametrizar-btns">
+                                        <button id="adicionar-variavel-parametrizar-btn-upload-lista">
+                                            <img src="./images/lista.svg" alt="">
+                                            <input class= "upload-file" type="file" name="upload" id="">
+                                            <span>Upload de lista</span>
+                                        </button>
+                                        <button id="adicionar-variavel-parametrizar-btn-simular">
+                                            <img src="./images/grafico.png" alt="">
+                                            <span>Simular variáveis</span>
+                                        </button>
+                                        <button id="adicionar-variavel-parametrizar-btn-Atualizar">
+                                            <img src="./images/add.png" alt="">
+                                            <span>Atualizar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../script.js"></script>
+    <script src="./javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+</body>
+</html>

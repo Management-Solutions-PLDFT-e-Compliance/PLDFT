@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1" >
+        <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+          <button class="botaoHeader botaoEstrategico botaoOff">
+            <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+            <p>Estratégico</p>
+          </button>
+        </a>
+        <a href="../../gerencial/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoGerencial botaoOff">
+            <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+            <p>Gerencial</p>
+          </button>
+        </a>
+        <a href="../../operacional/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoOperacional botaoOff">
+            <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+            <p>Operacional</p>
+          </button>
+        </a>
+        <a href="../home.html" class="linksBotoes">
+          <button class="botaoHeader botaoParams botaoOn botaoOnParams">
+            <img src="../../assets/icons/parametrizacaoOn.png" alt="Icone Atendimento">
+            <p>Parametrização</p>
+          </button>
+        </a>
+        <h1 class="a comprimentos" style="font-weight: bold;">Olá, Usuário! </h1>
+        <a href="../../index.html" style="position: absolute; top: 31px;">
+          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+            <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+            SAIR
+          </button>
+        </a>
+    </header>
+
+    <nav class="cabecario">
+        <ul>
+            <li class="vazio"></li>
+            <li class="active"><span>Calculo do risco LDFT</span></li>
+            <li class="vazio"></li>
+            <li><a href="../builderRegras/builderRegras.html"><span>Builder de regras</span></a></li>
+            <li class="vazio" style="width: 70%;"></li>
+        </ul>
+    </nav>
+
+    <div>
+        <div id="pop-up" style="display: none;">
+            <div class="chartCard">
+                <div class="headerCard">
+                    <h2>Simulação</h2>
+                    <img src="./images/fechar-preto.png" id="fechar-pop-up" alt="">
+                </div>
+                <div class="bodyCard">
+                    <div class="esquerda-direita">
+                        <div class="esquerda">
+                            <div class="container-h3">
+                                <h3>Cenário anterior</h3>
+                            </div>
+                            <div class="subtitulo-tabela">
+                                <div class="container-h4">
+                                    <h4>Classificação dos clientes em categorias de risco</h4>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Total de clientes</th>
+                                            <th>Total de clientes</th>
+                                            <th>Risco</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5.005.738</td>
+                                            <td>49,45%</td>
+                                            <td>Baixo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.113.099</td>
+                                            <td>50,52%</td>
+                                            <td>Médio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.017</td>
+                                            <td>0,03</td>
+                                            <td>Alto</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="direita">
+                            <div class="container-h3">
+                                <h3>Simulação</h3>
+                            </div>
+                            <div class="subtitulo-tabela">
+                                <div class="container-h4">
+                                    <h4>Classificação dos clientes em categorias de risco</h4>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Total de clientes</th>
+                                            <th>Total de clientes</th>
+                                            <th>Risco</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>7.198.350</td>
+                                            <td>66,42%</td>
+                                            <td>Baixo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.410.224</td>
+                                            <td>31,42%</td>
+                                            <td>Médio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>229.793</td>
+                                            <td>2,12</td>
+                                            <td>Alto</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="pop-up-btn-incluir">
+                        <img src="./images/add.png" alt="">
+                        <span>Incluir</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="dashboard">
+            <div class="chartCard">
+                <div class="headerCard">
+                    <h2>Perfil de risco LDFT</h2>
+                    <h3>Perfis regulatórios</h3>
+                </div>
+                <div class="bodyCard">        
+                    <ul class="lista-categorias">
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTInstituicao.html">
+                                <img src="./images/instituicao.svg" alt="">
+                                <p class="legenda">Instituição</p>
+                            </a>
+                        </li>
+                        <li class="lista-item" id="cliente">
+                            <a href="./calculoRiscoLDFTCliente.html">
+                                <img src="./images/client.png" alt="">
+                                <p class="legenda">Cliente</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTProduto.html">
+                                <img src="./images/product.png" alt="">
+                                <p class="legenda">Produto</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTFuncionario.html">
+                                <img src="./images/employee.png" alt="">
+                                <p class="legenda">Funcionários</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTParceiro.html">
+                                <img src="./images/handshake.png" alt="">
+                                <p class="legenda">Parceiros</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTFornecedor.html">
+                                <img src="./images/supplier.png" alt="">
+                                <p class="legenda">Fornecedores</p>
+                            </a>
+                        </li>
+                        <li class="lista-item">
+                            <a href="./calculoRiscoLDFTBeneficiario.html">
+                                <img src="./images/debt.png" alt="">
+                                <p class="legenda">Beneficiários de produtos de acumulação</p>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <div class="container-content">
+                        <p id="cliente-home">Selecione perfil para visualização</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../script.js"></script>
+    <script src="./javascript/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+</body>
+</html>

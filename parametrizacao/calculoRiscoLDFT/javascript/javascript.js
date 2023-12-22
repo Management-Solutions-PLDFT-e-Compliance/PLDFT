@@ -73,16 +73,6 @@ dadosVariaveisAtuais.forEach(dado => {
 
 })
 
-cliente.addEventListener("click", function(e) {
-    if(e.target.parentElement.tagName == "LI")
-        e.target.parentElement.style.backgroundColor = "lightgray";
-    else
-        e.target.style.backgroundColor = "lightgray";
-
-    telaVariaveisAtuais.style.display = "block"
-    clienteHome.style.display = "none"
-})
-
 adicionarVariavelBtn.addEventListener("click", function() {
     telaVariaveisAtuais.style.display = "none"
     telaAdicionarVariavel.style.display = "flex"
