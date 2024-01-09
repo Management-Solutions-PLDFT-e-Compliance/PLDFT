@@ -2,6 +2,7 @@
 // GRAFICO
 var graficoAnaliseEsteiraCtx = document.getElementById('grafico-analise-esteira').getContext('2d');
 var graficoOciosidadeCtx = document.getElementById('grafico-ociosidade').getContext('2d');
+var graficoDistribuicaoSeniorCtx = document.getElementById('grafico-distribuicao-senioridade-por-esteira').getContext('2d');
 
 var dataAnaliseEsteira = {
     labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos'],
@@ -37,7 +38,109 @@ var dataOciosidade = {
     }]
 };
 
+var dataDistribuicaoSenior = {
+    labels: ['Júnior', 'Pleno', 'Senior'],
+    datasets: [{
+        label: 'Operações',
+        type: 'bar',
+        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+        borderColor: 'rgba(75, 192, 192, 1)',
+        data: [73, 76, 78],
+        borderWidth: 1,
+        pointRadius: 0,
+        barPercentage: 0.4,
+        datalabels: {
+            display: false // Remove os rótulos de dados para este conjunto de dados
+        }
+    }]
+};
+
 var optionsAnaliseEsteira = {
+    scales: {
+        y: {
+            type: 'linear',
+            position: 'left',
+            beginAtZero: true,
+            suggestedMin: 0, // Valor mínimo sugerido
+            suggestedMax: 100, // Valor máximo sugerido
+            grid: {
+                display: true // Remove a grade do eixo Y
+            },
+            ticks: {
+                stepSize: 20
+            }
+        },
+        x: {
+            beginAtZero: true,
+            grid: {
+                display: false // Remove a grade do eixo Y
+            }
+        }
+        
+    },
+    plugins: {
+        legend: {
+            position: 'right', // Coloca a legenda à direita do gráfico
+            display: false
+        },
+
+        datalabels: {
+            display: true,
+            align: 'top', // Posiciona o rótulo acima do ponto
+            anchor: 'center', // Alinha o rótulo no centro do ponto
+            clamp: true
+        },
+        grid: {
+            display: false // Remove a grade do gráfico
+        }
+        
+    }
+};
+
+
+var optionsOciosidade = {
+    scales: {
+        y: {
+            type: 'linear',
+            position: 'left',
+            beginAtZero: true,
+            suggestedMin: 0, // Valor mínimo sugerido
+            suggestedMax: 50, // Valor máximo sugerido
+            grid: {
+                display: true // Remove a grade do eixo Y
+            },
+            ticks: {
+                stepSize: 10
+            }
+        },
+        x: {
+            beginAtZero: true,
+            grid: {
+                display: false // Remove a grade do eixo Y
+            }
+        }
+        
+    },
+    plugins: {
+        legend: {
+            position: 'right', // Coloca a legenda à direita do gráfico
+            display: false
+        },
+
+        datalabels: {
+            display: true,
+            align: 'top', // Posiciona o rótulo acima do ponto
+            anchor: 'center', // Alinha o rótulo no centro do ponto
+            clamp: true
+        },
+        grid: {
+            display: false // Remove a grade do gráfico
+        }
+        
+    }
+};
+
+var optionsDistribuicaoSenior = {
     scales: {
         y: {
             type: 'linear',
@@ -134,13 +237,18 @@ var graficoOCiosidade = new Chart(graficoOciosidadeCtx, {
     options: optionsOciosidade
 });
 
+var graficoDistribuicaoSenior = new Chart(graficoDistribuicaoSeniorCtx, {
+    type: 'bar',
+    data: dataDistribuicaoSenior,
+    options: optionsDistribuicaoSenior
+});
+
 function createLinearGradientBar(ctx, colorInicio, colorFim) {
     var gradient = ctx.createLinearGradient(0, 100, 0, 200);
     gradient.addColorStop(0, colorInicio); // Cor no início do gradiente
     gradient.addColorStop(1, colorFim); // Cor no final do gradiente
     return gradient;
 }
-
 
 // PRODUTIVIDADE ABRIR
 const btnFecharProd = document.getElementById("fechar-produtividade-dos-analistas")
@@ -173,4 +281,131 @@ function toggleCheckBox(index) {
 // Adiciona o evento a cada elemento da lista
 checkBoxes.forEach(function(elemento, index) {
     elemento.addEventListener('click', e => toggleCheckBox(index));
+});
+
+document.getElementById('select-distribuicao-senioridade').addEventListener('change', function () {
+    // Obtém o valor selecionado
+    var selectedOption = this.value;
+
+    // Atualiza os dados com base na opção selecionada
+    var newData;
+
+    if (selectedOption === 'Câmbio') {
+        newData = {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [452, 527, 600],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4
+            },
+            ]
+        };
+    } else if (selectedOption === 'Contas') {
+        newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [73, 76, 78],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4,
+            }]
+        };
+    } else if (selectedOption === 'Seguros') {
+        newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [73, 76, 78],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4,
+            }]
+        };
+    } else if (selectedOption === 'Funcionarios') {
+        newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [85, 89, 55],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4,
+            }]
+        };
+    } else if (selectedOption === 'Investimentos') {
+        newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [150, 147, 135],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4,
+            }]
+        };
+    } else if (selectedOption === 'Consórcios') {
+        newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [354, 326, 375],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4,
+            }]
+        };
+    } else if (selectedOption === 'Funcionários') {
+        newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [412, 12, 55],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4,
+            }]
+        };
+    } else if (selectedOption === 'Externas') {
+        newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
+            datasets: [{
+                label: 'Muito Baixo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [105, 123, 55],
+                fill: false,
+                borderWidth: 1,
+                pointRadius: 0,
+                barPercentage: 0.4,
+            }]
+        };
+    }
+
+    // Atualiza o gráfico com os novos dados
+    graficoDistribuicaoSenior.data = newData;
+    graficoDistribuicaoSenior.update();
 });
