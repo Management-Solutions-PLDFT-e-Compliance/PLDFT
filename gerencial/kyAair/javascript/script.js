@@ -193,15 +193,15 @@ var data = {
     var tabelaHTML = "";
     switch (selectedOption) {
         case "Clientes":
-            tabelaHTML = `<table>
+          tabelaHTML = `<table>
           <thead>
             <tr class="headerTable">
               <th></th>
-              <th>Segmento 1</th>
-              <th>Segmento 2</th>
-              <th>Segmento 3</th>
-              <th>Segmento 4</th>
-              <th>Segmento 5</th>
+              <th>Digital PF</th>
+              <th>Digital PJ</th>
+              <th>Alta Renda PF</th>
+              <th>Alta Renda PJ</th>
+              <th>Varejo</th>
             </tr>
           </thead>
           <tbody>
@@ -247,17 +247,75 @@ var data = {
             </tr>
           </tbody>
         </table>`;
-            break;
+          break;
+        
+        case "Parceiros":
+          tabelaHTML = `<table>
+        <thead>
+          <tr class="headerTable">
+            <th></th>
+            <th>Correspondentes <br>Bancários</th>
+            <th>Leiloeiros</th>
+            <th>Parceiros <br>Internacionais</th>
+            <th>Chave Swift</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="riscoMuitoAlto">
+            <td class="headerTable">Muito Alto</td>
+            <td>12</td>
+            <td>1</td>
+            <td>123</td>
+            <td>98</td>
+            
+          </tr>
+          <tr class="riscoAlto">
+            <td class="headerTable">Risco Alto</td>
+            <td>2333</td>
+            <td>1232</td>
+            <td>3257</td>
+            <td>743</td>
+            
+          </tr>
+          <tr class="riscoModerado">
+            <td class="headerTable">Risco Moderado</td>
+            <td>6444</td>
+            <td>90334</td>
+            <td>72578</td>
+            <td>3486</td>
+            
+          </tr>
+          <tr class="riscoBaixo">
+            <td class="headerTable">Risco Baixo</td>
+            <td>19324</td>
+            <td>40553</td>
+            <td>32532</td>
+            <td>280</td>
+            
+          </tr>
+          <tr class="riscoMuitoBaixo">
+            <td class="headerTable">Risco Muito Baixo</td>
+            <td>205</td>
+            <td>2944</td>
+            <td>46643</td>
+            <td>967</td>
+            
+          </tr>
+        </tbody>
+      </table>`;
+          break;
+
         case "Funcionários":
             tabelaHTML = `<table>
             <thead>
               <tr class="headerTable">
                 <th></th>
-                <th>Segmento 1</th>
-                <th>Segmento 2</th>
-                <th>Segmento 3</th>
-                <th>Segmento 4</th>
-                <th>Segmento 5</th>
+                <th>Comercial</th>
+                <th>Riscos</th>
+                <th>Tecnologia</th>
+                <th>Auditoria</th>
+                <th>Tesouraria</th>
               </tr>
             </thead>
             <tbody>
@@ -308,12 +366,12 @@ var data = {
             tabelaHTML = `<table>
             <thead>
               <tr class="headerTable">
-                <th></th>
-                <th>Agência</th>
-                <th>Internet <br> Banking</th>
-                <th>Mobile</th>
-                <th>ATM</th>
-                <th>-</th>
+                <th>
+                <th>Empréstimos</th>
+                <th>Contas</th>
+                <th>Investimentos</th>
+                <th>Câmbio</th>
+                <th>Seguros</th>
               </tr>
             </thead>
             <tbody>
@@ -323,7 +381,7 @@ var data = {
                 <td>1900</td>
                 <td>2000</td>
                 <td>500</td>
-                <td class="naoAplica">n/a</td>
+                <td>300</td>
               </tr>
               <tr class="riscoAlto">
                 <td class="headerTable">Risco Alto</td>
@@ -331,7 +389,7 @@ var data = {
                 <td>550</td>
                 <td>650</td>
                 <td>700</td>
-                <td class="naoAplica">n/a</td>
+                <td>400</td>
               </tr>
               <tr class="riscoModerado">
                 <td class="headerTable">Risco Moderado</td>
@@ -339,7 +397,7 @@ var data = {
                 <td>300</td>
                 <td>500</td>
                 <td>450</td>
-                <td class="naoAplica">n/a</td>
+                <td>550</td>
               </tr>
               <tr class="riscoBaixo">
                 <td class="headerTable">Risco Baixo</td>
@@ -347,7 +405,7 @@ var data = {
                 <td>500</td>
                 <td>50</td>
                 <td>50</td>
-                <td class="naoAplica">n/a</td>
+                <td>200</td>
               </tr>
               <tr class="riscoMuitoBaixo">
                 <td class="headerTable">Risco Muito Baixo</td>
@@ -355,7 +413,7 @@ var data = {
                 <td>3800</td>
                 <td>5100</td>
                 <td>1900</td>
-                <td class="naoAplica">n/a</td>
+                <td>450</td>
               </tr>
             </tbody>
           </table>`;
@@ -366,11 +424,11 @@ var data = {
             <thead>
               <tr class="headerTable">
                 <th></th>
-                <th>Segmento 1</th>
-                <th>Segmento 2</th>
-                <th>Segmento 3</th>
-                <th>Segmento 4</th>
-                <th>Segmento 5</th>
+                <th>Comercial</th>
+                <th>Riscos</th>
+                <th>Tecnologia</th>
+                <th>Auditoria</th>
+                <th>Tesouraria</th>
               </tr>
             </thead>
             <tbody>

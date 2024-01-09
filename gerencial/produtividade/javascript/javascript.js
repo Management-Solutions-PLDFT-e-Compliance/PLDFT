@@ -4,7 +4,7 @@ var graficoAnaliseEsteiraCtx = document.getElementById('grafico-analise-esteira'
 var graficoOciosidadeCtx = document.getElementById('grafico-ociosidade').getContext('2d');
 
 var dataAnaliseEsteira = {
-    labels: ['Esteira 1', 'Esteira 2', 'Esteira 3', 'Esteira 4', 'Esteira 5'],
+    labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos'],
     datasets: [{
         label: 'Operações',
         type: 'bar',
@@ -21,7 +21,7 @@ var dataAnaliseEsteira = {
 };
 
 var dataOciosidade = {
-    labels: ['Esteira 1', 'Esteira 2', 'Esteira 3', 'Esteira 4', 'Esteira 5'],
+    labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos'],
     datasets: [{
         label: 'Operações',
         type: 'bar',
