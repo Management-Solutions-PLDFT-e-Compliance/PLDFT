@@ -233,11 +233,15 @@ h3 {
 }
 
 .table_header li:nth-child(1) {
-    width: 30%;
+    width: 33%;
 }   
 
 .table_header li:nth-child(2) {
-    width: 70%;
+    width: 33%;
+}
+
+.table_header li:nth-child(3) {
+    width: 33%;
 }
 
 .table_row {
@@ -254,13 +258,19 @@ h3 {
 
 .table_row li:nth-child(1) {
     border-right: 1px solid #c5c5c5;
-    width: 30%
+    width: 33%
 }
 
 .table_row li:nth-child(2) {
     border-left: 1px solid #c5c5c5;
-    width: 70%
+    width: 33%
 }
+
+.table_row li:nth-child(3) {
+    border-left: 1px solid #c5c5c5;
+    width: 33%
+}
+
 
 .atribuicao-manual{
     height: 100.45%;
