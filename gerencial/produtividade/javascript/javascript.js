@@ -174,3 +174,31 @@ function toggleCheckBox(index) {
 checkBoxes.forEach(function(elemento, index) {
     elemento.addEventListener('click', e => toggleCheckBox(index));
 });
+
+// Dados de exemplo
+var dados_esteira = {
+    labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos', 'Consórcios', 'Funcionários', 'Externas'],
+    datasets: [{
+       data: [92, 42, 40, 34, 12, 9, 12, 20 ], // Valores para cada categoria
+       backgroundColor: ['#3F51B5', '#FF5722', '#4CAF50', '#FFC107', '#9C27B0', '#2196F3', '#E91E63', '#FF9800'] // Cores das fatias
+    }]
+ };
+
+ // Configuração do gráfico
+
+ const config = {
+    type: 'pie',
+    data: dados_esteira,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'right',
+        },
+      }
+    },
+};
+ // Obtenha o contexto do canvas e crie o gráfico de pizza
+ let graficoPessoaEsteiraCtx = document.getElementById('pessoas-por-esteira').getContext('2d');
+ 
+ var grafico_esteira = new Chart(graficoPessoaEsteiraCtx, config);
