@@ -446,3 +446,16 @@ h3 {
 .producao-esteira-analise-ociosidade .bodyCard img {
     height: 50px;
 }
+
+.middle {
+    display: flex;
+    gap: 1rem;
+}
+
+.quantidade-pessoas-por-esteira {
+    width: 50%;
+}
+
+.senioridade-por-esteira {
+    width: 50%;
+}
