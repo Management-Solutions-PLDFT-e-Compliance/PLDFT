@@ -319,22 +319,30 @@ h3 {
 }
 
 .atribuicao-automatica-manutencao .table_header li:nth-child(1){
-    width: 35%;
+    width: 28%;
 }
 .atribuicao-automatica-manutencao .table_header li:nth-child(2){
-    width: 50%;
+    width: 28%;
 }
 .atribuicao-automatica-manutencao .table_header li:nth-child(3){
+    width: 28%;
+}
+.atribuicao-automatica-manutencao .table_header li:nth-child(4){
     width: 15%;
 }
 
 .atribuicao-automatica-manutencao .table_row li:nth-child(1){
-    width: 35%;
+    width: 28%;
 }
 .atribuicao-automatica-manutencao .table_row li:nth-child(2){
-    width: 50%;
+    width: 28%;
 }
+
 .atribuicao-automatica-manutencao .table_row li:nth-child(3){
+    width: 28%;
+}
+
+.atribuicao-automatica-manutencao .table_row li:nth-child(4){
     display: flex;
     justify-content: space-between;
     width: 15%;
