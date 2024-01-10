@@ -414,14 +414,14 @@ document.getElementById('select-distribuicao-senioridade').addEventListener('cha
 var dados_esteira = {
     labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos', 'Consórcios', 'Funcionários', 'Externas'],
     datasets: [{
-       data: [92, 42, 40, 34, 12, 9, 12, 20 ], // Valores para cada categoria
+       data: [92, 42, 40, 28, 12, 15, 12, 20 ], // Valores para cada categoria
        backgroundColor: ['#3F51B5', '#FF5722', '#4CAF50', '#FFC107', '#9C27B0', '#2196F3', '#E91E63', '#FF9800'] // Cores das fatias
     }]
  };
 
  // Configuração do gráfico
 
- const config = {
+ const config_esteira = {
     type: 'pie',
     data: dados_esteira,
     options: {
@@ -436,4 +436,45 @@ var dados_esteira = {
  // Obtenha o contexto do canvas e crie o gráfico de pizza
  let graficoPessoaEsteiraCtx = document.getElementById('pessoas-por-esteira').getContext('2d');
  
- var grafico_esteira = new Chart(graficoPessoaEsteiraCtx, config);
+ var grafico_esteira = new Chart(graficoPessoaEsteiraCtx, config_esteira);
+
+ let dados_comparacao = {
+    labels:['Habilidade 1', 'Habilidade 2', 'Habilidade 3', 'Habilidade 4', 'Habilidade 5', 'Habilidade 6', 'Habilidade 7', 'Habilidade 8', 'Habilidade 9'],
+    datasets: [
+        {
+        label: 'nomeAnalista1',
+        data: [-85, -95, , -81, -65, -60, -55, -59, -40, -69],
+        backgroundColor: "#1c78b3",
+        },
+        {
+        label: 'nomeAnalista2',
+        data: [82, 75, 79, 55, 43, 49, 20, 60, 35],
+        backgroundColor: '#fe800f',
+        }
+    ]
+ }
+
+ const config_comparacao = {
+    type: 'bar',
+    data: dados_comparacao,
+    options: {
+      indexAxis: 'y',
+      // Elements options apply to all of the options unless overridden in a dataset
+      // In this case, we are setting the border of each horizontal bar to be 2px wide
+      elements: {
+        bar: {
+          borderWidth: 2,
+        }
+      },
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        }
+      }
+    },
+  };
+
+let graficoComparacaoAnalistaCtx = document.getElementById('grafico-comparacao-analistas').getContext('2d');
+
+let grafico_comparacao = new Chart(graficoComparacaoAnalistaCtx, config_comparacao)
