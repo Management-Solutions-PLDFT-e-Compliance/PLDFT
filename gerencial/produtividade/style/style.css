@@ -477,3 +477,34 @@ h3 {
     height: fit-content;
     padding: .5rem 1rem;
 }
+
+.produtividade-analista-por-equipe {
+    width: 50%;
+}
+
+.produtividade-analista-por-equipe .selects-esteiras-analistas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.produtividade-analista-por-equipe select {
+    padding: .5rem 1rem;
+    font-size: 1em;
+    border: 1px solid lightgray;
+}
+
+.produtividade-analista-por-equipe .bodyCard{
+    display: flex;
+    gap: 2rem;
+}
+
+.produtividade-analista-por-equipe canvas{
+    max-width: 75%;
+}
+
+.produtividade-analista-por-equipe .selects-esteiras-analistas {
+    display: flex;
+    flex-direction: column;
+}
