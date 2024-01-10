@@ -456,6 +456,24 @@ h3 {
     width: 50%;
 }
 
-.senioridade-por-esteira {
+.distribuicao-senioridade-por-esteira {
     width: 50%;
+}
+
+.distribuicao-senioridade-por-esteira .bodyCard{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.distribuicao-senioridade-por-esteira canvas{
+    max-width: 75%;
+    max-height: 300px;
+}
+
+.distribuicao-senioridade-por-esteira select{
+    width: 15%;
+    border: 1px solid lightgray;
+    height: fit-content;
+    padding: .5rem 1rem;
 }
