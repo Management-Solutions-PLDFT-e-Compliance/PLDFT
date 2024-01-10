@@ -233,3 +233,43 @@ var config_historico = {
 
 
 grafico_barra = new Chart(ctx_historico, config_historico);
+
+//mudando valores de acordo com o período escolhido
+const numeros = document.getElementsByClassName("numero_contorno")
+let multiplicadorAnterior = 1
+
+document.getElementById('select-range').addEventListener("change", function(){
+    switch (document.getElementById('select-range').value) {
+        case "Últimos 30 dias":
+            for (let i = 0; i < 6 ; i++){
+                numeros[i].innerHTML = `${Math.round((numeros[i].innerHTML / multiplicadorAnterior) * 1.7)}`
+            }
+            multiplicadorAnterior = 1.7
+            break;
+        
+        case "Último semestre":
+            for (let i = 0; i < 6; i++){
+                numeros[i].innerHTML = `${Math.round((numeros[i].innerHTML / multiplicadorAnterior) * 3.2)}`
+            }
+
+            multiplicadorAnterior = 3.2
+            break;
+
+        case "Último ano":
+            for (let i = 0; i < 6; i++){
+                numeros[i].innerHTML = `${Math.round((numeros[i].innerHTML / multiplicadorAnterior) * 4.7)}`
+            }
+
+            multiplicadorAnterior = 4.7
+            break;
+        
+        default:
+            
+            for (let i = 0; i < 6; i++){
+                numeros[i].innerHTML = `${Math.round(numeros[i].innerHTML / multiplicadorAnterior)}`
+            }
+            multiplicadorAnterior = 1
+            break;
+    }   
+
+})
