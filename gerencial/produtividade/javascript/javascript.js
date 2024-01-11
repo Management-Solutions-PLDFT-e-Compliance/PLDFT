@@ -59,25 +59,12 @@ var dataDistribuicaoSenior = {
 var dataProdAnalistaEquipe = {
     labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
     datasets: [{
-        label: 'Operações',
+        label: 'Limite Superior',
         type: 'line',
         backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
-        borderColor: 'rgba(75, 192, 192, 1)',
+        borderColor: 'lightgray',
         data: [0, 0, 0, 0, 0, 0],
-        borderWidth: 1,
-        pointRadius: 0,
-        barPercentage: 0.4,
-        datalabels: {
-            display: false // Remove os rótulos de dados para este conjunto de dados
-        }
-    },
-    {
-        label: 'Operações',
-        type: 'line',
-        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
-        borderColor: 'rgba(75, 192, 192, 1)',
-        data: [0, 0, 0, 0, 0, 0],
-        borderWidth: 1,
+        borderWidth: 4,
         pointRadius: 0,
         barPercentage: 0.4,
         datalabels: {
@@ -298,6 +285,36 @@ var optionsProdAnalistaEquipe = {
         },
         grid: {
             display: false // Remove a grade do gráfico
+        },
+        annotation: {
+            annotations: [
+                {
+                    type: 'line',
+                    mode: 'horizontal',
+                    scaleID: 'y',
+                    value: 2, // Valor da primeira linha
+                    borderColor: 'red',
+                    borderWidth: 2,
+                    label: {
+                        content: 'Linha 1',
+                        enabled: true,
+                        position: 'right'
+                    }
+                },
+                {
+                    type: 'line',
+                    mode: 'horizontal',
+                    scaleID: 'y',
+                    value: 10, // Valor da segunda linha
+                    borderColor: 'blue',
+                    borderWidth: 2,
+                    label: {
+                        content: 'Linha 2',
+                        enabled: true,
+                        position: 'right'
+                    }
+                }
+            ]
         }
         
     }
@@ -602,9 +619,34 @@ selectEsteiras.addEventListener("change", function() {
                    borderColor: 'rgba(75, 192, 192, 1)',
                    data: [82, 75, 80, 60,90, 50],
                    fill: false,
-                   borderWidth: 3,
+                   borderWidth: 2,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Limite Superior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [90, 90, 90, 90, 90, 90],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            },
+            {
+                label: 'Limite Inferior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [50, 50, 50, 50, 50, 50],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -623,7 +665,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [82, 75, 80, 60,90, 50],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -632,9 +674,34 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [52, 70, 75, 82,60, 50],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [90, 90, 90, 90, 90, 90],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [50, 50, 50, 50, 50, 50],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                } else if(selectedOptionAnalista == "Bryan da Silva") {
                    newDataAnalista = {
@@ -645,7 +712,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [82, 75, 80, 60,90, 50],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -654,10 +721,73 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [80, 65, 75, 45, 55, 72],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [90, 90, 90, 90, 90, 90],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [45, 45, 45, 45, 45, 45],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
+               } else {
+                    newDataAnalista = {
+                        labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                        datasets: [{
+                            label: 'Esteira',
+                            backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            data: [82, 75, 80, 60,90, 50],
+                            fill: false,
+                            borderWidth: 2,
+                            pointRadius: 0,
+                        },{
+                         label: 'Limite Superior',
+                         type: 'line',
+                         backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                         borderColor: '#081c4c',
+                         data: [90, 90, 90, 90, 90, 90],
+                         borderWidth: 4,
+                         pointRadius: 0,
+                         barPercentage: 0.4,
+                         datalabels: {
+                             display: false // Remove os rótulos de dados para este conjunto de dados
+                         }
+                     },
+                     {
+                         label: 'Limite Inferior',
+                         type: 'line',
+                         backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                         borderColor: 'red',
+                         data: [50, 50, 50, 50, 50, 50],
+                         borderWidth: 4,
+                         pointRadius: 0,
+                         barPercentage: 0.4,
+                         datalabels: {
+                             display: false // Remove os rótulos de dados para este conjunto de dados
+                         }
+                     }]
+                    }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -678,9 +808,34 @@ selectEsteiras.addEventListener("change", function() {
                    borderColor: 'rgba(75, 192, 192, 1)',
                    data: [39, 39, 94, 50, 95, 20],
                    fill: false,
-                   borderWidth: 3,
+                   borderWidth: 2,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Limite Superior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [95, 95, 95, 95, 95, 95],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            },
+            {
+                label: 'Limite Inferior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [20, 20, 20, 20, 20, 20],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -699,7 +854,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [39, 39, 94, 50, 95, 20],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -708,9 +863,34 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [62, 10, 15, 12,60, 50],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95, 95, 95],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [10, 10, 10, 10, 10, 10],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                } else if(selectedOptionAnalista == "João Martins") {
                    newDataAnalista = {
@@ -721,7 +901,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [39, 39, 94, 50, 95, 20],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -730,10 +910,73 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [80, 65, 75, 45, 55, 72],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95, 95, 95],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [20, 20, 20, 20, 20, 20],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [39, 39, 94, 50, 95, 20],
+                        fill: false,
+                        borderWidth: 2,
+                        pointRadius: 0,
+                    },{
+                     label: 'Limite Superior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [95, 95, 95, 95, 95, 95],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 },
+                 {
+                     label: 'Limite Inferior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [20, 20, 20, 20, 20, 20],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -754,9 +997,34 @@ selectEsteiras.addEventListener("change", function() {
                    borderColor: 'rgba(75, 192, 192, 1)',
                    data: [74, 85, 30, 60, 83, 93],
                    fill: false,
-                   borderWidth: 3,
+                   borderWidth: 2,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Limite Superior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [93, 93, 93, 93, 93, 93],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            },
+            {
+                label: 'Limite Inferior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [30, 30, 30, 30, 30, 30],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -775,7 +1043,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [74, 85, 30, 60, 83, 93],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -784,9 +1052,34 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [12, 20, 45, 22, 40, 60],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [93, 93, 93, 93, 93, 93],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [12, 12, 12, 12, 12, 12],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                } else if(selectedOptionAnalista == "Pedro Almeida") {
                    newDataAnalista = {
@@ -797,7 +1090,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [74, 85, 30, 60, 83, 93],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -806,10 +1099,73 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [28, 78, 22, 36, 65, 11],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [93, 93, 93, 93, 93, 93],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [11, 11, 11, 11, 11, 11],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
+               } else {
+                    newDataAnalista = {
+                        labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                        datasets: [{
+                            label: 'Esteira',
+                            backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            data: [74, 85, 30, 60, 83, 93],
+                            fill: false,
+                            borderWidth: 2,
+                            pointRadius: 0,
+                        },{
+                         label: 'Limite Superior',
+                         type: 'line',
+                         backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                         borderColor: '#081c4c',
+                         data: [93, 93, 93, 93, 93, 93],
+                         borderWidth: 4,
+                         pointRadius: 0,
+                         barPercentage: 0.4,
+                         datalabels: {
+                             display: false // Remove os rótulos de dados para este conjunto de dados
+                         }
+                     },
+                     {
+                         label: 'Limite Inferior',
+                         type: 'line',
+                         backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                         borderColor: 'red',
+                         data: [30, 30, 30, 30, 30, 30],
+                         borderWidth: 4,
+                         pointRadius: 0,
+                         barPercentage: 0.4,
+                         datalabels: {
+                             display: false // Remove os rótulos de dados para este conjunto de dados
+                         }
+                     }]
+                    }         
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -830,9 +1186,34 @@ selectEsteiras.addEventListener("change", function() {
                    borderColor: 'rgba(75, 192, 192, 1)',
                    data: [48, 35, 83, 34, 24, 57],
                    fill: false,
-                   borderWidth: 3,
+                   borderWidth: 2,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Limite Superior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [83, 83, 83, 83, 83, 83],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            },
+            {
+                label: 'Limite Inferior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [24, 24, 24, 24, 24, 24],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -851,7 +1232,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [48, 35, 83, 34, 24, 57],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -860,9 +1241,34 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [12, 20, 45, 22, 40, 60],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [83, 83, 83, 83, 83, 83],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [12, 12, 12, 12, 12, 12],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                } else if(selectedOptionAnalista == "Marcos Pereira") {
                    newDataAnalista = {
@@ -873,7 +1279,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [48, 35, 83, 34, 24, 57],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -882,10 +1288,74 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [33, 45, 32, 55, 21, 45],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [83, 83, 83, 83, 83, 83],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [21, 21, 21, 21, 21, 21],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [48, 35, 83, 34, 24, 57],
+                        fill: false,
+                        borderWidth: 2,
+                        pointRadius: 0,
+                    },{
+                     label: 'Limite Superior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [83, 83, 83, 83, 83, 83],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 },
+                 {
+                     label: 'Limite Inferior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [24, 24, 24, 24, 24, 24],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 }]
+                }
+     
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -906,9 +1376,34 @@ selectEsteiras.addEventListener("change", function() {
                    borderColor: 'rgba(75, 192, 192, 1)',
                    data: [65, 23, 95, 34, 56, 43],
                    fill: false,
-                   borderWidth: 3,
+                   borderWidth: 2,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Limite Superior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [95, 95, 95, 95, 95, 95],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            },
+            {
+                label: 'Limite Inferior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [23, 23, 23, 23, 23, 23],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -927,7 +1422,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [65, 23, 95, 34, 56, 43],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -936,9 +1431,34 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [25, 35, 73, 46, 62, 80],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95, 95, 95],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [23, 23, 23, 23, 23, 23],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                } else if(selectedOptionAnalista == "Lucas Silva") {
                    newDataAnalista = {
@@ -949,7 +1469,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [65, 23, 95, 34, 56, 43],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -958,10 +1478,73 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [44, 32, 23, 56, 83, 45],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95, 95, 95],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [23, 23, 23, 23, 23, 23],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [65, 23, 95, 34, 56, 43],
+                        fill: false,
+                        borderWidth: 2,
+                        pointRadius: 0,
+                    },{
+                     label: 'Limite Superior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [95, 95, 95, 95, 95, 95],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 },
+                 {
+                     label: 'Limite Inferior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [23, 23, 23, 23, 23, 23],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -982,9 +1565,34 @@ selectEsteiras.addEventListener("change", function() {
                    borderColor: 'rgba(75, 192, 192, 1)',
                    data: [98, 36, 82, 62, 45, 12],
                    fill: false,
-                   borderWidth: 3,
+                   borderWidth: 2,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Limite Superior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [98, 98, 98, 98, 98, 98],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            },
+            {
+                label: 'Limite Inferior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [12, 12, 12, 12, 12, 12],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -1003,7 +1611,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [98, 36, 82, 62, 45, 12],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -1012,9 +1620,34 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [44, 38, 37, 64, 26, 8],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [98, 98, 98, 98, 98, 98],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [8, 8, 8, 8, 8, 8],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                } else if(selectedOptionAnalista == "Bruno Oliveira") {
                    newDataAnalista = {
@@ -1025,7 +1658,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [98, 36, 82, 62, 45, 12],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -1034,10 +1667,73 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [27, 83, 12, 56, 80, 31],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [98, 98, 98, 98, 98, 98],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [12, 12, 12, 12, 12, 12],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [98, 36, 82, 62, 45, 12],
+                        fill: false,
+                        borderWidth: 2,
+                        pointRadius: 0,
+                    },{
+                     label: 'Limite Superior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [98, 98, 98, 98, 98, 98],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 },
+                 {
+                     label: 'Limite Inferior',
+                     type: 'line',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [12, 12, 12, 12, 12, 12],
+                     borderWidth: 4,
+                     pointRadius: 0,
+                     barPercentage: 0.4,
+                     datalabels: {
+                         display: false // Remove os rótulos de dados para este conjunto de dados
+                     }
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -1058,9 +1754,34 @@ selectEsteiras.addEventListener("change", function() {
                    borderColor: 'rgba(75, 192, 192, 1)',
                    data: [34, 56, 76, 53, 34, 34],
                    fill: false,
-                   borderWidth: 3,
+                   borderWidth: 2,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Limite Superior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [76, 76, 76, 76, 76, 76],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            },
+            {
+                label: 'Limite Inferior',
+                type: 'line',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [34, 34, 34, 34, 34, 34],
+                borderWidth: 4,
+                pointRadius: 0,
+                barPercentage: 0.4,
+                datalabels: {
+                    display: false // Remove os rótulos de dados para este conjunto de dados
+                }
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -1079,7 +1800,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [34, 56, 76, 53, 34, 34],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -1088,9 +1809,34 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [78, 21, 51, 65, 34, 29],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [78, 78, 78, 78, 78, 78],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [21, 21, 21, 21, 21, 21],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                } else if(selectedOptionAnalista == "Lucas Madeiro") {
                    newDataAnalista = {
@@ -1101,7 +1847,7 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'rgba(75, 192, 192, 1)',
                            data: [34, 56, 76, 53, 34, 34],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
                        }, 
                        {
@@ -1110,14 +1856,36 @@ selectEsteiras.addEventListener("change", function() {
                            borderColor: 'yellow',
                            data: [27, 74, 58, 96, 5, 29],
                            fill: false,
-                           borderWidth: 3,
+                           borderWidth: 2,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Limite Superior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [96, 96, 96, 96, 96, 96],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        type: 'line',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [5, 5, 5, 5, 5, 5],
+                        borderWidth: 4,
+                        pointRadius: 0,
+                        barPercentage: 0.4,
+                        datalabels: {
+                            display: false // Remove os rótulos de dados para este conjunto de dados
+                        }
+                    }]
                    }
                }
-
-               graficoProdAnalistaEquipe.data = newDataAnalista
-               graficoProdAnalistaEquipe.update()
            })
        }
    } else {
@@ -1126,3 +1894,160 @@ selectEsteiras.addEventListener("change", function() {
        selectAnalista.disabled = true
    }
 })
+
+const selectTempoHistoricoProd = document.getElementById("select-tempo-historico-produtividade")
+
+selectTempoHistoricoProd.addEventListener("change", function() {
+    let newLabel
+    const optionTempo = this.value
+    
+    if(optionTempo == "Últimos 30 dias") {
+        newLabel = ["5", "10", "15", "20", "25", "30"]
+    } else if(optionTempo == "Último semestre") {
+        newLabel = ["Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+    } else if(optionTempo == "Último ano") {
+        newLabel = ["Fev", "Abr", "Jun", "Ago", "Out", "Dez"]
+    }
+
+    if(selectEsteiras.value != "Esteiras" && selectAnalista.value == "Analistas") {
+        let valoresGrafico = gerarValores()
+
+        let newData = {
+            labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+            datasets: [{
+                label: 'Esteira',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: valoresGrafico.vetorAleatorio,
+                fill: false,
+                borderWidth: 2,
+                pointRadius: 0,
+            },{
+             label: 'Limite Superior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: '#081c4c',
+             data: valoresGrafico.vetorMaximo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         },
+         {
+             label: 'Limite Inferior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: 'red',
+             data: valoresGrafico.vetorMinimo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         }]
+        }
+
+       graficoProdAnalistaEquipe.data = newData
+       graficoProdAnalistaEquipe.update()
+    } else {
+        doisvalores = gerarDoisValores()
+
+        newData = {
+            labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+            datasets: [{
+                label: 'Esteira',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: doisvalores.vetorEsteira,
+                fill: false,
+                borderWidth: 2,
+                pointRadius: 0,
+            }, 
+            {
+                label: 'Analista',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'yellow',
+                data: doisvalores.vetorAnalista,
+                fill: false,
+                borderWidth: 2,
+                pointRadius: 0,
+            },{
+             label: 'Limite Superior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: '#081c4c',
+             data: doisvalores.vetorMaximo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         },
+         {
+             label: 'Limite Inferior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: 'red',
+             data: doisvalores.vetorMinimo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         }]
+        }
+       graficoProdAnalistaEquipe.data = newData
+       graficoProdAnalistaEquipe.update()
+    }
+
+
+    graficoProdAnalistaEquipe.data.labels = newLabel
+    graficoProdAnalistaEquipe.update()
+})
+
+function gerarValores() {
+    const vetorAleatorio = Array.from({ length: 6 }, () => Math.round(Math.random() * 100));
+
+    // Encontrar o valor máximo
+    const maximo = Math.max(...vetorAleatorio);
+
+    // Encontrar o valor mínimo
+    const minimo = Math.min(...vetorAleatorio);
+
+    const vetorMaximo = Array(6).fill(maximo);
+    const vetorMinimo = Array(6).fill(minimo);
+
+    return {
+        vetorAleatorio,
+        vetorMaximo,
+        vetorMinimo
+    }
+}
+
+function gerarDoisValores() {
+    const esteira = gerarValores()
+    const analista = gerarValores()
+
+    const vetorEsteira = esteira.vetorAleatorio
+    const vetorAnalista = analista.vetorAleatorio
+    let vetorMaximo = []
+    let vetorMinimo = []
+
+    if(esteira.vetorMaximo[0] > analista.vetorMaximo[0])
+        vetorMaximo = esteira.vetorMaximo
+    else   
+        vetorMaximo = analista.vetorMaximo
+
+    
+    if(esteira.vetorMinimo[0] < analista.vetorMinimo[0])
+        vetorMinimo = esteira.vetorMinimo
+    else   
+        vetorMinimo = analista.vetorMinimo
+
+    return {vetorEsteira, vetorAnalista, vetorMinimo, vetorMaximo}
+}

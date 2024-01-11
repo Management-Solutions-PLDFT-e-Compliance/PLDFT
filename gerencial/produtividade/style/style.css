@@ -374,7 +374,7 @@ h3 {
 .tela-abrir .table_row li:nth-child(8){
     width: 10%;
 }
-.tela-abrir .table_header li:nth-child(9){
+.tela-abrir .table_row li:nth-child(9){
     width: 10%;
 }
 .tela-abrir .table_row li:nth-child(10){
@@ -485,8 +485,25 @@ h3 {
 .produtividade-analista-por-equipe .selects-esteiras-analistas {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.produtividade-analista-por-equipe .grupo-selects {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+}
+
+.produtividade-analista-por-equipe .legenda ul li{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.produtividade-analista-por-equipe .grupo-selects-legenda{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .produtividade-analista-por-equipe select {
