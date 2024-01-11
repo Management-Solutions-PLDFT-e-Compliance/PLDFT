@@ -127,8 +127,33 @@
                         <h2>Comparação de Analistas por Habilidades</h2>
                         <h3>Tempo médio de análise por esteira</h3>
                     </div>
-                    <div class="bodyCard">
-                        <canvas id="grafico-comparacao-analistas"></canvas>
+                    <div style="display: flex; width: 100%; justify-content: space-between;">
+                        <select name="analista1" id="select-analista1" class="selects-comparacao-analistas" style="border: 1px solid lightgray;
+                        background-color:lightgray;
+                        color : gray;">
+                            <option value="">Selecione um Analista</option>       
+                        </select>
+
+                        <select name="esteiras-comparacao" id="esteiras-comparacao" class="selects-comparacao-analistas" >
+                            <option value="Esteiras" disabled selected>Selecione a Esteira</option>
+                            <option value="Contas">Contas</option>
+                            <option value="Câmbio">Câmbio</option>
+                            <option value="Seguros">Seguros</option>
+                            <option value="Investimentos">Investimentos</option>
+                            <option value="Consórcios">Consórcios</option>
+                            <option value="Funcionários">Funcionários</option>
+                            <option value="Externas">Externas</option>
+                        </select>
+
+                        <select name="analista2" id="select-analista2" class="selects-comparacao-analistas" style="border: 1px solid lightgray;
+                        background-color:lightgray;
+                        color : gray;">
+                            <option value="">Selecione um Analista</option>
+                        </select>
+                    </div>
+                    <div class="bodyCard" style="display: flex;">
+                        <canvas id="grafico-comparacao-analistas1" style="max-width: 50%;"></canvas>
+                        <canvas id="grafico-comparacao-analistas2" style="max-width: 50%;"></canvas>
                     </div>
                 </div>
                 <div class="chartCard produtividade-analista-por-equipe">

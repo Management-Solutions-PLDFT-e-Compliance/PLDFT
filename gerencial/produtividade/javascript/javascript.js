@@ -521,46 +521,7 @@ var dados_esteira = {
  
  var grafico_esteira = new Chart(graficoPessoaEsteiraCtx, config_esteira);
 
- let dados_comparacao = {
-    labels:['Habilidade 1', 'Habilidade 2', 'Habilidade 3', 'Habilidade 4', 'Habilidade 5', 'Habilidade 6', 'Habilidade 7', 'Habilidade 8', 'Habilidade 9'],
-    datasets: [
-        {
-        label: 'nomeAnalista1',
-        data: [-85, -95, , -81, -65, -60, -55, -59, -40, -69],
-        backgroundColor: "#1c78b3",
-        },
-        {
-        label: 'nomeAnalista2',
-        data: [82, 75, 79, 55, 43, 49, 20, 60, 35],
-        backgroundColor: '#fe800f',
-        }
-    ]
- }
-
- const config_comparacao = {
-    type: 'bar',
-    data: dados_comparacao,
-    options: {
-      indexAxis: 'y',
-      // Elements options apply to all of the options unless overridden in a dataset
-      // In this case, we are setting the border of each horizontal bar to be 2px wide
-      elements: {
-        bar: {
-          borderWidth: 2,
-        }
-      },
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'top',
-        }
-      }
-    },
-  };
-
-let graficoComparacaoAnalistaCtx = document.getElementById('grafico-comparacao-analistas').getContext('2d');
-
-let grafico_comparacao = new Chart(graficoComparacaoAnalistaCtx, config_comparacao)
+ 
 
 
 const selectEsteiras = document.getElementById("select-esteiras")
@@ -1126,3 +1087,508 @@ selectEsteiras.addEventListener("change", function() {
        selectAnalista.disabled = true
    }
 })
+// grafico comparacao
+let selectAnalista1 = document.getElementById('select-analista1')
+let selectAnalista2 = document.getElementById('select-analista2')
+
+ let dados_analista1 = {
+    labels: ['Habilidade 1', 'Habilidade 2', 'Habilidade 3', 'Habilidade 4', 'Habilidade 5', 'Habilidade 6', 'Habilidade 7', 'Habilidade 8', 'Habilidade 9'],
+    datasets: [
+        {
+            label: selectAnalista1.value,
+            data: [85, 95, 81, 65, 60, 55, 59, 40, 69],
+            backgroundColor: "#1c78b3",
+        },
+
+    ]
+};
+
+const config_comparacao1 = {
+    type: 'bar',
+    data: dados_analista1,
+    options: {
+        indexAxis: 'y',
+        elements: {
+            bar: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            title:
+            {
+                text: '',
+                display: true
+            }
+        },
+        scales: {
+            x: {
+                reverse: true
+            },
+        },
+    },
+};
+
+
+let graficoComparacao1Ctx = document.getElementById('grafico-comparacao-analistas1').getContext('2d');
+
+//Grafico 1 de comparacao
+let graficoComparacao1 = new Chart(graficoComparacao1Ctx, config_comparacao1)
+
+
+
+const graficoComparacao2Ctx = document.getElementById("grafico-comparacao-analistas2").getContext('2d')
+
+const dados_analista2 = {
+    labels: ['Habilidade 1', 'Habilidade 2', 'Habilidade 3', 'Habilidade 4', 'Habilidade 5', 'Habilidade 6', 'Habilidade 7', 'Habilidade 8', 'Habilidade 9'],
+    datasets: [
+        {
+            label: "analista2",
+            data: [82, 75, 79, 55, 43, 49, 20, 60, 35],
+            backgroundColor: '#fe8000',
+        }
+    ]
+};
+
+const config_comparacao2 = {
+    type: 'bar',
+    data: dados_analista2,
+    options: {
+        indexAxis: 'y',
+        // Elements options apply to all of the options unless overridden in a dataset
+        // In this case, we are setting the border of each horizontal bar to be 2px wide
+        elements: {
+            bar: {
+                borderWidth: 2,
+            }
+        },
+        responsive: true,
+        plugins: {
+            legend: {
+                display:false
+            },
+            title: {
+                display: true,
+                text: ''
+            }
+        },
+
+        scales: {
+            y: {
+                position: 'right' // Define a posição do eixo y para a direita
+            }
+        },
+
+
+    },
+};
+
+//Grafico 2 de comparacao
+let graficoComparacao2 = new Chart(graficoComparacao2Ctx, config_comparacao2)
+
+// logica comparacao
+function disableSelects(select){
+    select.style.backgroundColor = 'lightgray';
+    select.style.color = 'gray';
+    select.disabled = true;
+}
+
+function enableSelects(select){
+    select.style.backgroundColor = "white"
+    select.style.color = "black"
+    select.disabled = false
+}
+
+selectAnalista1.disabled = true;
+selectAnalista2.disabled = true;
+
+document.getElementById('esteiras-comparacao').addEventListener("change", function(){
+
+    switch (this.value){
+
+        case "Esteiras":
+            disableSelects(selectAnalista1)
+            disableSelects(selectAnalista2)
+            break
+
+        case 'Contas':
+            enableSelects(selectAnalista1)
+            enableSelects(selectAnalista2)
+
+            selectAnalista1.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Lucas Monteiro">Lucas Monteiro</option>
+            <option value="José Silva">José Silva</option>
+            <option value="João Witkowiski">João Witkowiski</option>`
+
+            selectAnalista2.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Lucas Monteiro">Lucas Monteiro</option>
+            <option value="José Silva">José Silva</option>
+            <option value="João Witkowiski">João Witkowiski</option>`
+            break
+        case 'Câmbio': 
+            enableSelects(selectAnalista1)
+            enableSelects(selectAnalista2)
+
+            selectAnalista1.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Bianca Dias">Bianca Dias</option>
+            <option value="Matheus Oliveira">Matheus Oliveira</option>
+            <option value="Camila Goes">Camila Goes</option>`
+
+            selectAnalista2.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Bianca Dias">Bianca Dias</option>
+            <option value="Matheus Oliveira">Matheus Oliveira</option>
+            <option value="Camila Goes">Camila Goes</option>`
+            break
+        case 'Seguros':
+            enableSelects(selectAnalista1)
+            enableSelects(selectAnalista2)
+
+            selectAnalista1.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Marcos Ferreira">Marcos Ferreira</option>
+            <option value="Arthur Cristo">Arthur Cristo</option>
+            <option value="William Mendes">William Mendes</option>`
+
+            selectAnalista2.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Marcos Ferreira">Marcos Ferreira</option>
+            <option value="Arthur Cristo">Arthur Cristo</option>
+            <option value="William Mendes">William Mendes</option>`
+            break
+        case 'Investimentos':
+
+            enableSelects(selectAnalista1)
+            enableSelects(selectAnalista2)
+
+            selectAnalista1.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Fabiana Costa">Fabiana Costa</option>
+            <option value="Peter Abreu">Peter Abreu</option>
+            <option value="Paulo Silva">Paulo Silva</option>`
+
+            selectAnalista2.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Fabiana Costa">Fabiana Costa</option>
+            <option value="Peter Abreu">Peter Abreu</option>
+            <option value="Paulo Silva">Paulo Silva</option>`
+            break
+        case 'Consórcios':
+            enableSelects(selectAnalista1)
+            enableSelects(selectAnalista2)
+
+            selectAnalista1.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Rogerio Mendes">Rogerio Mendes</option>
+            <option value="Davi Domingues">Davi Domingues</option>
+            <option value="Gustavo Costa">Gustavo Costa</option>`
+
+            selectAnalista2.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Rogerio Mendes">Rogerio Mendes</option>
+            <option value="Davi Domingues">Davi Domingues</option>
+            <option value="Gustavo Costa">Gustavo Costa</option>`
+            break
+        case 'Funcionários':
+            enableSelects(selectAnalista1)
+            enableSelects(selectAnalista2)
+
+            selectAnalista1.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Julio Vasconcelos">Julio Vasconcelos</option>
+            <option value="Katia Marota">Katia Marota</option>
+            <option value="Raul Prado">Raul Prado</option>`
+
+            selectAnalista2.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Julio Vasconcelos">Julio Vasconcelos</option>
+            <option value="Katia Marota">Katia Marota</option>
+            <option value="Raul Prado">Raul Prado</option>`
+            break
+        case 'Externas':
+            console.log(this.value)
+            enableSelects(selectAnalista1)
+            enableSelects(selectAnalista2)
+
+            selectAnalista1.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Pedro Carvalho">Pedro Carvalho</option>
+            <option value="Igor Soler">Igor Soler</option>
+            <option value="Rafael Miranda">Rafael Miranda</option>`
+
+            selectAnalista2.innerHTML = `<option value=""disabled selected>Selecione um Analista</option>
+            <option value="Pedro Carvalho">Pedro Carvalho</option>
+            <option value="Igor Soler">Igor Soler</option>
+            <option value="Rafael Miranda">Rafael Miranda</option>`
+            break
+    }
+})
+changeEvent = new Event('change')
+selectAnalista1.addEventListener("change", function(){
+    config_comparacao1.options.plugins.title.text = this.value
+
+    switch(this.value){
+        case 'Lucas Monteiro':
+            dados_analista1.datasets[0].data = [45, 78, 32, 55, 90, 20, 68, 40, 15];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'José Silva':
+            dados_analista1.datasets[0].data = [65, 40, 88, 12, 30, 75, 50, 95, 22];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'João Witkowiski':
+            dados_analista1.datasets[0].data = [18, 60, 42, 75, 33, 88, 10, 58, 80];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Bianca Dias':
+            dados_analista1.datasets[0].data = [80, 45, 70, 25, 92, 35, 15, 50, 78];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Matheus Oliveira':
+            dados_analista1.datasets[0].data = [60, 30, 85, 42, 75, 20, 48, 70, 92];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Camila Goes':
+            dados_analista1.datasets[0].data = [38, 55, 75, 92, 20, 42, 68, 80, 30];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Marcos Ferreira':
+            dados_analista1.datasets[0].data = [72, 20, 45, 88, 65, 38, 50, 75, 10];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Arthur Cristo':
+            dados_analista1.datasets[0].data = [55, 68, 30, 92, 20, 48, 75, 42, 88];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'William Mendes':
+            dados_analista1.datasets[0].data = [92, 75, 42, 68, 55, 20, 38, 10, 48];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Fabiana Costa':
+            dados_analista1.datasets[0].data = [42, 75, 88, 20, 60, 92, 30, 55, 10];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Peter Abreu':
+            dados_analista1.datasets[0].data = [68, 55, 10, 75, 30, 92, 48, 20, 42];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Paulo Silva':
+            dados_analista1.datasets[0].data = [20, 48, 30, 92, 75, 42, 55, 10, 68];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Rogerio Mendes':
+            dados_analista1.datasets[0].data = [30, 10, 55, 20, 75, 68, 92, 48, 42];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Davi Domingues':
+            dados_analista1.datasets[0].data = [48, 20, 75, 68, 30, 10, 92, 55, 42];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Gustavo Costa':
+            dados_analista1.datasets[0].data = [10, 30, 48, 20, 75, 92, 42, 68, 55];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Julio Vasconcelos':
+            dados_analista1.datasets[0].data = [75, 92, 55, 30, 48, 20, 68, 42, 10];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Katia Marota':
+            dados_analista1.datasets[0].data = [92, 30, 42, 55, 68, 10, 75, 20, 48];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Raul Prado':
+            dados_analista1.datasets[0].data = [55, 10, 92, 30, 42, 75, 20, 68, 48];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Pedro Carvalho':
+            dados_analista1.datasets[0].data = [20, 42, 10, 55, 30, 75, 68, 92, 48];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Igor Soler':
+            dados_analista1.datasets[0].data = [42, 10, 30, 48, 75, 92, 55, 20, 68];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+
+        case 'Rafael Miranda':
+            dados_analista1.datasets[0].data = [10, 42, 20, 30, 68, 92, 75, 48, 55];
+            graficoComparacao1.update()
+            selectAnalista2.dispatchEvent(changeEvent)
+            break;
+    }
+    if (this.value == selectAnalista2.value){
+        dados_analista1.datasets[0].data = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        dados_analista2.datasets[0].data = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        graficoComparacao1.update()
+        graficoComparacao2.update()
+    }
+})
+
+selectAnalista2.addEventListener("change", function(){
+    config_comparacao2.options.plugins.title.text = this.value
+    switch(this.value){
+        case 'Lucas Monteiro':
+            dados_analista2.datasets[0].data = [45, 78, 32, 55, 90, 20, 68, 40, 15];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'José Silva':
+            dados_analista2.datasets[0].data = [65, 40, 88, 12, 30, 75, 50, 95, 22];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'João Witkowiski':
+            dados_analista2.datasets[0].data = [18, 60, 42, 75, 33, 88, 10, 58, 80];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Bianca Dias':
+            dados_analista2.datasets[0].data = [80, 45, 70, 25, 92, 35, 15, 50, 78];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Matheus Oliveira':
+            dados_analista2.datasets[0].data = [60, 30, 85, 42, 75, 20, 48, 70, 92];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Camila Goes':
+            dados_analista2.datasets[0].data = [38, 55, 75, 92, 20, 42, 68, 80, 30];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Marcos Ferreira':
+            dados_analista2.datasets[0].data = [72, 20, 45, 88, 65, 38, 50, 75, 10];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Arthur Cristo':
+            dados_analista2.datasets[0].data = [55, 68, 30, 92, 20, 48, 75, 42, 88];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'William Mendes':
+            dados_analista2.datasets[0].data = [92, 75, 42, 68, 55, 20, 38, 10, 48];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Fabiana Costa':
+            dados_analista2.datasets[0].data = [42, 75, 88, 20, 60, 92, 30, 55, 10];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Peter Abreu':
+            dados_analista2.datasets[0].data = [68, 55, 10, 75, 30, 92, 48, 20, 42];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Paulo Silva':
+            dados_analista2.datasets[0].data = [20, 48, 30, 92, 75, 42, 55, 10, 68];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Rogerio Mendes':
+            dados_analista2.datasets[0].data = [30, 10, 55, 20, 75, 68, 92, 48, 42];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Davi Domingues':
+            dados_analista2.datasets[0].data = [48, 20, 75, 68, 30, 10, 92, 55, 42];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Gustavo Costa':
+            dados_analista2.datasets[0].data = [10, 30, 48, 20, 75, 92, 42, 68, 55];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Julio Vasconcelos':
+            dados_analista2.datasets[0].data = [75, 92, 55, 30, 48, 20, 68, 42, 10];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Katia Marota':
+            dados_analista2.datasets[0].data = [92, 30, 42, 55, 68, 10, 75, 20, 48];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Raul Prado':
+            dados_analista2.datasets[0].data = [55, 10, 92, 30, 42, 75, 20, 68, 48];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Pedro Carvalho':
+            dados_analista2.datasets[0].data = [20, 42, 10, 55, 30, 75, 68, 92, 48];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Igor Soler':
+            dados_analista2.datasets[0].data = [42, 10, 30, 48, 75, 92, 55, 20, 68];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+
+        case 'Rafael Miranda':
+            dados_analista2.datasets[0].data = [10, 42, 20, 30, 68, 92, 75, 48, 55];
+            graficoComparacao2.update()
+            selectAnalista1.dispatchEvent(changeEvent)
+            break;
+    }
+    if (this.value == selectAnalista1.value){
+        dados_analista2.datasets[0].data = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        dados_analista1.datasets[0].data = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        graficoComparacao1.update()
+        graficoComparacao2.update()
+    }
+})
+

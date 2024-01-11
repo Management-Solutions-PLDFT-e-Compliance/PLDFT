@@ -508,3 +508,9 @@ h3 {
     display: flex;
     flex-direction: column;
 }
+
+.selects-comparacao-analistas{
+    padding: .5rem 1rem;
+    font-size: 1em;
+    
+}
