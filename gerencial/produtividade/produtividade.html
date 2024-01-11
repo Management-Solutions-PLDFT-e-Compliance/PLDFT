@@ -165,24 +165,35 @@
                         <canvas id="grafico-analise-produtividade-analista-por-equipe"></canvas>
 
                         <div class="selects-esteiras-analistas">
-                            <select name="" id="select-esteiras">
-                                <option value="Esteiras">Esteiras</option>
-                                <option value="Contas">Contas</option>
-                                <option value="Câmbio">Câmbio</option>
-                                <option value="Seguros">Seguros</option>
-                                <option value="Investimentos">Investimentos</option>
-                                <option value="Consórcios">Consórcios</option>
-                                <option value="Funcionários">Funcionários</option>
-                                <option value="Externas">Externas</option>
-                            </select>
-                            <select name="" id="select-analista">
-                                <option value="Contas">Analistas</option>
-                                <!-- <option value="Câmbio">Câmbio</option>
-                                <option value="Seguros">Seguros</option>
-                                <option value="Investimentos">Investimentos</option>
-                                <option value="Consórcios">Consórcios</option>
-                                <option value="Funcionários">Funcionários</option>
-                                <option value="Externas">Externas</option> -->
+                            <div class="grupo-selects-legenda">
+                                <div class="grupo-selects">
+                                    <select name="" id="select-esteiras">
+                                        <option value="Esteiras">Esteiras</option>
+                                        <option value="Contas">Contas</option>
+                                        <option value="Câmbio">Câmbio</option>
+                                        <option value="Seguros">Seguros</option>
+                                        <option value="Investimentos">Investimentos</option>
+                                        <option value="Consórcios">Consórcios</option>
+                                        <option value="Funcionários">Funcionários</option>
+                                        <option value="Externas">Externas</option>
+                                    </select>
+                                    <select name="" id="select-analista">
+                                        <option value="Contas">Analistas</option>
+                                    </select>
+                                </div>
+                                <div class="legenda">
+                                    <ul>
+                                        <li><hr style="width: 25px; height: 4px; background-color: #081c4c; border: none;"/><span>Máximo</span></li>
+                                        <li><hr style="width: 25px; height: 4px; background-color: red; border: none;"/> <span>Mínimo</span></li>
+                                        <li><hr style="width: 25px; height: 2px; background-color: rgba(75, 192, 192, 1); border: none;"/> <span>Média da esteira</span></li>
+                                        <li><hr style="width: 25px; height: 2px; background-color: yellow; border: none;"/> <span>prod. do analista</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <select name="" id="select-tempo-historico-produtividade">
+                                <option value="Últimos 30 dias">últimos 30 dias</option>
+                                <option value="Último semestre">Último semestre</option>
+                                <option value="Último ano">Último ano</option>
                             </select>
                         </div>
                     </div>

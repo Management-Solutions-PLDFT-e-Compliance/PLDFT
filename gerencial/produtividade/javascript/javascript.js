@@ -1087,6 +1087,163 @@ selectEsteiras.addEventListener("change", function() {
        selectAnalista.disabled = true
    }
 })
+
+const selectTempoHistoricoProd = document.getElementById("select-tempo-historico-produtividade")
+
+selectTempoHistoricoProd.addEventListener("change", function() {
+    let newLabel
+    const optionTempo = this.value
+    
+    if(optionTempo == "Últimos 30 dias") {
+        newLabel = ["5", "10", "15", "20", "25", "30"]
+    } else if(optionTempo == "Último semestre") {
+        newLabel = ["Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+    } else if(optionTempo == "Último ano") {
+        newLabel = ["Fev", "Abr", "Jun", "Ago", "Out", "Dez"]
+    }
+
+    if(selectEsteiras.value != "Esteiras" && selectAnalista.value == "Analistas") {
+        let valoresGrafico = gerarValores()
+
+        let newData = {
+            labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+            datasets: [{
+                label: 'Esteira',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: valoresGrafico.vetorAleatorio,
+                fill: false,
+                borderWidth: 2,
+                pointRadius: 0,
+            },{
+             label: 'Limite Superior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: '#081c4c',
+             data: valoresGrafico.vetorMaximo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         },
+         {
+             label: 'Limite Inferior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: 'red',
+             data: valoresGrafico.vetorMinimo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         }]
+        }
+
+       graficoProdAnalistaEquipe.data = newData
+       graficoProdAnalistaEquipe.update()
+    } else {
+        doisvalores = gerarDoisValores()
+
+        newData = {
+            labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+            datasets: [{
+                label: 'Esteira',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: doisvalores.vetorEsteira,
+                fill: false,
+                borderWidth: 2,
+                pointRadius: 0,
+            }, 
+            {
+                label: 'Analista',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'yellow',
+                data: doisvalores.vetorAnalista,
+                fill: false,
+                borderWidth: 2,
+                pointRadius: 0,
+            },{
+             label: 'Limite Superior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: '#081c4c',
+             data: doisvalores.vetorMaximo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         },
+         {
+             label: 'Limite Inferior',
+             type: 'line',
+             backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+             borderColor: 'red',
+             data: doisvalores.vetorMinimo,
+             borderWidth: 4,
+             pointRadius: 0,
+             barPercentage: 0.4,
+             datalabels: {
+                 display: false // Remove os rótulos de dados para este conjunto de dados
+             }
+         }]
+        }
+       graficoProdAnalistaEquipe.data = newData
+       graficoProdAnalistaEquipe.update()
+    }
+
+
+    graficoProdAnalistaEquipe.data.labels = newLabel
+    graficoProdAnalistaEquipe.update()
+})
+
+function gerarValores() {
+    const vetorAleatorio = Array.from({ length: 6 }, () => Math.round(Math.random() * 100));
+
+    // Encontrar o valor máximo
+    const maximo = Math.max(...vetorAleatorio);
+
+    // Encontrar o valor mínimo
+    const minimo = Math.min(...vetorAleatorio);
+
+    const vetorMaximo = Array(6).fill(maximo);
+    const vetorMinimo = Array(6).fill(minimo);
+
+    return {
+        vetorAleatorio,
+        vetorMaximo,
+        vetorMinimo
+    }
+}
+
+function gerarDoisValores() {
+    const esteira = gerarValores()
+    const analista = gerarValores()
+
+    const vetorEsteira = esteira.vetorAleatorio
+    const vetorAnalista = analista.vetorAleatorio
+    let vetorMaximo = []
+    let vetorMinimo = []
+
+    if(esteira.vetorMaximo[0] > analista.vetorMaximo[0])
+        vetorMaximo = esteira.vetorMaximo
+    else   
+        vetorMaximo = analista.vetorMaximo
+
+    
+    if(esteira.vetorMinimo[0] < analista.vetorMinimo[0])
+        vetorMinimo = esteira.vetorMinimo
+    else   
+        vetorMinimo = analista.vetorMinimo
+
+    return {vetorEsteira, vetorAnalista, vetorMinimo, vetorMaximo}
+}
 // grafico comparacao
 let selectAnalista1 = document.getElementById('select-analista1')
 let selectAnalista2 = document.getElementById('select-analista2')
