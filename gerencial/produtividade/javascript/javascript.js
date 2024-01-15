@@ -565,7 +565,23 @@ selectEsteiras.addEventListener("change", function() {
                    fill: false,
                    borderWidth: 3,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Máximo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [90, 90, 90, 90,90, 90],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            },{
+                label: 'Mínimo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [50, 50, 50, 50, 50, 50],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -595,7 +611,23 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [90, 90, 90, 90,90, 90],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [50, 50, 50, 50, 50, 50],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
                } else if(selectedOptionAnalista == "Bryan da Silva") {
                    newDataAnalista = {
@@ -617,8 +649,53 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [90, 90, 90, 90,90, 90],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [45, 45, 45, 45, 45, 45],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [82, 75, 80, 60,90, 50],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                     label: 'Máximo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [90, 90, 90, 90,90, 90],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 },{
+                     label: 'Mínimo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [50, 50, 50, 50, 50, 50],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -641,7 +718,23 @@ selectEsteiras.addEventListener("change", function() {
                    fill: false,
                    borderWidth: 3,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Máximo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [95, 95, 95, 95,95, 95],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            },{
+                label: 'Mínimo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [20, 20, 20, 20, 20, 20],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -671,7 +764,23 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95,95, 95],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [10, 10, 10, 10, 10, 10],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
                } else if(selectedOptionAnalista == "João Martins") {
                    newDataAnalista = {
@@ -693,8 +802,53 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95,95, 95],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [20, 20, 20, 20, 20, 20],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [39, 39, 94, 50, 95, 20],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                     label: 'Máximo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [95, 95, 95, 95,95, 95],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 },{
+                     label: 'Mínimo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [20, 20, 20, 20, 20, 20],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -717,7 +871,23 @@ selectEsteiras.addEventListener("change", function() {
                    fill: false,
                    borderWidth: 3,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Máximo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [93, 93, 93, 93,93, 93],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            },{
+                label: 'Mínimo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [30, 30, 30, 30, 30, 30],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -747,7 +917,23 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [93, 93, 93, 93,93, 93],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [12, 12, 12, 12, 12, 12],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
                } else if(selectedOptionAnalista == "Pedro Almeida") {
                    newDataAnalista = {
@@ -769,8 +955,53 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [93, 93, 93, 93,93, 93],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [11, 11, 11, 11, 11, 11],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [74, 85, 30, 60, 83, 93],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                     label: 'Máximo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [93, 93, 93, 93,93, 93],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 },{
+                     label: 'Mínimo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [30, 30, 30, 30, 30, 30],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -793,7 +1024,23 @@ selectEsteiras.addEventListener("change", function() {
                    fill: false,
                    borderWidth: 3,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Máximo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [83, 83, 83, 83,83, 83],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            },{
+                label: 'Mínimo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [24, 24, 24, 24, 24, 24],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -823,7 +1070,23 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [83, 83, 83, 83,83, 83],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [12, 12, 12, 12, 12, 12],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
                } else if(selectedOptionAnalista == "Marcos Pereira") {
                    newDataAnalista = {
@@ -845,8 +1108,53 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [83, 83, 83, 83,83, 83],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [21, 21, 21, 21, 21, 21],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [48, 35, 83, 34, 24, 57],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                     label: 'Máximo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [83, 83, 83, 83,83, 83],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 },{
+                     label: 'Mínimo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [24, 24, 24, 24, 24, 24],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -869,7 +1177,23 @@ selectEsteiras.addEventListener("change", function() {
                    fill: false,
                    borderWidth: 3,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Máximo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [95, 95, 95, 95,95, 95],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            },{
+                label: 'Mínimo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [23, 23, 23, 23, 23, 23],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -899,7 +1223,23 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95,95, 95],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [23, 23, 23, 23, 23, 23],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
                } else if(selectedOptionAnalista == "Lucas Silva") {
                    newDataAnalista = {
@@ -921,8 +1261,53 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [95, 95, 95, 95,95, 95],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [23, 23, 23, 23, 23, 23],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [65, 23, 95, 34, 56, 43],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                     label: 'Máximo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [95, 95, 95, 95,95, 95],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 },{
+                     label: 'Mínimo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [23, 23, 23, 23, 23, 23],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -945,7 +1330,23 @@ selectEsteiras.addEventListener("change", function() {
                    fill: false,
                    borderWidth: 3,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Máximo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [98, 98, 98, 98,98, 98],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            },{
+                label: 'Mínimo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [12, 12, 12, 12, 12, 12],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -975,7 +1376,23 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [98, 98, 98, 98,98, 98],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [8, 8, 8, 8, 8, 8],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
                } else if(selectedOptionAnalista == "Bruno Oliveira") {
                    newDataAnalista = {
@@ -997,8 +1414,54 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [98, 98, 98, 98,98, 98],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [12, 12, 12, 12, 12, 12],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [98, 36, 82, 62, 45, 12],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                     label: 'Máximo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [98, 98, 98, 98,98, 98],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 },{
+                     label: 'Mínimo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [12, 12, 12, 12, 12, 12],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 }]
+                }
+     
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
@@ -1021,7 +1484,23 @@ selectEsteiras.addEventListener("change", function() {
                    fill: false,
                    borderWidth: 3,
                    pointRadius: 0,
-               }]
+               },{
+                label: 'Máximo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: '#081c4c',
+                data: [76, 76, 76, 76,76, 76],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            },{
+                label: 'Mínimo',
+                backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                borderColor: 'red',
+                data: [34, 34, 34, 34, 34, 34],
+                fill: false,
+                borderWidth: 3,
+                pointRadius: 0,
+            }]
            }
 
            graficoProdAnalistaEquipe.data = newDataEsteira
@@ -1051,7 +1530,23 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [78, 78, 78, 78,78, 78],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [21, 21, 21, 21, 21, 21],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
                } else if(selectedOptionAnalista == "Lucas Madeiro") {
                    newDataAnalista = {
@@ -1073,8 +1568,53 @@ selectEsteiras.addEventListener("change", function() {
                            fill: false,
                            borderWidth: 3,
                            pointRadius: 0,
-                       }]
+                       },{
+                        label: 'Máximo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: '#081c4c',
+                        data: [96, 96, 96, 96,96, 96],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                        label: 'Mínimo',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'red',
+                        data: [5, 5, 5, 5, 5, 5],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    }]
                    }
+               } else {
+                newDataAnalista = {
+                    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Esteira',
+                        backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: [34, 56, 76, 53, 34, 34],
+                        fill: false,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                    },{
+                     label: 'Máximo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: '#081c4c',
+                     data: [76, 76, 76, 76,76, 76],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 },{
+                     label: 'Mínimo',
+                     backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
+                     borderColor: 'red',
+                     data: [34, 34, 34, 34, 34, 34],
+                     fill: false,
+                     borderWidth: 3,
+                     pointRadius: 0,
+                 }]
+                }
                }
 
                graficoProdAnalistaEquipe.data = newDataAnalista
