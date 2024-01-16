@@ -4,7 +4,7 @@
 var analisePendenteCtx = document.getElementById('grafico-analises-pendentes').getContext('2d');
 
 var dataAnalisePendente = {
-    labels: ['Analista 1', 'Analista 2', 'Analista 3', 'Analista 4', 'Analista 5', 'Analista 6'],
+    labels: ['José Silva', 'João Witkowiski', 'Bianca Dias', 'Lucas Monteiro', 'Matheus Oliveira', 'Camila Goes'],
     datasets: [{
         label: 'Operações',
         type: 'bar',
@@ -58,6 +58,9 @@ var optionsAnalisePendente = {
             beginAtZero: true,
             grid: {
                 display: false // Remove a grade do eixo Y
+            },
+            font: {
+                size: 10
             }
         }
         

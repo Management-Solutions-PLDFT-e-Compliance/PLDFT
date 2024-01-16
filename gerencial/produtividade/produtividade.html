@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="../../style.css">
@@ -95,8 +96,8 @@
             <div class="middle">
                 <div class="chartCard quantidade-pessoas-por-esteira">
                     <div class="headerCard">
-                        <h2>Quantidade de pessoas por esteira</h2>
-                        <h3>Tempo médio de análise por esteira</h3>
+                        <h2>Relação de alertas por funcionário</h2>
+                        <h3>Quantidade de alertas por funcionário por esterira</h3>
                     </div>
                     <div class="bodyCard">
                         <canvas id="pessoas-por-esteira" style="width: fit-content;max-height: 500px;"></canvas>
@@ -105,7 +106,7 @@
                 <div class="chartCard distribuicao-senioridade-por-esteira">
                     <div class="headerCard">
                         <h2>Distribuição de senioridade por esteira</h2>
-                        <h3>Quantidade de seniores em cada esteira</h3>
+                        <h3>Quantidade de pessoas por cargo</h3>
                     </div>
                     <div class="bodyCard">
                         <canvas id="grafico-distribuicao-senioridade-por-esteira"></canvas>
@@ -151,7 +152,7 @@
                             <option value="">Selecione um Analista</option>
                         </select>
                     </div>
-                    <div class="bodyCard" style="display: flex;">
+                    <div class="bodyCard" style="display: flex; width: 90%; justify-content: center;align-self: center;">
                         <canvas id="grafico-comparacao-analistas1" style="max-width: 50%;"></canvas>
                         <canvas id="grafico-comparacao-analistas2" style="max-width: 50%;"></canvas>
                     </div>
@@ -159,7 +160,7 @@
                 <div class="chartCard produtividade-analista-por-equipe">
                     <div class="headerCard">
                         <h2>Produtividade do analista e esteira</h2>
-                        <h3>Analise de produtividade do analista por equipe</h3>
+                        <h3>Análise de produtividade do analista por esteira</h3>
                     </div>
                     <div class="bodyCard">
                         <canvas id="grafico-analise-produtividade-analista-por-equipe"></canvas>

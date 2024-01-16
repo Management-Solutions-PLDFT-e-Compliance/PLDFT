@@ -163,6 +163,8 @@ function updateColor(value, colorBox) {
     }
 }
 
+const mapaCalorHearder = document.querySelectorAll(".mapa_calor_header > li > span")
+
 document.getElementById('mapa_calor_select').addEventListener('change', function () {
     var selectedOption = this.value;
     const tabela_indicacao = document.getElementById('tabela_indicacao')
@@ -208,6 +210,11 @@ document.getElementById('mapa_calor_select').addEventListener('change', function
                 risco: "Muito Alto"
             },
         ]
+        
+       mapaCalorHearder[0].innerHTML = "Digital PF"
+       mapaCalorHearder[1].innerHTML = "Digital PJ"
+       mapaCalorHearder[2].innerHTML = "Varejo"
+       mapaCalorHearder[3].innerHTML = "Corporate"
 
         dadosMapa = [6, 90, 78, 34, 19, 40, 32, 2, 20, 29, 4, 7, 74, 57, 45, 95]
     } else if (selectedOption === 'Canais') {
@@ -249,6 +256,12 @@ document.getElementById('mapa_calor_select').addEventListener('change', function
             },
         ]
 
+        mapaCalorHearder[0].innerHTML = "Digital PF"
+        mapaCalorHearder[1].innerHTML = "Digital PJ"
+        mapaCalorHearder[2].innerHTML = "Varejo"
+        mapaCalorHearder[3].innerHTML = "Corporate"
+
+
         dadosMapa = [10, 25, 95, 34, 18, 40, 32, 24, 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a']
     } else if (selectedOption == 'Produtos') {
         newData = [
@@ -288,6 +301,11 @@ document.getElementById('mapa_calor_select').addEventListener('change', function
                 risco: "Muito Alto"
             },
         ]
+
+        mapaCalorHearder[0].innerHTML = "Empréstimos"
+        mapaCalorHearder[1].innerHTML = "Investimentos"
+        mapaCalorHearder[2].innerHTML = "Câmbio"
+        mapaCalorHearder[3].innerHTML = "Seguros"
 
         dadosMapa = ['n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 20, 10, 99, 40, 75, 4, 7, 4, 95]
     } else if (selectedOption === 'Segmentos') {

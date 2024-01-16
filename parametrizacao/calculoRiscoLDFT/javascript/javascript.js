@@ -325,7 +325,6 @@ visualizacaoVariaveisDownload.addEventListener("change", function() {
 
 visualizacaoVariaveisExcluir.addEventListener("click", function() {
     Swal.fire({
-        icon: 'success',
         title: 'Tem certeza que deseja excluir variável?',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -342,7 +341,10 @@ visualizacaoVariaveisExcluir.addEventListener("click", function() {
                 }
             })
             
-            Swal.fire('Variável excluída com sucesso!');
+            Swal.fire({
+                icon: 'success',
+                title: 'Variável excluída com sucesso!'
+            });
         } else {
             // Ação a ser executada se o botão "Não" for clicado
             Swal.fire('Operação cancelada');

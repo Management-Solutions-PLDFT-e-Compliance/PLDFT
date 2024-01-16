@@ -391,6 +391,7 @@ document.getElementById('select-distribuicao-senioridade').addEventListener('cha
         };
     } else if (selectedOption === 'Contas') {
         newData =  {
+            labels: ['Júnior', 'Pleno', 'Sênior'],
             datasets: [{
                 label: 'Muito Baixo',
                 backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
@@ -489,8 +490,8 @@ document.getElementById('select-distribuicao-senioridade').addEventListener('cha
     }
 
     // Atualiza o gráfico com os novos dados
-    graficoProdAnalistaEquipe.data = newData;
-    graficoProdAnalistaEquipe.update();
+    graficoDistribuicaoSenior.data = newData;
+    graficoDistribuicaoSenior.update();
 });
 
 // Dados de exemplo
@@ -1789,9 +1790,10 @@ let selectAnalista1 = document.getElementById('select-analista1')
 let selectAnalista2 = document.getElementById('select-analista2')
 
  let dados_analista1 = {
-    labels: ['Habilidade 1', 'Habilidade 2', 'Habilidade 3', 'Habilidade 4', 'Habilidade 5', 'Habilidade 6', 'Habilidade 7', 'Habilidade 8', 'Habilidade 9'],
+    labels: ['taxa de detecção LDFT', 'Precisão de análise', 'Tempo médio de Resolução', 'Número de casos Gerenciados', 'Qnt práticas LDFT prevenidas'],
     datasets: [
         {
+            barPercentage: 0.4,
             label: selectAnalista1.value,
             data: [85, 95, 81, 65, 60, 55, 59, 40, 69],
             backgroundColor: "#1c78b3",
@@ -1819,12 +1821,22 @@ const config_comparacao1 = {
             {
                 text: '',
                 display: true
-            }
+            },
+            datalabels: {
+                display: true,
+                anchor: 'top',
+                align: 'center',
+                formatter: function(value, context) {
+                    // Adicionar a unidade de medida desejada aos valores
+                    return value + ' unidades';
+                }
+            },
+            
         },
         scales: {
             x: {
-                reverse: true
-            },
+                reverse: true,
+            }
         },
     },
 };
@@ -1840,9 +1852,10 @@ let graficoComparacao1 = new Chart(graficoComparacao1Ctx, config_comparacao1)
 const graficoComparacao2Ctx = document.getElementById("grafico-comparacao-analistas2").getContext('2d')
 
 const dados_analista2 = {
-    labels: ['Habilidade 1', 'Habilidade 2', 'Habilidade 3', 'Habilidade 4', 'Habilidade 5', 'Habilidade 6', 'Habilidade 7', 'Habilidade 8', 'Habilidade 9'],
+    labels: ['taxa de detecção LDFT', 'Precisão de análise', 'Tempo médio de Resolução', 'Número de casos Gerenciados', 'Qnt práticas LDFT prevenidas'],
     datasets: [
         {
+            barPercentage: 0.4,
             label: "analista2",
             data: [82, 75, 79, 55, 43, 49, 20, 60, 35],
             backgroundColor: '#fe8000',
@@ -1875,8 +1888,9 @@ const config_comparacao2 = {
 
         scales: {
             y: {
-                position: 'right' // Define a posição do eixo y para a direita
-            }
+                position: 'right', // Define a posição do eixo y para a direita 
+                
+            },
         },
 
 
