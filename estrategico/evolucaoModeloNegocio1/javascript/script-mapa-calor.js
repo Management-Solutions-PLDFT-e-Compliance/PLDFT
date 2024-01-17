@@ -387,6 +387,11 @@ document.getElementById('mapa_calor_select').addEventListener('change', function
             },
         ]
 
+        mapaCalorHearder[0].innerHTML = "Pagamento de contas"
+        mapaCalorHearder[1].innerHTML = "Depósitos à vista"
+        mapaCalorHearder[2].innerHTML = "Cadernetas de poupança"
+        mapaCalorHearder[3].innerHTML = "Recebimento de salário"
+
         dadosMapa = [63, 91, 64, 14, 19, 40, 35, 2, 21, 98, 76, 98, 15, 80, 25, 2]
     }
 
