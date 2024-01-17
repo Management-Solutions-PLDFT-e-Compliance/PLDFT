@@ -46,7 +46,7 @@
       </button>
     </a>
     <h1 class="a comprimentos" style="font-weight: bold;">Olá, Usuário! </h1>
-    <a href="../../index.html" style="position: absolute; top: 31px;">
+    <a href="../../index.html" style="position: absolute; top: 29px;">
       <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
         <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
         SAIR
@@ -217,6 +217,8 @@
             <div id="select-boxes-charts">
                 <select name="time-range-chart" class="selection-boxes" style="position: absolute;">
                     <option value="6_meses">Últimos 6 meses</option>
+                    <option value="6_meses">Últimos 12 meses</option>
+                    <option value="6_meses">Últimos 32 meses</option>
                 </select>
 
                 <select id="select-chart" name="Charts" class="selection-boxes" style="position: absolute; left: 773px;">
@@ -234,7 +236,20 @@
                 <h5>Últimos 6 meses</h5>
                 <hr>
             </div>
-            <canvas id="historico_alertas_regra" style="width: 921px; height: 560px; margin: 10px;"></canvas>
+            <div style="display: flex; justify-content: space-between;padding-right: .5rem;">
+              <select name="time-range-chart" class="selection-boxes">
+                  <option value="6_meses">Últimos 6 meses</option>
+                  <option value="6_meses">Últimos 12 meses</option>
+                  <option value="6_meses">Últimos 32 meses</option>
+              </select>
+
+              <select id="select-chart" name="Charts" class="selection-boxes">
+                  <option value="Bacen">Bacen</option>
+                  <option value="CVM">CVM</option>
+                  <option value="Susep">Susep</option>
+              </select>
+          </div>
+          <canvas id="historico_alertas_regra" style="width: 921px; height: 560px; margin: 10px;"></canvas>
         </div>
 
     </div>

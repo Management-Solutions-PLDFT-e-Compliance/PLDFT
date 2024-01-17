@@ -256,10 +256,10 @@ document.getElementById('mapa_calor_select').addEventListener('change', function
             },
         ]
 
-        mapaCalorHearder[0].innerHTML = "Digital PF"
-        mapaCalorHearder[1].innerHTML = "Digital PJ"
-        mapaCalorHearder[2].innerHTML = "Varejo"
-        mapaCalorHearder[3].innerHTML = "Corporate"
+        mapaCalorHearder[0].innerHTML = "Digital"
+        mapaCalorHearder[1].innerHTML = "Agência"
+        mapaCalorHearder[2].innerHTML = "Correspondentes"
+        mapaCalorHearder[3].innerHTML = "SAC"
 
 
         dadosMapa = [10, 25, 95, 34, 18, 40, 32, 24, 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a']
