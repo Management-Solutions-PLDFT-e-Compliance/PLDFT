@@ -152,3 +152,51 @@
     margin-top: -57px;
     margin-left: 1719px;
 }
+
+
+.filtroValor{
+    position: absolute;
+    left: 300px;
+    top: 30px;
+}
+.filtroData1{
+    position: absolute;
+    left: 600px;
+    top: 30px;
+}
+.filtroData2{
+    position: absolute;
+    left: 775px;
+    top: 30px;
+}
+.filtroValor label {
+    font-weight: bold;
+    font-size: 18px;
+}
+.filtroData1 label {
+    font-weight: bold;
+    font-size: 18px;
+}
+.filtroData2 label {
+    font-weight: bold;
+    font-size: 18px;
+}
+.redeTransacFull .botao2{
+    position: absolute;
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 110px;
+    gap: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    right: 20px;
+}
