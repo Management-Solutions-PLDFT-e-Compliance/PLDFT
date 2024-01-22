@@ -268,7 +268,13 @@
             <div class="titulos">
                 <h2>Sugestão de comunicação
                 </h2>
-                <h5>Parecer IA</h5>
+                <h5>Parecer IA  </h5>
+                <form  method="POST" enctype="multipart/form-data" name="myForm">
+                  <div id="yourBtn" onclick="getFile()">Selecione uma evidência</div>
+                  <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile" type="file" value="upload" onchange="sub(this)" /></div>
+                </form>
+                
+                
             </div>
             <hr>
             <div class="conteudo">

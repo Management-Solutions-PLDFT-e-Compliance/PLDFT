@@ -7,6 +7,15 @@
     left: 35px;
     border-radius: 10px;
 }
+/* .redeTransacFull select{
+    position: absolute;
+    top: 40px;
+    width: 180px;
+    background-color: white;
+    height: 20px;
+    left: 195px;
+    border-radius: 10px;
+} */
 
 #grafRedeTransac {
     width: 100%;

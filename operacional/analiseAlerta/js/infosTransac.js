@@ -95,3 +95,13 @@ dataVolumeTransacoes.datasets.forEach(function(dataset, index) {
     else
     customLegendVolumeTransacoes.innerHTML += '<div class="alinhamento-icone-palavra"><span style="background-color:' + dataset.borderColor + '; width: 25px; height: ' + dataset.borderWidth + 'px; display: inline-block; margin-right: 5px;"></span>' + dataset.label + '</div>';
 });
+
+function getFile() {
+    document.getElementById("upfile").click();
+  }
+  
+  function sub(obj) {
+    var file = obj.value;
+    var fileName = file.split("\\");
+    document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
+  }
