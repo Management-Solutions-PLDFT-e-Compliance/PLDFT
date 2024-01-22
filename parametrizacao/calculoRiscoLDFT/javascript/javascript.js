@@ -164,8 +164,9 @@ function cenariosListaPonderacoesIncluir() {
     if(adicionarVariavelBtnSimular.style.backgroundColor == "rgb(46, 74, 126)") {
 
         counterId+= 1
+        let counterIdString = counterId.toString().padStart(5, '0');
         dadosVariaveisAtuais.push({
-                id: counterId,
+                id: counterIdString,
                 variavel: adicionarVariavelVarCentral.value,
                 tipo: "Cadastral",
                 pfpj: "PF",
@@ -177,7 +178,7 @@ function cenariosListaPonderacoesIncluir() {
         const tr = document.createElement("tr")
 
         tr.innerHTML = `<td><input type='checkbox' name='' id=''></td>
-        <td><span>${counterId}</span></td>
+        <td><span>${counterIdString}</span></td>
         <td><span>${adicionarVariavelVarCentral.value}</span></td>
         <td><span>${"Cadastral"}</span></td>
         <td><span>${"PF"}</span></td>
