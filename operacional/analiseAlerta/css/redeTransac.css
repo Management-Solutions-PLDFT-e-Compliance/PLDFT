@@ -159,6 +159,20 @@
     left: 300px;
     top: 30px;
 }
+.filtroRisco{
+    position: absolute;
+    left: 970px;
+    top: 30px;
+    /* width: 300px; */
+    
+}
+.filtroProdutos{
+    position: absolute;
+    left: 1200px;
+    top: 30px;
+    /* width: 300px; */
+    
+}
 .filtroData1{
     position: absolute;
     left: 600px;
@@ -173,6 +187,14 @@
     font-weight: bold;
     font-size: 18px;
 }
+.filtroRisco label {
+    font-weight: bold;
+    font-size: 18px;
+}
+.filtroProdutos label {
+    font-weight: bold;
+    font-size: 18px;
+}
 .filtroData1 label {
     font-weight: bold;
     font-size: 18px;
@@ -180,6 +202,7 @@
 .filtroData2 label {
     font-weight: bold;
     font-size: 18px;
+    padding-right: 5px;
 }
 .redeTransacFull .botao2{
     position: absolute;

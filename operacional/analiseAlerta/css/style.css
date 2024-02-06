@@ -282,7 +282,9 @@
     margin-bottom: 0px;
 }
 .botaoUploadEvidencia{
-    display:flex;
+    position:absolute;
+    right: 20px;
+    top: 565px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16.6px;
     width: 210px;

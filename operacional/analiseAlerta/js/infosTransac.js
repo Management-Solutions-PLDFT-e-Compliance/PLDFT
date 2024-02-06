@@ -105,3 +105,43 @@ function getFile() {
     var fileName = file.split("\\");
     document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
   }
+
+
+  let uploadedFiles = [];
+
+document.getElementById('sendEvidenceBtn').addEventListener('click', function() {
+  swal({
+    title: uploadedFiles.length > 0 ? "Arquivos Enviados" : "Nenhum arquivo enviado",
+    content: {
+      element: "div",
+      attributes: {
+        innerHTML: uploadedFiles.map(file => `<div>${file}</div>`).join('')
+      },
+    },
+    icon: "info",
+    buttons: {
+      cancel: "Fechar",
+      uploadMore: {
+        text: "Upload",
+        value: "upload"
+      }
+    },
+  })
+  .then((value) => {
+    if (value === "upload") {
+      document.getElementById('fileInput').click();
+    }
+  });
+});
+
+document.getElementById('fileInput').addEventListener('change', function(event) {
+  const files = event.target.files;
+
+  if (!files || files.length === 0) return;
+
+  for (let i = 0; i < files.length; i++) {
+    uploadedFiles.push(files[i].name);
+  }
+
+  swal("Envio de Arquivos", "Os arquivos foram enviados com sucesso!", "success");
+});

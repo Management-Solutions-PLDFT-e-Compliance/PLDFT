@@ -61,12 +61,45 @@
             <h2>Rede transacional</h2>
             <h5>Grafos</h5>
             <div class="filtroValor">
-              <label for="">Valor:</label>
-              <select name="" id="">
-                <option value=""></option>
-                <option value="">Acima de R$ 10.000,00</option>
+              <label for="filtro-valor">Valor:</label>
+              <select name="filtro-valor" id="filtro-valor">
+                  <option value="">Todos valores</option>
+                  <option value="1000-5000">R$ 1.000,00 - R$ 5.000,00</option>
+                  <option value="5000-10000">R$ 5.000,00 - R$ 10.000,00</option>
+                  <option value="10000-20000">R$ 10.000,00 - R$ 20.000,00</option>
+                  <option value="20000-30000">R$ 20.000,00 - R$ 30.000,00</option>
+                  <option value="30000-40000">R$ 30.000,00 - R$ 40.000,00</option>
+                  <option value="40000-50000">R$ 40.000,00 - R$ 50.000,00</option>
+                  <option value="50000-75000">R$ 50.000,00 - R$ 75.000,00</option>
+                  <option value="75000-100000">R$ 75.000,00 - R$ 100.000,00</option>
+                  <option value="100000-">Acima de R$ 100.000,00</option>
               </select>
             </div>
+            <div class="filtroRisco">
+              <label for="filtro-risco">Risco:</label>
+              <select name="filtro-risco" id="filtro-risco">
+                  <option value="">Todos</option>
+                  <option value="1000-5000">Risco Muito Alto</option>
+                  <option value="5000-10000">Risco Alto</option>
+                  <option value="10000-20000">Risco Moderado</option>
+                  <option value="20000-30000">Risco Baixo</option>
+                  <option value="30000-40000">Risco Muito Baixo</option>
+                  <option value="40000-50000">Não Cliente</option>
+              </select>
+            </div>
+            <div class="filtroProdutos">
+              <label for="filtro-Produtos">Produto:</label>
+              <select name="filtro-produto" id="filtro-produto">
+                  <option value="">Todos</option>
+                  <option value="1000-5000">Conta Corrente</option>
+                  <option value="5000-10000">Cartão de Débito/Crédito</option>
+                  <option value="10000-20000">Poupança</option>
+                  <option value="20000-30000">Emprestimos</option>
+                  <option value="30000-40000">Câmbio</option>
+              </select>
+            </div>
+            
+          
             <div class="filtroData1">
               <label for="">Data:</label>
               <input type="date">  

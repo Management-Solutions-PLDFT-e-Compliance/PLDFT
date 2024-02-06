@@ -62,6 +62,21 @@
         <h5>Resumo</h5>
     </div>
     <a href="./analiseAlerta.html"><button class="botao"><img src="./icons/voltar.png" alt="" width="30px" height="30px">Voltar</button></a>
+    <button id="toggleButton" onclick="toggleContent()">Ocultar Conteúdo</button>
+
+    <script>
+        // Função para alternar a visibilidade do conteúdo
+        function toggleContent() {
+            var contentDiv = document.querySelector('.conteudo');
+            if (contentDiv.style.display === 'none') {
+                contentDiv.style.display = 'block';
+                document.getElementById('toggleButton').innerText = 'Ocultar Conteúdo';
+            } else {
+                contentDiv.style.display = 'none';
+                document.getElementById('toggleButton').innerText = 'Mostrar Conteúdo';
+            }
+        }
+    </script>
     <hr>
     <div class="conteudo">
         <div class="espacoid">
@@ -103,7 +118,7 @@
   </div>
   <div class="relatorioInterno">
     <div class="titulos">
-      <h2 contenteditable="true">Relatório de Comunicação
+      <h2 contenteditable="true">Relatório de Comunicação Interna
       </h2>
       <h5>Resumo</h5>
   </div>
