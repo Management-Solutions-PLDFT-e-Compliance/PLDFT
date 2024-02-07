@@ -50,6 +50,25 @@ body{
     border: 1px solid #dcdcdc;
 }
 
+.item8{
+    grid-column: span 4;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+}
+
+.item9{
+    grid-column: span 1;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+}
+
+.graficoSLA{
+    width: 1000px;
+    height: 1000px;
+}
+
 /* #select-boxes-charts{
     display: flex;
 } */

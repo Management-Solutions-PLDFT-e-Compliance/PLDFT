@@ -215,20 +215,27 @@ var config_historico = {
             }
         },
 
-        plugins:{
-
+        plugins: {
             legend: {
-                position: 'bottom',
-                display: true, // Exibe a legenda
+                display: true,
+                position: 'right',
                 labels: {
                     font: {
                         size: 14 
                     }
                 }
-            }
+            },
+    
+            datalabels: {
+                display: false,
+                align: 'top', // Posiciona o rótulo acima do ponto
+                anchor: 'center', // Alinha o rótulo no centro do ponto
+                clamp: true
+            },
+            
         }
     }
-};
+}
 
 
 
@@ -273,3 +280,89 @@ document.getElementById('select-range').addEventListener("change", function(){
     }   
 
 })
+
+const data_1 = {
+    labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+    datasets: [{
+      label: 'Alertas Analisados',
+      backgroundColor: 'rgba(100, 124, 164, 0.7)', // Cor verde para alertas analisados
+      data: [2000, 1500, 2500, 2000, 1500, 1000, 500], 
+      datalabels: {
+        display: false // Esconder os rótulos de dados
+      }
+    }, {
+      label: 'Alertas',
+      backgroundColor: 'rgba(156, 172, 196, 0.5)', // Cor vermelha para alertas
+      data: [1000, 2500, 4000, 3500, 2000, 1500, 1000] // Número de alertas por dia
+    }, {
+      label: 'Produtividade Necessária',
+      borderColor: 'rgba(4, 28, 76, 0.9)', // Cor azul para a linha de produtividade necessária
+      borderWidth: 4, // Espessura da linha
+      type: 'line',
+      data: [25, 25, 25, 25, 25, 25, 25], // Produtividade necessária por dia
+      yAxisID: 'produtividade', // Define a escala Y a ser usada para este conjunto de dados
+      fill: false // Não preencher abaixo da linha
+    }, {
+      label: 'Produtividade Real',
+      borderColor: 'rgba(164, 164, 164, 0.9)', // Cor roxa para a linha de produtividade real
+      borderWidth: 4, // Espessura da linha
+      type: 'line',
+      data: [20, 23, 22, 27, 18, 12, 15], // Produtividade real por dia
+      yAxisID: 'produtividade', // Define a escala Y a ser usada para este conjunto de dados
+      fill: false // Não preencher abaixo da linha
+    }]
+  };
+  
+  // Configurações específicas para o gráfico ctx1
+  const config_1 = {
+    type: 'bar',
+    data: data_1,
+    options: {
+      scales: {
+        x: {
+          stacked: true,
+          grid: {
+            display: false // Remover o grid do eixo Y principal
+          }
+        },
+        y: {
+          stacked: true,
+          grid: {
+            display: false // Remover o grid do eixo Y principal
+          }
+        },
+        produtividade: { // Definindo uma segunda escala Y para produtividade
+          position: 'right', // Colocando a escala à direita
+          
+          grid: {
+            display: false // Remover o grid do eixo Y secundário
+          }
+        }
+      },
+      plugins: {
+        // legend: {
+        //     display: true,
+        //     position: 'right',
+        //     labels: {
+        //         font: {
+        //             size: 14 
+        //         }
+        //     }
+        // },
+
+        datalabels: {
+            display: false,
+            align: 'top', // Posiciona o rótulo acima do ponto
+            anchor: 'center', // Alinha o rótulo no centro do ponto
+            clamp: true
+        },
+        
+    }
+    }
+    
+  };
+  
+  // Renderizar o gráfico apenas no contexto ctx1
+  const ctx_1 = document.getElementById('stackedBarChart1').getContext('2d');
+  raficoSLA = new Chart(ctx_1, config_1);
+  

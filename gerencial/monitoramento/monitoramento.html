@@ -15,6 +15,7 @@
         src="https://cdn.jsdelivr.net/npm/chart.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -207,6 +208,31 @@
                 </div>
             </div>
         </div>
+        <div class="item8">
+          <div class="titulos">
+            <h2>Monitoramento de SLA</h2>
+            <h5>Semanal</h5>
+            <select name="" id="">
+              <option value="">Todos</option>
+              <option value="">Contas</option>
+              <option value="">Investimentos</option>
+              <option value="">Câmbio</option>
+              <option value="">Empréstimos</option>
+              <option value="">Seguros</option>
+            </select>
+            <hr>
+            
+            
+          </div>
+          <canvas id="stackedBarChart1" width="20" height="7"></canvas>
+        </div>
+        <div class="item9">
+          <div class="titulos">
+            <h2>Monitoramento de SLA</h2>
+            <h5>Consolidado</h5>
+            <hr>
+          </div>
+        </div>
 
         <div class="item6">
             <div class="titulos">
@@ -251,8 +277,7 @@
           </div>
           <canvas id="historico_alertas_regra" style="width: 921px; height: 560px; margin: 10px;"></canvas>
         </div>
-
-    </div>
+        
     <script src="monitoramento.js"></script>
     <script src="../../script.js"></script>
 </body>
