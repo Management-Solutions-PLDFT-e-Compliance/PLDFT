@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="denunciaInterna.css">
+    <link rel="stylesheet" href="../../home_style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+
+<body>
+    
+  <header class="header1" >
+    <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+    <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+      <button class="botaoHeader botaoEstrategico botaoOff">
+        <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+        <p>Estratégico</p>
+      </button>
+    </a>
+    <a href="../../gerencial/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoGerencial botaoOff">
+        <img src="../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+        <p>Gerencial</p>
+      </button>
+    </a>
+    <a href="../../operacional/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoOperacional botaoOn">
+        <img src="../../assets/icons/operacionalOn.png" alt="Icone Atendimento">
+        <p>Operacional</p>
+      </button>
+    </a>
+    <a href="../../parametrizacao/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoParams botaoOff">
+        <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+        <p>Parametrização</p>
+      </button>
+    </a>
+    <h1 class="a comprimentos">Olá, Usuário! </h1>
+    <a href="../../index.html" style="position: absolute; top: 29px;">
+      <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+        <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+        SAIR
+      </button>
+    </a>
+  </header>
+  
+  <nav class="cabecario">
+    <ul>
+        <li class="vazio"></li>
+        <li><a href="../monitoramento/monitoramento2.html"><span>Monitoramento</span></a></li>
+        <li class="vazio"></li>
+        <li><a href="../analiseAlerta/analiseAlerta.html"><span>Análise de alerta</span></a></li>
+        <li class="vazio"></li>
+        <li class="active"><span>Análise de alerta</span></li>
+        <li class="vazio" style="width: 70%;"></li>
+    </ul>
+  </nav>
+    <div class="chartCard">
+      <div class="headerCard">
+        <h2>Denúncia  interna de risco PLDFT</h2>
+        <h3>Detalhes do report</h3>
+      </div>
+      <div class="bodyCard">
+        <div class="formatacao-form">
+          <div class="upload-container">
+            <div id="dragArea" class="drag-area">
+                <img src="icons/feather_upload-cloud.png" alt="">
+                <span class="title-upload">Select a file or drag and drop here</span>
+                <span class="subtitle-upload">JPG, PNG or PDF, file size no more than 10MB</span>
+                <label for="fileInput" class="upload-label">
+                  SELECT FILE
+                </label>
+                <input type="file" id="fileInput" class="file-input" multiple>
+                <div id="file-name"></div>
+            </div>
+          </div>
+          <form action="">
+            <div class="form-esq">
+              <div class="label-input">
+                <label for="">Data do incidente:</label>
+                <input type="text" placeholder="Selecione uma data">
+              </div>
+              <div class="label-input">
+                <label for="">Localização:</label>
+                <input type="text" placeholder="Selecione uma Localização">
+              </div>
+              <div class="label-input">
+                <label for="">Envolvidos:</label>
+                <input type="text" placeholder="Digite o nome dos envolvidos">
+              </div>
+              <div class="label-input">
+                <label for="">Transações envolvidas:</label>
+                <input type="text" placeholder="Digite o ID das transações suspeitas">
+              </div>
+              <div class="label-input">
+                <label for="">Informações adicionais:</label>
+                <textarea  placeholder="Adicione mais informações sobre a suspeita"></textarea>
+              </div>
+            </div>
+            <div class="label-input dir">
+              <label for="">Possíveis causas:</label>
+              <textarea placeholder=" Falhas ou lacunas no sistema de controle interno que possam ter contribuído para o incidente"></textarea>
+            </div>
+          </form>
+          <button class="btn-gerar-caso"><span>Gerar casos</span><img src="./icons/megaphone.png" alt=""></button>
+        </div>
+      </div>
+
+    </div>
+    <script src="../../script.js"></script>
+    <script src="./javascript.js"></script>
+</body>
+</html>
