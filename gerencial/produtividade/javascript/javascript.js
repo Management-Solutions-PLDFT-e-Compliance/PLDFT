@@ -57,7 +57,7 @@ var dataDistribuicaoSenior = {
 };
 
 var dataProdAnalistaEquipe = {
-    labels: ['Jul', 'Ago', 'Ste', 'Out', 'Nov', 'Dez'],
+    labels: ['5', '10', '15', '20', '25', '30'],
     datasets: [{
         label: 'Operações',
         type: 'line',
@@ -1790,7 +1790,7 @@ let selectAnalista1 = document.getElementById('select-analista1')
 let selectAnalista2 = document.getElementById('select-analista2')
 
  let dados_analista1 = {
-    labels: ['taxa de detecção LDFT', 'Precisão de análise', 'Tempo médio de Resolução', 'Número de casos Gerenciados', 'Qnt práticas LDFT prevenidas'],
+    labels:  ['taxa de detecção LDFT-%', 'Precisão de análise-%', 'Tempo médio de Resolução-min', 'Número de casos Gerenciados-Un', 'Qnt práticas LDFT prevenidas-Un'],
     datasets: [
         {
             barPercentage: 0.4,
@@ -1852,7 +1852,7 @@ let graficoComparacao1 = new Chart(graficoComparacao1Ctx, config_comparacao1)
 const graficoComparacao2Ctx = document.getElementById("grafico-comparacao-analistas2").getContext('2d')
 
 const dados_analista2 = {
-    labels: ['taxa de detecção LDFT', 'Precisão de análise', 'Tempo médio de Resolução', 'Número de casos Gerenciados', 'Qnt práticas LDFT prevenidas'],
+    labels: ['taxa de detecção LDFT-%', 'Precisão de análise-%', 'Tempo médio de Resolução-min', 'Número de casos Gerenciados-Un', 'Qnt práticas LDFT prevenidas-Un'],
     datasets: [
         {
             barPercentage: 0.4,

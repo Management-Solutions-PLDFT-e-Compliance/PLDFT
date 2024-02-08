@@ -24,7 +24,11 @@ body{
     width: 94px;
     height: 94px;
     margin-right: 25px;
+}
 
+.contorno_maior {
+    width: 140px;
+    height: 140px;
 }
 
 .icones_contorno{
@@ -72,3 +76,11 @@ body{
 /* #select-boxes-charts{
     display: flex;
 } */
+
+.formata-content-item9 {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: space-around;
+}

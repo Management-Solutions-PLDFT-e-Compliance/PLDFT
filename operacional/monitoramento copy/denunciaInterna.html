@@ -61,7 +61,7 @@
         <li class="vazio"></li>
         <li><a href="../analiseAlerta/analiseAlerta.html"><span>Análise de alerta</span></a></li>
         <li class="vazio"></li>
-        <li class="active"><span>Análise de alerta</span></li>
+        <li class="active"><span>Denúncias Internas</span></li>
         <li class="vazio" style="width: 70%;"></li>
     </ul>
   </nav>
@@ -86,33 +86,61 @@
           </div>
           <form action="">
             <div class="form-esq">
+              <p class="title-form">Informações do incidente:</p>
+
               <div class="label-input">
-                <label for="">Data do incidente:</label>
-                <input type="text" placeholder="Selecione uma data">
+                <label for="">Data da identificação do incidente:</label>
+                <input type="date" placeholder="Selecione uma data" id="data-da-identificação-do-incidente">
+              </div>
+              <div class="label-input">
+                <label for="">Data do incidente</label>
+                <input type="date" placeholder="Selecione uma data" id="data-do-incidente">
               </div>
               <div class="label-input">
                 <label for="">Localização:</label>
-                <input type="text" placeholder="Selecione uma Localização">
+                <input type="text" placeholder="Selecione uma Localização" id="localização">
               </div>
               <div class="label-input">
-                <label for="">Envolvidos:</label>
-                <input type="text" placeholder="Digite o nome dos envolvidos">
+                <label for="">Tipo de Cliente:</label>
+                <input type="text" placeholder="Digite o tipo de cliente" id="tipo-de-cliente">
+              </div>
+              <div class="label-input">
+                <label for="">Nome do Cliente:</label>
+                <input type="text" placeholder="Digite o nome do cliente" id="nome-do-cliente">
               </div>
               <div class="label-input">
                 <label for="">Transações envolvidas:</label>
-                <input type="text" placeholder="Digite o ID das transações suspeitas">
+                <input type="text"  placeholder="Digite as transações envolvidas" id="transacoes-envolvidas"/>
               </div>
               <div class="label-input">
-                <label for="">Informações adicionais:</label>
-                <textarea  placeholder="Adicione mais informações sobre a suspeita"></textarea>
+                <label for="">Motivo da denúncia:</label>
+                <textarea placeholder=" Digite o motivo da denúncia" id="motivo-da-denuncia"></textarea>
+              </div>
+              <div class="label-input">
+                <label for="">Valores transacionados:</label>
+                <textarea placeholder=" Digite os valores que foram transacionados no incidente" id="valores-transacionados"></textarea>
               </div>
             </div>
-            <div class="label-input dir">
-              <label for="">Possíveis causas:</label>
-              <textarea placeholder=" Falhas ou lacunas no sistema de controle interno que possam ter contribuído para o incidente"></textarea>
+
+            <div class="form-dir">
+              <p class="title-form">Dados do funcionário responsável pela denúncia:</p>
+              
+              <div class="label-input">
+                <label for="">Nome do Funcionário: </label>
+                <input type="text" placeholder="Digite o nome do funcionário" id="nome-do-funcionario">
+              </div>
+              <div class="label-input">
+                <label for="">Código do Funcionário: </label>
+                <input type="text" placeholder="Digite o codigo do funcionário" id="codigo-do-funcionario">
+              </div>
+              <div class="label-input">
+                <label for="">E-mail do Funcionário: </label>
+                <input type="text" placeholder="Digite o email do funcionário" id="email-do-funcionario">
+              </div>
             </div>
+          
           </form>
-          <button class="btn-gerar-caso"><span>Gerar casos</span><img src="./icons/megaphone.png" alt=""></button>
+          <button class="btn-gerar-caso"><span>Gerar caso</span><img src="./icons/megaphone.png" alt=""></button>
         </div>
       </div>
 
