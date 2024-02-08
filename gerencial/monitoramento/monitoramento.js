@@ -284,85 +284,81 @@ document.getElementById('select-range').addEventListener("change", function(){
 const data_1 = {
     labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'],
     datasets: [{
-      label: 'Alertas Analisados',
-      backgroundColor: 'rgba(100, 124, 164, 0.7)', // Cor verde para alertas analisados
-      data: [200, 150, 250, 200, 150], 
-      datalabels: {
-        display: false // Esconder os rótulos de dados
-      }
-    }, {
-      label: 'Alertas',
+      label: 'Estoque de analise',
       backgroundColor: 'rgba(156, 172, 196, 0.5)', // Cor vermelha para alertas
-      data: [100, 250, 400, 350, 140] // Número de alertas por dia
+      data: [131, 149, 175, 159, 251],
+      type: 'bar', // Número de alertas por dia
     }, {
-      label: 'Produtividade Necessária',
+      label: 'Novos alertas',
+      backgroundColor: 'rgba(204, 212, 228, 0.5)', // Cor vermelha para alertas
+      data: [102, 125, 151, 98, 48] // Número de alertas por dia
+    }, {
+      label: 'Análises que vencem no dia ',
       borderColor: 'rgba(4, 28, 76, 0.9)', // Cor azul para a linha de produtividade necessária
       borderWidth: 4, // Espessura da linha
       type: 'line',
-      data: [25, 25, 25, 25, 24], // Produtividade necessária por dia
+      data: [75, 58, 46,55 , 12], // Produtividade necessária por dia
       yAxisID: 'produtividade', // Define a escala Y a ser usada para este conjunto de dados
       fill: false // Não preencher abaixo da linha
     }, {
-      label: 'Produtividade Real',
+      label: 'Analises realizadas',
       borderColor: 'rgba(164, 164, 164, 0.9)', // Cor roxa para a linha de produtividade real
       borderWidth: 4, // Espessura da linha
       type: 'line',
-      data: [20, 23, 22, 27, 88], // Produtividade real por dia
+      data: [108, 123, 228, 209, 0], // Produtividade real por dia
       yAxisID: 'produtividade', // Define a escala Y a ser usada para este conjunto de dados
       fill: false // Não preencher abaixo da linha
     }]
-  };
-  
-  // Configurações específicas para o gráfico ctx1
-  const config_1 = {
+};
+
+// Calcular o valor máximo das barras empilhadas
+const maxStackedValue = data_1.datasets.reduce((acc, dataset) => {
+    if (dataset.type === 'bar') {
+        const sum = dataset.data.reduce((sum, value) => sum + value, 0);
+        return Math.max(acc, sum);
+    }
+    return acc;
+}, 0);
+
+// Configurações específicas para o gráfico ctx1
+const config_1 = {
     type: 'bar',
     data: data_1,
     options: {
-      scales: {
-        x: {
-          stacked: true,
-          grid: {
-            display: false // Remover o grid do eixo Y principal
-          }
+        scales: {
+            x: {
+                stacked: true,
+                grid: {
+                    display: false // Remover o grid do eixo Y principal
+                }
+            },
+            y: {
+                stacked: true,
+                grid: {
+                    display: false // Remover o grid do eixo Y principal
+                }
+            },
+            produtividade: { // Definindo uma segunda escala Y para produtividade
+                position: 'right', // Colocando a escala à direita
+                grid: {
+                    display: false // Remover o grid do eixo Y secundário
+                },
+                max: 350 // Definindo o valor máximo do eixo Y
+            }
         },
-        y: {
-          stacked: true,
-          grid: {
-            display: false // Remover o grid do eixo Y principal
-          }
-        },
-        produtividade: { // Definindo uma segunda escala Y para produtividade
-          position: 'right', // Colocando a escala à direita
-          
-          grid: {
-            display: false // Remover o grid do eixo Y secundário
-          }
+        plugins: {
+            datalabels: {
+                display: false,
+                align: 'top', // Posiciona o rótulo acima do ponto
+                anchor: 'center', // Alinha o rótulo no centro do ponto
+                clamp: true
+            },
         }
-      },
-      plugins: {
-        // legend: {
-        //     display: true,
-        //     position: 'right',
-        //     labels: {
-        //         font: {
-        //             size: 14 
-        //         }
-        //     }
-        // },
+    }
+};
 
-        datalabels: {
-            display: false,
-            align: 'top', // Posiciona o rótulo acima do ponto
-            anchor: 'center', // Alinha o rótulo no centro do ponto
-            clamp: true
-        },
-        
-    }
-    }
-    
-  };
-  
-  // Renderizar o gráfico apenas no contexto ctx1
-  const ctx_1 = document.getElementById('stackedBarChart1').getContext('2d');
-  raficoSLA = new Chart(ctx_1, config_1);
+// Renderizar o gráfico apenas no contexto ctx1
+const ctx_1 = document.getElementById('stackedBarChart1').getContext('2d');
+graficoSLA = new Chart(ctx_1, config_1);
+
   

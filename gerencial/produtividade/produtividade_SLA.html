@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../home_style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header1">
+        <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+        <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+          <button class="botaoHeader botaoEstrategico botaoOff">
+            <img src="../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+            <p>Estratégico</p>
+          </button>
+        </a>
+        <a href="../home.html" class="linksBotoes">
+          <button class="botaoHeader botaoGerencial botaoOn">
+            <img src="../../assets/icons/gerencialOn.png" alt="Icone Atendimento">
+            <p>Gerencial</p>
+          </button>
+        </a>
+        <a href="../../operacional/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoOperacional botaoOff">
+            <img src="../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+            <p>Operacional</p>
+          </button>
+        </a>
+        <a href="../../parametrizacao/home.html" class="linksBotoes">
+          <button class="botaoHeader botaoParams botaoOff">
+            <img src="../../assets/icons/parametrizacaoOff.png" alt="Icone Atendimento">
+            <p>Parametrização</p>
+          </button>
+        </a>
+        <h1 class="a comprimentos" style="font-weight: bold;">Olá Raul!</h1>
+        <a href="../../index.html" style="position: absolute; top: 29px;">
+          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+            <img src="../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+            SAIR
+          </button>
+        </a>
+      </header>
+
+    <nav class="cabecario" style="font-size: 1.3em;">
+        <ul>
+            <li class="vazio"></li>
+            <li><a href="../monitoramento/monitoramento.html" style="height: 100%; width: 100%;display: flex; justify-content: center;"><span>Monitoramento</span></a></li>
+            <li class="vazio"></li>
+            <li><a href="../distribuicaoAlertas/distribuicaoAlertas.html" style="height: 100%; width: 100%;display: flex; justify-content: center;"><span>Distribuição de alertas</span></a></li>
+            <li class="vazio"></li>
+            <li><a href="../comunicacao/comunicacao.html" style="height: 100%; width: 100%;display: flex; justify-content: center;"><span>Comunicação</span></a></li>
+            <li class="vazio"></li>
+            <li class="active"><span>Produtividade</span></li>
+            <li class="vazio"></li>
+            <li><a href="../kyAair/kyAir.html" style="height: 100%; width: 100%;display: flex; justify-content: center;"><span>KY e AIR</span></a></li>
+            <li class="vazio"></li>
+            <li><a href="../distGeo/distGeo.html" style="height: 100%; width: 100%;display: flex; justify-content: center;"><span>Distribuição Geográfica</span></a></li>
+            <li class="vazio"></li>
+            <li><a href="../avaliacaoEfetividade/avaliacaoEfetividade.html"><span>Avaliação de Efetividade</span></a></li>
+            <li class="vazio"></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard-tela-abrir">
+        <div id="dashboard" style="display: none;">
+            <div class="up">
+
+                <div class="chartCard producao-esteira-analise-por-esteira">
+                    <div class="headerCard">
+                        <h2>Produção por esteira de análise</h2>
+                        <h3>Tempo médio de análise por esteira</h3>
+                    </div>
+                    <div class="bodyCard">
+                        <img src="./images/legenda-minutos.png" alt="">
+                        <canvas id="grafico-analise-esteira" width="524" height="250" style="display: block; box-sizing: border-box; height: 250px; width: 524px;"></canvas>
+                    </div>
+                </div>
+                <div class="chartCard producao-esteira-analise-ociosidade">
+                    <div class="headerCard">
+                        <h2 style="color: #fff;">Vazio</h2>
+                        <h3>Tempo médio de ociosidade da análise</h3>
+                    </div>
+                    <div class="bodyCard">
+                        <img src="./images/legenda-dias.png" alt="">
+                        <canvas id="grafico-ociosidade" width="524" height="250" style="display: block; box-sizing: border-box; height: 250px; width: 524px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="chartCard quantidade-pessoas-por-esteira">
+                    <div class="headerCard">
+                        <h2>Relação de alertas por funcionário</h2>
+                        <h3>Quantidade de alertas por funcionário por esteira</h3>
+                    </div>
+                    <div class="bodyCard">
+                        <canvas id="pessoas-por-esteira" style="width: 647px; max-height: 500px; display: block; box-sizing: border-box; height: 500px;" width="647" height="500"></canvas>
+                    </div>
+                </div>
+                <div class="chartCard distribuicao-senioridade-por-esteira">
+                    <div class="headerCard">
+                        <h2>Distribuição de senioridade por esteira</h2>
+                        <h3>Quantidade de pessoas por cargo</h3>
+                    </div>
+                    <div class="bodyCard">
+                        <canvas id="grafico-distribuicao-senioridade-por-esteira" width="486" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 486px;"></canvas>
+                        <select name="" id="select-distribuicao-senioridade">
+                            <option value="Contas">Contas</option>
+                            <option value="Câmbio">Câmbio</option>
+                            <option value="Seguros">Seguros</option>
+                            <option value="Investimentos">Investimentos</option>
+                            <option value="Consórcios">Consórcios</option>
+                            <option value="Funcionários">Funcionários</option>
+                            <option value="Externas">Externas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="chartCard quantidade-pessoas-por-esteira">
+                    <div class="headerCard">
+                        <h2>Comparação de Analistas por Habilidades</h2>
+                        <h3>Tempo médio de análise por esteira</h3>
+                    </div>
+                    <div style="display: flex; width: 100%; justify-content: space-between;">
+                        <select name="analista1" id="select-analista1" class="selects-comparacao-analistas" style="border: 1px solid lightgray;
+                        background-color:lightgray;
+                        color : gray;" disabled="">
+                            <option value="">Selecione um Analista</option>       
+                        </select>
+
+                        <select name="esteiras-comparacao" id="esteiras-comparacao" class="selects-comparacao-analistas">
+                            <option value="Esteiras" disabled="" selected="">Selecione a Esteira</option>
+                            <option value="Contas">Contas</option>
+                            <option value="Câmbio">Câmbio</option>
+                            <option value="Seguros">Seguros</option>
+                            <option value="Investimentos">Investimentos</option>
+                            <option value="Consórcios">Consórcios</option>
+                            <option value="Funcionários">Funcionários</option>
+                            <option value="Externas">Externas</option>
+                        </select>
+
+                        <select name="analista2" id="select-analista2" class="selects-comparacao-analistas" style="border: 1px solid lightgray;
+                        background-color:lightgray;
+                        color : gray;" disabled="">
+                            <option value="">Selecione um Analista</option>
+                        </select>
+                    </div>
+                    <div class="bodyCard" style="display: flex; width: 90%; justify-content: center;align-self: center;">
+                        <canvas id="grafico-comparacao-analistas1" style="max-width: 50%; display: block; box-sizing: border-box; height: 290px; width: 581px;" width="581" height="290"></canvas>
+                        <canvas id="grafico-comparacao-analistas2" style="max-width: 50%; display: block; box-sizing: border-box; height: 290px; width: 581px;" width="581" height="290"></canvas>
+                    </div>
+                </div>
+                <div class="chartCard produtividade-analista-por-equipe">
+                    <div class="headerCard">
+                        <h2>Produtividade do analista e esteira</h2>
+                        <h3>Análise de produtividade do analista por esteira</h3>
+                    </div>
+                    <div class="bodyCard">
+                        <canvas id="grafico-analise-produtividade-analista-por-equipe" width="486" height="323" style="display: block; box-sizing: border-box; height: 323px; width: 486px;"></canvas>
+
+                        <div class="selects-esteiras-analistas">
+                            <div class="grupo-selects-legenda">
+                                <div class="grupo-selects">
+                                    <select name="" id="select-esteiras">
+                                        <option value="Esteiras">Esteiras</option>
+                                        <option value="Contas">Contas</option>
+                                        <option value="Câmbio">Câmbio</option>
+                                        <option value="Seguros">Seguros</option>
+                                        <option value="Investimentos">Investimentos</option>
+                                        <option value="Consórcios">Consórcios</option>
+                                        <option value="Funcionários">Funcionários</option>
+                                        <option value="Externas">Externas</option>
+                                    </select>
+                                    <select name="" id="select-analista" disabled="" style="background-color: lightgray; color: gray;">
+                                        <option value="Contas">Analistas</option>
+                                    </select>
+                                </div>
+                                <div class="legenda">
+                                    <ul>
+                                        <li><hr style="width: 25px; height: 4px; background-color: #081c4c; border: none;"><span>Máximo</span></li>
+                                        <li><hr style="width: 25px; height: 4px; background-color: red; border: none;"> <span>Mínimo</span></li>
+                                        <li><hr style="width: 25px; height: 2px; background-color: rgba(75, 192, 192, 1); border: none;"> <span>Média da esteira</span></li>
+                                        <li><hr style="width: 25px; height: 2px; background-color: yellow; border: none;"> <span>prod. do analista</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <select name="" id="select-tempo-historico-produtividade">
+                                <option value="Últimos 30 dias">últimos 30 dias</option>
+                                <option value="Último semestre">Último semestre</option>
+                                <option value="Último ano">Último ano</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chartCard produtividade-analistas">
+                <div class="headerCard">
+                    <h2>Produtividade dos analistas por esteira</h2>
+                    <h3>Tempo de análise considerando últimos 6 meses (recebimento de alerta até encerramento)</h3>
+                </div>
+                <div class="bodyCard">
+                    <button id="btn-abrir-produtividade">Abrir produtividade por analista</button>
+                    <ul class="table">
+                        <li><ul class="table_header"><li><span>Esteira de análise</span></li><li><span>Análise mais rápida</span></li><li><span>Análise mais demorada</span></li><li><span>Tempo médio esteira</span></li><li><span>Análise realizadas</span></li><li><span>Estoque de análises (d-0)</span></li><li><span>Análise fora do prazo</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Contas</span></li><li><span>ID análise - 55min</span></li><li><span>ID análise - 10 dias</span></li><li><span>5 dias</span></li><li><span>120</span></li><li><span>1532</span></li><li><span>120</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Câmbio</span></li><li><span>ID análise - 60min</span></li><li><span>ID análise - 25 dias</span></li><li><span>15 dias</span></li><li><span>610</span></li><li><span>1162</span></li><li><span>101</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Seguros</span></li><li><span>ID análise - 85min</span></li><li><span>ID análise - 45 dias</span></li><li><span>30 dias</span></li><li><span>372</span></li><li><span>1500</span></li><li><span>29</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Investimentos</span></li><li><span>ID análise - 94min</span></li><li><span>ID análise - 63 dias</span></li><li><span>25 dias</span></li><li><span>613</span></li><li><span>2939</span></li><li><span>121</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Empréstimos</span></li><li><span>ID análise - 40min</span></li><li><span>ID análise - 44 dias</span></li><li><span>14 dias</span></li><li><span>782</span></li><li><span>2103</span></li><li><span>11</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Consórcios</span></li><li><span>ID análise - 35min</span></li><li><span>ID análise - 33 dias</span></li><li><span>10 dias</span></li><li><span>652</span></li><li><span>1123</span></li><li><span>23</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Funcionários</span></li><li><span>ID análise - 65min</span></li><li><span>ID análise - 60 dias</span></li><li><span>22 dias</span></li><li><span>375</span></li><li><span>1482</span></li><li><span>45</span></li></ul></li>
+                        <li><ul class="table_row"><li><span>Externas</span></li><li><span>ID análise - 55min</span></li><li><span>ID análise - 44 dias</span></li><li><span>30 dias</span></li><li><span>215</span></li><li><span>1325</span></li><li><span>123</span></li></ul></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tela-abrir chartCard" style="display: block;">
+            <div class="headerCard">
+                <div class="titulo-subtitulo">
+                    <h2>Produtividade dos analistas</h2>
+                    <h3>Tempo de análise considerando últimos 6 meses (recebimento do alerta até encerramento)</h3>
+                </div>
+                <button id="fechar-produtividade-dos-analistas">Fechar</button>
+            </div>
+            <div class="bodyCard">
+                <div style="height: 1rem;"></div> 
+                <ul class="table">
+                    <li><ul class="table_header">
+                        <li><span>Analista</span></li>
+                        <li><span>Cargo</span></li>
+                        <li><span>Esteira de análise</span></li>
+                        <li><span>Análise mais rápida</span></li>
+                        <li><span>Análise mais demorada</span></li>
+                        <li><span>Tempo médio analista</span></li>
+                        <li><span>Análises realizadas</span></li>
+                        <li><span>Estoque de análises (d-0)</span></li>
+                        <li><span>Análise fora do prazo</span></li></ul>
+                    </li>
+
+                    <li><ul class="table_row">
+                        <li><span>José Silva</span></li>
+                        <li><span>Analista Júnior</span></li>
+                        <li><span>Contas</span></li>
+                        <li><span>ID análise - 55min</span></li>
+                        <li><span>ID análise - 10 dias</span></li>
+                        <li><span> 5 dias</span></li>
+                        <li><span>64</span></li>
+                        <li><span>16</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul>
+                    </li>
+
+                    <li><ul class="table_row">
+
+                        <li><span>João Witkowiski</span></li>
+                        <li><span>Analista Sênior</span></li>
+                        <li><span>Investimentos</span></li>
+                        <li><span>ID análise - 60min</span></li>
+                        <li><span>ID análise - 25 dias</span></li>
+                        <li><span>15 dias</span></li>
+                        <li><span>78</span></li>
+                        <li><span>15</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Bianca Dias</span></li>
+                        <li><span>Analista Sênior</span></li>
+                        <li><span>Câmbio</span></li>
+                        <li><span>ID análise - 85min</span></li>
+                        <li><span>ID análise - 45 dias</span></li>
+                        <li><span>30 dias</span></li>
+                        <li><span>59</span></li>
+                        <li><span>9</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Lucas Monteiro</span></li>
+                        <li><span>Analista Pleno</span></li>
+                        <li><span>Câmbio</span></li>
+                        <li><span>ID análise - 94min</span></li>
+                        <li><span>ID análise - 63 dias</span></li>
+                        <li><span>25 dias</span></li>
+                        <li><span>63</span></li>
+                        <li><span>23</span></li>
+                        <li><span>1</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Matheus Oliveira</span></li>
+                        <li><span>Analista Júnior</span></li>
+                        <li><span>Empréstimos</span></li>
+                        <li><span>ID análise - 40min</span></li>
+                        <li><span>ID análise - 44 dias</span></li>
+                        <li><span> 14 dias</span></li>
+                        <li><span>78</span></li>
+                        <li><span>11</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Lucas Monteiro</span></li>
+                        <li><span>Analista Pleno</span></li>
+                        <li><span>Contas</span></li>
+                        <li><span>ID análise - 55min</span></li>
+                        <li><span>ID análise - 10 dias</span></li>
+                        <li><span> 5 dias</span></li>
+                        <li><span>20</span></li>
+                        <li><span>10</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Camila Goes</span></li>
+                        <li><span>Analista Júnior</span></li>
+                        <li><span>Seguros</span></li>
+                        <li><span>ID análise - 60min</span></li>
+                        <li><span>ID análise - 25 dias</span></li>
+                        <li><span> 15 dias</span></li>
+                        <li><span>58</span></li>
+                        <li><span>14</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Marcos Ferreira</span></li>
+                        <li><span>Analista Sênior</span></li>
+                        <li><span>Investimentos</span></li>
+                        <li><span>ID análise - 85min</span></li>
+                        <li><span>ID análise - 45 dias</span></li>
+                        <li><span> 30 dias</span></li>
+                        <li><span>99</span></li>
+                        <li><span>22</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Arthur Cristo</span></li>
+                        <li><span>Analista Pleno</span></li>
+                        <li><span>Investimentos</span></li>
+                        <li><span>ID análise - 94min</span></li>
+                        <li><span>ID análise - 63 dias</span></li>
+                        <li><span> 25 dias</span></li>
+                        <li><span>61</span></li>
+                        <li><span>33</span></li>
+                        <li><span>1</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>William Mendes</span></li>
+                        <li><span>Analista Júnior</span></li>
+                        <li><span>Contas</span></li>
+                        <li><span>ID análise - 40min</span></li>
+                        <li><span>ID análise - 44 dias</span></li>
+                        <li><span> 14 dias</span></li>
+                        <li><span>76</span></li>
+                        <li><span>21</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                    <li><ul class="table_row">
+
+                        <li><span>Fabiana Costa</span></li>
+                        <li><span>Analista Pleno</span></li>
+                        <li><span>Câmbio</span></li>
+                        <li><span>ID análise - 40min</span></li>
+                        <li><span>ID análise - 44 dias</span></li>
+                        <li><span> 14 dias</span></li>
+                        <li><span>76</span></li>
+                        <li><span>21</span></li>
+                        <li><span>0</span></li>
+                        <li class="correto"><img style="display: none;" src="./images/correct.png" alt=""></li></ul></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/javascript.js"></script>
+    <script src="../../script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body>
+</html>
