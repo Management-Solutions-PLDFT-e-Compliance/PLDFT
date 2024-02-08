@@ -61,7 +61,7 @@ series.data = [{
       }, {
         "name": "Beneficiário 9", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoBaixo
       }, {
-        "name": "João - Parentesco: 3º Grau", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoMuitoAlto, "children":[{
+        "name": "João - Parentesco: 3 Grau", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoMuitoAlto, "children":[{
             "name": "Beneficiário A", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoNaoCliente
           }, {
             "name": "Beneficiário B", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoAlto
@@ -72,7 +72,7 @@ series.data = [{
           }, {
             "name": "Beneficiário E", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoAlto
           }, {
-            "name": "Matheus - Parentesco: 1º Grau", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoMuitoAlto, "children": [{
+            "name": "Matheus - Parentesco: 1 Grau", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoMuitoAlto, "children": [{
                 "name": "Beneficiário Z", "value": tamanhoNodes, "image": "./icons/user.png", "color": corRiscoNaoCliente
               }]
           }]

@@ -282,24 +282,24 @@ document.getElementById('select-range').addEventListener("change", function(){
 })
 
 const data_1 = {
-    labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+    labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'],
     datasets: [{
       label: 'Alertas Analisados',
       backgroundColor: 'rgba(100, 124, 164, 0.7)', // Cor verde para alertas analisados
-      data: [2000, 1500, 2500, 2000, 1500, 1000, 500], 
+      data: [200, 150, 250, 200, 150], 
       datalabels: {
         display: false // Esconder os rótulos de dados
       }
     }, {
       label: 'Alertas',
       backgroundColor: 'rgba(156, 172, 196, 0.5)', // Cor vermelha para alertas
-      data: [1000, 2500, 4000, 3500, 2000, 1500, 1000] // Número de alertas por dia
+      data: [100, 250, 400, 350, 140] // Número de alertas por dia
     }, {
       label: 'Produtividade Necessária',
       borderColor: 'rgba(4, 28, 76, 0.9)', // Cor azul para a linha de produtividade necessária
       borderWidth: 4, // Espessura da linha
       type: 'line',
-      data: [25, 25, 25, 25, 25, 25, 25], // Produtividade necessária por dia
+      data: [25, 25, 25, 25, 24], // Produtividade necessária por dia
       yAxisID: 'produtividade', // Define a escala Y a ser usada para este conjunto de dados
       fill: false // Não preencher abaixo da linha
     }, {
@@ -307,7 +307,7 @@ const data_1 = {
       borderColor: 'rgba(164, 164, 164, 0.9)', // Cor roxa para a linha de produtividade real
       borderWidth: 4, // Espessura da linha
       type: 'line',
-      data: [20, 23, 22, 27, 18, 12, 15], // Produtividade real por dia
+      data: [20, 23, 22, 27, 88], // Produtividade real por dia
       yAxisID: 'produtividade', // Define a escala Y a ser usada para este conjunto de dados
       fill: false // Não preencher abaixo da linha
     }]
