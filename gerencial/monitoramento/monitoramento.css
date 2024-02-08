@@ -27,8 +27,8 @@ body{
 }
 
 .contorno_maior {
-    width: 140px;
-    height: 140px;
+    width: 240px;
+    height: 130px;
 }
 
 .icones_contorno{
@@ -83,22 +83,4 @@ body{
     height: 90%;
     align-items: center;
     justify-content: space-around;
-}
-
-.selectSLA{
-    position: fixed;
-    right: 400px;
-    top: 435px;
-    width: 150px;
-    height: 30px;
-    border: 1px solid lightgray;
-    margin-left: 10px;
-}
-
-.botaoProdutividade{
-    position: fixed;
-    right: 345px;
-    top: 435px;
-    height: 30px;
-    width: 30px;
 }
