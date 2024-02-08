@@ -6,13 +6,13 @@ var graficoDistribuicaoSeniorCtx = document.getElementById('grafico-distribuicao
 var graficoProdAnalistaEquipeCtx = document.getElementById('grafico-analise-produtividade-analista-por-equipe').getContext('2d');
 
 var dataAnaliseEsteira = {
-    labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos'],
+    labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos', 'Consórcios', 'Funcionários', 'Externos'],
     datasets: [{
         label: 'Operações',
         type: 'bar',
         backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgb(9,41,104)', 'rgba(157,195,230,255)'),
         borderColor: 'rgba(75, 192, 192, 1)',
-        data: [40, 30, 90, 30, 45],
+        data: [40, 30, 90, 30, 45, 55, 25, 35],
         borderWidth: 1,
         pointRadius: 0,
         barPercentage: 0.4,
@@ -23,13 +23,13 @@ var dataAnaliseEsteira = {
 };
 
 var dataOciosidade = {
-    labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos'],
+    labels: ['Contas', 'Câmbio', 'Seguros', 'Investimentos', 'Empréstimos', 'Consórcios', 'Funcionários', 'Externos'],
     datasets: [{
         label: 'Operações',
         type: 'bar',
         backgroundColor: createLinearGradientBar(graficoAnaliseEsteiraCtx, 'rgba(70,115,196,255)', 'rgba(157,195,230,255)'),
         borderColor: 'rgba(75, 192, 192, 1)',
-        data: [45, 22, 14, 25, 33],
+        data: [45, 22, 14, 25, 33, 44, 23, 56],
         borderWidth: 1,
         pointRadius: 0,
         barPercentage: 0.4,

@@ -13,6 +13,7 @@ const valoresTransacionados = document.getElementById("valores-transacionados");
 const nomeDoFuncionario = document.getElementById("nome-do-funcionario");
 const codigoDoFuncionario = document.getElementById("codigo-do-funcionario");
 const emailDoFuncionario = document.getElementById("email-do-funcionario");
+const gerarCaso = document.getElementById("gerar-caso");
 
 
 // Clique no rótulo
@@ -47,8 +48,8 @@ fileInput.addEventListener("change", function () {
 function handleFiles(files) {
     // Lógica para lidar com os arquivos selecionados
     fileName.innerHTML = files[0].name
-    dataDaIdentificaçãoDoIncidente.value = "15-01-2024"
-    dataDoIncidente.value = "07-01-2024"
+    dataDaIdentificaçãoDoIncidente.value = "2024-01-15"
+    dataDoIncidente.value = "2024-01-07"
     localização.value = "Agência 0583 – SP"
     tipoDeCliente.value = "Pessoa física"
     nomeDoCliente.value = "João Santos"
@@ -59,3 +60,24 @@ function handleFiles(files) {
     codigoDoFuncionario.value = "00BR003"
     emailDoFuncionario.value = "ana.silva@banco.com"
 }
+
+
+gerarCaso.addEventListener('click', function() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Caso gerado com sucesso!'
+    })
+
+    fileName.innerHTML = ""
+    dataDaIdentificaçãoDoIncidente.value = ""
+    dataDoIncidente.value = ""
+    localização.value = ""
+    tipoDeCliente.value = ""
+    nomeDoCliente.value = ""
+    transacoesEnvolvidas.value = ""
+    motivoDaDenuncia.innerHTML = ""
+    valoresTransacionados.innerHTML = ""
+    nomeDoFuncionario.value = ""
+    codigoDoFuncionario.value = ""
+    emailDoFuncionario.value = ""
+})  

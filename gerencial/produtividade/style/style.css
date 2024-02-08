@@ -347,7 +347,10 @@ h3 {
     width: 10%;
 }
 .tela-abrir .table_header li:nth-child(9){
-    width: 10%;
+    width: 8%;
+}
+.tela-abrir .table_header li:nth-child(10){
+    width: 7%;
 }
 
 .tela-abrir .table_row li:nth-child(1){
@@ -375,15 +378,15 @@ h3 {
     width: 10%;
 }
 .tela-abrir .table_row li:nth-child(9){
-    width: 10%;
+    width: 8%;
 }
 .tela-abrir .table_row li:nth-child(10){
-    width: 3%;
+    width: 7%;
+    border: none;
 }
 
 .tela-abrir .table_row li:nth-child(10) img{
     height: 20px;
-    /* display: none; */
 }
 
 
