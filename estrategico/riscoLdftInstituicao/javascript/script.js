@@ -51,7 +51,7 @@ var graf_inerente = new Chart(graf_inerentectx, config_inerente);
 // Segundo Gráfico
 
 var dados_negocio = {
-    labels: ['Unidade 1', 'Unidade 2', 'Unidade 3', 'Unidade 4', 'Unidade 5', 'Unidade 6', 'Unidade 7', 'Unidade 8', 'Unidade 9', 'Unidade 10'],
+    labels: ['Varejo', 'Atacado', 'Crédito', 'Tesouraria', 'Seguros', 'Corretora', 'Investimentos', 'Consórcios', 'Empréstimos', 'Câmbio'],
     datasets: [
         {
             label: '2021',
