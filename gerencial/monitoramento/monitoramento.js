@@ -361,4 +361,28 @@ const config_1 = {
 const ctx_1 = document.getElementById('stackedBarChart1').getContext('2d');
 graficoSLA = new Chart(ctx_1, config_1);
 
+function atualizarHorario() {
+    const fusoHorario = 'America/Sao_Paulo';
+    const dataAtual = new Date();
+    const opcoes = { 
+      hour: '2-digit', 
+      minute: '2-digit', 
+      day: '2-digit', 
+      month: '2-digit', 
+      year: 'numeric',
+      timeZone: fusoHorario 
+    };
   
+    const formatadorDataHora = new Intl.DateTimeFormat('pt-BR', opcoes);
+    const horaFormatada = formatadorDataHora.format(dataAtual);
+  
+    const horas = horaFormatada.split(',')[1].trim();
+    const paragrafos = document.querySelectorAll('#horaAtualizada');
+    paragrafos.forEach((paragrafo)=>{
+      paragrafo.textContent = `Última atualização em: ${horas.replace(':', 'h')} ${horaFormatada.split(',')[0]}`;
+    });
+  }
+  
+  if(document.getElementById('horaAtualizada')){
+    atualizarHorario();
+  }
