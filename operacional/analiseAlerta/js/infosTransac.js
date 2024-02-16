@@ -149,6 +149,23 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
 var btn = document.getElementById('btn');
 var resumoCadastro = document.querySelector('.resumoCadastro');
 
+var btn = document.getElementById('btn');
+var resumoCadastro = document.querySelector('.resumoCadastro');
+
+var isOpen = false;
+
 btn.addEventListener('click', function() {
-    resumoCadastro.classList.toggle('show');
+    isOpen = !isOpen; // Alterna o estado entre aberto e fechado
+    
+    if (isOpen) {
+        resumoCadastro.style.display = 'block';
+        resumoCadastro.style.animation = 'slideInRight 1s forwards'; // Animção mais rápida
+    } else {
+        resumoCadastro.style.animation = 'slideOutRight 1s forwards'; // Animção mais rápida
+        setTimeout(function() {
+            resumoCadastro.style.display = 'none'; // Oculta o elemento após a animação
+        }, 1000); // Tempo ajustado para corresponder à duração da animação
+    }
 });
+
+

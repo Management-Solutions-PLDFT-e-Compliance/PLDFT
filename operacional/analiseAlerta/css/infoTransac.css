@@ -294,17 +294,7 @@
     position: fixed;
     right: 46.6px;
     bottom: 20px;
-    transition: transform 0.5s ease; /* Aplicando transição apenas para transform */
-    transform: translateX(100%);
-    display: none;
 }
-
-.resumoCadastro.show {
-    display: block;
-    transform: translateX(0%);
-}
-
-
   .resumoCadastro p{
     margin: 12px;
 
@@ -322,3 +312,21 @@
     box-shadow: 10px;
     bottom: 20px;
   }
+
+  @keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
