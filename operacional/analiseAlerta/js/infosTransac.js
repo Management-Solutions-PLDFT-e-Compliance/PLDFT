@@ -145,3 +145,10 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
 
   swal("Envio de Arquivos", "Os arquivos foram enviados com sucesso!", "success");
 });
+
+var btn = document.getElementById('btn');
+var resumoCadastro = document.querySelector('.resumoCadastro');
+
+btn.addEventListener('click', function() {
+    resumoCadastro.classList.toggle('show');
+});

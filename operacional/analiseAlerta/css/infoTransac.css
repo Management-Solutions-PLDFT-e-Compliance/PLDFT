@@ -282,3 +282,43 @@
   a{
     text-decoration: none;
   }
+
+  .resumoCadastro {
+    background-color: #304c7c;
+    /* border: 1px solid white; Adicionei um valor para a propriedade border */
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 6px;
+    position: fixed;
+    right: 46.6px;
+    bottom: 20px;
+    transition: transform 0.5s ease; /* Aplicando transição apenas para transform */
+    transform: translateX(100%);
+    display: none;
+}
+
+.resumoCadastro.show {
+    display: block;
+    transform: translateX(0%);
+}
+
+
+  .resumoCadastro p{
+    margin: 12px;
+
+  }
+
+  #btn {
+    position: fixed;
+    right: 5px;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    border-color: #304c7c;
+    border-width: 0px;
+    background-color: #304c7c;
+    box-shadow: 10px;
+    bottom: 20px;
+  }
