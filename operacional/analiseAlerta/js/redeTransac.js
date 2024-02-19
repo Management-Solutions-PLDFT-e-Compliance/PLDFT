@@ -147,7 +147,7 @@ series.links.template.adapter.add("stroke", function (stroke, target) {
         return corOutrasInfo;
     }
 
-    else if(target.dataItem.name == 'Conta Corrente' || target.dataItem.name == 'João'|| target.dataItem.name == 'Matheus'){
+    else if(target.dataItem.name == 'Conta Corrente' || target.dataItem.name == 'João - Parentesco: 3 Grau'|| target.dataItem.name == 'Matheus - Parentesco: 1 Grau'){
         return corTransacAlert;
     }
 
