@@ -33,8 +33,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Adiciona selects à nova div
     for (var i = 0; i < 3; i++) {
       var select = document.createElement("select");
-      select.name = "";
-      select.id = "";
+      var options = [];
+
+      switch(i) {
+        case 0:
+          options = ["", "Valor transf.", "Quantidade transf.", "Renda"];
+          break;
+        case 1:
+          options = ["", ">", ">=", "<", "<="];
+          break;
+        case 2:
+          options = ["", "5.000", "50.000", "150.000", "500.000"];
+          break;
+        default:
+          break;
+      }
+
+      for (var j = 0; j < options.length; j++) {
+        var option = document.createElement("option");
+        option.value = options[j];
+        option.text = options[j];
+        select.appendChild(option);
+      }
+
       novaCondicaoDiv2.appendChild(select);
     }
 
@@ -44,6 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+document.getElementById('label_codigo_regra').onclick = function() {
+  document.getElementById('codigo_regra').value = "00018";
+  document.getElementById('nome_regra').value = "Câmbio / renda 2";
+};
 
 if (document.getElementById("salvar")) {
   let botaoSalvar = document.getElementById("salvar");

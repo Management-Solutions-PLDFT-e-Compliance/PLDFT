@@ -73,17 +73,18 @@
             <hr>
         </div>
         <form action="/action_page.php" method="post">
-            <p>
-              <label for="codigo_regra">Código da Regra:</label>
-              <input type="text" id="codigo_regra" name="codigo_regra" value="00018" readonly>
-            </p>
-            <p>
-              <label for="nome_regra">Nome da Regra:</label>
-              <input type="text" id="nome_regra" name="nome_regra" value="Câmbio / renda 2" required>
-            </p>
+          <p>
+            <label for="codigo_regra" id="label_codigo_regra">Código da Regra:</label>
+            <input type="text" id="codigo_regra" name="codigo_regra" value="" readonly>
+        </p>
+        <p>
+            <label for="nome_regra">Nome da Regra:</label>
+            <input type="text" id="nome_regra" name="nome_regra" value="" required>
+        </p>
             <p>
               <label for="periodo_transacional">Período transacional:</label>
               <select id="periodo_transacional" name="periodo_transacional">
+                <option value="Diário"></option>
                 <option value="Diário">Diário</option>
                 <option value="Semanal">Semanal</option>
                 <option value="Mensal">Mensal</option>
@@ -93,6 +94,7 @@
             <p>
               <label for="produto_servico">Produto/ Serviço:</label>
               <select id="produto_servico" name="produto_servico">
+                <option value="Conta corrente"></option>
                 <option value="Conta corrente">Conta corrente</option>
                 <option value="Cartão de crédito">Cartão de crédito</option>
                 <option value="Cartão de débito">Cartão de débito</option>
@@ -102,6 +104,7 @@
             <p>
               <label for="rating_risco_cliente">Rating risco Cliente:</label>
               <select id="rating_risco_cliente" name="rating_risco_cliente">
+                <option value="Baixo"></option>
                 <option value="Baixo">Baixo</option>
                 <option value="Médio">Médio</option>
                 <option value="Alto">Alto</option>
@@ -110,6 +113,7 @@
             <p>
               <label for="tipo_cliente_pf_pj">Tipo de cliente (PF/PJ):</label>
               <select id="tipo_cliente_pf_pj" name="tipo_cliente_pf_pj">
+                <option value="PF"></option>
                 <option value="PF">Pessoa física</option>
                 <option value="PJ">Pessoa jurídica</option>
               </select>
@@ -117,6 +121,7 @@
             <p>
               <label for="pep">PEP:</label>
               <select id="pep" name="pep">
+                <option value="Sim"></option>
                 <option value="Sim">Sim</option>
                 <option value="Não">Não</option>
               </select>
@@ -124,6 +129,7 @@
             <p>
               <label for="moeda">Moeda:</label>
               <select id="moeda" name="moeda">
+                <option value="BRL"></option>
                 <option value="BRL">Real</option>
                 <option value="USD">Dólar</option>
                 <option value="EUR">Euro</option>
@@ -145,9 +151,26 @@
             </div>
             <div class="camposRegras">
               <div>
-                <select name="" id=""></select>
-                <select name="" id=""></select>
-                <select name="" id=""></select>
+                <select name="" id="">
+                  <option value=""></option>
+                  <option value="">Valor transf.</option>
+                  <option value="">Quantidade transf.</option>
+                  <option value="">Renda</option>
+                </select>
+                <select name="" id="">
+                  <option value=""></option>
+                  <option value="">></option>
+                  <option value="">>=</option>
+                  <option value=""><</option>
+                  <option value=""><=</option>
+                </select>
+                <select name="" id="">
+                  <option value=""></option>
+                  <option value="">5.000</option>
+                  <option value="">50.000</option>
+                  <option value="">150.000</option>
+                  <option value="">500.000</option>
+                </select>
               </div>
             </div>
           </div>
