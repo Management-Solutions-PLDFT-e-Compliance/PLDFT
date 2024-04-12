@@ -209,10 +209,10 @@ series.links.template.adapter.add("tooltipText", function (text, target) {
     case "Beneficiário E":
         return `Recebeu Pix de R$1.253,90 de ${target.dataItem.name}`;
 
-    case "João":
+    case "João - Parentesco: 3 Grau":
         return `Enviou TED de R$30.000,00 para ${target.dataItem.name}`;
 
-    case "Matheus":
+    case "Matheus - Parentesco: 1 Grau":
         return `Enviou PIX de R$25.400,00 para ${target.dataItem.name}`;
 
     case "Beneficiário Z":
