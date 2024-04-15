@@ -92,34 +92,36 @@
                 <canvas id="volumeTransacoes"></canvas>
                 <div id="legenda-volume-transacoes"></div>
             </div>
-            <div class="selections">
-                <select name="transacoes" id="transacoes">
-                    <option value="Unidade de Negócio">Unidade de Negócio</option>
-                    <option value="Conta">Conta</option>
-                    <option value="Empréstimos">Empréstimos</option>
-                    <option value="Cartões">Cartões</option>
-                    <option value="Corretora">Corretora</option>
-                    <option value="Câmbio">Câmbio</option>
-                    <option value="Externas">Externas</option>
-                </select>
-                <select name="contrato" id="contrato">
-                    <option value="Tipo de Cliente">Tipo de Cliente</option>
-                    <option value="PF">PF</option>
-                    <option value="PJ">PJ</option>
-                </select>
-                <select name="entidade" id="entidades">
-                    <option value="Órgão Regulador">Órgão Regulador</option>
-                    <option value="Bacen">Bacen</option>
-                    <option value="CVM">CVM</option>
-                    <option value="Susep">Susep</option>
-                </select>
-                <select name="meios" id="meios">
-                    <option value="Segmento">Segmento</option>
-                    <option value="Varejo">Varejo</option>
-                    <option value="Private">Private</option>
-                    <option value="Middle">Middle</option>
-                    <option value="Corporate">Corporate</option>
-                </select>
+            <div class="alinha-select-grafico">
+                <div class="selections">
+                    <select name="transacoes" id="transacoes">
+                        <option value="Unidade de Negócio">Unidade de Negócio</option>
+                        <option value="Conta">Conta</option>
+                        <option value="Empréstimos">Empréstimos</option>
+                        <option value="Cartões">Cartões</option>
+                        <option value="Corretora">Corretora</option>
+                        <option value="Câmbio">Câmbio</option>
+                        <option value="Externas">Externas</option>
+                    </select>
+                    <select name="contrato" id="contrato">
+                        <option value="Tipo de Cliente">Tipo de Cliente</option>
+                        <option value="PF">PF</option>
+                        <option value="PJ">PJ</option>
+                    </select>
+                    <select name="entidade" id="entidades">
+                        <option value="Órgão Regulador">Órgão Regulador</option>
+                        <option value="Bacen">Bacen</option>
+                        <option value="CVM">CVM</option>
+                        <option value="Susep">Susep</option>
+                    </select>
+                    <select name="meios" id="meios">
+                        <option value="Segmento">Segmento</option>
+                        <option value="Varejo">Varejo</option>
+                        <option value="Private">Private</option>
+                        <option value="Middle">Middle</option>
+                        <option value="Corporate">Corporate</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -154,7 +156,7 @@
         </div>
         <div class="bodyCard alertas-monitoramento-chart-selections chart-alertas-monitoramentos">
             <canvas id="alertasMonitoramento"></canvas>
-            <div class="selections">
+            <div class="selections-alerta-monitoramento">
                 <select name="clientes" id="clientes">
                     <option value="cliente-PF">Tipo de Cliente</option>
                     <option value="cliente-PF">PF</option>
@@ -218,9 +220,17 @@
         </div>
     </div>
     <div class="chartCard">
-        <div class="headerCard">
-            <h2>Top 5 clientes</h2>
-            <h3>Mais alertados</h3>
+        <div class="headerCard header-titulo-select">
+            <div class="titulo-subtitulo">
+                <h2>Top 5 clientes</h2>
+                <h3>Mais alertados</h3>
+            </div>
+
+            <select name="clientes" id="clientes-selects">
+                <option value="Clientes">Clientes</option>
+                <option value="PF">PF</option>
+                <option value="PJ">PJ</option>
+            </select>
         </div>
         <div class="bodyCard">
             <div class="table-select">
@@ -232,20 +242,25 @@
                     <li><ul class="table_row"><li><span>IBM</span></li><li><span></span>76 alertas</li><li><span>Risco alto</span></li></ul></li>
                     <li><ul class="table_row"><li><span>Rodolfo</span></li><li><span></span>52 alertas</li><li><span>Risco médio</span></li></ul></li>
                 </ul>
-                <select name="clientes" id="clientes-selects">
-                    <option value="Clientes">Clientes</option>
-                    <option value="PF">PF</option>
-                    <option value="PJ">PJ</option>
-                </select>
             </div>
             
 
         </div>
     </div>
     <div class="chartCard">
-        <div class="headerCard">
-            <h2>Top 5 produtos</h2>
-            <h3>Mais alertados</h3>
+        <div class="headerCard header-titulo-select">
+            <div class="titulo-subtitulo">
+                <h2>Top 5 produtos</h2>
+                <h3>Mais alertados</h3>
+            </div>
+
+            <select name="canais" id="canais">
+                <option value="canais">Canais</option>
+                <option value="canais">Digital</option>
+                <option value="canais">Agência</option>
+                <option value="canais">SAC</option>
+                <option value="canais">Correspondentes</option>
+            </select>
         </div>
         <div class="bodyCard">
             <div class="table-select">
@@ -257,13 +272,6 @@
                     <li><ul class="table_row"><li><span>Seguros</span></li><li><span>104 alertas</span></li><li><span>Risco alto</span></li></ul></li>
                     <li><ul class="table_row"><li><span>Empréstimos</span></li><li><span>93 alertas</span></li><li><span>Risco baixo</span></li></ul></li>
                 </ul>
-                <select name="canais" id="canais">
-                    <option value="canais">Canais</option>
-                    <option value="canais">Digital</option>
-                    <option value="canais">Agência</option>
-                    <option value="canais">SAC</option>
-                    <option value="canais">Correspondentes</option>
-                </select>
             </div>
         </div>
     </div>

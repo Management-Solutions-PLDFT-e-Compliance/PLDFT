@@ -246,9 +246,23 @@ body{
 }
 
 .logoTitulo{
-margin: 40px 0px 0px 40px;
-display: flex;
-align-items: center;
+  margin: 40px 0px 0px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.titulo-subtitulo {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-subtitulo h2 {
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.titulo-subtitulo h1 {
+  margin-bottom: .5rem
 }
 
 .tituloCompliance{

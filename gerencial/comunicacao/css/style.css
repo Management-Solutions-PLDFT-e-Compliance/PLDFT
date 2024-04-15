@@ -47,14 +47,14 @@
 }
 
 .comunicacaoFull select{
-    padding: 2px;
-    border: 2px solid lightgray;
+    padding: 1px;
+    border: 1px solid lightgray;
 }
 
 .comunicacaoFull .blocoSuperior .card1 select{
     padding: 2px;
-    border: 2px solid lightgray;
-    margin-bottom: 17px;
+    border: 1px solid lightgray;
+    margin-bottom: 30px;
 }
 
 .comunicacaoFull .blocoSuperior .card1 .conteinerContadores{
@@ -125,7 +125,7 @@
 .comunicacaoFull .blocoSuperior .card4 select{
     width: 40%;
     padding: 2px;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     margin-bottom: 30px;
 }
 
@@ -185,7 +185,7 @@
 .comunicacaoFull .blocoSuperior .card3 .conteudo .imagemCadeado{
     position: absolute;
     width: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .comunicacaoFull .blocoInferior .card2 .conteudo select{
@@ -219,8 +219,4 @@
 .comunicacaoFull .blocoInferior .card1 .conteinerGraf{
     width: 98%;
     margin-left: 10px;
-}
-
-.card1, .card2, .card3, .card4{
-    padding: 1em;
 }
