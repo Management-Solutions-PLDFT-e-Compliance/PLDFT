@@ -17,7 +17,7 @@ body{
     background-color: white;
     border-radius: 12px;
     border: 1px solid #dcdcdc;
-    
+    padding: 1rem;
 }
 
 .icones_contorno > img{
@@ -45,6 +45,7 @@ body{
     background-color: white;
     border-radius: 12px;
     border: 1px solid #dcdcdc;
+    padding: 1rem;
 }
 
 .item7{
@@ -52,6 +53,7 @@ body{
     background-color: white;
     border-radius: 12px;
     border: 1px solid #dcdcdc;
+    padding: 1rem;
 }
 
 .item8{
@@ -59,6 +61,7 @@ body{
     background-color: white;
     border-radius: 12px;
     border: 1px solid #dcdcdc;
+    padding: 1rem;
 }
 
 .item9{
@@ -66,6 +69,7 @@ body{
     background-color: white;
     border-radius: 12px;
     border: 1px solid #dcdcdc;
+    padding: 1rem;
 }
 
 .graficoSLA{
@@ -87,11 +91,14 @@ body{
 
 
 .titulo-item8 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding-bottom: 0px;
     padding-top: 0px;
+}
+
+.botaoProdutividade{
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 1509px;
 }
 
 .select-produtividade {
@@ -108,7 +115,7 @@ body{
 .horarioAtualizacao{
     position: absolute;
     right: 440px;
-    top: 465px;
+    top: 522px;
 }
 .select-produtividade{
     padding-left: 10px;

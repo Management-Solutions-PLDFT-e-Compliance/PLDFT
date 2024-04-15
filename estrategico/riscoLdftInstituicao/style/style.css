@@ -27,6 +27,7 @@ body{
     height: 100%;
     border-radius: 12px;
     border: 1px solid #dcdcdc;
+    padding: 1rem;
 }
 
 .item-header {
@@ -49,6 +50,7 @@ body{
     grid-column: span 2;
     border-radius: 12px;
     border: 1px solid #dcdcdc;
+    padding: 1rem;
 }
 
 .graficos_inferiores {
@@ -77,7 +79,7 @@ body{
 }
 
 .graficoEsq{
-    margin-left: 16px;
+    margin-left: 0px;
 }
 
 

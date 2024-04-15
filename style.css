@@ -334,13 +334,13 @@ width: 24px;
 }
 
 .titulos{
-  padding: 1rem;
   border-bottom: 1px solid lightgray;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
 .titulos > h2{
+  font-family: Calibri, sans-serif;
   font-size: 1.3em;
   color: #000;
   font-weight: 700;
