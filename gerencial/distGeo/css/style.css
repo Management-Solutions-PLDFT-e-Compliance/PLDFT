@@ -1,3 +1,7 @@
+.titulos > h2 {
+  margin-bottom: 0rem;
+}
+
 .distGeoFull{
     display: flex;
     position: absolute;
@@ -11,7 +15,7 @@
     height: 900px;
     width: 48%;
     border-radius: 10px;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .distGeoFull .bloco1{
