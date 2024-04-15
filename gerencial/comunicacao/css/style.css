@@ -40,12 +40,12 @@
 
 .comunicacaoFull select{
     padding: 2px;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
 }
 
 .comunicacaoFull .blocoSuperior .card1 select{
     padding: 2px;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     margin-bottom: 30px;
 }
 
@@ -116,7 +116,7 @@
 .comunicacaoFull .blocoSuperior .card4 select{
     width: 40%;
     padding: 2px;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     margin-bottom: 30px;
 }
 
@@ -175,7 +175,7 @@
 .comunicacaoFull .blocoSuperior .card3 .conteudo .imagemCadeado{
     position: absolute;
     width: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .comunicacaoFull .blocoInferior .card2 .conteudo select{
@@ -210,3 +210,4 @@
     width: 98%;
     margin-left: 10px;
 }
+

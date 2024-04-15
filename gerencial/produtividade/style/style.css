@@ -534,3 +534,13 @@ h3 {
     font-size: 1em;
     
 }
+
+.titulos-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+#grafico-distribuicao-senioridade-por-esteira {
+    max-width: 90%;
+    max-height: 350px;
+}

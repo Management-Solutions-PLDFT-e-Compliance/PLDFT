@@ -66,13 +66,15 @@ body{
     height: 100%;
 }
 
-.risco_style_inerente{
+.risco_style_inerente_1{
     width: 10%; 
-    height: 427px;
+    height: 430px;
 }
 
-
-
+.risco_style_inerente_2 {
+    width: 10%; 
+    height: 410px;
+}
 
 #inerente-chart {
     max-width: 90%;

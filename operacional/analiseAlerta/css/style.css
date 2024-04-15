@@ -318,3 +318,25 @@
     text-align: center;
     cursor: pointer;
   }
+
+
+#carrosel {
+    height: 450px;
+    overflow: hidden;
+}
+
+.titulos-carrosel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacao-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem
+}
+
+.titulo-abrir {
+    display: flex;
+    margin-bottom: 1rem;
+}

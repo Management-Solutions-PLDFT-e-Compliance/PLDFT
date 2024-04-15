@@ -91,7 +91,7 @@ h3 {
 #table-cliente, #table-produto {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
 }
 
 
@@ -158,6 +158,7 @@ h3 {
 .table-select {
     display: flex;
     align-items: center;
+    margin-left: 50px;
 }
 
 .table-select select{
@@ -376,3 +377,18 @@ h3 {
   /* Para o Firefox */
   /* Nota: O Firefox não suporta a personalização avançada da barra de rolagem via CSS */
   
+
+  .header-titulo-select {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .headerCard select{
+    padding: 2.5px 20px;
+    text-align: center;
+  }
+
+  .headerCard #canais{
+    padding: 2.5px 0px;
+  }
