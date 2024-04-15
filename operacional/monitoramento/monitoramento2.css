@@ -3,7 +3,7 @@
     height: 880px;
     display: flex;
     gap: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .ladoEsquerdo{
@@ -17,6 +17,7 @@
     background-color: white;
     border-radius: 10px;
     height: 100%;
+    padding: 1rem;
 }
 
 .ladoEsquerdo .card1 .conteudo{
@@ -161,6 +162,7 @@
     background-color: white;
     border-radius: 10px;
     width: 65%;
+    padding: 1rem;
 }
 
 .conteinerCardsAlerta2{
