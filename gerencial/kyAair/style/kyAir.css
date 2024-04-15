@@ -15,19 +15,19 @@ body{
 
 h4{
     font-family: sans-serif;
-    font-weight: bold;
-    font-size: 26px;
+    /* font-weight: bold; */
+    font-size: 20px;
 }
 
 h3{
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 52px;
+    font-size: 42px;
 }
 
 .clientes{
     position: fixed;
-    left: 145px;
+    left: 125px;
 }
 .fornecedores{
     position: fixed;
@@ -48,54 +48,54 @@ h3{
 
 .clientes2{
     position: fixed;
-    left: 145px;
-    top: 375px;
+    left: 135px;
+    top: 405px;
 }
 .fornecedores2{
     position: fixed;
-    left: 515px;
-    top: 375px;
+    left: 505px;
+    top: 405px;
 }
 .parceiros2{
     position: fixed;
-    left: 920px;
-    top: 375px;
+    left: 910px;
+    top: 405px;
 }
 .funcionarios2{
     position: fixed;
-    left: 1315px;
-    top: 375px;
+    left: 1305px;
+    top: 405px;
 }
 .produtos2{
     position: fixed;
-    left: 1670px;
-    top: 375px;
+    left: 1660px;
+    top: 405px;
 }
 
 .clientes3{
     position: fixed;
     left: 105px;
-    top: 550px;
+    top: 580px;
 }
 .fornecedores3{
     position: fixed;
     left: 465px;
-    top: 550px;
+    top: 580px;
 }
 .parceiros3{
     position: fixed;
     left: 865px;
-    top: 550px;
+    top: 580px;
 }
 .funcionarios3{
     position: fixed;
     left: 1270px;
-    top: 550px;
+    top: 580px;
 }
 .produtos3{
     position: fixed;
     left: 1625px;
-    top: 550px;
+    top: 580px;
 }
 
 .cardDistribuicao{
@@ -149,37 +149,37 @@ h3{
     max-height: 270px;
     max-width: 320px;
     position: fixed;
-    top: 265px;
-    left: 35px;
+    top: 295px;
+    left: 15px;
 
 }
 #doughnutChart2{
     max-height: 270px;
     max-width: 320px;
     position: fixed;
-    left: 400px;
-    top: 265px;
+    left: 380px;
+    top: 295px;
 }
 #doughnutChart3{
     max-height: 270px;
     max-width: 320px;
     position: fixed;
-    left: 800px;
-    top: 265px;
+    left: 780px;
+    top: 295px;
 }
 #doughnutChart4{
     max-height: 270px;
     max-width: 320px;
     position: fixed;
-    left: 1200px;
-    top: 265px;
+    left: 1180px;
+    top: 295px;
 }
 #doughnutChart5{
     max-height: 270px;
     max-width: 320px;
     position: fixed;
-    left: 1550px;
-    top: 265px;
+    left: 1530px;
+    top: 295px;
 
 }
 
@@ -275,47 +275,47 @@ input{
 .camposLabel1{
     position: fixed;
     right: 500px;
-    bottom: 315px;
+    bottom: 285px;
 }
 .camposLabel2{
     position: fixed;
     right: 500px;
-    bottom: 275px;
+    bottom: 245px;
 }
 .camposLabel3{
     position: fixed;
     right: 500px;
-    bottom: 235px;
+    bottom: 205px;
 }
 .camposLabel4{
     position: fixed;
     right: 500px;
-    bottom: 145px;
+    bottom: 115px;
 }
 .camposInput1{
     position: fixed;
     right: 130px;
-    bottom: 300px;
+    bottom: 270px;
 }
 .camposInput2{
     position: fixed;
     right: 130px;
-    bottom: 260px;
+    bottom: 230px;
 }
 .camposInput3{
     position: fixed;
     right: 130px;
-    bottom: 220px;
+    bottom: 190px;
 }
 .camposInput4{
     position: fixed;
     right: 130px;
-    bottom: 180px;
+    bottom: 150px;
 }
 .camposInput5{
     position: fixed;
     right: 130px;
-    bottom: 130px;
+    bottom: 100px;
 }
 
 .botaoPesquisa{
@@ -339,4 +339,11 @@ input{
     position: fixed;
     top: 620px;
     left: 350px;
+}
+
+#seletorTabela{
+    position: absolute;
+    left: 950px;
+    bottom: 325px;
+
 }
