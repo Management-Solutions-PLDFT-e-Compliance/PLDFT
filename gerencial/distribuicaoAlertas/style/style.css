@@ -504,3 +504,14 @@ h3 {
     display: flex;
     justify-content: center;
 }
+
+.titulos-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#atribuicao-aut{
+    font-size: 20px;
+    margin-left: 0;
+}
