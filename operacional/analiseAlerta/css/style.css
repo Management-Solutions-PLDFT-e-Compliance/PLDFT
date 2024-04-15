@@ -72,12 +72,15 @@
 .analiseAlertaFull .parteBaixo .gestao-documental{
     width: 55%;
     background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .analiseAlertaFull .parteBaixo .card3{
     width: 45%;
     padding: 1rem;
     background-color: #fff;
+    border-radius: 10px;
 }
 
 /*------------------estilização conteúdos---------------------- */
@@ -367,9 +370,4 @@
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1rem;
-}
-
-.titulos-anexar {
-    display: flex;
-    justify-content: space-between;
 }
