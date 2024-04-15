@@ -39,7 +39,7 @@ body{
     width: auto;
     height: auto;
     background-color: white;
-    padding: 1rem 0.625rem
+    padding: 0rem 0.625rem
 }
 
 .item3{
@@ -71,7 +71,14 @@ body{
     height: 427px;
 }
 
+#tituloImpactoAno{
+    border: none;
+    margin: 0;
+}
 
+.graficoEsq{
+    margin-left: 16px;
+}
 
 
 #inerente-chart {

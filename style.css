@@ -334,23 +334,25 @@ width: 24px;
 }
 
 .titulos{
-  padding: 10px;
+  padding: 1rem;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .titulos > h2{
+  font-size: 1.3em;
   color: #000;
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: bold;
-  margin-bottom: 6px;
+  font-weight: 700;
+  margin-bottom: 0.325rem;
 
 }
 
 .titulos > h5 {
-  color: #c2c2c2;
-  font-size: 18px;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #808080;
 }
 
 .selection-boxes{
