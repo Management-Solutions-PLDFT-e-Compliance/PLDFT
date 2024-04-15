@@ -423,6 +423,9 @@ h3 {
     font-weight: bold;
     color: #fff;
     align-self: flex-end;
+    position: absolute;
+    top: 1765px;
+    right: 50px;
 }
 
 .produtividade-analistas .bodyCard{
