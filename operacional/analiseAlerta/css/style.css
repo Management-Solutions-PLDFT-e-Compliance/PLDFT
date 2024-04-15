@@ -62,9 +62,22 @@
     padding: 1rem;
 }
 
+.analiseAlertaFull .parteBaixo .card3-gestao-documental{
+    width: 45%;
+    display: flex;
+    gap: 1.5rem;
+    background-color: lightgray;
+}
+
+.analiseAlertaFull .parteBaixo .gestao-documental{
+    width: 55%;
+    background-color: #fff;
+}
+
 .analiseAlertaFull .parteBaixo .card3{
     width: 45%;
     padding: 1rem;
+    background-color: #fff;
 }
 
 /*------------------estilização conteúdos---------------------- */
@@ -204,8 +217,7 @@
 }
 
 .analiseAlertaFull .parteBaixo .card3 .conteudo{
-    padding-top: 60px;
-    padding-left: 30px;
+    padding: 1rem;
 }
 
 .analiseAlertaFull .parteBaixo .card3 .conteudo .linha{
@@ -234,10 +246,9 @@
 
 .analiseAlertaFull .parteBaixo .card3 .conteudo .linha2{
     display: flex;
-    gap: 100px;
-    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
 }
-
 .analiseAlertaFull .parteBaixo .card3 .conteudo .linha2 .botao{
     display: flex;
     background-color: #304c7c;
@@ -345,4 +356,20 @@
 
 .titulos > h2 {
     margin-bottom: 0rem;
+}
+.coaf-assertividade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.like-dislike {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.titulos-anexar {
+    display: flex;
+    justify-content: space-between;
 }
