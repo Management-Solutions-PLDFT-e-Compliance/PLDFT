@@ -47,14 +47,12 @@
 }
 
 .comunicacaoFull select{
-    padding: 2px;
+    padding: 1px;
     border: 1px solid lightgray;
 }
 
 .comunicacaoFull .blocoSuperior .card1 select{
     padding: 2px;
-    border: 2px solid lightgray;
-    margin-bottom: 17px;
     border: 1px solid lightgray;
     margin-bottom: 30px;
 }
