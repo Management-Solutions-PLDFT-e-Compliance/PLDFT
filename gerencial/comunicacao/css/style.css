@@ -10,7 +10,15 @@
 }
 
 .comunicacaoFull *{
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.titulos > h2 {
+    font-family: Calibri, sans-serif;
+    font-size: 1.3em;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0rem;
 }
 
 .comunicacaoFull > div{
@@ -35,7 +43,7 @@
 }
 
 .comunicacaoFull .blocoSuperior .card1 .conteudo{
-    padding: 20px;
+    padding: 0px;
 }
 
 .comunicacaoFull select{
@@ -45,6 +53,8 @@
 
 .comunicacaoFull .blocoSuperior .card1 select{
     padding: 2px;
+    border: 2px solid lightgray;
+    margin-bottom: 17px;
     border: 1px solid lightgray;
     margin-bottom: 30px;
 }
@@ -77,7 +87,7 @@
 
 
 .comunicacaoFull .conteudo{
-    padding: 20px;
+    padding: 0px;
 }
 
 .comunicacaoFull .blocoSuperior .card2 .conteinerContadores{
@@ -105,7 +115,8 @@
 
 
 .comunicacaoFull .blocoSuperior .card4 .conteudo{
-    padding: 20px;
+    padding: 0px;
+    margin-top: -5px;
 }
 
 .comunicacaoFull .blocoSuperior .card4 .conteinerSelects{
@@ -145,13 +156,14 @@
 
 
 .comunicacaoFull .blocoSuperior .card3 .conteudo{
-    padding: 20px
+    padding: 0px;
+    margin-top: -5px
 }
 
 .comunicacaoFull .blocoSuperior .card3 .conteinerContadores{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     margin-left: 150px;
 }
 
@@ -210,4 +222,3 @@
     width: 98%;
     margin-left: 10px;
 }
-

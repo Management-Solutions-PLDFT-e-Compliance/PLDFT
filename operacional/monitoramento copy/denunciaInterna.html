@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento</title>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/chart.js">
-    </script>
-    <link rel="stylesheet" href="../../reset.css">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="denunciaInterna.css">
-    <link rel="stylesheet" href="../../home_style.css">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/chart.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoramento</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <link rel="stylesheet" href="../../reset.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="denunciaInterna.css">
+  <link rel="stylesheet" href="../../home_style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
 
 <body>
-    
-  <header class="header1" >
+
+  <header class="header1">
     <a href="../../home.html"><img src="../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
     <a href="../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
       <button class="botaoHeader botaoEstrategico botaoOff">
@@ -53,101 +52,104 @@
       </button>
     </a>
   </header>
-  
+
   <nav class="cabecario">
     <ul>
-        <li class="vazio"></li>
-        <li><a href="../monitoramento/monitoramento2.html"><span>Monitoramento</span></a></li>
-        <li class="vazio"></li>
-        <li><a href="../analiseAlerta/analiseAlerta.html"><span>Análise de alerta</span></a></li>
-        <li class="vazio"></li>
-        <li class="active"><span>Denúncias Internas</span></li>
-        <li class="vazio" style="width: 70%;"></li>
+      <li class="vazio"></li>
+      <li><a href="../monitoramento/monitoramento2.html"><span>Monitoramento</span></a></li>
+      <li class="vazio"></li>
+      <li><a href="../analiseAlerta/analiseAlerta.html"><span>Análise de alerta</span></a></li>
+      <li class="vazio"></li>
+      <li class="active"><span>Denúncias Internas</span></li>
+      <li class="vazio" style="width: 70%;"></li>
     </ul>
   </nav>
-    <div class="chartCard">
-      <div class="headerCard">
-        <h2>Denúncia  interna de risco PLDFT</h2>
-        <h3>Detalhes do report</h3>
-      </div>
-      <div class="bodyCard">
-        <div class="formatacao-form">
-          <div class="upload-container">
-            <div id="dragArea" class="drag-area">
-                <img src="icons/feather_upload-cloud.png" alt="">
-                <span class="title-upload">Select a file or drag and drop here</span>
-                <span class="subtitle-upload">JPG, PNG or PDF, file size no more than 10MB</span>
-                <label for="fileInput" class="upload-label">
-                  SELECT FILE
-                </label>
-                <input type="file" id="fileInput" class="file-input" multiple>
-                <div id="file-name"></div>
+  <div class="chartCard">
+    <div class="headerCard">
+      <h2>Denúncia interna de risco PLDFT</h2>
+      <h3>Detalhes do report</h3>
+    </div>
+    <div class="bodyCard">
+      <div class="formatacao-form">
+        <div class="upload-container">
+          <div id="dragArea" class="drag-area">
+            <img src="icons/feather_upload-cloud.png" alt="">
+            <span class="title-upload">Select a file or drag and drop here</span>
+            <span class="subtitle-upload">JPG, PNG or PDF, file size no more than 10MB</span>
+            <label for="fileInput" class="upload-label">
+              SELECT FILE
+            </label>
+            <input type="file" id="fileInput" class="file-input" multiple>
+            <div id="file-name"></div>
+          </div>
+        </div>
+        <form action="">
+          <div class="form-esq">
+            <p class="title-form">Informações do incidente:</p>
+
+            <div class="label-input">
+              <label for="">Data da identificação do incidente:</label>
+              <input type="date" placeholder="Selecione uma data" id="data-da-identificação-do-incidente">
+            </div>
+            <div class="label-input">
+              <label for="">Data do incidente</label>
+              <input type="date" placeholder="Selecione uma data" id="data-do-incidente">
+            </div>
+            <div class="label-input">
+              <label for="">Localização:</label>
+              <input type="text" placeholder="Selecione uma Localização" id="localização">
+            </div>
+            <div class="label-input">
+              <label for="">Tipo de Cliente:</label>
+              <input type="text" placeholder="Digite o tipo de cliente" id="tipo-de-cliente">
+            </div>
+            <div class="label-input">
+              <label for="">Nome do Cliente:</label>
+              <input type="text" placeholder="Digite o nome do cliente" id="nome-do-cliente">
+            </div>
+            <div class="label-input">
+              <label for="">Transações envolvidas:</label>
+              <input type="text" placeholder="Digite as transações envolvidas" id="transacoes-envolvidas" />
+            </div>
+
+            <div class="label-input">
+              <label for="">Valores transacionados:</label>
+              <textarea placeholder=" Digite os valores que foram transacionados no incidente"
+                id="valores-transacionados"></textarea>
             </div>
           </div>
-          <form action="">
-            <div class="form-esq">
-              <p class="title-form">Informações do incidente:</p>
 
-              <div class="label-input">
-                <label for="">Data da identificação do incidente:</label>
-                <input type="date" placeholder="Selecione uma data" id="data-da-identificação-do-incidente">
-              </div>
-              <div class="label-input">
-                <label for="">Data do incidente</label>
-                <input type="date" placeholder="Selecione uma data" id="data-do-incidente">
-              </div>
-              <div class="label-input">
-                <label for="">Localização:</label>
-                <input type="text" placeholder="Selecione uma Localização" id="localização">
-              </div>
-              <div class="label-input">
-                <label for="">Tipo de Cliente:</label>
-                <input type="text" placeholder="Digite o tipo de cliente" id="tipo-de-cliente">
-              </div>
-              <div class="label-input">
-                <label for="">Nome do Cliente:</label>
-                <input type="text" placeholder="Digite o nome do cliente" id="nome-do-cliente">
-              </div>
-              <div class="label-input">
-                <label for="">Transações envolvidas:</label>
-                <input type="text"  placeholder="Digite as transações envolvidas" id="transacoes-envolvidas"/>
-              </div>
-              <div class="label-input">
-                <label for="">Motivo da denúncia:</label>
-                <textarea placeholder=" Digite o motivo da denúncia" id="motivo-da-denuncia"></textarea>
-              </div>
-              <div class="label-input">
-                <label for="">Valores transacionados:</label>
-                <textarea placeholder=" Digite os valores que foram transacionados no incidente" id="valores-transacionados"></textarea>
-              </div>
-            </div>
+          <div class="form-dir">
+            <p class="title-form">Dados do funcionário responsável pela denúncia:</p>
 
-            <div class="form-dir">
-              <p class="title-form">Dados do funcionário responsável pela denúncia:</p>
-              
-              <div class="label-input">
-                <label for="">Nome do Funcionário: </label>
-                <input type="text" placeholder="Digite o nome do funcionário" id="nome-do-funcionario">
-              </div>
-              <div class="label-input">
-                <label for="">Código do Funcionário: </label>
-                <input type="text" placeholder="Digite o codigo do funcionário" id="codigo-do-funcionario">
-              </div>
-              <div class="label-input">
-                <label for="">E-mail do Funcionário: </label>
-                <input type="text" placeholder="Digite o email do funcionário" id="email-do-funcionario">
-              </div>
+            <div class="label-input">
+              <label for="">Nome do Funcionário: </label>
+              <input type="text" placeholder="Digite o nome do funcionário" id="nome-do-funcionario">
             </div>
-          
-          </form>
-          <button class="btn-gerar-caso" id="gerar-caso"><span>Gerar caso</span><img src="./icons/megaphone.png" alt=""></button>
-        </div>
+            <div class="label-input">
+              <label for="">Código do Funcionário: </label>
+              <input type="text" placeholder="Digite o codigo do funcionário" id="codigo-do-funcionario">
+            </div>
+            <div class="label-input">
+              <label for="">E-mail do Funcionário: </label>
+              <input type="text" placeholder="Digite o email do funcionário" id="email-do-funcionario">
+            </div>
+            <div class="label-input">
+              <label for="">Motivo da denúncia:</label>
+              <textarea placeholder=" Digite o motivo da denúncia" id="motivo-da-denuncia"></textarea>
+            </div>
+          </div>
+        </form>
+        <button class="btn-gerar-caso" id="gerar-caso"><span>Gerar caso</span><img src="./icons/megaphone.png"
+            alt=""></button>
       </div>
-
     </div>
-    <script src="../../script.js"></script>
-    <script src="./javascript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+
+  </div>
+  <script src="../../script.js"></script>
+  <script src="./javascript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
 </body>
+
 </html>

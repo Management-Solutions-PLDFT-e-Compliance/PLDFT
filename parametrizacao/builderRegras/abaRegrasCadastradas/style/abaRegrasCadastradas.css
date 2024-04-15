@@ -1,6 +1,6 @@
 #selects{
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .selection-boxes{
@@ -10,18 +10,18 @@
     height: 40px;
     border: 1px solid lightgray;
     margin-left: 10px;
+    border-radius: 12px;
 }
 
 #regras_atuais{
     font-size: x-large;
     background-color: white;
     width: auto;
-    margin-top: 30px;
     margin-left: 15px;
     margin-right: 15px;
     border: 5px solid white;
     border-radius: 12px;
-    height: 730px;
+    height: 785px;
 }
 
 .tabelaRegras{

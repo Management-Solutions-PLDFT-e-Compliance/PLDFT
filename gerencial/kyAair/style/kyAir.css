@@ -10,6 +10,7 @@ body{
     margin: 19.2px;
     position: fixed;
     top: 13vh;
+    padding: 1rem;
 }
 
 h4{
@@ -106,6 +107,7 @@ h3{
     margin: 20px;
     position: fixed;
     top: 61vh;
+    padding: 1rem;
 }
 
 .cardHistorico{
@@ -118,9 +120,10 @@ h3{
     position: fixed;
     top: 61vh;
     left: 61%;
+    padding: 1rem;
 }
 .titulos {
-    padding: 10px;
+    padding: 0px;
 }
 .titulos > h2 {
     color: #000;
