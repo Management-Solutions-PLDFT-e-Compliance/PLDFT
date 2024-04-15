@@ -6,7 +6,13 @@
     height: 900px;
     left: 35px;
     border-radius: 10px;
+    padding: 1rem;
 }
+
+.titulos > h2 {
+    margin-bottom: 0rem;
+}
+
 /* .redeTransacFull select{
     position: absolute;
     top: 40px;
@@ -149,8 +155,8 @@
 .redeTransacFull > a{
     text-decoration: none;
     position: fixed;
-    margin-top: -57px;
-    margin-left: 1719px;
+    margin-top: -84px;
+    margin-left: 1706px;
 }
 
 
