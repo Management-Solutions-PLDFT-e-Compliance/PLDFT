@@ -387,12 +387,15 @@
                 <h2>Gestão documental</h2>
                 <h5>Controle interno</h5>
               </div>  
-              <a href="./paginaRelatDuvida.html"><button class="botao">Anexar</button></a>
+              <!-- <input type="file" name="files[]" id="files" multiple style="display: none;"> -->
+              <!-- <a href="./paginaRelatDuvida.html"><button class="botao">Anexar</button></a> -->
               <!-- <input type="text" name="" id=""> -->
+              <input type="file" id="file-input" multiple  onchange="uploadFiles()">
+              <button onclick="document.getElementById('file-input').click()">Selecione os Arquivos</button>
             </div>
             
             <div class="conteudo">
-              
+              <ul id="uploaded-files"></ul>
             </div>
         </div>  
           <div class="card3">
@@ -656,5 +659,6 @@
     <script src="../../script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="./js/carrosel-alerta-monitoramento.js"></script>
+    <script src="./js/uploadArquivo.js"></script>
 </body>
 </html>

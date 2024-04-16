@@ -24,6 +24,11 @@ header {
     padding: 0 2rem; 
 } */
 
+#dashboard{
+    display: flex;
+    justify-content: center;
+}
+
 /* CARDS */
 .chartCard {
     background-color: #fff;
@@ -32,12 +37,14 @@ header {
     border-radius: 10px;
     height: 85vh;
     padding: 1rem;
+    width: 98%;
 }
 
 .headerCard {
     border-bottom: 1px solid #000;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    
 }
 
 .bodyCard {
@@ -123,7 +130,7 @@ h3 {
 }
 
 .lista-item {
-    width: 14.28%;
+    width: 13.9%;
     border-radius: 10px;
     border: 1px solid lightgray;
     padding: 1rem;

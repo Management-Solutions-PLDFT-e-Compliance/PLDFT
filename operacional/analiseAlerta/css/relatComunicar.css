@@ -5,6 +5,7 @@
     left: 20px;
     background-color: white;
     border-radius: 10px;
+    padding: 1rem;
 }
 
 .relatComunicarFull *{
@@ -12,7 +13,6 @@
 }
 
 .relatComunicarFull .conteudo{
-    padding: 20px;
     margin-top: 20px;
 }
 
@@ -99,8 +99,8 @@
 .relatComunicarFull > a{
     text-decoration: none;
     position: absolute;
-    margin-top: -56px;
-    margin-left: 1747px;
+    margin-top: -87px;
+    margin-left: 1723px;
 }
 
 .botoesEditarSalvar{
@@ -123,11 +123,12 @@
 
 .relatorioInterno{
     position: absolute;
-    top: 310px;
+    top: 360px;
     width: 1870px;
     left: 20px;
     background-color: white;
     border-radius: 10px;
+    padding: 1rem;
 }
 
 
@@ -136,6 +137,17 @@
 }
 
 .relatorioInterno .conteudo{
-    padding: 20px;
     margin-top: 20px;
+}
+
+.titulos {
+    font-size: 16px;
+}
+
+.titulos > h2 {
+    margin-bottom: 0rem;
+}
+
+.expandeBtn{
+    border: none;
 }

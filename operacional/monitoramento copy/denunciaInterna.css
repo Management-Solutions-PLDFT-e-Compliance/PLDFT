@@ -30,7 +30,7 @@ body {
     display: none;
 }
 
-h2 {
+/* h2 {
     font-size: 1.3em;
     color: #000;
     font-weight: 700;
@@ -42,7 +42,7 @@ h3 {
     font-size: 1.3em;
     font-weight: 600;
     color: 	#808080;
-}
+} */
 
 .chartCard {
     background-color: #fff;
@@ -53,11 +53,11 @@ h3 {
     margin: 0.5rem;
 }
 
-.headerCard {
+/* .headerCard {
     border-bottom: 1px solid lightgray;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-}
+} */
 
 .bodyCard {
     flex-grow: 1;
