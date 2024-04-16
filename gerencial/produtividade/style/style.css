@@ -416,13 +416,19 @@ h3 {
 }
 
 #btn-abrir-produtividade {
-    padding: .75rem 2rem;
+    Display: flex;
+	font-family: sans-serif;
+	font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #304c7c;
+    align-items: center;
+	gap: 10px;
     border: none;
-    background-color: #2e4a7e;
-    font-size: 1.2em;
     font-weight: bold;
     color: #fff;
-    align-self: flex-end;
     position: absolute;
     top: 1765px;
     right: 50px;
@@ -556,7 +562,17 @@ h3 {
 }
 
 #fechar-produtividade-dos-analistas{
+    Display: flex;
+	font-family: sans-serif;
+	font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #304c7c;
+	Gap: 10px;
+	align-items: center;
     position: absolute;
-    margin-left: 1780px;
-    margin-top: -70px;
+    margin-left: 1752px;
+    margin-top: -75px;
 }
