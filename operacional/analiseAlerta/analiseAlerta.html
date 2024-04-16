@@ -66,7 +66,7 @@
                 </h2>
                 <h5>Cadastro</h5>
             </div>
-            <hr>
+            
             <div class="conteudo">
                 <div class="col1">
                     <p><strong>Tipo de cliente: Pessoa Física</strong></p>
@@ -174,8 +174,8 @@
             </div>
         </div>
         <div class="card2">
-            <div class="titulos titulos-carrosel">
-              <div class="titulo-subtiulo">
+            <div class="titulos-carrosel">
+              <div class="titulo-subtiulo titulos">
                 <h2>Informações sobre o alerta e o monitoramento
                 </h2>
                 <h5>Alerta</h5>
@@ -186,7 +186,7 @@
                 <img src="./icons/seta-direita.png" id="prox" alt="">
               </div>
             </div>
-            <hr>
+            
             <div id="carrosel">
               <div class="conteudo">
                   <div class="col1">
@@ -342,7 +342,7 @@
                 </h2>
                 <h5>Volume atual</h5>
             </div>
-            <hr>
+            
             <!-- <a href="./informacaoesTransac.html"><img src="./icons/lupaPreta.png" alt="" class="lupaPreta"></a> -->
             <div class="conteudo">
                 <div class="linha">
@@ -373,49 +373,62 @@
         </div>
         <div class="card2">
             <div class="titulos">
-                <h2>Rede Transacional
+                <h2>Rede transacional
                 </h2>
                 <h5>Grafos</h5>
             </div>
-            <hr>
+            
             <div class="conteudo"><a href="./redeTransac.html"><img src="./assets/imgRedeTransac.svg" alt="" class="imgRedeTransac"></a></div>
         </div>
-        <div class="card3">
-            <div class="titulos">
-                <h2>Sugestão de comunicação
-                </h2>
-                <h5>Parecer IA  </h5>
-                <div class="">
-                  <input type="file" id="fileInput" style="display:none;" multiple>
-                  <button id="sendEvidenceBtn" class="botaoUploadEvidencia">Enviar evidências</button>
-                </div>  
-                
+        <div class="card3-gestao-documental">
+          <div class="gestao-documental">
+            <div class="titulos-anexar">
+              <div class=" titulos">
+                <h2>Gestão documental</h2>
+                <h5>Controle interno</h5>
+              </div>  
+              <a href="./paginaRelatDuvida.html"><button class="botao">Anexar</button></a>
+              <!-- <input type="text" name="" id=""> -->
             </div>
-            <hr>
+            
             <div class="conteudo">
-                <div class="linha">
-                    <p>Sugestão: <span>Comunicar ao COAF</span></p>
-                    <p class="assertividade">Assertividade: <span class="porcentagem">97%</span></p>
-                </div>
-                <div class="linha2">
-                    <a href="./paginaRelatDuvida.html"><button class="botao"><img src="./icons/interrogacao.png" alt="" width="30px" height="30px">Dúvida</button></a>
-                    <a href="./paginaRelatFalsoPositivo.html"><button class="botao botaoFalsoPos"><img src="./icons/fechar.png" alt="" width="18px" height="18px">Falso Positivo</button></a>
-                    <a href="./paginaRelatComunicar.html"><button class="botao"><img src="./icons/checked.png" alt="" width="30px" height="30px">Comunicar</button></a>
-                </div>
+              
             </div>
         </div>  
-    </div>
+          <div class="card3">
+              <div class="titulos">
+                <h2>Sugestão de comunicação</h2>
+                <h5>Parecer IA</h5> 
+              </div>
+              <div class="conteudo">
+                   <div class="coaf-assertividade">
+                      <p>Sugestão: <span>Comunicar ao COAF</span></p>
+                      <p class="assertividade">Assertividade: <span class="porcentagem">97%</span></p>
+                      <div class="like-dislike">
+                          <img src="./icons/like.png" alt="">
+                          <img src="./icons/dislike.png" alt="">
+                      </div>
+                  </div>
+                 <div class="linha2">
+                      <a href="./paginaRelatDuvida.html"><button class="botao"><img src="./icons/interrogacao.png" alt="" width="30px" height="30px">Dúvida</button></a>
+                      <a href="./paginaRelatFalsoPositivo.html"><button class="botao botaoFalsoPos"><img src="./icons/fechar.png" alt="" width="18px" height="18px">Falso Positivo</button></a>
+                      <a href="./paginaRelatComunicar.html"><button class="botao"><img src="./icons/checked.png" alt="" width="30px" height="30px">Comunicar</button></a>
+                  </div>
+              </div>
+          </div>  
+      </div>
+        </div>
     <div class="infoTransacFull">
         <div class="parteBaixo">
             <div class="card1">
-                <div class="titulos titulo-abrir">
-                  <div class="titulo-subtitulo">
+                <div class="titulo-abrir">
+                  <div class="titulos">
                     <h2>Movimentação</h2>
                     <h5>Detalhe</h5>
                   </div>
                   <button class="botao">Abrir</button>
                 </div>
-                <hr>
+                
                 <!-- <a href="./analiseAlerta.html"><button class="botaoVoltar"><img src="./icons/voltar.png" alt="" width="30px" height="30px">Voltar</button></a> -->
                 <div class="tableFixHead10Col">
                     <table class="table10Col">
@@ -578,7 +591,7 @@
                   </h2>
                   <h5>Movimentação</h5>
               </div>
-              <hr>
+              
               <div class="conteudo">
                   <div class="col1">
                       <p>Filtro:</p>
@@ -619,7 +632,7 @@
                   </h2>
                   <h5>Quantidade de operações e montantes envolvidos (bi reais)</h5>
               </div>
-              <hr>
+              
               <div class="conteinerGrafico">
                 <canvas id="volumeTransacoes"></canvas>
                 <div id="legenda-volume-transacoes"></div>
