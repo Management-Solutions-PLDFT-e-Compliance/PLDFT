@@ -66,12 +66,12 @@
 }
 
 .analiseAlertaFull .parteBaixo .gestao-documental{
-    width: 55%;
+    width: 35%;
     background-color: #fff;
 }
 
 .analiseAlertaFull .parteBaixo .card3{
-    width: 45%;
+    width: 65%;
     background-color: #fff;
 }
 
@@ -367,4 +367,13 @@
 .titulos-anexar {
     display: flex;
     justify-content: space-between;
+}
+
+#file-input {
+    display: none;
+}
+
+#uploaded-files {
+    list-style: none;
+    padding: 1rem;
 }
