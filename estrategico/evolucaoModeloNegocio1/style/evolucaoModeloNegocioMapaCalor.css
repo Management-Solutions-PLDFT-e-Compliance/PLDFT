@@ -316,11 +316,14 @@ h3 {
 }
 
 .btn-download-tabela {
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+    font-size: 18px;
     align-self: flex-end;
-    border-radius: 5px;
-    width: fit-content;
-    padding: .5rem 1rem;
-    background-color: #2e4a7e;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #304c7c;
     display: none;
 }
 
