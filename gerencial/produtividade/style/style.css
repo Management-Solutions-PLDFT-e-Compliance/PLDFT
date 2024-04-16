@@ -547,3 +547,16 @@ h3 {
     max-width: 90%;
     max-height: 350px;
 }
+
+#select-distribuicao-senioridade{
+    position: absolute;
+    margin-left: 768px;
+    margin-top: 7px;
+    width: 120px;
+}
+
+#fechar-produtividade-dos-analistas{
+    position: absolute;
+    margin-left: 1780px;
+    margin-top: -70px;
+}
