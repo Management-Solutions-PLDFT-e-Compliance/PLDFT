@@ -70,9 +70,9 @@
 .infoTransacFull .parteCima .card1 .botao{
     display: flex;
     background-color: #304c7c;
-    padding: 7px 12px;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
     align-items: center;
@@ -80,11 +80,10 @@
     color: white;
     font-size: 18px;
     font-weight: bold;
-    width: 150px;
-    gap: 5px;
-    height: 35px;
-    margin-left: 475px;
-    margin-top: -20px;
+    font-family: sans-serif;
+    gap: 10px;
+    margin-left: 446px;
+    margin-top: -320px;
 }
 
 .infoTransacFull .parteCima .card2{
@@ -122,9 +121,10 @@
 .infoTransacFull .parteBaixo .card1 .botao{
     display: flex;
     background-color: #304c7c;
-    padding: 7px 12px;
+    font-family: sans-serif;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
     align-items: center;
@@ -132,13 +132,10 @@
     color: white;
     font-size: 18px;
     font-weight: bold;
-    width: 150px;
-    gap: 5px;
-    height: 35px;
+    gap: 10px;
     position: absolute;
-    margin-left: 1582px;
-    margin-top: -65px;
-    margin-bottom: 0px;
+    margin-left: 1635px;
+    margin-top: -77px;
 }
 
 .infoTransacFull .parteBaixo .card1 .botaoVoltar{

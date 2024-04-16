@@ -138,7 +138,10 @@
                 </div>
                 
                 <div class="col3">     
-                  <button class="DownloadEvidencia" onclick="downloadPDF('../analiseAlerta/assets/Formulário KYC.pdf')">Download formulário KYC</button>
+                  <button class="DownloadEvidencia" onclick="downloadPDF('../analiseAlerta/assets/Formulário KYC.pdf')">
+                    <img src="./icons/download-branco.svg" alt="">
+                    <span style="font-size: 18px;">Download formulário KYC</span>
+                  </button>
 
                     <script>
                     function downloadPDF(url) {
@@ -383,15 +386,17 @@
         <div class="card3-gestao-documental">
           <div class="gestao-documental">
             <div class="titulos-anexar">
-              <div class=" titulos">
+              <div class="titulos">
                 <h2>Gestão documental</h2>
                 <h5>Controle interno</h5>
-              </div>  
+              </div>
               <!-- <input type="file" name="files[]" id="files" multiple style="display: none;"> -->
               <!-- <a href="./paginaRelatDuvida.html"><button class="botao">Anexar</button></a> -->
               <!-- <input type="text" name="" id=""> -->
               <input type="file" id="file-input" multiple  onchange="uploadFiles()">
-              <button onclick="document.getElementById('file-input').click()">Selecione os Arquivos</button>
+              <button class="botaoGestDoc" onclick="document.getElementById('file-input').click()">
+                <img src="./icons/upload.png" width="30px" height="30px" alt="">
+              </button>
             </div>
             
             <div class="conteudo">
@@ -413,9 +418,9 @@
                       </div>
                   </div>
                  <div class="linha2">
-                      <a href="./paginaRelatDuvida.html"><button class="botao"><img src="./icons/interrogacao.png" alt="" width="30px" height="30px">Dúvida</button></a>
-                      <a href="./paginaRelatFalsoPositivo.html"><button class="botao botaoFalsoPos"><img src="./icons/fechar.png" alt="" width="18px" height="18px">Falso Positivo</button></a>
-                      <a href="./paginaRelatComunicar.html"><button class="botao"><img src="./icons/checked.png" alt="" width="30px" height="30px">Comunicar</button></a>
+                      <a href="./paginaRelatDuvida.html"><button class="botao"><img src="./icons/interrogacao.png" alt="" width="30px" height="30px"><span>Dúvida</span></button></a>
+                      <a href="./paginaRelatFalsoPositivo.html"><button class="botao botaoFalsoPos"><img src="./icons/fechar.png" alt="" width="18px" height="18px"><span>Falso Positivo</span></button></a>
+                      <a href="./paginaRelatComunicar.html"><button class="botao"><img src="./icons/checked.png" alt="" width="30px" height="30px"><span>Comunicar</span></button></a>
                   </div>
               </div>
           </div>  
@@ -429,7 +434,10 @@
                     <h2>Movimentação</h2>
                     <h5>Detalhe</h5>
                   </div>
-                  <button class="botao">Abrir</button>
+                  <button class="botao">
+                    <img src="./icons/abrir.png" width="30px" height="30px" alt="">
+                    <span style="font-size: 18px;">Abrir</span>
+                  </button>
                 </div>
                 
                 <!-- <a href="./analiseAlerta.html"><button class="botaoVoltar"><img src="./icons/voltar.png" alt="" width="30px" height="30px">Voltar</button></a> -->
@@ -627,7 +635,10 @@
                       </div>
                   </div>
               </div>
-              <button class="botao">Pesquisar</button>
+              <button class="botao">
+                <img src="./icons/lupa.png" width="30px" height="30px">
+                <span style="font-size: 18px;">Pesquisar</span>
+              </button>
           </div>
           <div class="card2">
               <div class="titulos">
