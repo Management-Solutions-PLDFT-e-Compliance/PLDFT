@@ -344,10 +344,19 @@ h3 {
 
 .atribuicao-automatica-manutencao .table_row li:nth-child(4){
     display: flex;
-    justify-content: space-between;
-    width: 15%;
-    background-color: #081c4c;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 18px;
+	font-weight: bold;
+    gap: 10px;
+    box-shadow: 2px 2px 2px #888888;
+    border-radius: 12px;
+    background-color: #304c7c;;
     color: #fff;
+    border: none;
+    width: 15%;
+    height: 42px;
+    
 }
 .atribuicao-automatica-manutencao .table_row li:nth-child(3) img{
     height: 15px;
@@ -444,8 +453,8 @@ h3 {
 .tela-abrir button{
     border: none;
     padding: .5rem 1rem;
-    border-radius: 5px;
-    background-color: #2e4a7e;
+    border-radius: 12px;
+    background-color: #304c7c;;
     color: #fff;
 }
 
@@ -498,11 +507,18 @@ h3 {
 
 .tela-abrir .table_row li:nth-child(5){
     width: 10%;
-    background-color: #2e4a7e;
+    background-color: #304c7c;;
     color: #fff;
     font-weight: bold;
     display: flex;
+    align-items: center;
     justify-content: center;
+    font-family: sans-serif;
+    box-shadow: 2px 2px 2px #888888;
+    border-radius: 12px;
+    font-size: 18px;
+    gap: 10px;
+    border: none;
 }
 
 .titulos-select {
@@ -514,4 +530,16 @@ h3 {
 #atribuicao-aut{
     font-size: 20px;
     margin-left: 0;
+}
+
+#fechar-alertas-distribuicao-pendentes{
+    Display: flex;
+	font-family: sans-serif;
+	font-weight: bold;
+    box-shadow: 2px 2px 2px #888888;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #304c7c;
+	Gap: 10px;
 }
