@@ -1,188 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="../../../style.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+  <title>Document</title>
 </head>
+
 <body>
-    <header class="header1" >
-        <a href="../../../home.html"><img src="../../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
-        <a href="../../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
-          <button class="botaoHeader botaoEstrategico botaoOff">
-            <img src="../../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
-            <p>Estratégico</p>
-          </button>
-        </a>
-        <a href="../../../gerencial/home.html" class="linksBotoes">
-          <button class="botaoHeader botaoGerencial botaoOff">
-            <img src="../../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
-            <p>Gerencial</p>
-          </button>
-        </a>
-        <a href="../../../operacional/home.html" class="linksBotoes">
-          <button class="botaoHeader botaoOperacional botaoOff">
-            <img src="../../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
-            <p>Operacional</p>
-          </button>
-        </a>
-        <a href="../../home.html" class="linksBotoes">
-          <button class="botaoHeader botaoParams botaoOn botaoOnParams">
-            <img src="../../../assets/icons/parametrizacaoOn.png" alt="Icone Atendimento">
-            <p>Parametrização</p>
-          </button>
-        </a>
-        <h1 class="a comprimentos">Olá, Usuário! </h1>
-        <a href="../../../index.html" style="position: absolute; top: 29px;">
-          <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
-            <img src="../../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
-            SAIR
-          </button>
-        </a>
-    </header>
-    <nav class="cabecario">
-        <ul>
-            <li class="vazio"></li>
-            <li><a href="../../calculoRiscoLDFT/calculoRiscoLDFTHome.html"><span>Cálculo do risco LDFT</span></a></li>
-            <li class="vazio"></li>
-            <li class="active"><span>Builder de regras</span></li>
-            <li class="vazio" style="width: 70%;"></li>
-        </ul>
-    </nav>
-    <nav class="subCabecario">
-        <ul>
-            <li class="vazio"></li>
-            <li><a href="../abaRegrasCadastradas/abaRegrasCadastradas.html"><span>Regras cadastradas</span></a></li>
-            <li class="vazio"></li>
-            <li class="active"><a href="" style="text-decoration: none; height: 100%; width:100%"><span>Nova Regra Monitoramento</span></a></li>
-            <li class="vazio" style="width: 70%;"></li>
-        </ul>
-    </nav>
-    <div class="cardNovaRegra">
-      <div class="restaurarFlex">
-        <div>
-            <h3>Nova regra de monitoramento transacional</h3>
-        </div>
+  <header class="header1">
+    <a href="../../../home.html"><img src="../../../assets/icons/logoMS.png" alt="MSSolutions" class="MSlogoHome"></a>
+    <a href="../../../estrategico/home.html" class="linksBotoes primeiroLinkBotao">
+      <button class="botaoHeader botaoEstrategico botaoOff">
+        <img src="../../../assets/icons/estrategicoIconOff.svg" alt="Icone Atendimento">
+        <p>Estratégico</p>
+      </button>
+    </a>
+    <a href="../../../gerencial/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoGerencial botaoOff">
+        <img src="../../../assets/icons/gerencialOff.png" alt="Icone Atendimento">
+        <p>Gerencial</p>
+      </button>
+    </a>
+    <a href="../../../operacional/home.html" class="linksBotoes">
+      <button class="botaoHeader botaoOperacional botaoOff">
+        <img src="../../../assets/icons/operacionalOff.png" alt="Icone Atendimento">
+        <p>Operacional</p>
+      </button>
+    </a>
+    <a href="../../home.html" class="linksBotoes">
+      <button class="botaoHeader botaoParams botaoOn botaoOnParams">
+        <img src="../../../assets/icons/parametrizacaoOn.png" alt="Icone Atendimento">
+        <p>Parametrização</p>
+      </button>
+    </a>
+    <h1 class="a comprimentos">Olá, Usuário! </h1>
+    <a href="../../../index.html" style="position: absolute; top: 29px;">
+      <button class="botaoHeader botaoSair botaoSairHeaderPrincipal botaoProCantoDireito">
+        <img src="../../../assets/icons/exitIcon.png" alt="Descrição da Imagem" height="25px" width="25px">
+        SAIR
+      </button>
+    </a>
+  </header>
+  <nav class="cabecario">
+    <ul>
+      <li class="vazio"></li>
+      <li><a href="../../calculoRiscoLDFT/calculoRiscoLDFTHome.html"><span>Cálculo do risco LDFT</span></a></li>
+      <li class="vazio"></li>
+      <li class="active"><span>Builder de regras</span></li>
+      <li class="vazio" style="width: 70%;"></li>
+    </ul>
+  </nav>
+  <nav class="subCabecario">
+    <ul>
+      <li class="vazio"></li>
+      <li><a href="../abaRegrasCadastradas/abaRegrasCadastradas.html"><span>Regras cadastradas</span></a></li>
+      <li class="vazio"></li>
+      <li class="active"><a href="" style="text-decoration: none; height: 100%; width:100%"><span>Nova Regra
+            Monitoramento</span></a></li>
+      <li class="vazio" style="width: 70%;"></li>
+    </ul>
+  </nav>
+
+  <div id="pag_parametrizar" style="display: block;">
+    <div id="conteudo_parametrizar">
+      <div id="Parametrizacao_de_regra">
+
+        <p style="font-size: 1.1em; font-family: sans-serif; font-weight: bold; margin: 20px 10px 10px 10px;">
+          Parametros de regra de monitoramento transacional</p>
+
         <div class="titulos">
-            <h2>Histórico  por perfil</h2>
-            <hr>
+          <h2>Dados e Parâmetros</h2>
+
         </div>
-        <form action="/action_page.php" method="post">
-          <p>
-            <label for="codigo_regra" id="label_codigo_regra">Código da Regra:</label>
-            <input type="text" id="codigo_regra" name="codigo_regra" value="" readonly>
-        </p>
-        <p>
-            <label for="nome_regra">Nome da Regra:</label>
-            <input type="text" id="nome_regra" name="nome_regra" value="" required>
-        </p>
-            <p>
-              <label for="periodo_transacional">Período transacional:</label>
-              <select id="periodo_transacional" name="periodo_transacional">
-                <option value="Diário"></option>
-                <option value="Diário">Diário</option>
-                <option value="Semanal">Semanal</option>
-                <option value="Mensal">Mensal</option>
-                <option value="Anual">Anual</option>
-              </select>
-            </p>
-            <p>
-              <label for="produto_servico">Produto/ Serviço:</label>
-              <select id="produto_servico" name="produto_servico">
-                <option value="Conta corrente"></option>
-                <option value="Conta corrente">Conta corrente</option>
-                <option value="Cartão de crédito">Cartão de crédito</option>
-                <option value="Cartão de débito">Cartão de débito</option>
-                <option value="Empréstimo">Empréstimo</option>
-              </select>
-            </p>
-            <p>
-              <label for="rating_risco_cliente">Rating risco Cliente:</label>
-              <select id="rating_risco_cliente" name="rating_risco_cliente">
-                <option value="Baixo"></option>
-                <option value="Baixo">Baixo</option>
-                <option value="Médio">Médio</option>
-                <option value="Alto">Alto</option>
-              </select>
-            </p>
-            <p>
-              <label for="tipo_cliente_pf_pj">Tipo de cliente (PF/PJ):</label>
-              <select id="tipo_cliente_pf_pj" name="tipo_cliente_pf_pj">
-                <option value="PF"></option>
-                <option value="PF">Pessoa física</option>
-                <option value="PJ">Pessoa jurídica</option>
-              </select>
-            </p>
-            <p>
-              <label for="pep">PEP:</label>
-              <select id="pep" name="pep">
-                <option value="Sim"></option>
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-              </select>
-            </p>
-            <p>
-              <label for="moeda">Moeda:</label>
-              <select id="moeda" name="moeda">
-                <option value="BRL"></option>
-                <option value="BRL">Real</option>
-                <option value="USD">Dólar</option>
-                <option value="EUR">Euro</option>
-              </select>
-            </p>
-          </form>
-          </div>
-          <div class="racionalRegra">
-            <div>
-              <h3>Racional da regra</h3>
-            </div>
-            <div class="titulos2">
-              <h2>Campo</h2>
-              <h2>Operação</h2>
-              <h2>Valor</h2>
-              <hr>
-            </div>
-            <div>
-            </div>
-            <div class="camposRegras">
-              <div>
-                <select name="" id="">
-                  <option value=""></option>
-                  <option value="">Valor transf.</option>
-                  <option value="">Quantidade transf.</option>
-                  <option value="">Renda</option>
-                </select>
-                <select name="" id="">
-                  <option value=""></option>
-                  <option value="">></option>
-                  <option value="">>=</option>
-                  <option value=""><</option>
-                  <option value=""><=</option>
-                </select>
-                <select name="" id="">
-                  <option value=""></option>
-                  <option value="">5.000</option>
-                  <option value="">50.000</option>
-                  <option value="">150.000</option>
-                  <option value="">500.000</option>
-                </select>
-              </div>
-            </div>
-          </div>
+
+        <div class="dadosParam_filtros">
+          <label>Código da Regra</label>
+          <input type="text" style="height: 40px; width: 250px; border-radius: 12px; border: 1px solid lightgray;
+          position: absolute; left: 640px; top: 340px;">
+          <!-- <select name="codigo-regra" class="selection-boxes">
+            <option value="0001">0001</option>
+          </select> -->
         </div>
-      </div>
-      <div class="botoesNovaRegra">
-        <button class="adicionar"><img src="./images/adicionar.png" alt="">Adicionar condição</button>
-        <button class="retornar"><img src="./images/voltar.png" alt="" height="35px">Retornar</button>
-        <button class="salvar" id="salvar"><img src="./images/salvar.png" alt="" height="35px">Salvar nova regra</button>
+
+        <div class="dadosParam_filtros">
+          <label>Nome da Regra</label>
+          <input type="text" style="height: 40px; width: 250px; border-radius: 12px; border: 1px solid lightgray;
+          position: absolute; left: 640px; top: 420px;">
+          <!-- <select name="nome-regra" class="selection-boxes">
+            <option value="PEP 1">PEP 1</option>
+          </select> -->
+        </div>
+
+        <div class="dadosParam_filtros">
+          <label>Perído transacional</label>
+          <select name="periodoTran" class="selection-boxes">
+            <option value="Mensal">Mensal</option>
+          </select>
+        </div>
+
+        <div class="dadosParam_filtros">
+          <label>Produto/ Serviço</label>
+          <select name="Produto" class="selection-boxes">
+            <option value="Conta_corrente">Conta corrente</option>
+          </select>
+        </div>
+
+        <div class="dadosParam_filtros">
+          <label>Rating risco Cliente</label>
+          <select name="risco-cliente" class="selection-boxes">
+            <option value="Todos">Todos</option>
+          </select>
+        </div>
+
+        <div class="dadosParam_filtros">
+          <label>Tipo de cliente(PF/PJ)</label>
+          <select name="tipo-cliente" class="selection-boxes">
+            <option value="PF">PF</option>
+          </select>
+        </div>
+
+        <div class="dadosParam_filtros">
+          <label>PEP</label>
+          <select name="PEP" class="selection-boxes">
+            <option value="Sim">Sim</option>
+          </select>
+        </div>
+
+        <div class="dadosParam_filtros">
+          <label>Moeda</label>
+          <select name="Moeda" class="selection-boxes">
+            <option value="BRL">BRL</option>
+          </select>
+        </div>
+
       </div>
 
-    <script src="../../../script.js"></script>
-    <script src="./javascript/javascript.js"></script>
+      <div id="Racional_da_regra">
+
+        <p style="font-size: 1.1em; font-family: sans-serif; font-weight: bold; margin: 20px 10px 25px 10px;">Racional
+          da regra</p>
+
+        <div class="titulos" style="display: flex; padding-bottom: 0px;">
+          <h2>Campo</h2>
+          <h2 style="margin-left: 250px;">Operação</h2>
+          <h2 style="margin-left: 165px;">Valor</h2>
+        </div>
+
+
+        <div id="racional_filtros">
+          <div class="cada_fitro">
+
+            <select name="campo_regra" class="selection-boxes">
+              <option value="Valor">Valor trans.</option>
+            </select>
+
+            <select name="operacao" class="selection-boxes">
+              <option value=">">&gt;</option>
+            </select>
+
+            <select name="valor" class="selection-boxes">
+              <option value="50000">50.000</option>
+            </select>
+
+          </div>
+
+          <div class="cada_fitro">
+            <input type="checkbox" style="width: 15px; height: 15px; margin-left: 10px;" id="filtro_E">
+            <label for="input">e</label>
+
+            <input type="checkbox" style="margin-left: 30px; width: 15px; height: 15px;" id="filtro_OU">
+            <label for="input">ou</label>
+          </div>
+
+          <div class="cada_fitro">
+            <select name="campo_regra" class="selection-boxes">
+              <option value="Selecionar">Selecionar</option>
+              <option value="Quantd_trans">Quantidade trans.</option>
+            </select>
+
+            <select name="operacao" class="selection-boxes">
+              <option value="Selecionar">Selecionar</option>
+              <option value=">=">&gt;=</option>
+            </select>
+
+            <select name="valor" class="selection-boxes">
+              <option value="Selecionar">Selecionar</option>
+              <option value="#10">#10</option>
+            </select>
+          </div>
+
+        </div>
+
+        <button onclick="adicionarCondicao()" class="botao_ativo AddCondicao" style="margin-top: 10px;"> <img
+            src="./images/adicionar.png" alt="Adicionar" style="width: 30px; height: 30px;">Adicionar
+          condição</button>
+
+        <button class="botao_ativo Salvar" onclick="SalvarAtivar()"> <img src="./images/salvar.png" alt="Salvar"
+            style="width: 30px; height: 30px;">Salvar e ativar</button>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <script src="../../../script.js"></script>
+  <script src="./javascript/javascript.js"></script>
 </body>
+
 </html>

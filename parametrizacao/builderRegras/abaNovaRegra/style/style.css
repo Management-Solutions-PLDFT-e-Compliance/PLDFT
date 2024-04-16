@@ -1,3 +1,163 @@
+#selects {
+    display: flex;
+    justify-content: center;
+}
+
+.selection-boxes {
+    font-size: large;
+    margin: 20px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+    border-radius: 12px;
+}
+
+#regras_atuais {
+    font-size: x-large;
+    background-color: white;
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 5px solid white;
+    border-radius: 12px;
+    height: 785px;
+}
+
+.tabelaRegras {
+    max-height: 650px;
+    overflow-y: auto;
+}
+
+.tabelaRegras>table {
+    margin-left: 0px;
+    width: 100%;
+}
+
+.tabelaRegras>table>thead>tr>th:nth-child(2),
+th:nth-child(3),
+th:nth-child(4),
+th:nth-child(5),
+th:nth-child(6),
+th:nth-child(7),
+th:nth-child(8),
+th:nth-child(9) {
+
+    color: #000;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 7px;
+    border-collapse: collapse;
+    font-weight: bold;
+
+}
+
+.tabelaRegras>table>tbody>tr>td {
+    margin: 12px;
+    text-align: center;
+}
+
+.tabelaRegras>table {
+    border-collapse: separate;
+    border-spacing: 25px;
+    /*Altere o valor conforme necessário*/
+}
+
+.tabelaRegras>table>tbody>tr>td>input {
+    width: 20px;
+    height: 20px;
+}
+
+/* Botoes */
+
+#botoes_inferiores {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+}
+
+.botao_ativo {
+    display: flex;
+    background-color: #304c7c;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.botao_inativo {
+    display: flex;
+    background-color: lightgray;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+#pag_parametrizar {
+    display: none;
+}
+
+/* Parametrizar */
+
+#conteudo_parametrizar {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: 1;
+    gap: 10px;
+    margin: 10px;
+    border: 10px solid white;
+    border-radius: 12px;
+    height: 860px;
+}
+
+.dadosParam_filtros {
+    display: flex;
+
+}
+
+.dadosParam_filtros>select {
+    position: absolute;
+    left: 630px;
+}
+
+.dadosParam_filtros>label {
+    color: #547cbc;
+    font-weight: bold;
+    margin: 30px 10px;
+}
+
+/* Racional */
+#racional_filtros {
+    max-height: 670px;
+    overflow-y: auto;
+
+}
+
+.cada_filtro {
+    display: flex;
+}
+
+.Salvar {
+    position: absolute;
+    right: 10px;
+    bottom: 20px
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,7 +165,7 @@
 body {
     background-color: #f5f5f5;
     font-family: sans-serif;
- }
+}
 
 
 header {
@@ -26,22 +186,22 @@ header {
     width: 100%;
     color: gray;
 }
- 
-.cabecario  ul{
+
+.cabecario ul {
     display: flex;
     width: 100%;
     justify-content: left;
     /* gap: .5rem; */
 }
- 
+
 .cabecario .vazio {
     width: .5rem;
     padding: 0;
     background-color: #f5f5f5;
     align-self: flex-end;
 }
- 
-.cabecario  li{
+
+.cabecario li {
     width: 15%;
     padding: 0;
     margin-top: 6%;
@@ -55,7 +215,8 @@ header {
     border-bottom: 2px solid gray;
     background-color: #fff;
 }
-.cabecario li a{
+
+.cabecario li a {
     color: #808080;
     display: flex;
     justify-content: center;
@@ -79,28 +240,29 @@ header {
     width: 100%;
     color: gray;
 }
-.subCabecario  ul{
+
+.subCabecario ul {
     display: flex;
     width: 100%;
     justify-content: left;
     /* gap: .5rem; */
 }
 
-.subCabecario  ul{
+.subCabecario ul {
     display: flex;
     width: 100%;
     justify-content: left;
     /* gap: .5rem; */
 }
- 
+
 .subCabecario .vazio {
     width: .5rem;
     padding: 0;
     background-color: gray;
     align-self: flex-end;
 }
- 
-.subCabecario  li{
+
+.subCabecario li {
     width: 15%;
     padding: 0;
     margin-top: 0.5%;
@@ -114,16 +276,15 @@ header {
     border-bottom: 2px solid gray;
     /* background-color: #fff; */
 }
-.subCabecario li a{
+
+.subCabecario li a {
     color: #2c4c7c;
     display: flex;
     justify-content: center;
     text-decoration: none;
 }
 
-
 .subCabecario .active {
-    color: red;
     background-color: #d3d3d3;
     /* border-top: 2px solid gray; */
     /* border-left: 2px solid gray; */
@@ -131,188 +292,3 @@ header {
     border-bottom: 4px solid #2c4c7c;
 }
 
-.cardNovaRegra{
-    width: 98%;
-    height: 76%;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 12px;
-    margin: 19.2px;
-    position: fixed;
-    top: 21vh;
-}
-
-h3{
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    padding-top: 40px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-}
-
-.titulos {
-    padding: 10px;
-}
-
-.titulos hr{
-    width: 100%;
-}
-
-.titulos > h2 {
-    color: #000;
-    font-size: 90px;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-bottom: 4px;
-    padding-left: 20px;
-}
-
-.titulos2 > h2 {
-    color: #000;
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding-left: 20px;
-    margin-right: 200px;
-    display: inline-block;
-}
-
-.titulos > h5 {
-    color: #c2c2c2;
-    font-size: 18px;
-    font-family: sans-serif;
-    font-weight: bold;
-}
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-label{
-    color: #2c4c7c;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-select{
-    height: 35px;
-    width: 350px;
-}
-
-form input{
-    height: 35px;
-    width: 350px;
-}
-form p{
-    padding-top: 35px;
-    padding-left: 20px;
-}
-
-form p {
-    text-align: left;
-    margin-right: 50px; /* Ajuste conforme necessário */
-}
-
-form {
-    text-align: right;
-    font-family: "Poppins", sans-serif;
-  }
-
-  form p {
-    text-align: left;
-    font-family: "Poppins", sans-serif;
-    margin-right: 50px; /* Ajuste conforme necessário */
-  }
-
-  form label {
-    display: inline-block;
-    width: 500px; /* Ajuste conforme necessário */
-    text-align: left;
-    font-family: "Poppins", sans-serif;
-    margin-right: 10px; /* Espaçamento entre a etiqueta e o campo de entrada */
-  }
-
-  form input,
-  select {
-    font-family: "Poppins", sans-serif;
-    width: 350px; /* Ajuste conforme necessário */
-  }
-
-.cardNovaRegra {
-  display: flex;
-}
-    
-.racionalRegra {
-  margin-left: 20px; /* Ajuste a margem conforme necessário */
-  height: 650px;
-  overflow-y: scroll;
-}
-
-.restaurarFlex {
-    flex: 0 0 auto;
-}
-
-.racionalRegra select{
-    font-family: "Poppins", sans-serif;
-    display: inline-block;
-    width: 200px; /* Ajuste conforme necessário */
-    margin-right: 100px;
-    margin-top: 45px;
-    margin-bottom: 25px;
-}
-
-.racionalRegra label {
-    font-family: "Poppins", sans-serif;
-    color: black;
-    font-weight: normal;
-    padding-right: 30px;
-    padding-left: 10px;
-    vertical-align:top;
-}
-
-.racionalRegra input{
-    height: 20px;
-    width: 20px;
-}
-
-.botoesNovaRegra button{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16.6px;
-    padding: 0.3rem 0.5rem;
-    width: 200px;
-    height: 50px;
-    background-color: #2c4c7c;
-    border: solid 1px #2c4c7c;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.botoesNovaRegra .retornar{
-    position: fixed;
-    top: 1010px;
-    right: 240px;
-}
-.botoesNovaRegra .salvar{
-    position: fixed;
-    top: 1010px;
-    right: 30px;
-}
-.botoesNovaRegra .adicionar{
-    position: fixed;
-    background-color: white;
-    border: none;
-    color: lightgray;
-    box-shadow: none;
-    top: 930px;
-    right: 30px;
-}

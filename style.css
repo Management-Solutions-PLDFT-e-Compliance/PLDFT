@@ -369,12 +369,7 @@ width: 24px;
   color: #808080;
 }
 
-.selection-boxes{
-  width: 150px;
-  height: 30px;
-  border: 1px solid lightgray;
-  margin-left: 10px;
-}
+
 
 /* icones_contorno tem que conter no HTML as classes contorno*/
 .icones_contorno{
