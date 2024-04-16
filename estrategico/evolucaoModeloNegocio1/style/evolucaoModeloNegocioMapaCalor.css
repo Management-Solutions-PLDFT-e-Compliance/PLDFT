@@ -385,10 +385,19 @@ h3 {
 
 
   .headerCard select{
-    padding: 2.5px 20px;
     text-align: center;
   }
 
   .headerCard #canais{
-    padding: 2.5px 0px;
+    padding: 0.5rem 0rem;
+    position: absolute;
+    margin-left: 779px;
+    margin-top: 8px;
+  }
+
+  #clientes-selects{
+    padding: 0.5rem 1rem;
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 8px;
   }
