@@ -1,12 +1,12 @@
 .infoTransacFull{
     position: absolute;
-    top: 890px;
+    top: 910px;
     width: 1880px;
     height: 960px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .infoTransacFull .parteCima{
@@ -116,6 +116,7 @@
     height: 100%;
     border-radius: 10px;
     background-color: white;
+    padding: 1rem;
 }
 
 .infoTransacFull .parteBaixo .card1 .botao{
@@ -134,9 +135,10 @@
     width: 150px;
     gap: 5px;
     height: 35px;
-    margin-left: 1600px;
-    margin-top: 10px;
-    margin-bottom: -10px;
+    position: absolute;
+    margin-left: 1582px;
+    margin-top: -65px;
+    margin-bottom: 0px;
 }
 
 .infoTransacFull .parteBaixo .card1 .botaoVoltar{

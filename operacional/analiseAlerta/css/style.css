@@ -12,7 +12,7 @@
 }
 
 .analiseAlertaFull *{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
@@ -33,10 +33,12 @@
 
 .analiseAlertaFull .parteCima .card1{
     width: 54%;
+    padding: 1rem;
 }
 
 .analiseAlertaFull .parteCima .card2{
     width: 45%;
+    padding: 1rem;
 }
 
 .analiseAlertaFull .parteBaixo{
@@ -52,10 +54,12 @@
 
 .analiseAlertaFull .parteBaixo .card1{
     width: 34%;
+    padding: 1rem;
 }
 
 .analiseAlertaFull .parteBaixo .card2{
     width: 19%;
+    padding: 1rem;
 }
 
 .analiseAlertaFull .parteBaixo .card3-gestao-documental{
@@ -68,11 +72,15 @@
 .analiseAlertaFull .parteBaixo .gestao-documental{
     width: 35%;
     background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .analiseAlertaFull .parteBaixo .card3{
     width: 65%;
+    padding: 1rem;
     background-color: #fff;
+    border-radius: 10px;
 }
 
 /*------------------estilização conteúdos---------------------- */
@@ -336,22 +344,22 @@
     overflow: hidden;
 }
 
-.titulos-carrosel {
-    display: flex;
-    justify-content: space-between;
-}
-
 .navegacao-conteudo {
     display: flex;
     align-items: center;
-    gap: 0.2rem
+    gap: 0.2rem;
+    position: absolute;
+    margin-top: -89px;
+    margin-left: 714px;
 }
 
 .titulo-abrir {
-    display: flex;
     margin-bottom: 1rem;
 }
 
+.titulos > h2 {
+    margin-bottom: 0rem;
+}
 .coaf-assertividade {
     display: flex;
     flex-direction: column;
