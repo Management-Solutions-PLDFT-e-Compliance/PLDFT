@@ -255,7 +255,7 @@
 .analiseAlertaFull .parteBaixo .card3 .conteudo .linha2 .botao{
     display: flex;
     background-color: #304c7c;
-    height: 42px;
+    padding: 10px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -275,7 +275,7 @@
 }
 
 .analiseAlertaFull .parteBaixo .card3 .conteudo .linha2 .botaoFalsoPos img{
-    margin-right: 5px;
+    margin: 6px 0px;
 }
 
 .analiseAlertaFull .parteBaixo .card1 .lupaPreta{
