@@ -3,7 +3,7 @@ body{
 }
 .cardEixo1Efetividade{
     width: 23.75%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -14,7 +14,7 @@ body{
 }
 .cardEixo2Efetividade{
     width: 23.75%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -26,7 +26,7 @@ body{
 }
 .cardEixo3Efetividade{
     width: 23.75%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -38,7 +38,7 @@ body{
 }
 .cardEixo4Efetividade{
     width: 23.75%;
-    height: 37%;
+    height: 36%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
@@ -51,11 +51,12 @@ body{
 
 .cardDeficiencias{
     width: 48.5%;
-    height: 46%;
+    height: 47%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
     margin: 20px;
+    margin-top: 10px;
     position: fixed;
     top: 51vh;
     padding: 1rem;
@@ -63,11 +64,12 @@ body{
 
 .cardPlanosDeAcao{
     width: 48.5%;
-    height: 46%;
+    height: 47%;
     background-color: white;
     border: 1px solid white;
     border-radius: 12px;
     margin: 20px;
+    margin-top: 10px;
     position: fixed;
     top: 51vh;
     left: 49.5%;
@@ -136,9 +138,9 @@ h3{
 
 table{
     width: 98%;
-    height: 420px;
+    height: 400px;
     font-size: 20px;
-    font-family: "Poppins", sans-serif;
+    font-family: sans-serif;
     border: 2px solid lightgray;
     margin: 5px;
 }
@@ -174,22 +176,26 @@ tr{
     left: 80px;
     height: 350px;
     width: 350px;
+    top: 239px;
 }
 .radarChart2{
     position: fixed;
     left: 550px;
     height: 350px;
     width: 350px;
+    top: 239px;
 }
 .radarChart3{
     position: fixed;
     right: 550px;
     height: 350px;
     width: 350px;
+    top: 239px;
 }
 .radarChart4{
     position: fixed;
     right: 60px;
     height: 350px;
     width: 350px;
+    top: 239px;
 }
