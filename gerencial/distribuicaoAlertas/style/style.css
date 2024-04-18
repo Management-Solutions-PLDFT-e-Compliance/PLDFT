@@ -356,6 +356,7 @@ h3 {
     border: none;
     width: 15%;
     height: 42px;
+    cursor: pointer;
     
 }
 .atribuicao-automatica-manutencao .table_row li:nth-child(3) img{
@@ -527,6 +528,7 @@ h3 {
     font-size: 18px;
     gap: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .titulos-select {

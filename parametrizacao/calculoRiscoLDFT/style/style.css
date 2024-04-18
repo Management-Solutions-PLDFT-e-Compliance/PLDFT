@@ -256,6 +256,7 @@ h3 {
     align-items: center;
     gap: 10px;
     box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
 }
 
 
@@ -351,6 +352,7 @@ h3 {
     background-color: #a6a6a6;
     align-self: flex-end;
     box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
 }
 
 #adicionar-variavel-btn-avancar img{
@@ -470,6 +472,7 @@ h3 {
     font-size: 18px;
     font-weight: bold;
     box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
 
 }
 
@@ -581,6 +584,7 @@ h3 {
     padding: 10px;
     gap: 10px;
     box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
 }
 
 #pop-up-btn-incluir img{
@@ -658,6 +662,7 @@ h3 {
     background-color: #a6a6a6;
     align-self: flex-end;
     box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
 }
 
 #parametrizar-btn-avancar img{
@@ -725,6 +730,7 @@ h3 {
     font-size: 18px;
     font-weight: bold;
     box-shadow: 2px 2px 2px #888888;
+    cursor: pointer;
 }
 
 /* .adicionar-variavel-parametrizar-btns button:nth-child(1){
