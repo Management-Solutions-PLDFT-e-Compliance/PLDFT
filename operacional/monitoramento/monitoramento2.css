@@ -169,7 +169,7 @@
     padding: 20px;
     padding-left: 40px;
     display: flex;
-    gap: 40px;
+    gap: 32px;
     flex-wrap: wrap;
     height: 70%;
     overflow-y: auto;
