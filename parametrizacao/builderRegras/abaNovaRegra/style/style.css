@@ -80,9 +80,9 @@ th:nth-child(9) {
 .botao_ativo {
     display: flex;
     background-color: #304c7c;
-    padding: 7px 12px;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
     margin: 0px 15px 0px 15px;
@@ -90,6 +90,9 @@ th:nth-child(9) {
     align-items: center;
     color: white;
     font-weight: bold;
+    font-size: 18px;
+    font-family: sans-serif;
+    gap: 10px;
 }
 
 .botao_inativo {
