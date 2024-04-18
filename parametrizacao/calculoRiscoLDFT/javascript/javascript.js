@@ -91,14 +91,14 @@ function verificacaoAdicionarVariavel() {
     && adicionarVariavelQntFaixas.value != "Selecionar" 
     && (adicionarVariavelCenarioFaixas.checked || adicionarVariavelLista.checked))
     {
-        adicionarVariavelBtnAvancar.style.backgroundColor = "#2e4a7e"
+        adicionarVariavelBtnAvancar.style.backgroundColor = "#304c7c"
     } else {
         adicionarVariavelBtnAvancar.style.backgroundColor = "#a6a6a6"
     }
 }
 
 function adicionarVariavelAvancar() {
-    if(adicionarVariavelBtnAvancar.style.backgroundColor == "rgb(46, 74, 126)") {
+    if(adicionarVariavelBtnAvancar.style.backgroundColor == "rgb(48, 76, 124)") {
         telaAdicionarVariavel.style.display = "none"
         telaCenariosListaPonderacoes.style.display = "flex"
     }
@@ -134,8 +134,8 @@ function verificacaoCenarioListaPonderacoes() {
     && cenariosListaPonderacoesAcimaDe.value != "Selecionar"
     )
     {
-        adicionarVariavelBtnSimular.style.backgroundColor = "#2e4a7e"
-        adicionarVariavelBtnIncluir.style.backgroundColor = "#2e4a7e"
+        adicionarVariavelBtnSimular.style.backgroundColor = "#304c7c"
+        adicionarVariavelBtnIncluir.style.backgroundColor = "#304c7c"
     } else {
         adicionarVariavelBtnSimular.style.backgroundColor = "#a6a6a6"
         adicionarVariavelBtnIncluir.style.backgroundColor = "#a6a6a6"
@@ -148,7 +148,7 @@ cenariosListaPonderacoesDe.addEventListener("click", verificacaoCenarioListaPond
 cenariosListaPonderacoesAcimaDe.addEventListener("click", verificacaoCenarioListaPonderacoes)
 
 function cenariosListaPonderacoesSimular() {
-    if(adicionarVariavelBtnSimular.style.backgroundColor == "rgb(46, 74, 126)") {
+    if(adicionarVariavelBtnSimular.style.backgroundColor == "rgb(48, 76, 124)") {
         telaPopUp.style.display = "flex"
     }
 }
@@ -161,7 +161,7 @@ fecharPopUp.addEventListener("click", function() {
 
 let counterId = 16
 function cenariosListaPonderacoesIncluir() {
-    if(adicionarVariavelBtnSimular.style.backgroundColor == "rgb(46, 74, 126)") {
+    if(adicionarVariavelBtnSimular.style.backgroundColor == "rgb(48, 76, 124)") {
 
         counterId+= 1
         let counterIdString = counterId.toString().padStart(5, '0');
@@ -212,9 +212,9 @@ function checkboxAtiva() {
     checkboxVariaveisAtuais.forEach(checkbox => {if(checkbox.checked) ativo = true})
 
     if(ativo){
-        visualizacaoVariaveisParametrizar.style.backgroundColor = "rgb(46, 74, 126)"
-        visualizacaoVariaveisDownload.style.backgroundColor = "rgb(46, 74, 126)"
-        visualizacaoVariaveisExcluir.style.backgroundColor = "rgb(46, 74, 126)"
+        visualizacaoVariaveisParametrizar.style.backgroundColor = "rgb(48, 76, 124)"
+        visualizacaoVariaveisDownload.style.backgroundColor = "rgb(48, 76, 124)"
+        visualizacaoVariaveisExcluir.style.backgroundColor = "rgb(48, 76, 124)"
     } else {
         visualizacaoVariaveisParametrizar.style.backgroundColor = "#a6a6a6"
         visualizacaoVariaveisDownload.style.backgroundColor = "#a6a6a6"
@@ -226,7 +226,7 @@ function checkboxAtiva() {
 checkboxVariaveisAtuais.forEach(checkbox => checkbox.addEventListener("click", checkboxAtiva))
 
 visualizacaoVariaveisParametrizar.addEventListener("click", function() {
-    if(visualizacaoVariaveisParametrizar.style.backgroundColor == "rgb(46, 74, 126)") {
+    if(visualizacaoVariaveisParametrizar.style.backgroundColor == "rgb(48, 76, 124)") {
         telaVariaveisAtuais.style.display = "none"
         telaParametrizar.style.display = "flex"
 
@@ -262,7 +262,7 @@ function verificacaoParametrizar() {
     && parametrizarQntFaixas.value != "Selecionar" 
     && (parametrizarCenariosFaixas.checked || parametrizarLista.checked))
     {
-        parametrizarBtnAvancar.style.backgroundColor = "#2e4a7e"
+        parametrizarBtnAvancar.style.backgroundColor = "#304c7c"
     } else {
         parametrizarBtnAvancar.style.backgroundColor = "#a6a6a6"
     }
@@ -276,7 +276,7 @@ parametrizarQntFaixas.addEventListener("click", verificacaoParametrizar)
 parametrizarVarCadastral.addEventListener("click", verificacaoParametrizar)
 
 function parametrizarAvancar() {
-    if(parametrizarBtnAvancar.style.backgroundColor == "rgb(46, 74, 126)") {
+    if(parametrizarBtnAvancar.style.backgroundColor == "rgb(48, 76, 124)") {
         telaCenariosListaPonderacoesParametrizar.style.display = "flex"
         telaParametrizar.style.display = "none"
     }
@@ -328,7 +328,7 @@ visualizacaoVariaveisExcluir.addEventListener("click", function() {
     Swal.fire({
         title: 'Tem certeza que deseja excluir variável?',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
+        confirmButtonColor: '#304c7c',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Sim',
         cancelButtonText: 'Não'
