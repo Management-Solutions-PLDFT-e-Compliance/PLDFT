@@ -72,9 +72,9 @@
 .botao_ativo{
     display: flex;
     background-color: #304c7c;
-    padding: 7px 12px;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
     margin: 0px 15px 0px 15px;
@@ -82,14 +82,17 @@
     align-items: center;
     color: white;
     font-weight: bold;
+    font-size: 18px;
+    font-family: sans-serif;
+    gap: 10px;
 }
 
 .botao_inativo{
     display: flex;
-    background-color: lightgray;
-    padding: 7px 12px;
+    background-color: #a6a6a6;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
     margin: 0px 15px 0px 15px;
@@ -97,6 +100,8 @@
     align-items: center;
     color: white;
     font-weight: bold;
+    font-size: 18px;
+    gap: 10px;
 }
 
 #pag_parametrizar{
