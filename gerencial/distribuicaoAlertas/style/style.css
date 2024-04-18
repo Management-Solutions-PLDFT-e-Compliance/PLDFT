@@ -424,14 +424,22 @@ h3 {
 
 /* CARD ABRIR TELA */
 
+.dashboard-tela-abrir{
+    display: block;
+    justify-content: center;
+}
+
 .tela-abrir {
     display: none;
+    width: 98%;
+    height: 887px
 }
 
 .tela-abrir .table{
     width: 100%;
     height: fit-content;
     overflow-y: none;
+    margin-top: -20px;
 }
 
 /* .tela-abrir .table > li:nth-child(1){

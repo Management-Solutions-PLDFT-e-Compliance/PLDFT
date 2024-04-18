@@ -100,6 +100,8 @@ function createLinearGradientBar(ctx, colorInicio, colorFim) {
 
 // DISTRIBUICAO PENDENTE ABRIR
 const btnFecharDistri = document.getElementById("fechar-alertas-distribuicao-pendentes")
+const dashTelaAbrir = document.querySelector(".dashboard-tela-abrir");
+
 const telaAbrir = document.getElementsByClassName("tela-abrir")[0]
 const dashboard = document.getElementById("dashboard")
 const distribuicaoPendenteLupa = document.getElementById("distribuicao-pendente-lupa")
@@ -107,9 +109,11 @@ const distribuicaoPendenteLupa = document.getElementById("distribuicao-pendente-
 btnFecharDistri.addEventListener("click", function() {
     telaAbrir.style.display = "none"
     dashboard.style.display = "grid"
+    dashTelaAbrir.style.display = "block"
 })
 
 distribuicaoPendenteLupa.addEventListener("click", function() {
-    telaAbrir.style.display = "block"
-    dashboard.style.display = "none"
+    telaAbrir.style.display = "block";
+    dashboard.style.display = "none";
+    dashTelaAbrir.style.display = "flex";
 })
